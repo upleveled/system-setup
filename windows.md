@@ -7,7 +7,7 @@
    ```
    This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command line.
    <br>
-3. The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br>
+3. The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br><br>
    <img src="./windows-2-chocolatey-installed.png"><br><br>
 4. Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
 5. Copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
