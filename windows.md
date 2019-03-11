@@ -1,11 +1,12 @@
-1. Run Command Prompt as administrator (open Start menu, type "cmd.exe", right-click on "Command Prompt" or "Eingabeaufforderung" and choose "Run as administrator"):<br>
+1. Open the Start menu and type "cmd.exe". Right-click on the item "Command Prompt" or "Eingabeaufforderung" that appears and choose "Run as administrator":<br>
    <br>
-   <img src="./windows-1-run-cmd-as-admin.jpg"><br><br>
+   <img src="./windows-1-run-cmd-as-admin.jpg">
+   <br>This will run the Command Prompt as an administrator user<br><br>
 2. Copy the following text (be sure you select all of it, it's very long) and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
    ```sh
    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
    ```
-   This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command line.
+   This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command prompt.
    <br>
 3. The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br><br>
    <img src="./windows-2-chocolatey-installed.png"><br><br>
