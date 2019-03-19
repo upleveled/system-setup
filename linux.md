@@ -45,3 +45,5 @@
    npx create-react-app --help
    ```
    This last step will prepare a program that we will use in the course.<br><br>
+7. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
+   <img src="./general-1-cra-installed.png"><br><br>
