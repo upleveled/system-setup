@@ -19,7 +19,7 @@
    This uses Homebrew to install Git, Node.js and Yarn.<br><br>
 6. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```sh
-   brew cask install vscode
+   brew cask install visual-studio-code
    ```
    This uses Homebrew to install Visual Studio Code.<br><br>
 7. Copy the following text, paste it in the terminal and hit return.<br><br>
