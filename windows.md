@@ -15,7 +15,7 @@
    ```sh
    choco install git nodejs yarn vscode hyper -y
    ```
-   This uses Chocolatey to install Git, Node.js, Yarn and Visual Studio Code.<br><br>
+   This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code and Hyper.<br><br>
 6. Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
 7. Copy the following text and right-click in the Command Prompt window to paste the text. Hit enter.<br><br>
    ```sh
