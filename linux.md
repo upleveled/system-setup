@@ -44,6 +44,32 @@
    ```sh
    npx create-react-app --help
    ```
-   This last step will prepare a program that we will use in the course.<br><br>
+   This will prepare a program that we will use in the course.<br><br>
 7. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
-   <img src="./general-1-cra-installed.png"><br><br>
+   <img src="./general-1-cra-installed.png"><br><br
+8. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+   First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
+   <img src="./general-2-github-name.png"><br><br>
+   Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
+   ```sh
+   git config --global user.name "Mona Lisa Octocat"
+   ```
+   You can test whether the name was set correctly with the next command (if it worked, it will print the name on the next line):<br><br>
+   ```sh
+   git config --global user.name
+   ```
+   <br>
+   For running the next command, **add your email in quotes**:<br><br>
+   ```sh
+   git config --global user.email "monalisaoctocat@example.com"
+   ```
+   You can test whether the email was set correctly with with the next command (if it worked, it will print the email on the next line):<br><br>
+   ```sh
+   git config --global user.email
+   ```
+   This prepares `git` so that your work is attributed correctly to you.<br><br>
+9. Copy the following text, paste it in the terminal and hit return.<br><br>
+   ```sh
+   git config --global credential.helper cache
+   ```
+   This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>>
