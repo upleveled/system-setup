@@ -71,4 +71,4 @@
    ```sh
    git config --global credential.helper cache
    ```
-   This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>>
+   This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
