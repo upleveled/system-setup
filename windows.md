@@ -35,8 +35,7 @@
    ```sh
    git config --global user.name
    ```
-   <br>
-   For running the next command, **add your email in quotes**:<br><br>
+   <br>For running the next command, **add your email in quotes**:<br><br>
    ```sh
    git config --global user.email "monalisaoctocat@example.com"
    ```
