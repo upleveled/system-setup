@@ -46,8 +46,11 @@
    ```
    This will prepare a program that we will use in the course.<br><br>
 7. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
-   <img src="./general-1-cra-installed.png"><br><br
-8. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+   <img src="./general-1-cra-installed.png"><br><br>
+8. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
+   <img src="./general-2-github-profile-settings.png"><br><br>
+   We will use this name in the next step.<br><br>
+9. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
    First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
    <img src="./general-2-github-name.png"><br><br>
    Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -67,8 +70,8 @@
    git config --global user.email
    ```
    This prepares `git` so that your work is attributed correctly to you.<br><br>
-9. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
-   git config --global credential.helper cache
-   ```
-   This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
+10. Copy the following text, paste it in the terminal and hit return.<br><br>
+    ```sh
+    git config --global credential.helper cache
+    ```
+    This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
