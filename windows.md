@@ -13,7 +13,7 @@
 4. Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
 5. Copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
    ```sh
-   choco install git nodejs yarn vscode -y
+   choco install git nodejs yarn vscode hyper -y
    ```
    This uses Chocolatey to install Git, Node.js, Yarn and Visual Studio Code.<br><br>
 6. Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
