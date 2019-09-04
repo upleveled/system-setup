@@ -31,11 +31,11 @@
 9. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
    <img src="./general-1-cra-installed.png"><br><br>
 10. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
-    <img src="./general-2-github-profile-settings.png"><br><br>
+    <img src="./general-3-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 11. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
-    <img src="./general-3-github-name.png"><br><br>
+    <img src="./general-4-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
     ```sh
     git config --global user.name "Mona Lisa Octocat"
