@@ -61,9 +61,13 @@
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
     <img src="./windows-3-hyper-preferences.png"><br><br>
     In this file, we will do three things:<br><br>
+
     1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\git-cmd.exe',`
     2. Find `shellArgs: ['--login'],` and replace it with `shellArgs: ['--command=usr/bin/bash.exe', '-l', '-i'],`
     3. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
+
+    Then save the file and close and restart Hyper.
+
 12. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
