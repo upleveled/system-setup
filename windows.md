@@ -95,13 +95,13 @@
     source $USERPROFILE/.bash_profile
     ```
 
-    Now everything should be ready to go! We can continue setting up the user, by changing the password for the `postgres` user.
-
     When you run this next command, it will ask you for a password. Use the password that you saved from the installation earlier:
 
     ```sh
     psql -U postgres -c "ALTER ROLE postgres PASSWORD 'postgres';"
     ```
+
+    This now changed the password for the `postgres` user to `postgres` - use this password any time it asks from now on.
 
 13. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
