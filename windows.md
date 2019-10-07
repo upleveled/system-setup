@@ -70,7 +70,7 @@
 
 12. <a name="postgresql"></a>In a new administrative window of Hyper (search for Hyper in the start menu, then right click on it and choose "Run as Administrator"), we will now install PostgreSQL.<br><br>
 
-    **Important:** Before pasting in the command below, this is important: pay attention during the installation - it will display the password for the `postgres` user on a yellow line starting with the word `WARNING`. Save this password for later. It will look like this:<br><br>
+    **Important:** Before pasting in the command below, this is important: pay attention during the installation - it will display the password for the `postgres` user on a yellow line starting with the word `WARNING`. **Save this password for later.** It will look like this:<br><br>
 
     <img src="windows-4-chocolatey-postgres-generated-password.png">
 
