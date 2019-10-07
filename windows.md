@@ -74,17 +74,17 @@
 
     <img src="windows-4-chocolatey-postgres-generated-password.png">
 
-    Copy the following text, paste it in Hyper and hit return.<br><br>
+    Copy the following text, paste it in Hyper and hit return.
 
     ```sh
     choco install postgresql -y
     ```
 
-    This will install PostgreSQL and create a default user of `postgres`.<br><br>
+    This will install PostgreSQL and create a default user of `postgres`.
 
-    After the installation is complete, close Hyper and reopen it (just as a normal user - not as an administrator).<br><br>
+    After the installation is complete, close Hyper and reopen it (just as a normal user - not as an administrator).
 
-    Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:<br><br>
+    Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
     ```sh
     cd /c/
@@ -95,9 +95,9 @@
     source $USERPROFILE/.bash_profile
     ```
 
-    Now everything should be ready to go! We can continue setting up the user, by changing the password for the `postgres` user.<br><br>
+    Now everything should be ready to go! We can continue setting up the user, by changing the password for the `postgres` user.
 
-    When you run this next command, it will ask you for a password. Use the password that you saved from the installation earlier:<br><br>
+    When you run this next command, it will ask you for a password. Use the password that you saved from the installation earlier:
 
     ```sh
     psql -U postgres -c "ALTER ROLE postgres PASSWORD 'postgres';"
