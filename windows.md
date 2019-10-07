@@ -70,38 +70,38 @@
 
 12. <a name="postgresql"></a>In a new administrative window of Hyper (search for Hyper in the start menu, then right click on it and choose "Run as Administrator"), we will now install PostgreSQL.<br><br>
 
-**Important:** Before pasting in the command below, this is important: pay attention during the installation - it will display the password for the `postgres` user on a yellow line starting with the word `WARNING`. Save this password for later. It will look like this:<br><br>
+    **Important:** Before pasting in the command below, this is important: pay attention during the installation - it will display the password for the `postgres` user on a yellow line starting with the word `WARNING`. Save this password for later. It will look like this:<br><br>
 
-<img src="windows-4-chocolatey-postgres-generated-password.png">
+    <img src="windows-4-chocolatey-postgres-generated-password.png">
 
-Copy the following text, paste it in Hyper and hit return.<br><br>
+    Copy the following text, paste it in Hyper and hit return.<br><br>
 
-```sh
-choco install postgresql -y
-```
+    ```sh
+    choco install postgresql -y
+    ```
 
-This will install PostgreSQL and create a default user of `postgres`.<br><br>
+    This will install PostgreSQL and create a default user of `postgres`.<br><br>
 
-After the installation is complete, close Hyper and reopen it (just as a normal user - not as an administrator).<br><br>
+    After the installation is complete, close Hyper and reopen it (just as a normal user - not as an administrator).<br><br>
 
-Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:<br><br>
+    Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:<br><br>
 
-```sh
-cd /c/
-POSTGRES_PATH=$(find . -name "psql.exe" -print -quit)
-POSTGRES_BIN_PATH=$(dirname "${POSTGRES_PATH/./\/c}")
-echo "export PATH=\$PATH:\"$POSTGRES_BIN_PATH\"" >> $USERPROFILE/.bash_profile
-echo "export PGDATA=\"${POSTGRES_BIN_PATH/bin/data}\"" >> $USERPROFILE/.bash_profile
-source $USERPROFILE/.bash_profile
-```
+    ```sh
+    cd /c/
+    POSTGRES_PATH=$(find . -name "psql.exe" -print -quit)
+    POSTGRES_BIN_PATH=$(dirname "${POSTGRES_PATH/./\/c}")
+    echo "export PATH=\$PATH:\"$POSTGRES_BIN_PATH\"" >> $USERPROFILE/.bash_profile
+    echo "export PGDATA=\"${POSTGRES_BIN_PATH/bin/data}\"" >> $USERPROFILE/.bash_profile
+    source $USERPROFILE/.bash_profile
+    ```
 
-Now everything should be ready to go! We can continue setting up the user, by changing the password for the `postgres` user.<br><br>
+    Now everything should be ready to go! We can continue setting up the user, by changing the password for the `postgres` user.<br><br>
 
-When you run this next command, it will ask you for a password. Use the password that you saved from the installation earlier:<br><br>
+    When you run this next command, it will ask you for a password. Use the password that you saved from the installation earlier:<br><br>
 
-```sh
-psql -U postgres -c "ALTER ROLE postgres PASSWORD 'postgres';"
-```
+    ```sh
+    psql -U postgres -c "ALTER ROLE postgres PASSWORD 'postgres';"
+    ```
 
 13. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
