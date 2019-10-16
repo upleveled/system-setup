@@ -1,35 +1,35 @@
-1. Open the Start menu and type "cmd.exe". Right-click on the item "Command Prompt" or "Eingabeaufforderung" that appears and choose "Run as administrator":<br>
-   <br>
-   <img src="./windows-1-run-cmd-as-admin.jpg">
-   <br>This will run the Command Prompt as an administrator user<br><br>
-2. Copy the following text (be sure you select all of it, it's very long) and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
-   ```sh
-   @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-   ```
-   This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command prompt.
-   <br>
-3. The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br><br>
-   <img src="./windows-2-chocolatey-installed.png"><br><br>
-4. Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
-5. Copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
-   ```sh
-   choco install git nodejs yarn vscode hyper -y
-   ```
-   This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code and Hyper.<br><br>
-6. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
-   If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
-   ```sh
-   choco install chrome -y
-   ```
-   This uses Chocolatey to install Chrome.<br><br>
-7. Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
-8. Copy the following text and right-click in the Command Prompt window to paste the text. Hit enter.<br><br>
-   ```sh
-   npx create-react-app --help
-   ```
-   This will prepare a program that we will use in the course.<br><br>
-9. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
-   <img src="./general-1-cra-installed.png"><br><br>
+1.  Open the Start menu and type "cmd.exe". Right-click on the item "Command Prompt" or "Eingabeaufforderung" that appears and choose "Run as administrator":<br>
+    <br>
+    <img src="./windows-1-run-cmd-as-admin.jpg">
+    <br>This will run the Command Prompt as an administrator user<br><br>
+2.  Copy the following text (be sure you select all of it, it's very long) and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
+    ```sh
+    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+    ```
+    This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command prompt.
+    <br>
+3.  The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br><br>
+    <img src="./windows-2-chocolatey-installed.png"><br><br>
+4.  Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
+5.  Copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
+    ```sh
+    choco install git nodejs yarn vscode hyper -y
+    ```
+    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code and Hyper.<br><br>
+6.  We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
+    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
+    ```sh
+    choco install chrome -y
+    ```
+    This uses Chocolatey to install Chrome.<br><br>
+7.  Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
+8.  Copy the following text and right-click in the Command Prompt window to paste the text. Hit enter.<br><br>
+    ```sh
+    npx create-react-app --help
+    ```
+    This will prepare a program that we will use in the course.<br><br>
+9.  The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
+    <img src="./general-1-cra-installed.png"><br><br>
 10. Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
     <img src="./general-2-vscode-settings.png"><br><br>
@@ -68,19 +68,15 @@
 
     Then save the file and close and restart Hyper.
 
-12. <a name="postgresql"></a>In a new administrative window of Hyper (search for Hyper in the start menu, then right click on it and choose "Run as Administrator"), we will now install PostgreSQL.
-
-    **Important:** Before pasting in the command below, this is important: pay attention during the installation - it will display the password for the `postgres` user on a yellow line starting with the word `WARNING`. **Save this password for later.** It will look like this:<br><br>
-
-    <img src="windows-4-chocolatey-postgres-generated-password.png">
+12. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
     ```sh
-    choco install postgresql -y
+    choco install postgresql12 --params '/Password:postgres'
     ```
 
-    This will install PostgreSQL and create a default user of `postgres`.
+    This will install PostgreSQL and create a default user of `postgres` and a password of `postgres`. Remember this password and use it any time it asks from now on.
 
     After the installation is complete, close Hyper and reopen it (just as a normal user - not as an administrator).
 
@@ -95,18 +91,43 @@
     source $USERPROFILE/.bash_profile
     ```
 
-    When you run this next command, it will ask you for a password. Use the password that you saved from the installation earlier:
+    If it worked, it should print out some lines with some messages that the database started and it is ready to accept connections:
+
+    <img src="./macos-5-postgres.png"><br><br>
+
+    You will need to run this every time you want to use your database.<br><br>
+    In order to stop PostgreSQL again, use the shortcut <kbd>control</kbd>-<kbd>C</kbd>.
+
+13. <a name="docker"></a>We will now install Docker.
+
+    **Option A - Windows 10 Pro:**
+
+    1. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+    2. Copy the following text and paste it into Hyper. Hit enter.
 
     ```sh
-    psql -U postgres -c "ALTER ROLE postgres PASSWORD 'postgres';"
+    choco install docker-desktop
     ```
 
-    This now changed the password for the `postgres` user to `postgres` - use this password any time it asks from now on.
+    3. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
+       You will need to run this every time you want to work with Docker after you restart.
 
-13. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
+    **Option B - Windows 10 Home:**
+
+    1. Open the Start menu and type "cmd.exe". Right-click on the item "Command Prompt" or "Eingabeaufforderung" that appears and choose "Run as administrator.
+    2. Copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.
+
+    ```sh
+    choco install docker-toolbox -ia /COMPONENTS="kitematic,virtualbox,dockercompose"
+    ```
+
+    3. Open start menu and search for "Docker Quickstart Terminal". Run it. This will set up and start Docker in the background. You may close the window after it's running.<br><br>
+       You will need to run this every time you want to work with Docker after you restart.
+
+14. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
-14. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+15. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -126,7 +147,7 @@
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-15. Copy the following text, paste it in the terminal and hit return.<br><br>
+16. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```sh
     git config --global credential.helper wincred
     ```
