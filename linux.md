@@ -90,11 +90,12 @@
    If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
    <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
 10. Set up PostgreSQL (refer to [the instructions in the official docs](https://www.postgresql.org/download/linux/ubuntu/))
-11. Set up Docker (refer to [the instructions in the official docs](https://docs.docker.com/install/linux/docker-ce/ubuntu/))
-12. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
+11. Set the PostgreSQL password (refer to [the instructions here on Server Fault](https://serverfault.com/a/325596/146733))
+12. Set up Docker (refer to [the instructions in the official docs](https://docs.docker.com/install/linux/docker-ce/ubuntu/))
+13. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
-13. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+14. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -114,7 +115,7 @@
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-14. Copy the following text, paste it in the terminal and hit return.<br><br>
+15. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```sh
     git config --global credential.helper cache
     ```
