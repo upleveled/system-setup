@@ -1,0 +1,10 @@
+{
+  "name": "system-setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:upleveled/system-setup.git",
+  "author": "Karl Horky <karl.horky@gmail.com>",
+  "devDependencies": {
+    "prettier": "prettier/prettier"
+  }
+}
