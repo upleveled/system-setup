@@ -91,13 +91,24 @@
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
-12. Set up PostgreSQL (refer to [the instructions in the official docs](https://www.postgresql.org/download/linux/ubuntu/))
-13. Set the PostgreSQL password (refer to [the instructions here on Server Fault](https://serverfault.com/a/325596/146733))
-14. Set up Docker (refer to [the instructions in the official docs](https://docs.docker.com/install/linux/docker-ce/ubuntu/))
-15. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
+12. <a name="postgresql"></a>We will now install PostgreSQL. Copy and run each of these lines separately in the terminal:
+
+    ```sh
+    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    sudo apt-get update
+    sudo apt-get install postgresql-12
+    ```
+
+    This will install PostgreSQL and create a default user of `postgres` with no password (only authorized users can use this user).<br><br>
+
+    Your database will be started automatically - no need to start it manually.
+
+13. Set up Docker (refer to [the instructions in the official docs](https://docs.docker.com/install/linux/docker-ce/ubuntu/))
+14. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
-16. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+15. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -117,7 +128,7 @@
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-17. Copy the following text, paste it in the terminal and hit return.<br><br>
+16. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```sh
     git config --global credential.helper cache
     ```
