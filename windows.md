@@ -109,7 +109,7 @@
 
     Now we will connect to PostgreSQL using a tool called `psql` and add a new table, to make sure everything is working with the connection.
 
-    Open a new tab in Hyper using <kbd>control</kbd>-<kbd>T</kbd> and run the following command:<br><br>
+    Open a new tab in Hyper using <kbd>control</kbd>-<kbd>T</kbd> and run the following command:
 
     ```sh
     psql -U postgres
@@ -119,7 +119,7 @@
 
     <img src="./macos-5.1-psql.png"><br><br>
 
-    If your screen looks like the above screenshot, type in or copy and paste the following query (this is a language called SQL):<br><br>
+    If your screen looks like the above screenshot, type in or copy and paste the following query (this is a language called SQL):
 
     ```sql
     CREATE TABLE users(
@@ -133,7 +133,7 @@
 
     <img src="./macos-5.2-psql.png"><br><br>
 
-    Now let's check that the table has been created. Run this query:<br><br>
+    Now let's check that the table has been created. Run this query:
 
     ```
     \dt
@@ -143,7 +143,7 @@
 
     <img src="./macos-5.3-psql.png"><br><br>
 
-    Finally, let's delete the table again to clean up. Run this query:<br><br>
+    Finally, let's delete the table again to clean up. Run this query:
 
     ```sql
     DROP TABLE users;
@@ -153,7 +153,7 @@
 
     <img src="./macos-5.4-psql.png"><br><br>
 
-    Great, PostgreSQL is set up! 🚀 Now you can exit from `psql` again by writing `exit` and hitting return:<br><br>
+    Great, PostgreSQL is set up! 🚀 Now you can exit from `psql` again by writing `exit` and hitting return:
 
     ```
     exit
