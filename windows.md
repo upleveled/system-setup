@@ -159,11 +159,11 @@
     exit
     ```
 
-    It should exit and send you back to the command line. Your screen should look like this:<br><br>
+    It should exit and send you back to the command line. Your screen should look similar to this (the last line will not be exactly the same):<br><br>
 
     <img src="./macos-5.5-psql.png"><br><br>
 
-    Now close the new tab in Hyper with <kbd>control</kbd>-<kbd>W</kbd>, and stop PostgreSQL again using <kbd>control</kbd>-<kbd>C</kbd>. PostgreSQL should shut down - your screen should look like this:<br><br>
+    Now close the new tab in Hyper with <kbd>control</kbd>-<kbd>W</kbd>, and stop PostgreSQL again using <kbd>control</kbd>-<kbd>C</kbd>. PostgreSQL should shut down - your screen should look similar to this (the last line will not be exactly the same):<br><br>
 
     <img src="./macos-5.6-psql.png"><br><br>
 
