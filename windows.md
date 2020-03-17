@@ -93,6 +93,12 @@
     source $USERPROFILE/.bash_profile
     ```
 
+    We can now test whether PostgreSQL has been correctly installed by starting the database by running the following command:
+
+    ```sh
+    postgres
+    ```
+
     If it worked, it should print out some lines with some messages that the database started and it is ready to accept connections:
 
     <img src="./macos-5-postgres.png"><br><br>
