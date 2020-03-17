@@ -96,7 +96,7 @@
     <img src="./macos-5-postgres.png"><br><br>
 
     You will need to run this every time you want to use your database.<br><br>
-    In order to stop PostgreSQL again, use the shortcut <kbd>control</kbd>-<kbd>C</kbd>.
+    In order to stop PostgreSQL again, just stop it like any other command line program using the shortcut <kbd>control</kbd>-<kbd>C</kbd>.
 
 15. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
 
