@@ -93,7 +93,7 @@
     source $USERPROFILE/.bash_profile
     ```
 
-    We can now test whether PostgreSQL has been correctly installed by starting the database by running the following command:
+    We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
 
     ```sh
     postgres
@@ -104,7 +104,8 @@
     <img src="./macos-5-postgres.png"><br><br>
 
     You will need to run this every time you want to use your database.<br><br>
-    In order to stop PostgreSQL again, just stop it like any other command line program using the shortcut <kbd>control</kbd>-<kbd>C</kbd>.
+
+    When you want to stop PostgreSQL again, just stop it like any other command line program using the shortcut <kbd>control</kbd>-<kbd>C</kbd>.<br><br>
 
 15. <a name="docker"></a>We will now install Docker.
 
