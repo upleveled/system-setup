@@ -103,11 +103,11 @@
 
     <img src="./macos-5-postgres.png"><br><br>
 
-    You will need to run this every time you want to use your database.<br><br>
+    You will need to run this every time you want to use your database.
 
-    When you want to stop PostgreSQL again, just stop it like any other command line program using the shortcut <kbd>control</kbd>-<kbd>C</kbd>.<br><br>
+    When you want to stop PostgreSQL again, just stop it like any other command line program using the shortcut <kbd>control</kbd>-<kbd>C</kbd>.
 
-    Now we will connect to PostgreSQL using a tool called `psql` and add a new table, to make sure everything is working with the connection.<br><br>
+    Now we will connect to PostgreSQL using a tool called `psql` and add a new table, to make sure everything is working with the connection.
 
     Open a new tab in Hyper using <kbd>control</kbd>-<kbd>T</kbd> and run the following command:<br><br>
 
@@ -178,7 +178,7 @@
     choco install docker-desktop
     ```
 
-    3. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
+    1. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
     **Option B - Windows 10 Home:**
@@ -190,7 +190,7 @@
     choco install docker-toolbox -ia /COMPONENTS="kitematic,virtualbox,dockercompose"
     ```
 
-    3. Open start menu and search for "Docker Quickstart Terminal". Run it. This will set up and start Docker in the background. You may close the window after it's running.<br><br>
+    1. Open start menu and search for "Docker Quickstart Terminal". Run it. This will set up and start Docker in the background. You may close the window after it's running.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
 16. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
