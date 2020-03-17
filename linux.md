@@ -104,6 +104,62 @@
 
     Your database will be started automatically - no need to start it manually.
 
+    Now we will connect to PostgreSQL using a tool called `psql` and add a new table, to make sure everything is working with the connection.
+
+    Run the following command:
+
+    ```sh
+    sudo -u postgres psql
+    ```
+
+    It should look like this:<br><br>
+
+    <img src="./macos-5.1-psql.png"><br><br>
+
+    If your screen looks like the above screenshot, type in or copy and paste the following query (this is a language called SQL):
+
+    ```sql
+    CREATE TABLE users(
+      id serial PRIMARY KEY,
+      first_name VARCHAR (100) NOT NULL,
+      last_name VARCHAR (100) NOT NULL
+    );
+    ```
+
+    It should print `CREATE TABLE` on the line after running the query. Your screen should look like this:<br><br>
+
+    <img src="./macos-5.2-psql.png"><br><br>
+
+    Now let's check that the table has been created. Run this query:
+
+    ```
+    \dt
+    ```
+
+    This will show the tables that you have, including the newly-created `users` table. Your screen should look like this:<br><br>
+
+    <img src="./macos-5.3-psql.png"><br><br>
+
+    Finally, let's delete the table again to clean up. Run this query:
+
+    ```sql
+    DROP TABLE users;
+    ```
+
+    It should print `DROP TABLE` on the line after running the query. Your screen should look like this:<br><br>
+
+    <img src="./macos-5.4-psql.png"><br><br>
+
+    Great, PostgreSQL is set up! 🚀 Now you can exit from `psql` again by writing `exit` and hitting return:
+
+    ```
+    exit
+    ```
+
+    It should exit and send you back to the command line. Your screen should look similar to this (the last line will not be exactly the same):<br><br>
+
+    <img src="./macos-5.5-psql.png"><br><br>
+
 13. Set up Docker (refer to [the instructions in the official docs](https://docs.docker.com/install/linux/docker-ce/ubuntu/))
 14. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>

@@ -98,6 +98,66 @@
     You will need to run this every time you want to use your database.<br><br>
     When you want to stop PostgreSQL again, just stop it like any other command line program using the shortcut <kbd>control</kbd>-<kbd>C</kbd>.
 
+    Now we will connect to PostgreSQL using a tool called `psql` and add a new table, to make sure everything is working with the connection.
+
+    Open a new tab in the terminal using <kbd>command</kbd>-<kbd>T</kbd> and run the following command:
+
+    ```sh
+    psql postgres
+    ```
+
+    It should look like this:<br><br>
+
+    <img src="./macos-5.1-psql.png"><br><br>
+
+    If your screen looks like the above screenshot, type in or copy and paste the following query (this is a language called SQL):
+
+    ```sql
+    CREATE TABLE users(
+      id serial PRIMARY KEY,
+      first_name VARCHAR (100) NOT NULL,
+      last_name VARCHAR (100) NOT NULL
+    );
+    ```
+
+    It should print `CREATE TABLE` on the line after running the query. Your screen should look like this:<br><br>
+
+    <img src="./macos-5.2-psql.png"><br><br>
+
+    Now let's check that the table has been created. Run this query:
+
+    ```
+    \dt
+    ```
+
+    This will show the tables that you have, including the newly-created `users` table. Your screen should look like this:<br><br>
+
+    <img src="./macos-5.3-psql.png"><br><br>
+
+    Finally, let's delete the table again to clean up. Run this query:
+
+    ```sql
+    DROP TABLE users;
+    ```
+
+    It should print `DROP TABLE` on the line after running the query. Your screen should look like this:<br><br>
+
+    <img src="./macos-5.4-psql.png"><br><br>
+
+    Great, PostgreSQL is set up! 🚀 Now you can exit from `psql` again by writing `exit` and hitting return:
+
+    ```
+    exit
+    ```
+
+    It should exit and send you back to the command line. Your screen should look similar to this (the last line will not be exactly the same):<br><br>
+
+    <img src="./macos-5.5-psql.png"><br><br>
+
+    Now close the new tab in Hyper with <kbd>command</kbd>-<kbd>W</kbd>, and stop PostgreSQL again using <kbd>control</kbd>-<kbd>C</kbd>. PostgreSQL should shut down - your screen should look similar to this (the last line will not be exactly the same):<br><br>
+
+    <img src="./macos-5.6-psql.png"><br><br>
+
 15. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
 
     ```sh
