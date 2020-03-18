@@ -221,3 +221,5 @@
     git config --global credential.helper wincred
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br>
+19. Open the Start menu and start Slack. Log in to the UpLeveled Slack.
+20. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.

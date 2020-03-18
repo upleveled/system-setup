@@ -196,3 +196,5 @@
     git config --global credential.helper cache
     ```
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
+19. Open Dash and start Slack. Log in to the UpLeveled Slack.
+20. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
