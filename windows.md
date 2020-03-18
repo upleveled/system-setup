@@ -13,9 +13,9 @@
 4.  Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
 5.  Copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
     ```sh
-    choco install git nodejs yarn vscode hyper -y
+    choco install git nodejs yarn vscode hyper zoom slack -y
     ```
-    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code and Hyper.<br><br>
+    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom and Slack.<br><br>
 6.  We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
     If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
     ```sh

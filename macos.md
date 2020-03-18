@@ -26,9 +26,9 @@
    This uses Homebrew to install Git, Node.js and Yarn.<br><br>
 7. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```sh
-   brew cask install visual-studio-code
+   brew cask install visual-studio-code zoomus slack
    ```
-   This uses Homebrew to install Visual Studio Code.<br><br>
+   This uses Homebrew Cask to install Visual Studio Code, Zoom and Slack.<br><br>
 8. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text, paste it in the terminal and hit return.<br><br>
    ```sh
