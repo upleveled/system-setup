@@ -44,7 +44,7 @@
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension wix.glean
    ```
-   This installs some extensions for VS Code.<br><br>
+   This installs some VS Code extensions we will need.<br><br>
 7. With each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```sh
    cd /tmp

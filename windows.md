@@ -26,7 +26,7 @@
     code --install-extension dbaeumer.vscode-eslint
     code --install-extension wix.glean
     ```
-    This installs some extensions for VS Code.<br><br>
+    This installs some VS Code extensions we will need.<br><br>
 7.  We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
     If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
     ```sh
