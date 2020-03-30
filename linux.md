@@ -34,7 +34,18 @@
    sudo apt-get install -y git nodejs yarn code
    ```
    This uses apt to install Git, Node.js, Yarn and Visual Studio Code.<br><br>
-6. With each line below, copy the text, paste it in the terminal and hit return.<br><br>
+6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+   ```sh
+   code --install-extension esbenp.prettier-vscode
+   code --install-extension jpoissonnier.vscode-styled-components
+   code --install-extension forbeslindesay.vscode-sql-template-literal
+   code --install-extension sysoev.vscode-open-in-github
+   code --install-extension kumar-harsh.graphql-for-vscode
+   code --install-extension dbaeumer.vscode-eslint
+   code --install-extension wix.glean
+   ```
+   This installs some extensions for VS Code.<br><br>
+7. With each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```sh
    cd /tmp
    wget https://zoom.us/client/latest/zoom_amd64.deb
@@ -42,12 +53,12 @@
    cd -
    ```
    This installs Zoom.<br><br>
-7. Copy the following text, paste it in the terminal and hit return.<br><br>
+8. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```sh
    sudo snap install slack --classic
    ```
    This uses Snap to install Slack.<br><br>
-8. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
+9. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, with each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```sh
    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -62,9 +73,9 @@
    sudo apt-get install -y google-chrome-stable
    ```
    This uses apt to install Chrome.<br><br>
-9. Install the [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
-10. Install the [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-11. Copy the following text, paste it in the terminal and hit return.<br><br>
+10. Install the [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+11. Install the [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+12. Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```sh
     npx create-react-app --help
@@ -72,9 +83,9 @@
 
     This will prepare a program that we will use in the course.<br><br>
 
-12. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
+13. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
     <img src="./general-1-cra-installed.png"><br><br>
-13. Next we will configure VS Code.<br><br>
+14. Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
     <img src="./general-2-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -101,7 +112,7 @@
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
-14. <a name="postgresql"></a>We will now install PostgreSQL. Copy and run each of these lines separately in the terminal:<br>
+15. <a name="postgresql"></a>We will now install PostgreSQL. Copy and run each of these lines separately in the terminal:<br>
 
     ```sh
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -170,11 +181,11 @@
 
     <img src="./macos-5.5-psql.png"><br><br>
 
-15. Set up Docker (refer to [the instructions in the official docs](https://docs.docker.com/install/linux/docker-ce/ubuntu/))
-16. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
+16. Set up Docker (refer to [the instructions in the official docs](https://docs.docker.com/install/linux/docker-ce/ubuntu/))
+17. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
-17. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+18. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -194,10 +205,10 @@
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-18. Copy the following text, paste it in the terminal and hit return.<br><br>
+19. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```sh
     git config --global credential.helper cache
     ```
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
-19. Open Dash and start Slack. Log in to the UpLeveled Slack.
-20. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+20. Open Dash and start Slack. Log in to the UpLeveled Slack.
+21. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
