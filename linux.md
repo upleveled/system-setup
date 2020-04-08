@@ -17,10 +17,10 @@
    This prepares the system to install Yarn.<br><br>
 4. With each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```sh
-   sudo apt-get update
-   sudo apt-get install -y apt-transport-https
-   sudo apt-get update
-   sudo apt-get install -y git nodejs yarn
+   sudo apt update
+   sudo apt install -y apt-transport-https
+   sudo apt update
+   sudo apt install -y git nodejs yarn
    ```
    This uses apt to install Git, Node.js and Yarn.<br><br>
 5. Copy the following text, paste it in the terminal and hit return.<br><br>
@@ -61,10 +61,10 @@
    echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
    ```
    ```sh
-   sudo apt-get update
+   sudo apt update
    ```
    ```sh
-   sudo apt-get install -y google-chrome-stable
+   sudo apt install -y google-chrome-stable
    ```
    This uses apt to install Chrome.<br><br>
 10. Install the [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
@@ -111,8 +111,8 @@
     ```sh
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-    sudo apt-get update
-    sudo apt-get install postgresql-12
+    sudo apt update
+    sudo apt install postgresql-12
     ```
 
     This will install PostgreSQL and create a default user of `postgres` with no password (only authorized users can use this user).<br><br>
