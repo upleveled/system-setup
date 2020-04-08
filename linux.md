@@ -17,23 +17,17 @@
    This prepares the system to install Yarn.<br><br>
 4. With each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```sh
-   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-   ```
-   ```sh
-   sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
-   ```
-   ```sh
-   sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-   ```
-   This prepares the system to install Visual Studio Code.<br><br>
-5. With each line below, copy the text, paste it in the terminal and hit return.<br><br>
-   ```sh
    sudo apt-get update
    sudo apt-get install -y apt-transport-https
    sudo apt-get update
-   sudo apt-get install -y git nodejs yarn code
+   sudo apt-get install -y git nodejs yarn
    ```
-   This uses apt to install Git, Node.js, Yarn and Visual Studio Code.<br><br>
+   This uses apt to install Git, Node.js and Yarn.<br><br>
+5. Copy the following text, paste it in the terminal and hit return.<br><br>
+   ```sh
+   sudo snap install --classic code
+   ```
+   This uses Snap to install VS Code.<br><br>
 6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```sh
    code --install-extension esbenp.prettier-vscode
