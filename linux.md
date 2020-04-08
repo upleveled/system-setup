@@ -43,7 +43,7 @@
    ```sh
    cd /tmp
    wget https://zoom.us/client/latest/zoom_amd64.deb
-   sudo dpkg -i zoom_amd64.deb
+   sudo dpkg --install zoom_amd64.deb
    cd -
    ```
    This installs Zoom.<br><br>
@@ -53,20 +53,14 @@
    ```
    This uses Snap to install Slack.<br><br>
 9. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
-   If you don't have Chrome installed yet, you can install it with Homebrew. To do this, with each line below, copy the text, paste it in the terminal and hit return.<br><br>
+   If you don't have Chrome installed yet, you can install it by copying each line below, pasting it in the terminal and hitting return.<br><br>
    ```sh
-   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+   cd /tmp
+   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+   sudo dpkg --install google-chrome-stable_current_amd64.deb
+   cd -
    ```
-   ```sh
-   echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-   ```
-   ```sh
-   sudo apt update
-   ```
-   ```sh
-   sudo apt install -y google-chrome-stable
-   ```
-   This uses apt to install Chrome.<br><br>
+   This installs Chrome.<br><br>
 10. Install the [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
 11. Install the [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 12. Copy the following text, paste it in the terminal and hit return.<br><br>
