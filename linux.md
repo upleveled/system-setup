@@ -4,7 +4,7 @@
    <img src="linux-1-open-terminal.png"><br>
 2. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```sh
-   curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+   curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
    ```
    This prepares the system to install Node.js.<br><br>
 3. With each line below, copy the text, paste it in the terminal and hit return.<br><br>
