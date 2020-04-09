@@ -154,10 +154,10 @@
     <img src="./macos-5.5-psql.png"><br><br>
 
 14. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
-   sudo snap install docker
-   ```
-   This uses Snap to install Docker.<br><br>
+    ```sh
+    sudo snap install docker
+    ```
+    This uses Snap to install Docker.<br><br>
 15. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
