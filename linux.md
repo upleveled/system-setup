@@ -165,26 +165,36 @@
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
+
     ```sh
     git config --global user.name "Mona Lisa Octocat"
     ```
+
     You can test whether the name was set correctly with the next command (if it worked, it will print the name on the next line):<br><br>
+
     ```sh
     git config --global user.name
     ```
+
     <br>For running the next command, **add your email in quotes**:<br><br>
+
     ```sh
     git config --global user.email "monalisaoctocat@example.com"
     ```
+
     You can test whether the email was set correctly with with the next command (if it worked, it will print the email on the next line):<br><br>
+
     ```sh
     git config --global user.email
     ```
+
     This prepares `git` so that your work is attributed correctly to you.<br><br>
 17. Copy the following text, paste it in the terminal and hit return.<br><br>
+
     ```sh
     git config --global credential.helper cache
     ```
+
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
 18. Open Dash and start Slack. Log in to the UpLeveled Slack.
 19. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
