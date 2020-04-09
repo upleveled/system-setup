@@ -9,7 +9,7 @@
    This uses Snap to install Node.js and Yarn.<br><br>
 3. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```sh
-   sudo snap install --classic code
+   sudo snap install code --classic
    ```
    This uses Snap to install VS Code.<br><br>
 4. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
