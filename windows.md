@@ -128,7 +128,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     Now we will connect to PostgreSQL using a tool called `psql` and add a new table, to make sure everything is working with the connection.
 
-    Open a new tab in Hyper using <kbd>control</kbd>-<kbd>T</kbd> and run the following command:
+    Open a new tab in Hyper using <kbd>control</kbd>-<kbd>shift</kbd>-<kbd>T</kbd> and run the following command:
 
     ```sh
     psql -U postgres
