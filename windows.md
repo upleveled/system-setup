@@ -16,6 +16,7 @@
     choco install git nodejs yarn vscode hyper zoom slack -y
     ```
     This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom and Slack.<br><br>
+    **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
 6.  Copy each line in the following text, right-click in the black middle part of the Command Prompt window to paste the text and hit enter.<br><br>
     ```sh
     code --install-extension esbenp.prettier-vscode
