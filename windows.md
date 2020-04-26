@@ -108,6 +108,10 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     source $USERPROFILE/.bash_profile
     ```
 
+    You may encounter some "Permission denied" warnings during some of these steps, which should be no problem:
+
+    <img src="./windows-4-permission-denied.png"><br><br>
+
     We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
 
     ```sh
