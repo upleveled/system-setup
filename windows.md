@@ -1,26 +1,26 @@
 Before you start, please make sure that you're running Windows 8.1 or Windows 10. Some things may not work on Windows 7, since it is no longer supported as of early 2020.
 
-1.  Open the Start menu and type "Windows Update". Make sure that you have all of the latest updates. 
-2.  Open the Start menu and type "cmd.exe". Right-click on the item "Command Prompt" or "Eingabeaufforderung" that appears and choose "Run as administrator":<br>
+1.  Open the Start menu and type "Windows Update". Make sure that you have all of the latest updates.
+2.  Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
     <br>
-    <img src="./windows-1-run-cmd-as-admin.jpg">
-    <br>This will run the Command Prompt as an administrator user<br><br>
-3.  Copy the following text (be sure you select all of it, it's very long) and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
+    <img src="./windows-1-run-powershell-as-admin.png">
+    <br>This will run Powershell as an administrator user<br><br>
+3.  Copy the following text (be sure you select all of it, it's very long) and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
     ```sh
-    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     ```
-    This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command prompt.
+    This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command line.
     <br>
 4.  The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br><br>
     <img src="./windows-2-chocolatey-installed.png"><br><br>
-5.  Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
-6.  Copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
+5.  Close PowerShell and open it again as administrator (like in step 1)<br><br>
+6.  Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
     ```sh
     choco install git nodejs yarn vscode hyper zoom slack -y
     ```
     This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom and Slack.<br><br>
     **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
-7.  Copy each line in the following text, right-click in the black middle part of the Command Prompt window to paste the text and hit enter.<br><br>
+7.  Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
     ```sh
     code --install-extension esbenp.prettier-vscode
     code --install-extension jpoissonnier.vscode-styled-components
@@ -32,15 +32,15 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     ```
     This installs some VS Code extensions we will need.<br><br>
 8.  We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
-    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.<br><br>
+    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
     ```sh
     choco install chrome -y
     ```
     This uses Chocolatey to install Chrome.<br><br>
 9.  Install the [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
-10.  Install the [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-11. Close the Command Prompt and open it again as administrator (like in step 1)<br><br>
-12. Copy the following text and right-click in the Command Prompt window to paste the text. Hit enter.<br><br>
+10. Install the [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+11. Close PowerShell and open it again as administrator (like in step 1)<br><br>
+12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
     ```sh
     npx create-react-app --help
     ```
@@ -202,8 +202,8 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     **Option B - Windows 10 Home:**
 
-    1. Open the Start menu and type "cmd.exe". Right-click on the item "Command Prompt" or "Eingabeaufforderung" that appears and choose "Run as administrator.
-    2. Copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.
+    1. Open PowerShell as administrator (like in step 1).
+    2. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.
 
     ```sh
     choco install docker-toolbox -ia /COMPONENTS="kitematic,virtualbox,dockercompose" -y
