@@ -134,7 +134,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     psql -U postgres
     ```
 
-    It will ask you for a password - enter `postgres` (the password will not appear. Now it should look like this:<br><br>
+    It will ask you for a password - enter `postgres` (the password will not be visible). Now it should look like this:<br><br>
 
     <img src="./macos-5.1-psql.png"><br><br>
 
