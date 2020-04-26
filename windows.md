@@ -1,5 +1,4 @@
-Before you start, please make sure that you're running Windows 8.1 or Windows 10. Some things may not work on Windows 7, since it has reached End of Life on 14 January 2020.
-
+Before you start, please make sure that you're running Windows 8.1 or Windows 10. Some things may not work on Windows 7, since it is no longer supported as of early 2020.
 
 1.  Open the Start menu and type "Windows Update". Make sure that you have all of the latest updates. 
 2.  Open the Start menu and type "cmd.exe". Right-click on the item "Command Prompt" or "Eingabeaufforderung" that appears and choose "Run as administrator":<br>
