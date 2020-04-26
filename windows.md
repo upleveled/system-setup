@@ -194,7 +194,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     2. Copy the following text and paste it into Hyper. Hit enter.
 
     ```sh
-    choco install docker-desktop
+    choco install docker-desktop -y
     ```
 
     1. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
@@ -206,7 +206,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     2. Copy the following text and right-click in the black middle part of the Command Prompt window to paste the text. Hit enter.
 
     ```sh
-    choco install docker-toolbox -ia /COMPONENTS="kitematic,virtualbox,dockercompose"
+    choco install docker-toolbox -ia /COMPONENTS="kitematic,virtualbox,dockercompose" -y
     ```
 
     1. Open start menu and search for "Docker Quickstart Terminal". Run it. This will set up and start Docker in the background. You may close the window after it's running.<br><br>
