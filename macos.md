@@ -56,7 +56,7 @@
 13. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
     <img src="./general-1-cra-installed.png"><br><br>
 14. Next we will configure VS Code.<br><br>
-    Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
+    Open VS Code and then press the keys <kbd>cmd</kbd>-<kbd>shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
     <img src="./general-2-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
     First of all, identify whether your settings file is empty or not. This is what an empty file looks like:<br><br>
