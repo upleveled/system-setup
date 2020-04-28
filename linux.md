@@ -154,14 +154,26 @@
     <img src="./macos-5.5-psql.png"><br><br>
 
 14. Copy the following text, paste it in the terminal and hit return.<br><br>
+
     ```sh
     sudo snap install docker
     ```
+
     This uses Snap to install Docker.<br><br>
-15. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
+
+15. Test if Docker is installed by running the following command on the command line:
+
+    ```sh
+    docker run hello-world
+    ```
+
+    It should print out a welcome message like this:<br><br>
+    <img src="macos-6-docker-hello-world.png"><br><br>
+
+16. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
-16. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+17. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -181,10 +193,10 @@
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-17. Copy the following text, paste it in the terminal and hit return.<br><br>
+18. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```sh
     git config --global credential.helper cache
     ```
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
-18. Open Dash and start Slack. Log in to the UpLeveled Slack.
-19. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+19. Open Dash and start Slack. Log in to the UpLeveled Slack.
+20. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.

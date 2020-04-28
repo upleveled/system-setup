@@ -212,10 +212,16 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     3. Open start menu and search for "Docker Quickstart Terminal". Run it. This will set up and start Docker in the background. You may close the window after it's running.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
-18. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
+18. Test if Docker is installed by running the following command on the command line:
+    ```sh
+    docker run hello-world
+    ```
+    It should print out a welcome message like this:<br><br>
+    <img src="macos-6-docker-hello-world.png"><br><br>
+19. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
-19. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+20. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -235,10 +241,10 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-20. Copy the following text, paste it in the terminal and hit return.<br><br>
+21. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```sh
     git config --global credential.helper wincred
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br>
-21. Open the Start menu and start Slack. Log in to the UpLeveled Slack.
-22. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+22. Open the Start menu and start Slack. Log in to the UpLeveled Slack.
+23. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
