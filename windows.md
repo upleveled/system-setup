@@ -197,7 +197,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     choco install docker-desktop -y
     ```
 
-    1. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
+    3. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
     **Option B - Windows 10 Home:**
@@ -209,7 +209,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     choco install docker-toolbox -ia /COMPONENTS="kitematic,virtualbox,dockercompose" -y
     ```
 
-    1. Open start menu and search for "Docker Quickstart Terminal". Run it. This will set up and start Docker in the background. You may close the window after it's running.<br><br>
+    3. Open start menu and search for "Docker Quickstart Terminal". Run it. This will set up and start Docker in the background. You may close the window after it's running.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
 18. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
