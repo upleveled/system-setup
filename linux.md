@@ -170,7 +170,9 @@
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
 
-16. If you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
+16. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+
+    If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 17. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
@@ -198,5 +200,8 @@
     git config --global credential.helper cache
     ```
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
-19. Open Dash and start Slack. Log in to the UpLeveled Slack.
-20. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+19. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+    <img src="./general-8-github-your-profile.png"><br><br>
+    Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
+20. Open Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
+21. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
