@@ -43,7 +43,7 @@
 9. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text, paste it in the terminal and hit return.<br><br>
    ```sh
-   brew cask install visual-studio-code
+   brew cask install google-chrome
    ```
    This uses Homebrew to install Chrome.<br><br>
 10. Install the [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
