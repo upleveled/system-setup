@@ -22,12 +22,13 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
 7.  Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
     ```sh
-    code --install-extension esbenp.prettier-vscode
-    code --install-extension jpoissonnier.vscode-styled-components
-    code --install-extension forbeslindesay.vscode-sql-template-literal
-    code --install-extension sysoev.vscode-open-in-github
-    code --install-extension kumar-harsh.graphql-for-vscode
+    code --install-extension blanu.vscode-styled-jsx
     code --install-extension dbaeumer.vscode-eslint
+    code --install-extension esbenp.prettier-vscode
+    code --install-extension forbeslindesay.vscode-sql-template-literal
+    code --install-extension jpoissonnier.vscode-styled-components
+    code --install-extension kumar-harsh.graphql-for-vscode
+    code --install-extension sysoev.vscode-open-in-github
     code --install-extension wix.glean
     ```
     This installs some VS Code extensions we will need.<br><br>

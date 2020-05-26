@@ -31,12 +31,13 @@
    This uses Homebrew Cask to install Visual Studio Code, Zoom and Slack.<br><br>
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```sh
-   code --install-extension esbenp.prettier-vscode
-   code --install-extension jpoissonnier.vscode-styled-components
-   code --install-extension forbeslindesay.vscode-sql-template-literal
-   code --install-extension sysoev.vscode-open-in-github
-   code --install-extension kumar-harsh.graphql-for-vscode
+   code --install-extension blanu.vscode-styled-jsx
    code --install-extension dbaeumer.vscode-eslint
+   code --install-extension esbenp.prettier-vscode
+   code --install-extension forbeslindesay.vscode-sql-template-literal
+   code --install-extension jpoissonnier.vscode-styled-components
+   code --install-extension kumar-harsh.graphql-for-vscode
+   code --install-extension sysoev.vscode-open-in-github
    code --install-extension wix.glean
    ```
    This installs some VS Code extensions we will need.<br><br>
