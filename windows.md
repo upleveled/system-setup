@@ -22,6 +22,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
 7.  Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
     ```sh
+    code --install-extension AndrewRazumovsky.vscode-styled-jsx-languageserver
     code --install-extension blanu.vscode-styled-jsx
     code --install-extension dbaeumer.vscode-eslint
     code --install-extension esbenp.prettier-vscode
@@ -224,6 +225,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
+
 20. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>

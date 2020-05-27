@@ -31,6 +31,7 @@
    This uses Homebrew Cask to install Visual Studio Code, Zoom and Slack.<br><br>
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```sh
+   code --install-extension AndrewRazumovsky.vscode-styled-jsx-languageserver
    code --install-extension blanu.vscode-styled-jsx
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension esbenp.prettier-vscode
@@ -194,6 +195,7 @@
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
+
 19. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
