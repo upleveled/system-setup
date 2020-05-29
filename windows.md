@@ -39,17 +39,19 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     choco install chrome -y
     ```
     This uses Chocolatey to install Chrome.<br><br>
-9.  Install the [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
-10. Install the [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-11. Close PowerShell and open it again as administrator (like in step 1)<br><br>
-12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
+9.  Install the following Chrome Extensions:
+    - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+    - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+    - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
+10. Close PowerShell and open it again as administrator (like in step 1)<br><br>
+11. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
     ```sh
     npx create-react-app --help
     ```
     This will prepare a program that we will use in the course.<br><br>
-13. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
+12. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
     <img src="./general-1-cra-installed.png"><br><br>
-14. Next we will configure VS Code.<br><br>
+13. Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
     <img src="./general-2-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -76,7 +78,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
-15. Now we will configure Hyper.<br><br>
+14. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
     <img src="./windows-3-hyper-preferences.png"><br><br>
     In this file, we will do three things:
@@ -87,7 +89,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     Then save the file and close and restart Hyper.
 
-16. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+15. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -188,7 +190,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-17. <a name="docker"></a>We will now install Docker.
+16. <a name="docker"></a>We will now install Docker.
 
     **Option A - Windows 10 Pro:**
 
@@ -214,19 +216,19 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     3. Open start menu and search for "Docker Quickstart Terminal". Run it. This will set up and start Docker in the background. You may close the window after it's running.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
-18. Test if Docker is installed by running the following command on the command line:
+17. Test if Docker is installed by running the following command on the command line:
     ```sh
     docker run hello-world
     ```
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
-19. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+18. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-20. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+19. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -246,13 +248,13 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-21. Copy the following text, paste it in the terminal and hit return.<br><br>
+20. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```sh
     git config --global credential.helper wincred
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br>
-22. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+21. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-23. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
-24. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+22. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
+23. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.

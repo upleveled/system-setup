@@ -48,16 +48,18 @@
    brew cask install google-chrome
    ```
    This uses Homebrew to install Chrome.<br><br>
-10. Install the [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
-11. Install the [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-12. Copy the following text, paste it in the terminal and hit return.<br><br>
+10. Install the following Chrome Extensions:
+    - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+    - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+    - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en))
+11. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```sh
     npx create-react-app --help
     ```
     This step will prepare a program that we will use in the course.<br><br>
-13. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
+12. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
     <img src="./general-1-cra-installed.png"><br><br>
-14. Next we will configure VS Code.<br><br>
+13. Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>cmd</kbd>-<kbd>shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
     <img src="./general-2-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -84,7 +86,7 @@
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
-15. <a name="postgresql"></a>We will now install PostgreSQL. Copy the following text, paste it in the terminal and hit return.
+14. <a name="postgresql"></a>We will now install PostgreSQL. Copy the following text, paste it in the terminal and hit return.
 
     ```sh
     brew install postgresql
@@ -171,7 +173,7 @@
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-16. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
+15. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
 
     ```sh
     brew cask install docker
@@ -181,7 +183,7 @@
     This uses Homebrew Cask to install Docker for Mac and starts it for the first time to set it up. Wait for a message at the top of the window to indicate that everything is finished being set up:<br><br>
     <img src="./macos-6-docker.png"><br><br>
 
-17. Test if Docker is installed by running the following command on the command line:
+16. Test if Docker is installed by running the following command on the command line:
 
     ```sh
     docker run hello-world
@@ -190,13 +192,13 @@
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
 
-18. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+17. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-19. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+18. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -216,13 +218,13 @@
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-20. Copy the following text, paste it in the terminal and hit return.<br><br>
+19. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```sh
     git config --global credential.helper osxkeychain
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br>
-21. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+20. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-22. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
-23. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+21. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
+22. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
