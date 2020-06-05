@@ -96,8 +96,8 @@
     Now let's set an environment variable to tell PostgreSQL where to put the data:
 
     ```sh
-    echo "export PGDATA=/usr/local/var/postgres" >> ~/.bash_profile
-    source ~/.bash_profile
+    echo "export PGDATA=/usr/local/var/postgres" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
+    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     ```
 
     We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
