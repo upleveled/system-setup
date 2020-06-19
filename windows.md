@@ -21,9 +21,17 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom and Slack.<br><br>
     **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
 7.  Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
+
+    <!--
+      vscode-styled-jsx conflicts with vscode-styled-components
+
+      https://github.com/styled-components/vscode-styled-components/issues/208#issuecomment-646606763
+
+      code --install-extension AndrewRazumovsky.vscode-styled-jsx-languageserver
+      code --install-extension blanu.vscode-styled-jsx
+    -->
+
     ```sh
-    code --install-extension AndrewRazumovsky.vscode-styled-jsx-languageserver
-    code --install-extension blanu.vscode-styled-jsx
     code --install-extension dbaeumer.vscode-eslint
     code --install-extension esbenp.prettier-vscode
     code --install-extension forbeslindesay.vscode-sql-template-literal
@@ -32,7 +40,9 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     code --install-extension sysoev.vscode-open-in-github
     code --install-extension wix.glean
     ```
+
     This installs some VS Code extensions we will need.<br><br>
+
 8.  We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
     If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
     ```sh
