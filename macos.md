@@ -207,7 +207,7 @@
     Copy the following text, paste it in the terminal and hit return.
 
     ```sh
-    sudo npm install -g expo-cli
+    npm install -g expo-cli
     ```
 
     On your phone, go to the app store and install Expo on your phone. Create an account and log in.
