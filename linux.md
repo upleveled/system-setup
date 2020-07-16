@@ -184,12 +184,12 @@
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
 
-15. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+15. <a name="expo-react-native"></a>We will now install Expo CLI for React Native.
 
-    Copy the following text, paste it in Hyper and hit return.
+    Copy the following text, paste it in the terminal and hit return.
 
     ```sh
-    npm install -g expo-cli
+    sudo npm install -g expo-cli
     ```
 
     On your phone, go to the app store and install Expo on your phone. Create an account and log in.
