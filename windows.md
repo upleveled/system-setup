@@ -32,6 +32,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     -->
 
     ```sh
+    code --install-extension Cardinal90.multi-cursor-case-preserve
     code --install-extension dbaeumer.vscode-eslint
     code --install-extension esbenp.prettier-vscode
     code --install-extension forbeslindesay.vscode-sql-template-literal
