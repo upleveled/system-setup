@@ -226,8 +226,13 @@
     git config --global credential.helper cache
     ```
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
-19. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+19. Copy the following text, paste it in the terminal and hit return.<br><br>
+    ```sh
+    git config --global init.defaultBranch main
+    ```
+    This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
+20. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-20. Open Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
-21. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+21. Open Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
+22. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
