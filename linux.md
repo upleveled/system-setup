@@ -92,6 +92,8 @@
      "workbench.editor.closeEmptyGroups": false,
      "prettier.singleQuote": true,
      "prettier.trailingComma": "all",
+     "files.trimTrailingWhitespace": true,
+     "files.trimFinalNewlines": true,
      "[markdown]": {
        "files.trimTrailingWhitespace": false
      },

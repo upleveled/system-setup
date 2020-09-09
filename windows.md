@@ -82,6 +82,8 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
      "workbench.editor.closeEmptyGroups": false,
      "prettier.singleQuote": true,
      "prettier.trailingComma": "all",
+     "files.trimTrailingWhitespace": true,
+     "files.trimFinalNewlines": true,
      "[markdown]": {
        "files.trimTrailingWhitespace": false
      },
