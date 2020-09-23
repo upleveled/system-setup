@@ -82,21 +82,21 @@
     <img src="./general-4-vscode-settings-comma.png"><br><br>
     Now in both cases you will want to paste the following settings **before the closing curly bracket (before the `}`)**:<br><br>
     ```json
-     "editor.wordWrap": "on",
-     "editor.minimap.enabled": false,
-     "editor.formatOnSave": true,
-     "files.autoSave": "onFocusChange",
-     "explorer.openEditors.visible": 0,
-     "editor.tabSize": 2,
-     "files.trimTrailingWhitespace": true,
-     "files.trimFinalNewlines": true,
-     "[markdown]": {
-       "files.trimTrailingWhitespace": false
-     },
-     "workbench.editor.tabSizing": "shrink",
-     "workbench.editor.closeEmptyGroups": false,
-     "prettier.singleQuote": true,
-     "prettier.trailingComma": "all",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "explorer.openEditors.visible": 0,
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.closeEmptyGroups": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
     ```
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
