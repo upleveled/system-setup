@@ -47,6 +47,7 @@
    code --install-extension forbeslindesay.vscode-sql-template-literal
    code --install-extension jpoissonnier.vscode-styled-components
    code --install-extension kumar-harsh.graphql-for-vscode
+   code --install-extension meganrogge.template-string-converter
    code --install-extension sysoev.vscode-open-in-github
    code --install-extension wix.glean
    ```

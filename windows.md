@@ -38,6 +38,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     code --install-extension forbeslindesay.vscode-sql-template-literal
     code --install-extension jpoissonnier.vscode-styled-components
     code --install-extension kumar-harsh.graphql-for-vscode
+    code --install-extension meganrogge.template-string-converter
     code --install-extension sysoev.vscode-open-in-github
     code --install-extension wix.glean
     ```
@@ -243,6 +244,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     ```sh
     npm install -g windows-build-tools
     ```
+
 19. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
