@@ -73,22 +73,44 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     <img src="./general-4-vscode-settings-comma.png"><br><br>
     Now in both cases you will want to paste the following settings **before the closing curly bracket (before the `}`)**:<br><br>
     ```json
-     "editor.wordWrap": "on",
-     "editor.minimap.enabled": false,
-     "editor.formatOnSave": true,
-     "files.autoSave": "onFocusChange",
-     "explorer.openEditors.visible": 0,
-     "editor.tabSize": 2,
-     "files.trimTrailingWhitespace": true,
-     "files.trimFinalNewlines": true,
-     "[markdown]": {
-       "files.trimTrailingWhitespace": false
-     },
-     "workbench.editor.tabSizing": "shrink",
-     "workbench.editor.closeEmptyGroups": false,
-     "prettier.singleQuote": true,
-     "prettier.trailingComma": "all",
-     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.autoSave": "onFocusChange",
+    "explorer.openEditors.visible": 0,
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.closeEmptyGroups": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     ```
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
