@@ -16,9 +16,9 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 5.  Close PowerShell and open it again as administrator (like in step 1)<br><br>
 6.  Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
     ```sh
-    choco install git nodejs yarn vscode hyper zoom slack -y
+    choco install git nodejs yarn vscode hyper zoom slack postman -y
     ```
-    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom and Slack.<br><br>
+    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom, Slack and Postman.<br><br>
     **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
 7.  Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 

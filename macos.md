@@ -26,9 +26,9 @@
    This uses Homebrew to install Git, Node.js and Yarn.<br><br>
 7. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```sh
-   brew cask install visual-studio-code zoomus slack
+   brew cask install visual-studio-code zoomus slack postman
    ```
-   This uses Homebrew Cask to install Visual Studio Code, Zoom and Slack.<br><br>
+   This uses Homebrew Cask to install Visual Studio Code, Zoom, Slack and Postman.<br><br>
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
     <!--
