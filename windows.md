@@ -248,15 +248,19 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     **Option B - Windows 10 Home:**
 
-    1. Open PowerShell as administrator (like in step 1).
-    2. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.
+    1. Click on the start menu, type in "winver" to the search and verify you have at least Windows 10 version 1903. If your number is lower than 1903, run Windows Update.<br><br>
+       <img src="windows-5-winver.jpg"><br><br>
+    2. Open PowerShell as administrator (like in step 1).
+    3. Copy and run each of these lines separately in the PowerShell window:
 
     ```sh
-    choco install docker-toolbox -ia /COMPONENTS="kitematic,virtualbox,dockercompose" -y
+    choco install wsl2 -y
+    choco install wsl-ubuntu-2004 -y
+    choco install docker-desktop -y
     ```
 
-    3. Open start menu and search for "Docker Quickstart Terminal". Run it. This will set up and start Docker in the background. You may close the window after it's running.<br><br>
-       You will need to run this every time you want to work with Docker after you restart.
+    4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
+    5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
 
 17. Test if Docker is installed by running the following command on the command line:
     ```sh
