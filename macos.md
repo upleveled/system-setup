@@ -285,6 +285,6 @@
 
 1. If you need to record your screen with sound (with export to mp4 and gif), you may want to try out Kap:
 
-```
+```sh
 brew cask install kap
 ```
