@@ -6,7 +6,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     <img src="./windows-1-run-powershell-as-admin.png">
     <br>This will run Powershell as an administrator user<br><br>
 3.  Copy the following text (be sure you select all of it, it's very long) and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
-    ```sh
+    ```bash
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     ```
     This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command line.
@@ -15,23 +15,14 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     <img src="./windows-2-chocolatey-installed.png"><br><br>
 5.  Close PowerShell and open it again as administrator (like in step 1)<br><br>
 6.  Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
-    ```sh
+    ```bash
     choco install git nodejs yarn vscode hyper zoom slack postman -y
     ```
     This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom, Slack and Postman.<br><br>
     **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
 7.  Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
-    <!--
-      vscode-styled-jsx conflicts with vscode-styled-components
-
-      https://github.com/styled-components/vscode-styled-components/issues/208#issuecomment-646606763
-
-      code --install-extension AndrewRazumovsky.vscode-styled-jsx-languageserver
-      code --install-extension blanu.vscode-styled-jsx
-    -->
-
-    ```sh
+    ```bash
     code --install-extension Cardinal90.multi-cursor-case-preserve
     code --install-extension dbaeumer.vscode-eslint
     code --install-extension esbenp.prettier-vscode
@@ -47,7 +38,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
 8.  We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
     If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
-    ```sh
+    ```bash
     choco install chrome -y
     ```
     This uses Chocolatey to install Chrome.<br><br>
@@ -57,7 +48,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
 10. Close PowerShell and open it again as administrator (like in step 1)<br><br>
 11. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
-    ```sh
+    ```bash
     npx create-react-app --help
     ```
     This will prepare a program that we will use in the course.<br><br>
@@ -135,7 +126,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     Copy the following text, paste it in Hyper and hit return.
 
-    ```sh
+    ```bash
     choco install postgresql12 --params '/Password:postgres'
     ```
 
@@ -145,7 +136,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
-    ```sh
+    ```bash
     cd /c/
     POSTGRES_PATH=$(find . -name "psql.exe" -print -quit)
     POSTGRES_BIN_PATH=$(dirname "${POSTGRES_PATH/./\/c}")
@@ -160,7 +151,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
 
-    ```sh
+    ```bash
     postgres
     ```
 
@@ -176,7 +167,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     Open a new tab in Hyper using <kbd>control</kbd>-<kbd>shift</kbd>-<kbd>T</kbd> and run the following command:
 
-    ```sh
+    ```bash
     psql -U postgres
     ```
 
@@ -239,7 +230,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     1. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
     2. Copy the following text and paste it into Hyper. Hit enter.
 
-    ```sh
+    ```bash
     choco install docker-desktop -y
     ```
 
@@ -253,7 +244,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     2. Open PowerShell as administrator (like in step 1).
     3. Copy and run each of these lines separately in the PowerShell window:
 
-    ```sh
+    ```bash
     choco install wsl2 -y
     choco install wsl-ubuntu-2004 -y
     choco install docker-desktop -y
@@ -263,7 +254,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
 
 17. Test if Docker is installed by running the following command on the command line:
-    ```sh
+    ```bash
     docker run hello-world
     ```
     It should print out a welcome message like this:<br><br>
@@ -272,7 +263,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     Copy the following text, paste it in Hyper and hit return.
 
-    ```sh
+    ```bash
     npm install -g windows-build-tools
     ```
 
@@ -280,7 +271,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     Copy the following text, paste it in Hyper and hit return.
 
-    ```sh
+    ```bash
     npm install -g expo-cli
     ```
 
@@ -297,29 +288,29 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
-    ```sh
+    ```bash
     git config --global user.name "Mona Lisa Octocat"
     ```
     You can test whether the name was set correctly with the next command (if it worked, it will print the name on the next line):<br><br>
-    ```sh
+    ```bash
     git config --global user.name
     ```
     <br>For running the next command, **add your email in quotes**:<br><br>
-    ```sh
+    ```bash
     git config --global user.email "monalisaoctocat@example.com"
     ```
     You can test whether the email was set correctly with with the next command (if it worked, it will print the email on the next line):<br><br>
-    ```sh
+    ```bash
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
 23. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```sh
+    ```bash
     git config --global credential.helper wincred
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br>
 24. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```sh
+    ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
@@ -328,3 +319,10 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
 26. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
 27. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+
+## Optional Software
+
+1. If you would like to check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
+   ```bash
+   code --install-extension streetsidesoftware.code-spell-checker
+   ```

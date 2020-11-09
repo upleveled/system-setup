@@ -3,27 +3,18 @@
 1. Click on the Ubuntu icon in the top left to open the Dash, type in "Terminal" and click on the matching application.<br><br>
    <img src="linux-1-open-terminal.png"><br>
 2. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    sudo snap install node --channel=14/stable --classic
    ```
    This uses Snap to install Node.js and Yarn.<br><br>
 3. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    sudo snap install code --classic
    ```
    This uses Snap to install VS Code.<br><br>
 4. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
-    <!--
-      vscode-styled-jsx conflicts with vscode-styled-components
-   
-      https://github.com/styled-components/vscode-styled-components/issues/208#issuecomment-646606763
-   
-      code --install-extension AndrewRazumovsky.vscode-styled-jsx-languageserver
-      code --install-extension blanu.vscode-styled-jsx
-    -->
-
-   ```sh
+   ```bash
    code --install-extension Cardinal90.multi-cursor-case-preserve
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension esbenp.prettier-vscode
@@ -38,7 +29,7 @@
    This installs some VS Code extensions we will need.<br><br>
 
 5. With each line below, copy the text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    cd /tmp
    wget https://zoom.us/client/latest/zoom_amd64.deb
    sudo dpkg --install zoom_amd64.deb
@@ -46,18 +37,18 @@
    ```
    This installs Zoom.<br><br>
 6. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    sudo snap install slack --classic
    ```
    This uses Snap to install Slack.<br><br>
 7. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    sudo snap install postman
    ```
    This uses Snap to install Postman.<br><br>
 8. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
    If you don't have Chrome installed yet, you can install it by copying each line below, pasting it in the terminal and hitting return.<br><br>
-   ```sh
+   ```bash
    cd /tmp
    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
    sudo dpkg --install google-chrome-stable_current_amd64.deb
@@ -70,7 +61,7 @@
    - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
 10. Copy the following text, paste it in the terminal and hit return.<br><br>
 
-    ```sh
+    ```bash
     npx create-react-app --help
     ```
 
@@ -131,7 +122,7 @@
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
 13. <a name="postgresql"></a>We will now install PostgreSQL. Copy and run each of these lines separately in the terminal:<br>
 
-    ```sh
+    ```bash
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
     sudo apt update
@@ -146,7 +137,7 @@
 
     Run the following command:
 
-    ```sh
+    ```bash
     sudo -u postgres psql
     ```
 
@@ -200,7 +191,7 @@
 
 14. Copy the following text, paste it in the terminal and hit return.<br><br>
 
-    ```sh
+    ```bash
     sudo snap install docker
     ```
 
@@ -208,7 +199,7 @@
 
 15. Test if Docker is installed by running the following command on the command line:
 
-    ```sh
+    ```bash
     docker run hello-world
     ```
 
@@ -219,7 +210,7 @@
 
     Copy the following text, paste it in the terminal and hit return.
 
-    ```sh
+    ```bash
     npm install -g expo-cli
     ```
 
@@ -236,29 +227,29 @@
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
-    ```sh
+    ```bash
     git config --global user.name "Mona Lisa Octocat"
     ```
     You can test whether the name was set correctly with the next command (if it worked, it will print the name on the next line):<br><br>
-    ```sh
+    ```bash
     git config --global user.name
     ```
     <br>For running the next command, **add your email in quotes**:<br><br>
-    ```sh
+    ```bash
     git config --global user.email "monalisaoctocat@example.com"
     ```
     You can test whether the email was set correctly with with the next command (if it worked, it will print the email on the next line):<br><br>
-    ```sh
+    ```bash
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
 20. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```sh
+    ```bash
     git config --global credential.helper cache
     ```
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
 21. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```sh
+    ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
@@ -267,3 +258,10 @@
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
 23. Open Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
 24. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+
+## Optional Software
+
+1. If you would like to check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
+   ```bash
+   code --install-extension streetsidesoftware.code-spell-checker
+   ```

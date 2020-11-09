@@ -2,14 +2,14 @@
    <img src="./macos-1-start-terminal.png">
    <br>This will launch the macOS terminal.<br><br>
 2. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    xcode-select --install
    ```
    It will pop up a prompt similar to the screenshot below. Click "Install":<br><br>
    <img src="./macos-1.1-xcode-command-line-tools.png"><br><br>
    This will install the Xcode Command Line Tools, tools that enable installation of other software.<br><br>
 3. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
    ```
    This will install Homebrew, a package manager which will allow us to install and uninstall programs from the terminal.<br><br>
@@ -20,27 +20,18 @@
 5. The installer will take a bit of time and then show a message that "Installation successful!", signaling that it is done:<br><br>
    <img src="./macos-4-installation-successful.png"><br><br>
 6. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    brew install git node yarn
    ```
    This uses Homebrew to install Git, Node.js and Yarn.<br><br>
 7. Copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    brew cask install visual-studio-code zoomus slack postman
    ```
    This uses Homebrew Cask to install Visual Studio Code, Zoom, Slack and Postman.<br><br>
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
-    <!--
-      vscode-styled-jsx conflicts with vscode-styled-components
-   
-      https://github.com/styled-components/vscode-styled-components/issues/208#issuecomment-646606763
-   
-      code --install-extension AndrewRazumovsky.vscode-styled-jsx-languageserver
-      code --install-extension blanu.vscode-styled-jsx
-    -->
-
-   ```sh
+   ```bash
    code --install-extension Cardinal90.multi-cursor-case-preserve
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension esbenp.prettier-vscode
@@ -56,7 +47,7 @@
 
 9. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text, paste it in the terminal and hit return.<br><br>
-   ```sh
+   ```bash
    brew cask install google-chrome
    ```
    This uses Homebrew to install Chrome.<br><br>
@@ -65,7 +56,7 @@
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en))
 11. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```sh
+    ```bash
     npx create-react-app --help
     ```
     This step will prepare a program that we will use in the course.<br><br>
@@ -124,21 +115,21 @@
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
 14. <a name="postgresql"></a>We will now install PostgreSQL. Copy the following text, paste it in the terminal and hit return.
 
-    ```sh
+    ```bash
     brew install postgresql
     ```
 
     This uses Homebrew to install PostgreSQL and create just a single user with your username and all role permissions. There will be no `postgres` user set up.<br><br>
     Now let's set an environment variable to tell PostgreSQL where to put the data:
 
-    ```sh
+    ```bash
     echo "export PGDATA=/usr/local/var/postgres" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     ```
 
     We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
 
-    ```sh
+    ```bash
     postgres
     ```
 
@@ -153,7 +144,7 @@
 
     Open a new tab in the terminal using <kbd>command</kbd>-<kbd>T</kbd> and run the following command:
 
-    ```sh
+    ```bash
     psql postgres
     ```
 
@@ -211,7 +202,7 @@
 
 15. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
 
-    ```sh
+    ```bash
     brew cask install docker
     open /Applications/Docker.app
     ```
@@ -221,7 +212,7 @@
 
 16. Test if Docker is installed by running the following command on the command line:
 
-    ```sh
+    ```bash
     docker run hello-world
     ```
 
@@ -232,7 +223,7 @@
 
     Copy the following text, paste it in the terminal and hit return.
 
-    ```sh
+    ```bash
     npm install -g expo-cli
     ```
 
@@ -249,29 +240,29 @@
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
-    ```sh
+    ```bash
     git config --global user.name "Mona Lisa Octocat"
     ```
     You can test whether the name was set correctly with the next command (if it worked, it will print the name on the next line):<br><br>
-    ```sh
+    ```bash
     git config --global user.name
     ```
     <br>For running the next command, **add your email in quotes**:<br><br>
-    ```sh
+    ```bash
     git config --global user.email "monalisaoctocat@example.com"
     ```
     You can test whether the email was set correctly with with the next command (if it worked, it will print the email on the next line):<br><br>
-    ```sh
+    ```bash
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
 21. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```sh
+    ```bash
     git config --global credential.helper osxkeychain
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br>
 22. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```sh
+    ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
@@ -283,8 +274,11 @@
 
 ## Optional Software
 
-1. If you need to record your screen with sound (with export to mp4 and gif), you may want to try out Kap:
-
-```sh
-brew cask install kap
-```
+1. If you would like to check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
+   ```bash
+   code --install-extension streetsidesoftware.code-spell-checker
+   ```
+2. If you need to record your screen with sound (with export to mp4 and gif), you may want to try out Kap:
+   ```bash
+   brew cask install kap
+   ```
