@@ -230,7 +230,7 @@
     On your phone, go to the app store and install Expo on your phone. Create an account and log in.
 
 18. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
-19. To verify that Expo is working with Android Studio, first start Android Studio and open the AVD manager under "Configure". Click on the green play button next to one of the devices.
+19. To verify that Expo is working with Android Studio, first start Android Studio, click on "Configure" and select AVD Manager. Click on the green play button next to one of the devices.
 
     Then copy and run each of these lines separately in the terminal:
 
