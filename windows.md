@@ -278,7 +278,10 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     On your phone, go to the app store and install Expo on your phone. Create an account and log in.
 
 20. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
-21. To verify that Expo is working with Android Studio, copy and run each of these lines separately in Hyper:
+21. To verify that Expo is working with Android Studio, first start Android Studio and open the AVD manager under "Configure". Click on the green play button next to one of the devices.
+
+    Then copy and run each of these lines separately in Hyper:
+
     ```bash
     cd ~
     mkdir projects
@@ -287,7 +290,9 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     cd expo-test
     yarn start
     ```
+
     This should run an Expo demo application, which will show you the Expo Developer Tools. In the left panel, select "Run on Android device/emulator". This should open up an Android emulator. It should show the words "Universal React with Expo".
+
 22. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
