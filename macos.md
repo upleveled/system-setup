@@ -35,7 +35,7 @@
    code --install-extension Cardinal90.multi-cursor-case-preserve
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension esbenp.prettier-vscode
-   code --install-extension thebearingedge.vscode-sql-lit
+   code --install-extension frigus02.vscode-sql-tagged-template-literals
    code --install-extension jpoissonnier.vscode-styled-components
    code --install-extension kumar-harsh.graphql-for-vscode
    code --install-extension meganrogge.template-string-converter
