@@ -63,6 +63,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     If your file is **not empty** (if there is more text within the curly brackets), then **we will need to do something extra** - add a comma on the second to last line:<br><br>
     <img src="./general-4-vscode-settings-comma.png"><br><br>
     Now in both cases you will want to paste the following settings **before the closing curly bracket (before the `}`)**:<br><br>
+
     ```json
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
@@ -89,6 +90,11 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    // Run organizeImports before Prettier
+    "editor.codeActionsOnSave": [
+      "source.organizeImports",
+      "source.fixAll.format"
+    ],
     "files.autoSave": "onFocusChange",
     "explorer.openEditors.visible": 0,
     "editor.tabSize": 2,
@@ -108,9 +114,11 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
       "-i"
     ],
     ```
+
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
+
 14. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
     <img src="./windows-3-hyper-preferences.png"><br><br>

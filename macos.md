@@ -97,6 +97,11 @@
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    // Run organizeImports before Prettier
+    "editor.codeActionsOnSave": [
+      "source.organizeImports",
+      "source.fixAll.format"
+    ],
     "files.autoSave": "onFocusChange",
     "explorer.openEditors.visible": 0,
     "editor.tabSize": 2,
