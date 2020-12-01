@@ -341,3 +341,8 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    ```bash
    code --install-extension streetsidesoftware.code-spell-checker
    ```
+
+2. If you need to record your screen to a gif, you may want to try out Screen to Gif:
+   ```bash
+   choco install screentogif
+   ```
