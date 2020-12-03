@@ -65,7 +65,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     <img src="./general-4-vscode-settings-comma.png"><br><br>
     Now in both cases you will want to paste the following settings **before the closing curly bracket (before the `}`)**:<br><br>
 
-    ```json
+    ```json5
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
