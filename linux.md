@@ -82,6 +82,8 @@
     ```json5
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
+    // Handled in `editor.codeActionsOnSave` with `source.fixAll.format`
+    "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[html]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
