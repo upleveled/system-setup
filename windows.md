@@ -31,6 +31,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     code --install-extension kumar-harsh.graphql-for-vscode
     code --install-extension meganrogge.template-string-converter
     code --install-extension rohit-gohri.format-code-action
+    code --install-extension stylelint.vscode-stylelint
     code --install-extension sysoev.vscode-open-in-github
     code --install-extension wix.glean
     ```
