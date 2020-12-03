@@ -22,6 +22,7 @@
    code --install-extension jpoissonnier.vscode-styled-components
    code --install-extension kumar-harsh.graphql-for-vscode
    code --install-extension meganrogge.template-string-converter
+   code --install-extension rohit-gohri.format-code-action
    code --install-extension sysoev.vscode-open-in-github
    code --install-extension wix.glean
    ```
@@ -81,7 +82,6 @@
     ```json
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[html]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -104,9 +104,15 @@
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    // Run organizeImports before Prettier
     "editor.codeActionsOnSave": [
+      // VS Code Organize Imports feature for sorting and consolidating imports
+      // https://code.visualstudio.com/updates/v1_23#_javascript-and-typescript-organize-imports
       "source.organizeImports",
+      // Run ESLint --fix on the current file
+      // https://github.com/microsoft/vscode-eslint/blob/master/README.md#version-204
+      "source.fixAll.eslint",
+      // Trigger VS Code Format Document feature through rohit-gohri.format-code-action, configured above to default to Prettier
+      // https://github.com/rohit-gohri/vscode-format-code-action#usage
       "source.fixAll.format"
     ],
     "files.autoSave": "onFocusChange",
