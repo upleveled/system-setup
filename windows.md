@@ -362,7 +362,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    choco install screentogif
    ```
 
-3. If you need a nice clipboard manager for your PC, this is an awesome option:
+3. If you need a clipboard manager to keep a history of things that you have copied, this is an awesome option:
     ```bash
     choco install ditto --pre 
     ```
