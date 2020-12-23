@@ -308,3 +308,7 @@
    ```bash
    brew install --cask kap
    ```
+3. If you would like to keep a history of what you have copied to your clipboard, you can try out Flycut:
+   ```bash
+   brew install --cask flycut
+   ```
