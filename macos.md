@@ -301,14 +301,25 @@
 ## Optional Software
 
 1. If you would like to check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
+
    ```bash
    code --install-extension streetsidesoftware.code-spell-checker
    ```
+
 2. If you need to record your screen with sound (with export to mp4 and gif), you may want to try out Kap:
+
    ```bash
    brew install --cask kap
    ```
+
 3. If you would like to keep a history of what you have copied to your clipboard, you can try out Maccy:
+
    ```bash
    brew install --cask maccy
+   ```
+
+4. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
+
+   ```bash
+   choco install responsively
    ```

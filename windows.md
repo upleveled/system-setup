@@ -358,11 +358,19 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    ```
 
 2. If you need to record your screen to a gif, you may want to try out Screen to Gif:
+
    ```bash
    choco install screentogif
    ```
 
 3. If you need a clipboard manager to keep a history of things that you have copied, this is an awesome option:
-    ```bash
-    choco install ditto 
-    ```
+
+   ```bash
+   choco install ditto
+   ```
+
+4. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
+
+   ```bash
+   choco install responsively
+   ```
