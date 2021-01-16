@@ -376,3 +376,9 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    ```bash
    choco install responsively
    ```
+
+5. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
+
+   ```bash
+   choco install bfg-repo-cleaner
+   ```
