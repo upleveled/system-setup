@@ -323,5 +323,5 @@
 4. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
 
    ```bash
-   choco install responsively
+   brew install --cask responsively
    ```
