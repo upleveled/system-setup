@@ -1,53 +1,53 @@
 Before you start, please make sure that you're running Windows 8.1 or Windows 10. Some things may not work on Windows 7, since it is no longer supported as of early 2020.
 
-1.  Open the Start menu and type "Windows Update". Make sure that you have all of the latest updates.
-2.  Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
-    <br>
-    <img src="./windows-1-run-powershell-as-admin.png">
-    <br>This will run Powershell as an administrator user<br><br>
-3.  Copy the following text (be sure you select all of it, it's very long) and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
-    ```bash
-    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    ```
-    This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command line.
-    <br>
-4.  The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br><br>
-    <img src="./windows-2-chocolatey-installed.png"><br><br>
-5.  Close PowerShell and open it again as administrator (like in step 1)<br><br>
-6.  Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
-    ```bash
-    choco install git nodejs yarn vscode hyper zoom slack postman -y
-    ```
-    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom, Slack and Postman.<br><br>
-    **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
-7.  Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
+1. Open the Start menu and type "Windows Update". Make sure that you have all of the latest updates.
+2. Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
+   <br>
+   <img src="./windows-1-run-powershell-as-admin.png">
+   <br>This will run Powershell as an administrator user<br><br>
+3. Copy the following text (be sure you select all of it, it's very long) and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+   ```bash
+   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+   ```
+   This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command line.
+   <br>
+4. The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br><br>
+   <img src="./windows-2-chocolatey-installed.png"><br><br>
+5. Close PowerShell and open it again as administrator (like in step 1)<br><br>
+6. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+   ```bash
+   choco install git nodejs yarn vscode hyper zoom slack postman -y
+   ```
+   This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom, Slack and Postman.<br><br>
+   **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
+7. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
-    ```bash
-    code --install-extension Cardinal90.multi-cursor-case-preserve
-    code --install-extension dbaeumer.vscode-eslint
-    code --install-extension esbenp.prettier-vscode
-    code --install-extension frigus02.vscode-sql-tagged-template-literals
-    code --install-extension jpoissonnier.vscode-styled-components
-    code --install-extension kumar-harsh.graphql-for-vscode
-    code --install-extension meganrogge.template-string-converter
-    code --install-extension rohit-gohri.format-code-action
-    code --install-extension stylelint.vscode-stylelint
-    code --install-extension sysoev.vscode-open-in-github
-    code --install-extension wix.glean
-    ```
+   ```bash
+   code --install-extension Cardinal90.multi-cursor-case-preserve
+   code --install-extension dbaeumer.vscode-eslint
+   code --install-extension esbenp.prettier-vscode
+   code --install-extension frigus02.vscode-sql-tagged-template-literals
+   code --install-extension jpoissonnier.vscode-styled-components
+   code --install-extension kumar-harsh.graphql-for-vscode
+   code --install-extension meganrogge.template-string-converter
+   code --install-extension rohit-gohri.format-code-action
+   code --install-extension stylelint.vscode-stylelint
+   code --install-extension sysoev.vscode-open-in-github
+   code --install-extension wix.glean
+   ```
 
-    This installs some VS Code extensions we will need.<br><br>
+   This installs some VS Code extensions we will need.<br><br>
 
-8.  We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
-    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
-    ```bash
-    choco install chrome -y
-    ```
-    This uses Chocolatey to install Chrome.<br><br>
-9.  Install the following Chrome Extensions:
-    - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-    - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
-    - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
+8. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
+   If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+   ```bash
+   choco install chrome -y
+   ```
+   This uses Chocolatey to install Chrome.<br><br>
+9. Install the following Chrome Extensions:
+   - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+   - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+   - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
 10. Close PowerShell and open it again as administrator (like in step 1)<br><br>
 11. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
     ```bash
@@ -348,7 +348,8 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
 28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
-29. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+29. Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Antje. Under "Windows specifications", click the Copy button and paste this to Antje.
+30. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
