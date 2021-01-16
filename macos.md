@@ -256,13 +256,14 @@
 
     This should run an Expo demo application, which will show you the Expo Developer Tools. In the left panel, select "Run on Android device/emulator". This should open up an Android emulator. It should show the words "Universal React with Expo".
 
-20. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+20. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Antje (if you haven't already).
+21. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-21. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+22. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -282,21 +283,21 @@
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-22. Copy the following text, paste it in the terminal and hit return.<br><br>
+23. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global credential.helper osxkeychain
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br>
-23. Copy the following text, paste it in the terminal and hit return.<br><br>
+24. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
-24. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+25. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-25. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
-26. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+26. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
+27. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
