@@ -54,9 +54,14 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     npx create-react-app --help
     ```
     This will prepare a program that we will use in the course.<br><br>
-12. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
+12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
+    ```bash
+    yarn global add @upleveled/preflight
+    ```
+    This will prepare a program that we will use in the course.<br><br>
+13. The preparation will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
     <img src="./general-1-cra-installed.png"><br><br>
-13. Next we will configure VS Code.<br><br>
+14. Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
     <img src="./general-2-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -125,7 +130,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
 
-14. Now we will configure Hyper.<br><br>
+15. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
     <img src="./windows-3-hyper-preferences.png"><br><br>
     In this file, we will do three things:
@@ -136,7 +141,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     Then save the file and close and restart Hyper.
 
-15. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+16. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -237,7 +242,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-16. <a name="docker"></a>We will now install Docker.
+17. <a name="docker"></a>We will now install Docker.
 
     **Option A - Windows 10 Pro:**
 
@@ -267,13 +272,13 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
     5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
 
-17. Test if Docker is installed by running the following command on the command line:
+18. Test if Docker is installed by running the following command on the command line:
     ```bash
     docker run hello-world
     ```
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
-18. Next we will install some Windows build tools that help with installing packages for Node.js. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+19. Next we will install some Windows build tools that help with installing packages for Node.js. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -281,7 +286,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     npm install -g windows-build-tools
     ```
 
-19. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+20. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -291,8 +296,8 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     On your phone, go to the app store and install Expo on your phone. Create an account and log in.
 
-20. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
-21. To verify that Expo is working with Android Studio, first start Android Studio, click on "Configure" and select AVD Manager. Click on the green play button next to one of the devices.
+21. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
+22. To verify that Expo is working with Android Studio, first start Android Studio, click on "Configure" and select AVD Manager. Click on the green play button next to one of the devices.
 
     Then copy and run each of these lines separately in Hyper:
 
@@ -307,14 +312,14 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     This should run an Expo demo application, which will show you the Expo Developer Tools. In the left panel, select "Run on Android device/emulator". This should open up an Android emulator. It should show the words "Universal React with Expo".
 
-22. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Antje (if you haven't already).
-23. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+23. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Antje (if you haven't already).
+24. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-24. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+25. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -334,22 +339,22 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-25. Copy the following text, paste it in the terminal and hit return.<br><br>
+26. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global credential.helper wincred
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br>
-26. Copy the following text, paste it in the terminal and hit return.<br><br>
+27. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
-27. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+28. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
-29. Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Antje. Under "Windows specifications", click the Copy button and paste this to Antje.
-30. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+29. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
+30. Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Antje. Under "Windows specifications", click the Copy button and paste this to Antje.
+31. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
