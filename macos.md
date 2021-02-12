@@ -139,7 +139,8 @@
     Now let's set an environment variable to tell PostgreSQL where to put the data:
 
     ```bash
-    echo "export PGDATA=/usr/local/var/postgres" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
+    [[ -d /opt/homebrew/var/postgres ]] && PGDATA_TMP=/opt/homebrew/var/postgres || PGDATA_TMP=/usr/local/var/postgres
+    echo "export PGDATA=$PGDATA_TMP" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     ```
 
