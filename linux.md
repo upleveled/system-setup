@@ -17,12 +17,12 @@
    ```bash
    code --install-extension Cardinal90.multi-cursor-case-preserve
    code --install-extension dbaeumer.vscode-eslint
+   code --install-extension dozerg.tsimportsorter
    code --install-extension esbenp.prettier-vscode
    code --install-extension frigus02.vscode-sql-tagged-template-literals
    code --install-extension jpoissonnier.vscode-styled-components
    code --install-extension kumar-harsh.graphql-for-vscode
    code --install-extension meganrogge.template-string-converter
-   code --install-extension rohit-gohri.format-code-action
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
    code --install-extension wix.glean
@@ -85,8 +85,10 @@
     ```json5
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
-    // Handled in `editor.codeActionsOnSave` with `source.fixAll.format`
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
+    "tsImportSorter.configuration.keepUnused": [".*"],
+    "tsImportSorter.configuration.emptyLinesBetweenGroups": 0,
+    "tsImportSorter.configuration.wrappingStyle": "prettier",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[html]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -109,14 +111,6 @@
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.codeActionsOnSave": [
-      // VS Code Organize Imports feature for sorting and consolidating imports
-      // https://code.visualstudio.com/updates/v1_23#_javascript-and-typescript-organize-imports
-      "source.organizeImports",
-      // Trigger VS Code Format Document feature through rohit-gohri.format-code-action, configured above to default to Prettier
-      // https://github.com/rohit-gohri/vscode-format-code-action#usage
-      "source.fixAll.format"
-    ],
     "files.autoSave": "onFocusChange",
     "explorer.openEditors.visible": 0,
     "editor.tabSize": 2,
