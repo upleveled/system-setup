@@ -382,3 +382,9 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    ```bash
    choco install bfg-repo-cleaner
    ```
+
+6. If you're running out of space on your computer, you can use WinDirStat to analyze your hard drive and show a chart of which items are taking up how much space:
+
+   ```bash
+   choco install windirstat
+   ```
