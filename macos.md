@@ -332,3 +332,9 @@
    ```bash
    brew install bfg
    ```
+
+6. If you're running out of space on your computer, you can use Disk Inventory X to analyze your hard drive and show a chart of which items are taking up how much space:
+
+   ```bash
+   brew install --cask disk-inventory-x
+   ```
