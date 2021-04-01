@@ -113,11 +113,9 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     "workbench.editor.closeEmptyGroups": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\git-cmd.exe",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "terminal.integrated.shellArgs.windows": [
-      "--command=usr/bin/bash.exe",
-      "-l",
-      "-i"
+      "--login"
     ],
     ```
 
@@ -130,9 +128,8 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     <img src="./windows-3-hyper-preferences.png"><br><br>
     In this file, we will do three things:
 
-    1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\git-cmd.exe',`
-    2. Find `shellArgs: ['--login'],` and replace it with `shellArgs: ['--command=usr/bin/bash.exe', '-l', '-i'],`
-    3. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
+    1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\bin\\bash.exe',`
+    2. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
 
     Then save the file and close and restart Hyper.
 
