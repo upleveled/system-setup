@@ -64,7 +64,7 @@
 10. Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
-    npx create-react-app --help
+    CI=true npx create-react-app --help
     ```
 
     This will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
