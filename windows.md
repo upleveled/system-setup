@@ -20,7 +20,16 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    ```
    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom, Slack and Postman.<br><br>
    **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
-7. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
+7. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
+
+   ```bash
+   choco install python visualcpp-build-tools -y
+   npm config set msvs_version 2017
+   ```
+
+   This uses Chocolatey to install some Windows build tools to help with installing some Node.js native modules.
+
+8. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
    ```bash
    code --install-extension Cardinal90.multi-cursor-case-preserve
@@ -38,18 +47,18 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
    This installs some VS Code extensions we will need.<br><br>
 
-8. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
+9. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
    choco install chrome -y
    ```
    This uses Chocolatey to install Chrome.<br><br>
-9. Install the following Chrome Extensions:
-   - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-   - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
-   - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
-10. Close PowerShell and open it again as administrator (like in step 1)<br><br>
-11. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
+10. Install the following Chrome Extensions:
+    - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+    - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+    - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
+11. Close PowerShell and open it again as administrator (like in step 1)<br><br>
+12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
 
     ```bash
     CI=true npx create-react-app --help
@@ -58,12 +67,12 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     This will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
     <img src="./general-1-cra-installed.png"><br><br>
 
-12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
+13. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
     ```bash
     yarn global add @upleveled/preflight
     ```
     This will prepare a program that we will use in the course.<br><br>
-13. Next we will configure VS Code.<br><br>
+14. Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
     <img src="./general-2-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -125,7 +134,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
 
-14. Now we will configure Hyper.<br><br>
+15. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
     <img src="./windows-3-hyper-preferences.png"><br><br>
     In this file, we will do three things:
@@ -135,7 +144,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     Then save the file and close and restart Hyper.
 
-15. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+16. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -236,7 +245,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-16. <a name="docker"></a>We will now install Docker.
+17. <a name="docker"></a>We will now install Docker.
 
     **Option A - Windows 10 Pro:**
 
@@ -266,20 +275,14 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
     5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
 
-17. Test if Docker is installed by running the following command on the command line:
+18. Test if Docker is installed by running the following command on the command line:
+
     ```bash
     docker run hello-world
     ```
+
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
-18. Next we will install some Windows build tools that help with installing packages for Node.js. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
-
-    Copy the following text, paste it in Hyper and hit return.
-
-    ```bash
-    choco install python visualcpp-build-tools -y
-    npm config set msvs_version 2017
-    ```
 
 19. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
