@@ -4,7 +4,7 @@
    <img src="linux-1-open-terminal.png"><br>
 2. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   sudo snap install node --channel=14/stable --classic
+   sudo snap install node --channel=16/stable --classic
    ```
    This uses Snap to install Node.js and Yarn.<br><br>
 3. Copy the following text, paste it in the terminal and hit return.<br><br>
