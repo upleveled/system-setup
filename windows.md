@@ -277,7 +277,8 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    npm install -g windows-build-tools
+    choco install python visualcpp-build-tools -y
+    npm config set msvs_version 2017
     ```
 
 19. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
