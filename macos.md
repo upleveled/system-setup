@@ -311,37 +311,43 @@
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. If you need to record your screen with sound (with export to mp4 and gif), you may want to try out Kap:
+2. If you want to easily capture screenshots and draw and write on them, try Flameshot:
+
+   ```bash
+   brew install --cask flameshot
+   ```
+
+3. If you need to record video of your screen with sound (with export to mp4 and gif), you may want to try out Kap:
 
    ```bash
    brew install --cask kap
    ```
 
-3. If you would like to keep a history of what you have copied to your clipboard, you can try out Maccy:
+4. If you would like to keep a history of what you have copied to your clipboard, you can try out Maccy:
 
    ```bash
    brew install --cask maccy
    ```
 
-4. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
+5. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
 
    ```bash
    brew install --cask responsively
    ```
 
-5. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
+6. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
 
    ```bash
    brew install bfg
    ```
 
-6. If you're running out of space on your computer, you can use Disk Inventory X to analyze your hard drive and show a chart of which items are taking up how much space:
+7. If you're running out of space on your computer, you can use Disk Inventory X to analyze your hard drive and show a chart of which items are taking up how much space:
 
    ```bash
    brew install --cask disk-inventory-x
    ```
 
-7. To do natural language calculations and conversions, try [Numi](https://numi.app/):
+8. To do natural language calculations and conversions, try [Numi](https://numi.app/):
 
    ```bash
    brew install --cask numi
