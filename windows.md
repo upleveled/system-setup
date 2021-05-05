@@ -128,6 +128,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     "terminal.integrated.shellArgs.windows": [
       "--login"
     ],
+    "eslint.runtime": "node",
     ```
 
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
