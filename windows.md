@@ -124,10 +124,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     "workbench.editor.closeEmptyGroups": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "terminal.integrated.shellArgs.windows": [
-      "--login"
-    ],
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
     "eslint.runtime": "node",
     ```
 
