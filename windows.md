@@ -345,7 +345,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
-27. Copy the followig thext, paste it in the terminal and hit return.<br><br>
+27. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global core.autocrlf false
     git config --global core.eol lf
