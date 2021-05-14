@@ -350,7 +350,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     git config --global core.autocrlf false
     git config --global core.eol lf
     ```
-    This step will improve compatibility between Windows line breaks and those from other operating systems.
+    This step will improve line breaks compatibility on Windows.
 28. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
