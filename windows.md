@@ -86,7 +86,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "editor.formatOnSave": true,
-    "tsImportSorter.configuration.groupRules": [{}, "^[.]"],
+    "tsImportSorter.configuration.groupRules": ["^node:", {}, "^[.]"],
     "tsImportSorter.configuration.keepUnused": [".*"],
     "tsImportSorter.configuration.emptyLinesBetweenGroups": 0,
     "tsImportSorter.configuration.wrappingStyle": "prettier",
