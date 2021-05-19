@@ -84,7 +84,7 @@
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "editor.formatOnSave": true,
-    "tsImportSorter.configuration.groupRules": [{}, "^[.]"],
+    "tsImportSorter.configuration.groupRules": ["^node:", {}, "^[.]"],
     "tsImportSorter.configuration.keepUnused": [".*"],
     "tsImportSorter.configuration.emptyLinesBetweenGroups": 0,
     "tsImportSorter.configuration.wrappingStyle": "prettier",
