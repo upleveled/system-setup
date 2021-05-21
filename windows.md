@@ -30,7 +30,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    yarn config set shell "C:\\Program Files\\Git\\bin\\bash.exe"
    ```
 
-   This configure Yarn package manager tu use git bash functions.<br><br>
+   This configure Yarn package manager to use git bash functions.<br><br>
 
 8. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
