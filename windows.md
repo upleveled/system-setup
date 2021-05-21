@@ -23,14 +23,14 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom, Slack and Postman.<br><br>
    **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
 
-7. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+7. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
    ```bash
    yarn config set script-shell "C:\\Program Files\\Git\\bin\\bash.exe"
    yarn config set shell "C:\\Program Files\\Git\\bin\\bash.exe"
    ```
 
-   This configure Yarn package manager to use git bash functions.<br><br>
+   This configures Yarn to run scripts in a way that's more compatible with other systems.<br><br>
 
 8. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
