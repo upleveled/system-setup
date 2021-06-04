@@ -147,7 +147,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    choco install postgresql12 --params '/Password:postgres'
+    choco install postgresql13 --params '/Password:postgres'
     ```
 
     This will install PostgreSQL and create a default user of `postgres` and a password of `postgres`. Remember this password and use it any time it asks from now on.
