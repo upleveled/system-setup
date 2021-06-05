@@ -20,6 +20,8 @@
    <img src="./macos-3-enter-password.png"><br><br>
 5. The installer will take a bit of time and then show a message that "Installation successful!", signaling that it is done:<br><br>
    <img src="./macos-4-installation-successful.png"><br><br>
+   Read the messages underneath the "Installation successful!" message and look for a heading that says "Next steps". If there is a bullet point with the text "Add Homebrew to your PATH...", then there are be some additional commands that you need to copy and run (copy each line, paste it in the terminal and hit return):<br><br>
+   <img src="./macos-4.1-homebrew-next-steps.png"><br><br>
 6. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    brew install git node yarn
