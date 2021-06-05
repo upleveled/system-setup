@@ -30,7 +30,7 @@
 
    This installs some VS Code extensions we will need.<br><br>
 
-5. With each line below, copy the text, paste it in the terminal and hit return.<br><br>
+5. If you don't have Zoom yet, install it: with each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```bash
    cd /tmp
    wget https://zoom.us/client/latest/zoom_amd64.deb
@@ -38,7 +38,7 @@
    cd -
    ```
    This installs Zoom.<br><br>
-6. Copy the following text, paste it in the terminal and hit return.<br><br>
+6. If you don't have Slack yet, install it: copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install slack --classic
    ```
@@ -64,7 +64,7 @@
 10. Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
-    CI=true npx create-react-app --help
+    yarn create react-app --help
     ```
 
     This will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>

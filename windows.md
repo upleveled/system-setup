@@ -16,10 +16,18 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 5. Close PowerShell and open it again as administrator (like in step 1)<br><br>
 6. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
-   choco install git nodejs yarn vscode hyper zoom slack postman -y
+   choco install git nodejs yarn vscode hyper postman -y
    ```
-   This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Zoom, Slack and Postman.<br><br>
+   This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper and Postman.<br><br>
    **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
+   If you don't have Zoom installed yet, run this to install it:<br>
+   ```bash
+   choco install zoom -y
+   ```
+   If you don't have Slack installed yet, run this to install it:<br>
+   ```bash
+   choco install slack -y
+   ```
 7. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash
@@ -61,7 +69,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
 
     ```bash
-    CI=true npx create-react-app --help
+    yarn create react-app --help
     ```
 
     This will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
