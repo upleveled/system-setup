@@ -29,9 +29,17 @@
    This uses Homebrew to install Git, Node.js and Yarn.<br><br>
 7. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install --cask visual-studio-code zoom slack postman
+   brew install --cask visual-studio-code postman
    ```
-   This uses Homebrew Cask to install Visual Studio Code, Zoom, Slack and Postman.<br><br>
+   This uses Homebrew Cask to install Visual Studio Code and Postman.<br><br>
+   If you don't have Zoom installed yet, run this to install it:<br>
+   ```bash
+   brew install --cask zoom
+   ```
+   If you don't have Slack installed yet, run this to install it:<br>
+   ```bash
+   brew install --cask slack
+   ```
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
