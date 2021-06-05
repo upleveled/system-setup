@@ -10,12 +10,13 @@
    This will install the Xcode Command Line Tools, tools that enable installation of other software.<br><br>
 3. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
    This will install Homebrew, a package manager which will allow us to install and uninstall programs from the terminal.<br><br>
 4. Hit return when the installer asks you to:<br><br>
-   <img src="./macos-2-hit-return.png">
-   <br><br>Also enter your Mac password when the installer asks you to. Note: while typing your password, you will not see the letters being entered. This is normal:<br><br>
+   <img src="./macos-2-hit-return.png"><br><br>
+   Also enter your Mac password when the installer asks you to.<br><br>
+   ‼️ Note: while typing your password, you will not see the letters being entered. This is normal:<br><br>
    <img src="./macos-3-enter-password.png"><br><br>
 5. The installer will take a bit of time and then show a message that "Installation successful!", signaling that it is done:<br><br>
    <img src="./macos-4-installation-successful.png"><br><br>
