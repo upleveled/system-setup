@@ -335,10 +335,10 @@
    brew install --cask kap
    ```
 
-4. If you would like to keep a history of what you have copied to your clipboard, you can try out Maccy:
+4. If you would like to keep a history of what you have copied to your clipboard, you can try out Yippy:
 
    ```bash
-   brew install --cask maccy
+   brew install --cask yippy
    ```
 
 5. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
