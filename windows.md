@@ -168,14 +168,27 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     cd /c/
     POSTGRES_PATH=$(find . -name "psql.exe" -print -quit)
     POSTGRES_BIN_PATH=$(dirname "${POSTGRES_PATH/./\/c}")
-    echo "export PATH=\$PATH:\"$POSTGRES_BIN_PATH\"" >> $USERPROFILE/.bash_profile
-    echo "export PGDATA=\"${POSTGRES_BIN_PATH/bin/data}\"" >> $USERPROFILE/.bash_profile
-    source $USERPROFILE/.bash_profile
+    echo "export PATH=\$PATH:\"$POSTGRES_BIN_PATH\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PGDATA=\"${POSTGRES_BIN_PATH/bin/data}\"" >> "$USERPROFILE/.bash_profile"
+    source "$USERPROFILE/.bash_profile"
     ```
 
     You may encounter some "Permission denied" warnings during some of these steps, which should be no problem:
 
     <img src="./windows-4-permission-denied.png"><br><br>
+
+    Test whether the previous command worked by running the following command:
+
+    ```bash
+    cat "$USERPROFILE/.bash_profile"
+    ```
+
+    It should print out something that looks like the following (although the `13` number may be different for you):
+
+    ```bash
+    export PATH=$PATH:"/c/Program Files/PostgreSQL/13/bin"
+    export PGDATA="/c/Program Files/PostgreSQL/13/data"
+    ```
 
     We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
 
