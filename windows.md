@@ -324,6 +324,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     cd projects
     npx create-react-native-app --template blank expo-test
     cd expo-test
+    yarn
     yarn start
     ```
 
