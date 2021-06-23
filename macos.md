@@ -258,7 +258,8 @@
 18. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
 
     If this guide doesn't work and your computer has an M1 (Apple Silicon) chip, try this: https://github.com/expo/expo/issues/13313#issue-923722853
-20. To verify that Expo is working with Android Studio, first start Android Studio, click on "Configure" and select AVD Manager. Click on the green play button next to one of the devices.
+
+19. To verify that Expo is working with Android Studio, first start Android Studio, click on "Configure" and select AVD Manager. Click on the green play button next to one of the devices.
 
     Then copy and run each of these lines separately in the terminal:
 
@@ -272,7 +273,13 @@
     yarn start
     ```
 
-    This should run an Expo demo application, which will show you the Expo Developer Tools. In the left panel, select "Run on Android device/emulator". This should open up an Android emulator. It should show the words "Universal React with Expo".
+    This should run an Expo demo application, which will show you the Expo Developer Tools.
+
+    In the left panel, select "Run on Android device/emulator". This will start a process that should open up an Android emulator - a simulator of an Android mobile device. The process may take several minutes. If the Android device says "System UI isn't responding", then click on "Wait".
+
+    Once it is loaded, it should show the words "Universal React with Expo".
+
+    If you're having troubles, the process should look something like shown in [Setup React Native with Android Studio (Expo) - Emulator & Physical device setup | YouTube](https://youtu.be/gVGuNxkh8ig?t=808)
 
 20. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Antje (if you haven't already).
 21. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.

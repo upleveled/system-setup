@@ -242,7 +242,13 @@
     yarn start
     ```
 
-    This should run an Expo demo application, which will show you the Expo Developer Tools. In the left panel, select "Run on Android device/emulator". This should open up an Android emulator. It should show the words "Universal React with Expo".
+    This should run an Expo demo application, which will show you the Expo Developer Tools.
+
+    In the left panel, select "Run on Android device/emulator". This will start a process that should open up an Android emulator - a simulator of an Android mobile device. The process may take several minutes. If the Android device says "System UI isn't responding", then click on "Wait".
+
+    Once it is loaded, it should show the words "Universal React with Expo".
+
+    If you're having troubles, the process should look something like shown in [Setup React Native with Android Studio (Expo) - Emulator & Physical device setup | YouTube](https://youtu.be/gVGuNxkh8ig?t=808)
 
 19. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Antje (if you haven't already).
 20. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
