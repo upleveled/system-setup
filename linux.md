@@ -238,6 +238,7 @@
     cd projects
     npx create-react-native-app --template blank expo-test
     cd expo-test
+    yarn
     yarn start
     ```
 
