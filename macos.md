@@ -253,7 +253,7 @@
     npm install -g expo-cli
     ```
 
-    On your phone, go to the app store and install Expo on your phone. Create an account and log in.
+    On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
 18. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
 
