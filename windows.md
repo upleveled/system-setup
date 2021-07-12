@@ -31,7 +31,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 7. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash
-   choco install python visualcpp-build-tools -y
+   choco install python visualstudio2017-workload-vctools -y
    npm config set msvs_version 2017
    ```
 
