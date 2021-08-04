@@ -196,9 +196,13 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     postgres
     ```
 
-    If it worked, it should print out some lines with some messages that the database started and it is ready to accept connections:
+    If it worked, it should print out some lines with some messages and end with the rectangular cursor on the left side of the screen:
 
     <img src="./macos-5-postgres.png"><br><br>
+
+    The messages may be different than the messages in the image above, and may not mention that PostgreSQL is ready to accept connections:
+
+    <img src="./windows-5-postgres.jpg"><br><br>
 
     You will need to run this every time you want to use your database.
 
