@@ -240,7 +240,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     \dt
     ```
 
-    This will show the tables that you have, including the newly-created `users` table. Your screen should look like this:<br><br>
+    This will show the tables that you have, including the newly-created `users` table. Your screen should look like this (although the owner may be `postgres` on your screen):<br><br>
 
     <img src="./macos-5.3-psql.png"><br><br>
 
