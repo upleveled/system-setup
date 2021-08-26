@@ -340,7 +340,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
     If you're having troubles, the process should look something like shown in [Setup React Native with Android Studio (Expo) - Emulator & Physical device setup | YouTube](https://youtu.be/gVGuNxkh8ig?t=808)
 
-22. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Antje (if you haven't already).
+22. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Karl (if you haven't already).
 23. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
@@ -386,8 +386,8 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 28. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-29. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Antje.
-30. Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Antje. Under "Windows specifications", click the Copy button and paste this to Antje.
+29. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
+30. Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Karl. Under "Windows specifications", click the Copy button and paste this to Karl.
 31. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
