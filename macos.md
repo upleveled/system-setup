@@ -27,11 +27,12 @@
    brew install git node yarn
    ```
    This uses Homebrew to install Git, Node.js and Yarn.<br><br>
-7. Copy the following text, paste it in the terminal and hit return.<br><br>
+7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install --cask visual-studio-code postman
+   brew tap microsoft/git
+   brew install --cask visual-studio-code postman git-credential-manager-core
    ```
-   This uses Homebrew Cask to install Visual Studio Code and Postman.<br><br>
+   This uses Homebrew Cask to install Visual Studio Code, Postman and Git Credential Manager Core.<br><br>
    If you don't have Zoom installed yet, run this to install it:<br>
    ```bash
    brew install --cask zoom
