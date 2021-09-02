@@ -200,7 +200,7 @@
 
     <img src="./macos-5.5-psql.png"><br><br>
 
-14. Copy the following text, paste it in the terminal and hit return.<br><br>
+14. <a name="docker"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
     sudo snap install docker
