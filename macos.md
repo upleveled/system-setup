@@ -59,7 +59,7 @@
 
    This installs some VS Code extensions we will need.<br><br>
 
-9. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
+9. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    brew install --cask google-chrome

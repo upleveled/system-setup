@@ -55,7 +55,7 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
 
    This installs some VS Code extensions we will need.<br><br>
 
-9. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
+9. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
    choco install chrome -y

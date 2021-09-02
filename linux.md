@@ -48,7 +48,7 @@
    sudo snap install postman
    ```
    This uses Snap to install Postman.<br><br>
-8. We recommend installing and using Chrome so that you have the same Devtools as others.<br><br>
+8. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
    If you don't have Chrome installed yet, you can install it by copying each line below, pasting it in the terminal and hitting return.<br><br>
    ```bash
    cd /tmp
