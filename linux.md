@@ -7,12 +7,36 @@
    sudo snap install node --channel=16/stable --classic
    ```
    This uses Snap to install Node.js and Yarn.<br><br>
-3. Copy the following text, paste it in the terminal and hit return.<br><br>
+3. For the version matching your version of Ubuntu, copy each line in the following text, paste it in the terminal and hit return.<br>
+
+   **Ubuntu 18.04 (Bionic)**<br><br>
+
+   ```bash
+   curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
+   sudo apt-get update
+   sudo apt-get install gcmcore
+   git-credential-manager-core configure
+   ```
+
+   **Ubuntu 21.04 (Hirsute)**<br><br>
+
+   ```bash
+   curl -sSL https://packages.microsoft.com/config/ubuntu/21.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list
+   curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   sudo apt-get update
+   sudo apt-get install gcmcore
+   git-credential-manager-core configure
+   ```
+
+   This installs Git Credential Manager Core.<br><br>
+
+4. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install code --classic
    ```
    This uses Snap to install VS Code.<br><br>
-4. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+5. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
    code --install-extension Cardinal90.multi-cursor-case-preserve
@@ -30,7 +54,7 @@
 
    This installs some VS Code extensions we will need.<br><br>
 
-5. If you don't have Zoom yet, install it: with each line below, copy the text, paste it in the terminal and hit return.<br><br>
+6. If you don't have Zoom yet, install it: with each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```bash
    cd /tmp
    wget https://zoom.us/client/latest/zoom_amd64.deb
@@ -38,17 +62,17 @@
    cd -
    ```
    This installs Zoom.<br><br>
-6. If you don't have Slack yet, install it: copy the following text, paste it in the terminal and hit return.<br><br>
+7. If you don't have Slack yet, install it: copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install slack --classic
    ```
    This uses Snap to install Slack.<br><br>
-7. Copy the following text, paste it in the terminal and hit return.<br><br>
+8. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install postman
    ```
    This uses Snap to install Postman.<br><br>
-8. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
+9. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
    If you don't have Chrome installed yet, you can install it by copying each line below, pasting it in the terminal and hitting return.<br><br>
    ```bash
    cd /tmp
@@ -57,11 +81,11 @@
    cd -
    ```
    This installs Chrome.<br><br>
-9. Install the following Chrome Extensions:
-   - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-   - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
-   - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
-10. Copy the following text, paste it in the terminal and hit return.<br><br>
+10. Install the following Chrome Extensions:
+    - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+    - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+    - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
+11. Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
     yarn create react-app --help
@@ -70,12 +94,12 @@
     This will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
     <img src="./general-1-cra-installed.png"><br><br>
 
-11. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
+12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
     ```bash
     yarn global add @upleveled/preflight
     ```
     This will prepare a program that we will use in the course.<br><br>
-12. Next we will configure VS Code.<br><br>
+13. Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
     <img src="./general-2-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -131,7 +155,7 @@
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
-13. <a name="postgresql"></a>We will now install PostgreSQL. Copy and run each of these lines separately in the terminal:<br>
+14. <a name="postgresql"></a>We will now install PostgreSQL. Copy and run each of these lines separately in the terminal:<br>
 
     ```bash
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -200,7 +224,7 @@
 
     <img src="./macos-5.5-psql.png"><br><br>
 
-14. <a name="docker"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
+15. <a name="docker"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
     sudo snap install docker
@@ -208,7 +232,7 @@
 
     This uses Snap to install Docker.<br><br>
 
-15. Test if Docker is installed by running the following command on the command line:
+16. Test if Docker is installed by running the following command on the command line:
 
     ```bash
     docker run hello-world
@@ -217,7 +241,7 @@
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
 
-16. <a name="expo-react-native"></a>We will now install Expo CLI for React Native.
+17. <a name="expo-react-native"></a>We will now install Expo CLI for React Native.
 
     Copy the following text, paste it in the terminal and hit return.
 
@@ -227,8 +251,8 @@
 
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-17. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
-18. To verify that Expo is working with Android Studio, first start Android Studio, click on "Configure" and select AVD Manager. Click on the green play button next to one of the devices.
+18. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
+19. To verify that Expo is working with Android Studio, first start Android Studio, click on "Configure" and select AVD Manager. Click on the green play button next to one of the devices.
 
     Then copy and run each of these lines separately in the terminal:
 
@@ -250,14 +274,14 @@
 
     If you're having troubles, the process should look something like shown in [Setup React Native with Android Studio (Expo) - Emulator & Physical device setup | YouTube](https://youtu.be/gVGuNxkh8ig?t=808)
 
-19. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Karl (if you haven't already).
-20. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+20. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Karl (if you haven't already).
+21. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-6-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-21. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+22. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-7-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -277,11 +301,13 @@
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-22. Copy the following text, paste it in the terminal and hit return.<br><br>
+
+<!-- 22. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global credential.helper cache
     ```
-    This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
+    This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br> -->
+
 23. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main

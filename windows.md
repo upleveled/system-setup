@@ -367,28 +367,30 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-25. Copy the following text, paste it in the terminal and hit return.<br><br>
+
+<!-- 25. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global credential.helper wincred
     ```
-    This step will save your GitHub password so that you don't need to enter it every time.<br><br>
-26. Copy the following text, paste it in the terminal and hit return.<br><br>
+    This step will save your GitHub password so that you don't need to enter it every time.<br><br> -->
+
+25. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
-27. Copy and run each of these lines separately in Hyper.<br><br>
+26. Copy and run each of these lines separately in Hyper.<br><br>
     ```bash
     git config --global core.autocrlf false
     git config --global core.eol lf
     ```
     This step will improve line breaks compatibility on Windows.
-28. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+27. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-29. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
-30. Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Karl. Under "Windows specifications", click the Copy button and paste this to Karl.
-31. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
+29. Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Karl. Under "Windows specifications", click the Copy button and paste this to Karl.
+30. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 

@@ -313,22 +313,24 @@
     git config --global user.email
     ```
     This prepares `git` so that your work is attributed correctly to you.<br><br>
-23. Copy the following text, paste it in the terminal and hit return.<br><br>
+
+<!-- 23. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global credential.helper osxkeychain
     ```
-    This step will save your GitHub password so that you don't need to enter it every time.<br><br>
-24. Copy the following text, paste it in the terminal and hit return.<br><br>
+    This step will save your GitHub password so that you don't need to enter it every time.<br><br> -->
+
+23. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
-25. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+24. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-26. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
-27. Click on the apple icon in the menu bar at the top left of your screen and select "About This Mac". Select "System Report...". Copy the "Hardware Overview" information in the right panel and send to Karl. Select "Software" in the left panel, copy the "System Software Overview" information and send to Karl.
-28. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+25. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
+26. Click on the apple icon in the menu bar at the top left of your screen and select "About This Mac". Select "System Report...". Copy the "Hardware Overview" information in the right panel and send to Karl. Select "Software" in the left panel, copy the "System Software Overview" information and send to Karl.
+27. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
