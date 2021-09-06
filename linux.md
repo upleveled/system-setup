@@ -29,6 +29,15 @@
    git-credential-manager-core configure
    ```
 
+   **Other Ubuntu/Debian versions**
+
+   Download [the latest `.deb` package](https://github.com/microsoft/Git-Credential-Manager-Core/releases/latest) (the one called something like `gcmcore-linux_amd64.x.x.xxx.xxxxx.deb`) and then run the following commands:
+   
+   ```bash
+   sudo dpkg -i <path-to-package>
+   git-credential-manager-core configure
+   ```
+
    This installs Git Credential Manager Core.<br><br>
 
 4. Copy the following text, paste it in the terminal and hit return.<br><br>
