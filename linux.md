@@ -2,11 +2,13 @@
 
 1. Click on the Ubuntu icon in the top left to open the Dash, type in "Terminal" and click on the matching application.<br><br>
    <img src="linux-1-open-terminal.png"><br>
-2. Copy the following text, paste it in the terminal and hit return.<br><br>
+2. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   sudo snap install node --channel=16/stable --classic
+   curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+   sudo apt-get install -y nodejs
+   npm install --global yarn
    ```
-   This uses Snap to install Node.js and Yarn.<br><br>
+   This uses apt to install Node.js and npm to install Yarn.<br><br>
 3. For the version matching your version of Ubuntu, copy each line in the following text, paste it in the terminal and hit return.<br>
 
    **Ubuntu 18.04 (Bionic)**<br><br>
