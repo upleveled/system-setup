@@ -28,14 +28,14 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    ```bash
    choco install slack -y
    ```
-7. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
+7. Close PowerShell and open it again as administrator (like in step 1). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash
    choco install python visualstudio2017-workload-vctools -y
    npm config set msvs_version 2017
    ```
 
-   This uses Chocolatey to install some Windows build tools to help with installing some Node.js native modules.
+   This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install some Windows build tools to help with installing some Node.js native modules.
 
 8. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
