@@ -6,7 +6,7 @@
    ```bash
    curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
    sudo apt-get install -y nodejs
-   npm install --global yarn
+   sudo npm install --global yarn
    ```
    This uses apt to install Node.js and npm to install Yarn.<br><br>
 3. For the version matching your version of Ubuntu, copy each line in the following text, paste it in the terminal and hit return.<br>
@@ -107,7 +107,7 @@
 
 12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
     ```bash
-    yarn global add @upleveled/preflight
+    sudo yarn global add @upleveled/preflight
     ```
     This will prepare a program that we will use in the course.<br><br>
 13. Next we will configure VS Code.<br><br>
