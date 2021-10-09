@@ -1,4 +1,4 @@
-Before you start, please make sure that you're running Windows 8.1 or Windows 10. Some things may not work on Windows 7, since it is no longer supported as of early 2020.
+Before you start, please make sure that you're running Windows 8.1, Windows 10 or Windows 11. Windows 7 is not supported, since it is no longer supported by Microsoft as of early 2020.
 
 1. Open the Start menu, type "Windows Update" and click on the result named Windows Update. Make sure that you have all of the latest updates.
 2. Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
@@ -19,7 +19,9 @@ Before you start, please make sure that you're running Windows 8.1 or Windows 10
    choco install git nodejs yarn vscode hyper postman -y
    ```
    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper and Postman.<br><br>
+<!--
    **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
+-->
    If you don't have Zoom installed yet, run this to install it:<br>
    ```bash
    choco install zoom -y
