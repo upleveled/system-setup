@@ -34,7 +34,7 @@
    **Other Ubuntu/Debian versions**
 
    Download [the latest `.deb` package](https://github.com/microsoft/Git-Credential-Manager-Core/releases/latest) (the one called something like `gcmcore-linux_amd64.x.x.xxx.xxxxx.deb`) and then run the following commands:
-   
+
    ```bash
    sudo dpkg -i <path-to-package>
    git-credential-manager-core configure
@@ -105,7 +105,7 @@
     This will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
     <img src="./general-1-cra-installed.png"><br><br>
 
-12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
+12. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     sudo yarn global add @upleveled/preflight
     ```
