@@ -157,7 +157,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    choco install postgresql13 --params '/Password:postgres'
+    choco install postgresql14 --params '/Password:postgres'
     ```
 
     This will install PostgreSQL and create a default user of `postgres` and a password of `postgres`. Remember this password and use it any time it asks from now on.
@@ -185,11 +185,11 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
     cat "$USERPROFILE/.bash_profile"
     ```
 
-    It should print out something that looks like the following (although the `13` number may be different for you):
+    It should print out something that looks like the following (although the `14` number may be different for you):
 
     ```bash
-    export PATH=$PATH:"/c/Program Files/PostgreSQL/13/bin"
-    export PGDATA="/c/Program Files/PostgreSQL/13/data"
+    export PATH=$PATH:"/c/Program Files/PostgreSQL/14/bin"
+    export PGDATA="/c/Program Files/PostgreSQL/14/data"
     ```
 
     We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
