@@ -19,9 +19,9 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
    choco install git nodejs yarn vscode hyper postman -y
    ```
    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper and Postman.<br><br>
-<!--
-   **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
--->
+   <!--
+      **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
+   -->
    If you don't have Zoom installed yet, run this to install it:<br>
    ```bash
    choco install zoom -y
@@ -47,7 +47,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
    code --install-extension dozerg.tsimportsorter
    code --install-extension esbenp.prettier-vscode
    code --install-extension frigus02.vscode-sql-tagged-template-literals
-   code --install-extension jpoissonnier.vscode-styled-components
+   code --install-extension styled-components.vscode-styled-components
    code --install-extension kumar-harsh.graphql-for-vscode
    code --install-extension meganrogge.template-string-converter
    code --install-extension stylelint.vscode-stylelint

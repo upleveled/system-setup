@@ -55,7 +55,7 @@
    code --install-extension dozerg.tsimportsorter
    code --install-extension esbenp.prettier-vscode
    code --install-extension frigus02.vscode-sql-tagged-template-literals
-   code --install-extension jpoissonnier.vscode-styled-components
+   code --install-extension styled-components.vscode-styled-components
    code --install-extension kumar-harsh.graphql-for-vscode
    code --install-extension meganrogge.template-string-converter
    code --install-extension stylelint.vscode-stylelint
