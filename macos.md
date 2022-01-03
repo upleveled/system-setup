@@ -329,7 +329,7 @@
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
 25. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
-26. Click on the apple icon in the menu bar at the top left of your screen and select "About This Mac". Select "System Report...". Copy the "Hardware Overview" information in the right panel and send to Karl. Select "Software" in the left panel, copy the "System Software Overview" information and send to Karl.
+26. <a name="specs"></a>Click on the apple icon in the menu bar at the top left of your screen and select "About This Mac". Select "System Report...". Copy the "Hardware Overview" information in the right panel and send to Karl. Select "Software" in the left panel, copy the "System Software Overview" information and send to Karl.
 27. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
