@@ -171,7 +171,8 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
     echo "export PGDATA=\"/c/Program Files/PostgreSQL/14/data}\"" >> "$USERPROFILE/.bash_profile"
     source "$USERPROFILE/.bash_profile"
     ```
-<!--
+    <!--
+
     You may encounter some "Permission denied" warnings during some of these steps, which should be no problem:
 
     <img src="./windows-4-permission-denied.png"><br><br>
@@ -188,7 +189,9 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
     export PATH=$PATH:"/c/Program Files/PostgreSQL/14/bin"
     export PGDATA="/c/Program Files/PostgreSQL/14/data"
     ```
--->
+
+    -->
+
     We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
 
     ```bash
