@@ -328,7 +328,12 @@
     <img src="./general-8-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
 25. Open Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
-26. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+26. <a name="specs"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
+    ```bash
+    lshw -short
+    ```
+    This will show you a summary of your computer specifications. Copy the text on the lines after this and send them to Karl in Slack.
+27. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
