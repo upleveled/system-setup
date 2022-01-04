@@ -337,7 +337,12 @@
     ```bash
     cat /etc/os-release
     ```
-    This will show you details about your operating system. Copy the text on the lines after the command and send it to Karl in Slack.
+    This will show you details about your operating system. Copy the text on the lines after the command and send it to Karl in Slack.<br><br>
+    Copy the following text, paste it in the terminal and hit return.<br><br>
+    ```bash
+    cat /proc/version
+    ```
+    This will show you details about your Linux distribution. Copy the text on the lines after the command and send it to Karl in Slack.
 27. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
