@@ -168,7 +168,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
 
     ```bash
     echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/14/bin\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PGDATA=\"/c/Program Files/PostgreSQL/14/data}\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PGDATA=\"/c/Program Files/PostgreSQL/14/data\"" >> "$USERPROFILE/.bash_profile"
     source "$USERPROFILE/.bash_profile"
     ```
     <!--
