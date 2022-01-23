@@ -2,21 +2,21 @@
 
 ## [Windows](./windows.md)
 
-- [postgresql](./windows.md#postgresql)
-- [docker](./windows.md#docker)
-- [expo-react-native](./windows.md#expo-react-native)
-- [specs](./windows.md#specs)
+- [PostgreSQL](./windows.md#user-content-postgresql)
+- [Docker](./windows.md#user-content-docker)
+- [Expo + React Native](./windows.md#user-content-expo-react-native)
+- [System Specifications](./windows.md#user-content-specs)
 
 ## [macOS](./macos.md)
 
-- [postgresql](./macos.md#postgresql)
-- [docker](./macos.md#docker)
-- [expo-react-native](./macos.md#expo-react-native)
-- [specs](./macos.md#specs)
+- [PostgreSQL](./macos.md#user-content-postgresql)
+- [Docker](./macos.md#user-content-docker)
+- [Expo + React Native](./macos.md#user-content-expo-react-native)
+- [System Specifications](./macos.md#user-content-specs)
 
 ## [Linux](./linux.md)
 
-- [postgresql](./linux.md#postgresql)
-- [docker](./linux.md#docker)
-- [expo-react-native](./linux.md#expo-react-native)
-- [specs](./linux.md#specs)
+- [PostgreSQL](./linux.md#user-content-postgresql)
+- [Docker](./linux.md#user-content-docker)
+- [Expo + React Native](./linux.md#user-content-expo-react-native)
+- [System Specifications](./linux.md#user-content-specs)
