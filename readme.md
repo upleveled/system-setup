@@ -2,6 +2,7 @@
 
 ## [Windows](./windows.md)
 
+- [VS Code Extensions](./windows.md#user-content-vs-code-extensions)
 - [VS Code Settings](./windows.md#user-content-vs-code-settings)
 - [PostgreSQL](./windows.md#user-content-postgresql)
 - [Docker](./windows.md#user-content-docker)
@@ -10,6 +11,7 @@
 
 ## [macOS](./macos.md)
 
+- [VS Code Extensions](./macos.md#user-content-vs-code-extensions)
 - [VS Code Settings](./macos.md#user-content-vs-code-settings)
 - [PostgreSQL](./macos.md#user-content-postgresql)
 - [Docker](./macos.md#user-content-docker)
@@ -18,6 +20,7 @@
 
 ## [Linux](./linux.md)
 
+- [VS Code Extensions](./linux.md#user-content-vs-code-extensions)
 - [VS Code Settings](./linux.md#user-content-vs-code-settings)
 - [PostgreSQL](./linux.md#user-content-postgresql)
 - [Docker](./linux.md#user-content-docker)

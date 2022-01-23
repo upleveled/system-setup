@@ -39,7 +39,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
 
    This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install some Windows build tools to help with installing some Node.js native modules.
 
-8. Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
+8. <a name="vs-code-extensions"></a> Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
    ```bash
    code --install-extension Cardinal90.multi-cursor-case-preserve
@@ -171,6 +171,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
     echo "export PGDATA=\"/c/Program Files/PostgreSQL/14/data\"" >> "$USERPROFILE/.bash_profile"
     source "$USERPROFILE/.bash_profile"
     ```
+
     <!--
 
     You may encounter some "Permission denied" warnings during some of these steps, which should be no problem:

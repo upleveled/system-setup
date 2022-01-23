@@ -47,7 +47,7 @@
    sudo snap install code --classic
    ```
    This uses Snap to install VS Code.<br><br>
-5. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+5. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
    code --install-extension Cardinal90.multi-cursor-case-preserve
