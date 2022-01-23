@@ -110,7 +110,7 @@
     sudo yarn global add @upleveled/preflight
     ```
     This will prepare a program that we will use in the course.<br><br>
-13. Next we will configure VS Code.<br><br>
+13. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
     <img src="./general-2-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>

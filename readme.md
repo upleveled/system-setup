@@ -2,6 +2,7 @@
 
 ## [Windows](./windows.md)
 
+- [VS Code Settings](./windows.md#user-content-vs-code-settings)
 - [PostgreSQL](./windows.md#user-content-postgresql)
 - [Docker](./windows.md#user-content-docker)
 - [Expo + React Native](./windows.md#user-content-expo-react-native)
@@ -9,6 +10,7 @@
 
 ## [macOS](./macos.md)
 
+- [VS Code Settings](./macos.md#user-content-vs-code-settings)
 - [PostgreSQL](./macos.md#user-content-postgresql)
 - [Docker](./macos.md#user-content-docker)
 - [Expo + React Native](./macos.md#user-content-expo-react-native)
@@ -16,6 +18,7 @@
 
 ## [Linux](./linux.md)
 
+- [VS Code Settings](./linux.md#user-content-vs-code-settings)
 - [PostgreSQL](./linux.md#user-content-postgresql)
 - [Docker](./linux.md#user-content-docker)
 - [Expo + React Native](./linux.md#user-content-expo-react-native)
