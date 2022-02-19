@@ -321,7 +321,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
 20. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
-21. To verify that Expo is working with Android Studio, first start Android Studio, click on "Configure" and select AVD Manager. Click on the green play button next to one of the devices.
+21. To verify that Expo is working with Android Studio, first start Android Studio. Then click on "More Actions" and select "Virtual Device Manager" (older versions: click "Configure" and select "AVD Manager"). Click on the green triangle play button next to one of the devices.
 
     Then copy and run each of these lines separately in Hyper:
 
