@@ -264,7 +264,7 @@
 
     If this guide doesn't work and your computer has an M1 (Apple Silicon) chip, try this: https://github.com/expo/expo/issues/13313#issue-923722853
 
-19. To verify that Expo is working with Android Studio, first start Android Studio, click on "Configure" and select AVD Manager. Click on the green play button next to one of the devices.
+19. To verify that Expo is working with Android Studio, first start Android Studio. Then click on "More Actions" and select "Virtual Device Manager" (older versions: click "Configure" and select "AVD Manager"). Click on the green triangle play button next to one of the devices.
 
     Then copy and run each of these lines separately in the terminal:
 
