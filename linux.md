@@ -273,7 +273,7 @@
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
     ```
 
-    This will install Android Studio, for creating and running emulators.
+    This will install Android Studio, for creating and running Android virtual devices in an emulator.
 
     Open Android Studio using Dash.
 

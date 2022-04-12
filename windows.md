@@ -328,7 +328,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
     choco install androidstudio
     ```
 
-    This will install Android Studio, for creating and running emulators.
+    This will install Android Studio, for creating and running Android virtual devices in an emulator.
 
     Open Android Studio by finding it using the Start menu.
 
