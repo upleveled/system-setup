@@ -13,11 +13,11 @@
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
    This will install Homebrew, a package manager which will allow us to install and uninstall programs from the terminal.<br><br>
-4. Hit return when the installer asks you to:<br><br>
-   <img src="./macos-2-hit-return.png"><br><br>
-   Also enter your Mac password when the installer asks you to.<br><br>
+4. When the installer asks for it, enter your password you use to log in to your Mac<br><br>
    ‼️ Note: while typing your password, you will not see the letters being entered. This is normal:<br><br>
    <img src="./macos-3-enter-password.png"><br><br>
+   Also press return when asked to:<br><br>
+   <img src="./macos-2-hit-return.png"><br><br>
 5. The installer will take a bit of time and then show a message that "Installation successful!", signaling that it is done:<br><br>
    <img src="./macos-4-installation-successful.png"><br><br>
    Read the messages underneath the "Installation successful!" message and look for a heading that says "Next steps". If there is a bullet point with the text "Add Homebrew to your PATH...", then there are be some additional commands that you need to copy and run (copy each line, paste it in the terminal and hit return):<br><br>
