@@ -103,7 +103,7 @@
     ```
 
     This will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
-    <img src="./general-1-cra-installed.png"><br><br>
+    <img src="./general-cra-installed.png"><br><br>
 
 12. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
@@ -112,12 +112,12 @@
     This will prepare a program that we will use in the course.<br><br>
 13. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
-    <img src="./general-2-vscode-settings.png"><br><br>
+    <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
     First of all, identify whether your settings file is empty or not. This is what an empty file looks like:<br><br>
-    <img src="./general-3-vscode-settings-empty.png"><br><br>
+    <img src="./general-vscode-settings-empty.png"><br><br>
     If your file is **not empty** (if there is more text within the curly brackets), then **we will need to do something extra** - add a comma on the second to last line:<br><br>
-    <img src="./general-4-vscode-settings-comma.png"><br><br>
+    <img src="./general-vscode-settings-comma.png"><br><br>
     Now in both cases you will want to paste the following settings **before the closing curly bracket (before the `}`)**:<br><br>
     ```json5
     "editor.wordWrap": "on",
@@ -165,7 +165,7 @@
     ```
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
-    <img src="./general-5-vscode-settings-fix-warnings.png"><br><br>
+    <img src="./general-vscode-settings-fix-warnings.png"><br><br>
 14. <a name="postgresql"></a>We will now install PostgreSQL. Copy and run each of these lines separately in the terminal:<br>
 
     ```bash
@@ -289,12 +289,12 @@
 21. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
-    <img src="./general-6-github-profile-settings.png"><br><br>
+    <img src="./general-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
 22. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
-    <img src="./general-7-github-name.png"><br><br>
+    <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
     ```bash
     git config --global user.name "Mona Lisa Octocat"
@@ -325,7 +325,7 @@
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
 24. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
-    <img src="./general-8-github-your-profile.png"><br><br>
+    <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
 25. Open Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
 26. <a name="specs"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
