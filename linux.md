@@ -262,28 +262,101 @@
 
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-18. Install the Android Studio Emulator for Expo by following this guide: https://docs.expo.io/workflow/android-studio-emulator/
-19. To verify that Expo is working with Android Studio, first start Android Studio. Then click on "More Actions" and select "Virtual Device Manager" (older versions: click "Configure" and select "AVD Manager"). Click on the green triangle play button next to one of the devices.
+18. Next we will set up some dependencies for Expo and React Native.
 
-    Then copy and run each of these lines separately in the terminal:
+    Copy each line in the following text, paste it in the terminal and hit return.
+
+    ```bash
+    sudo snap install android-studio --classic
+    [ -d "$HOME/Library/Android/sdk" ] && ANDROID_SDK=$HOME/Library/Android/sdk || ANDROID_SDK=$HOME/Android/Sdk
+    echo "export ANDROID_SDK=$ANDROID_SDK" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
+    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
+    ```
+
+    This will install Android Studio, for creating and running emulators.
+
+    Open Android Studio using Dash.
+
+    If it asks to import Android Studio Settings, choose **Do not import settings**.
+
+    When prompted, choose a **Custom** install:<br><br>
+
+    <img src="./general-android-studio-setup-install-type-custom.png"><br><br>
+
+    Leave the default JDK installation location as-is and click **Next**:<br><br>
+
+    <img src="./general-android-studio-setup-jdk-location.png"><br><br>
+
+    Uncheck the box next to **Android Virtual Device** (we will install our own manually):<br><br>
+
+    <img src="./general-android-studio-setup-uncheck-virtual-device.png"><br><br>
+
+    For each of the licenses with red stars next to them, click on the license name and then accept the agreement, finally clicking on **Finish** when you have accepted all agreements:<br><br>
+
+    <img src="./general-android-studio-setup-license-agreement.png"><br><br>
+
+    This will download components, which may take a few minutes:<br><br>
+
+    <img src="./general-android-studio-setup-downloading-components.png"><br><br>
+
+    Next will be getting a virtual device installed. Click on **More Actions** and select **Virtual Device Manager**:<br><br>
+
+    <img src="./general-android-studio-virtual-device-dropdown.png"><br><br>
+
+    Click on the **Create device** button on the top left of the window:<br><br>
+
+    <img src="./general-android-studio-virtual-device-create-device.png"><br><br>
+
+    Under the **Recommended** tab (the default tab), locate the system image named **R** (API level 30) and click on the **Download** link next to it. In the window that pops up, accept the license agreement and click **Next**:<br><br>
+
+    <img src="./general-android-studio-virtual-device-system-image-download.png"><br><br>
+
+    Once the download completes, select the image you just downloaded and click on **Next** through the rest of the steps until the virtual device has been created:<br><br>
+
+    <img src="./general-android-studio-virtual-device-system-image-select.png"><br><br>
+
+    The device will now show up in the Device Manager. Click on the triangular play button to launch the virtual device in the emulator. An emulator window will appear showing the screen of the virtual device:<br><br>
+
+    <img src="./general-android-studio-virtual-device-launch.png"><br><br>
+
+    If a message pops up in the virtual device that the "System UI isn't responding" at any point during these steps, you can click on "Wait".
+
+    Before running the first Expo app, test that the Android Studio `adb` (Android Debug Bridge) program has been set up properly, by running the following in a new terminal (open a new tab):
+
+    ```bash
+    adb
+    ```
+
+    It should print the version and help information:<br><br>
+
+    <img src="./general-android-studio-adb.png"><br><br>
+
+19. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
 
     ```bash
     cd ~
-    mkdir projects
+    mkdir -p projects
     cd projects
-    npx create-react-native-app --template blank expo-test
+    expo init expo-test --template blank
     cd expo-test
-    yarn
-    yarn start
+    yarn start --android
     ```
 
-    This should run an Expo demo application, which will show you the Expo Developer Tools.
+    This will create a new Expo demo app and start it. The first thing that you will see is the installation of Expo Go on the virtual device:<br><br>
 
-    In the left panel, select "Run on Android device/emulator". This will start a process that should open up an Android emulator - a simulator of an Android mobile device. The process may take several minutes. If the Android device says "System UI isn't responding", then click on "Wait".
+    <img src="./general-expo-start-expo-go-install.png"><br><br>
 
-    Once it is loaded, it should show the words "Universal React with Expo".
+    Next, the Metro bundler will bundle the JavaScript for the device, which may take some time. You will see a loading bar in the command line and a loading screen on the virtual device:<br><br>
 
-    If you're having troubles, the process should look something like shown in [Setup React Native with Android Studio (Expo) - Emulator & Physical device setup | YouTube](https://youtu.be/gVGuNxkh8ig?t=808)
+    <img src="./general-expo-start-metro-bundling-cli.png"><br><br>
+
+    <img src="./general-expo-start-metro-bundling-emulator.png"><br><br>
+
+    After the bundling has completed, the simple app should show up in the virtual device, with the words "Open up App.js to start working on your app!":<br><br>
+
+    <img src="./general-expo-start-app-loaded.png"><br><br>
+
+    Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
 20. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Karl (if you haven't already).
 21. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
