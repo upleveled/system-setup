@@ -16,7 +16,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
 5. Close PowerShell and open it again as administrator (like in step 1)<br><br>
 6. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
-   choco install git nodejs yarn vscode hyper postman -y
+   choco install git nodejs-lts yarn vscode hyper postman -y
    ```
    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper and Postman.<br><br>
    <!--
