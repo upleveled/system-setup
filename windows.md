@@ -376,16 +376,6 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
 
     If a message pops up in the virtual device that the "System UI isn't responding" at any point during these steps, you can click on "Wait".
 
-    Before running the first Expo app, test that the Android Studio `adb` (Android Debug Bridge) program has been set up properly, by running the following in a new Hyper command line (open a new tab):
-
-    ```bash
-    adb
-    ```
-
-    It should print the version and help information:<br><br>
-
-    <img src="./general-android-studio-adb.png"><br><br>
-
 21. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
 
     ```bash
@@ -407,7 +397,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
 
     <img src="./general-expo-start-metro-bundling-emulator.png"><br><br>
 
-    After the bundling has completed, the simple app should show up in the virtual device, with the words "Open up App.js to start working on your app!":<br><br>
+    After the bundling has completed, the simple app should show up in the virtual device, with the words "Open up App.js to start working on your app!" (if it instead says "Universal React with Expo", this is also ok):<br><br>
 
     <img src="./general-expo-start-app-loaded.png"><br><br>
 
