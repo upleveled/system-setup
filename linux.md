@@ -308,6 +308,8 @@
 
     <img src="./general-android-studio-virtual-device-create-device.png"><br><br>
 
+    Select the Pixel 3a as the hardware device.
+
     Under the **Recommended** tab (the default tab), locate the system image named **R** (API level 30) and click on the **Download** link next to it. In the window that pops up, accept the license agreement and click **Next**:<br><br>
 
     <img src="./general-android-studio-virtual-device-system-image-download.png"><br><br>
