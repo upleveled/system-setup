@@ -1,4 +1,4 @@
-Before you start, please make sure that you're running Windows 8.1, Windows 10 or Windows 11. Windows 7 is not supported, since it is no longer supported by Microsoft as of early 2020.
+Before you start, please make sure that you're running Windows 10 or Windows 11. Windows 7 is not supported, since it is no longer supported by Microsoft as of early 2020.
 
 1. Open the Start menu, type "Windows Update" and click on the result named Windows Update. Make sure that you have all of the latest updates.
 2. Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
@@ -273,7 +273,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
 
 17. <a name="docker"></a>We will now install Docker.
 
-    **Option A - Windows 10 Pro:**
+    **Option A - Windows 10/11 Pro:**
 
     1. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
     2. Copy the following text and paste it into Hyper. Hit enter.
@@ -285,9 +285,9 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
     3. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
-    **Option B - Windows 10 Home:**
+    **Option B - Windows 10/11 Home:**
 
-    1. Click on the start menu, type in "winver" to the search and verify you have at least Windows 10 version 1903. If your number is lower than 1903, run Windows Update.<br><br>
+    1. **Windows 10 only:** Click on the start menu, type in "winver" to the search and verify you have at least Windows 10 version 1903. If your number is lower than 1903, run Windows Update.<br><br>
        <img src="windows-5-winver.jpg"><br><br>
     2. Open PowerShell as administrator (like in step 1).
     3. Copy and run each of these lines separately in the PowerShell window:
