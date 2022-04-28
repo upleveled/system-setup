@@ -378,6 +378,10 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
 
     If a message pops up in the virtual device that the "System UI isn't responding" at any point during these steps, you can click on "Wait".
 
+    <!--
+
+    FIXME: Check whether this is needed / working on Windows - multiple students reported that they received "command not found" errors with this
+    
     Before running the first Expo app, test that the Android Studio `adb` (Android Debug Bridge) program has been set up properly, by running the following in a new Hyper command line (open a new tab):
 
     ```bash
@@ -387,6 +391,8 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
     It should print the version and help information:<br><br>
 
     <img src="./general-android-studio-adb.png"><br><br>
+
+    -->
 
 21. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
 
