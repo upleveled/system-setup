@@ -60,7 +60,7 @@ Before you start, please make sure that you're running Windows 8.1, Windows 10 o
 9. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
-   choco install chrome -y
+   choco install googlechrome -y
    ```
    This uses Chocolatey to install Chrome.<br><br>
 10. Install the following Chrome Extensions:
