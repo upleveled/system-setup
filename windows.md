@@ -312,6 +312,26 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
 
+    If after running `docker run hello-world` command an error equal or similar to this occur:
+
+    ```bash
+    Unable to write to the database. Exit code: 1
+      at Docker.Backend.Database.WriteKeys(ICollection\'1 keyValues) at Docker.Backend.Database.ModifyDatabase(ICollection`1 keyValuesToWrite, ICollection`1 keysToRemove)
+      at Docker.Backend.Database.Write(Settings settings)
+      at Docker.Backend.ContainerEngine.Linux.DoStart(Settings settings)
+      at Docker.Backend.ContainerEngine.Linux.Start(Settings settings)
+      at Docker.Core.Pipe.NamedPipeServer.<>c**DisplayClass8_0.<Register>b**0(Object[] parameters)
+      at Docker.Core.Pipe.NamedPipeServer.RunAction(String action, Object[] parameters)
+    ```
+
+    1. Press Ctrl+Alt+Delete and click on Task Manager
+       <img src="windows-7-task-manager.webp"><br><br>
+
+    2. Click on Performance tab and make sure you CPU has Virtualisation setting enabled
+       <img src="windows-8-virtualisation-enabled.png"><br><br>
+
+    3. In the case virtualization is not enabled, follow the steps in the Microsoft Windows [official documentation page](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1)
+
 19. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
