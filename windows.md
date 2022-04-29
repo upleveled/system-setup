@@ -13,7 +13,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
    <br>
 4. The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br><br>
    <img src="./windows-2-chocolatey-installed.png"><br><br>
-5. Close PowerShell and open it again as administrator (like in step 1)<br><br>
+5. Close PowerShell and open it again as administrator (like in step 2)<br><br>
 6. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
    choco install git nodejs-lts yarn vscode hyper postman -y
@@ -30,7 +30,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
    ```bash
    choco install slack -y
    ```
-7. Close PowerShell and open it again as administrator (like in step 1). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
+7. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash
    choco install python visualstudio2017-workload-vctools -y
@@ -67,7 +67,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
-11. Close PowerShell and open it again as administrator (like in step 1)<br><br>
+11. Close PowerShell and open it again as administrator (like in step 2)<br><br>
 12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
 
     ```bash
@@ -279,6 +279,8 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     2. Copy the following text and paste it into Hyper. Hit enter.
 
     ```bash
+    choco install wsl2 -y
+    choco install wsl-ubuntu-2004 -y
     choco install docker-desktop -y
     ```
 
@@ -289,8 +291,8 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     1. **Windows 10 only:** Click on the start menu, type in "winver" to the search and verify you have at least Windows 10 version 1903. If your number is lower than 1903, run Windows Update.<br><br>
        <img src="windows-5-winver.jpg"><br><br>
-    2. Open PowerShell as administrator (like in step 1).
-    3. Copy and run each of these lines separately in the PowerShell window:
+    2. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+    3. Copy the following text and paste it into Hyper. Hit enter.
 
     ```bash
     choco install wsl2 -y
@@ -381,7 +383,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     <!--
 
     FIXME: Check whether this is needed / working on Windows - multiple students reported that they received "command not found" errors with this
-    
+
     Before running the first Expo app, test that the Android Studio `adb` (Android Debug Bridge) program has been set up properly, by running the following in a new Hyper command line (open a new tab):
 
     ```bash
