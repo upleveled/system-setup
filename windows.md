@@ -275,19 +275,12 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     **Option A - Windows 10/11 Pro:**
 
-    1. Open PowerShell as administrator (like in step 2).
-    2. Copy and run each of these lines separately in the PowerShell window:
+    1. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+    2. Copy the following text and paste it into Hyper. Hit enter.
 
     ```bash
     choco install wsl2 -y
     choco install wsl-ubuntu-2004 -y
-    choco install docker-desktop -y
-    ```
-
-    3. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
-    4. Copy the following text and paste it into Hyper. Hit enter.
-
-    ```bash
     choco install docker-desktop -y
     ```
 
