@@ -275,14 +275,23 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     **Option A - Windows 10/11 Pro:**
 
-    1. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
-    2. Copy the following text and paste it into Hyper. Hit enter.
+    1. Open PowerShell as administrator (like in step 1).
+    2. Copy and run each of these lines separately in the PowerShell window:
+
+    ```bash
+    choco install wsl2 -y
+    choco install wsl-ubuntu-2004 -y
+    choco install docker-desktop -y
+    ```
+
+    3. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+    4. Copy the following text and paste it into Hyper. Hit enter.
 
     ```bash
     choco install docker-desktop -y
     ```
 
-    3. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
+    5. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
     **Option B - Windows 10/11 Home:**
@@ -381,7 +390,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     <!--
 
     FIXME: Check whether this is needed / working on Windows - multiple students reported that they received "command not found" errors with this
-    
+
     Before running the first Expo app, test that the Android Studio `adb` (Android Debug Bridge) program has been set up properly, by running the following in a new Hyper command line (open a new tab):
 
     ```bash
