@@ -312,7 +312,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
 
-    If after running `docker run hello-world` command an error equal or similar to this occur:
+    If after running `docker run hello-world` command, you receive an error like this:
 
     ```bash
     Unable to write to the database. Exit code: 1
