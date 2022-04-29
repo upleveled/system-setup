@@ -291,7 +291,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     1. **Windows 10 only:** Click on the start menu, type in "winver" to the search and verify you have at least Windows 10 version 1903. If your number is lower than 1903, run Windows Update.<br><br>
        <img src="windows-5-winver.jpg"><br><br>
-    2. Open PowerShell as administrator (like in step 2).
+    2. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
     3. Copy and run each of these lines separately in the PowerShell window:
 
     ```bash
