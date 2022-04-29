@@ -284,7 +284,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     choco install docker-desktop -y
     ```
 
-    5. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
+    3. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
     **Option B - Windows 10/11 Home:**
