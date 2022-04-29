@@ -324,7 +324,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
       at Docker.Core.Pipe.NamedPipeServer.RunAction(String action, Object[] parameters)
     ```
 
-    1. Press Ctrl+Alt+Delete and click on Task Manager
+    1. Press <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>Delete</kbd> and click on Task Manager
        <img src="windows-7-task-manager.webp"><br><br>
 
     2. Click on Performance tab and make sure you CPU has Virtualisation setting enabled
