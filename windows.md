@@ -325,10 +325,9 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     ```
 
     1. Press <kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>Delete</kbd> and click on Task Manager
-       <img src="windows-7-task-manager.webp"><br><br>
 
     2. Click on the Performance tab and make sure your CPU has the virtualisation setting enabled
-       <img src="windows-8-virtualisation-enabled.png"><br><br>
+       <img src="windows-7-virtualisation-enabled.png"><br><br>
 
     3. In the case virtualization is not enabled, make sure your machine meets the [docker requirements](https://docs.docker.com/desktop/windows/troubleshoot/#virtualization) and follow the steps in the Microsoft Windows [official documentation page](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1)
 
