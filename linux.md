@@ -261,6 +261,10 @@
     sudo npm install -g expo-cli
     ```
 
+    You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>
+
+    <img src="./general-expo-init.png"><br><br>
+
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
 18. Next we will set up some dependencies for Expo and React Native.
