@@ -324,7 +324,9 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     <img src="./general-expo-init.png"><br><br>
 
-    Lastly, we'll install Expo on your phone, so that you can also test on a real device. On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
+    Lastly, we'll install Expo on your phone, so that you can also test on a real device.
+
+    On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
 20. Next we will set up some dependencies for Expo and React Native.
 
