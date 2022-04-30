@@ -353,7 +353,7 @@
 
     This will create a new Expo demo app and start it.
 
-    If this step doesn't work, it's possible that you may not have the emulator running - check the last part of the previous step to see how to start the emulator.
+    If this step doesn't work, it's possible that you may not have the emulator running - check the last part of the previous step to see how to launch the emulator.
 
     The first thing that you will see is the installation of Expo Go on the virtual device:<br><br>
 
