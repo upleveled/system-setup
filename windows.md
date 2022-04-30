@@ -407,7 +407,11 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     yarn start --android
     ```
 
-    This will create a new Expo demo app and start it. The first thing that you will see is the installation of Expo Go on the virtual device:<br><br>
+    This will create a new Expo demo app and start it.
+
+    If this step doesn't work, it's possible that you may not have the emulator running - check the last part of the previous step to see how to start the emulator.
+
+    The first thing that you will see is the installation of Expo Go on the virtual device:<br><br>
 
     <img src="./general-expo-start-expo-go-install.png"><br><br>
 
