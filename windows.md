@@ -328,7 +328,15 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     <img src="windows-7-virtualisation-enabled.png"><br><br>
 
-    If virtualization is not enabled, [enable VT-x or SVM in your UEFI or BIOS](https://example.com/add-link-here).
+    Only if virtualization is not enabled, **Enable VT-x or SVM in your UEFI or BIOS**
+
+    1. Reboot your computer
+    2. Right when the computer is coming up from the black screen, press <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, or <kbd>F4</kbd>. Each computer manufacturer uses a different key but it may show a brief message at boot telling you which one to press. If you miss it the first time, reboot and try again. It helps to tap the key about twice a second when the computer is coming up. If you are not able to enter the BIOS via this method, consult your computer’s manual.
+    3. In the BIOS settings, find the configuration items related to the CPU. These can be in under the headings Processor, Chipset, or Northbridge.
+    4. Enable virtualization; the setting may be called VT-x, AMD-V, SVM, or Vanderpool. Enable Intel VT-d or AMD IOMMU if the options are available.
+    5. Save your changes and reboot.
+
+    If you are unable to find the Virtualization settings in your BIOS [make sure that your laptop does support it](https://archive.ph/aZ5Ng).
 
 19. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
