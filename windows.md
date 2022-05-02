@@ -312,7 +312,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
 
-    If after running `docker run hello-world` command, you receive an error like this:
+    If running `docker run hello-world` command results in [an `Unable to write to the database` error](https://github.com/docker/for-win/issues/74#issuecomment-247665026) like the one below, it may mean that virtualization is not enabled on your machine.
 
     ```bash
     Unable to write to the database. Exit code: 1
