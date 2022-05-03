@@ -52,6 +52,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
    code --install-extension meganrogge.template-string-converter
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
+   code --install-extension mattpocock.ts-error-translator
    code --install-extension wix.glean
    ```
 
