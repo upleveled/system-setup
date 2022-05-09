@@ -523,3 +523,9 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
    ```bash
    choco install windirstat
    ```
+
+7. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
+
+   ```bash
+   choco install powertoys
+   ```
