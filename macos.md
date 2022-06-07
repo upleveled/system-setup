@@ -281,7 +281,7 @@
 
     This will install Android Studio, for creating and running Android virtual devices in an emulator.
 
-    Open Android Studio using Start Menu, Spotlight, or Dash.
+    Open Android Studio using the Spotlight or locating it in Applications.
 
     If it asks to import Android Studio Settings, choose **Do not import settings**.
 
