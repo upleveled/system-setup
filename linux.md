@@ -347,7 +347,7 @@
     cd ~
     mkdir -p projects
     cd projects
-    expo init expo-test --template blank
+    yarn create expo-app expo-test --template blank
     cd expo-test
     yarn start --android
     ```
