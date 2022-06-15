@@ -409,7 +409,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     cd ~
     mkdir -p projects
     cd projects
-    expo init expo-test --template blank
+    yarn create expo-app expo-test --template blank
     cd expo-test
     yarn start --android
     ```
