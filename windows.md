@@ -331,10 +331,12 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
 20. Next we will set up some dependencies for Expo and React Native.
 
-    Copy the following text, paste it in Hyper and hit return.
+    Copy each line in the following text, paste it in Hyper and hit return.
 
     ```bash
     choco install androidstudio
+    echo "export PATH=$HOME/AppData/Local/Android/Sdk/platform-tools:\$PATH" >> ~/.bash_profile
+    source ~/.bash_profile
     ```
 
     This will install Android Studio, for creating and running Android virtual devices in an emulator.
@@ -387,10 +389,6 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     If a message pops up in the virtual device that the "System UI isn't responding" at any point during these steps, you can click on "Wait".
 
-    <!--
-
-    FIXME: Check whether this is needed / working on Windows - multiple students reported that they received "command not found" errors with this
-
     Before running the first Expo app, test that the Android Studio `adb` (Android Debug Bridge) program has been set up properly, by running the following in a new Hyper command line (open a new tab):
 
     ```bash
@@ -400,8 +398,6 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     It should print the version and help information:<br><br>
 
     <img src="./general-android-studio-adb.png"><br><br>
-
-    -->
 
 21. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
 
