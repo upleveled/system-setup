@@ -331,7 +331,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
 20. Next we will set up some dependencies for Expo and React Native.
 
-    Copy each line in the following text, paste it in the terminal and hit return.
+    Copy each line in the following text, paste it in Hyper and hit return.
 
     ```bash
     choco install androidstudio
