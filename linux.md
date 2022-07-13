@@ -154,8 +154,9 @@
     "files.autoSave": "onFocusChange",
     "explorer.openEditors.visible": 0,
     "editor.tabSize": 2,
-    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "[markdown]": {
       "files.trimTrailingWhitespace": false
     },
