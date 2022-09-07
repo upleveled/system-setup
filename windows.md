@@ -16,9 +16,9 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 5. Close PowerShell and open it again as administrator (like in step 2)<br><br>
 6. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
-   choco install git nodejs-lts yarn vscode hyper postman -y
+   choco install git nodejs-lts yarn vscode hyper postman flyctl -y
    ```
-   This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper and Postman.<br><br>
+   This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Postman and `flyctl`.<br><br>
    <!--
       **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
    -->
