@@ -26,7 +26,7 @@
    ```bash
    brew install git node@16 yarn flyctl
    ```
-   This uses Homebrew to install Git, Node.js and Yarn.<br><br>
+   This uses Homebrew to install Git, Node.js, Yarn and `flyctl`.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    brew tap microsoft/git
