@@ -46,7 +46,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension dozerg.tsimportsorter
    code --install-extension esbenp.prettier-vscode
-   code --install-extension frigus02.vscode-sql-tagged-template-literals
+   code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
    code --install-extension styled-components.vscode-styled-components
    code --install-extension kumar-harsh.graphql-for-vscode
    code --install-extension meganrogge.template-string-converter
