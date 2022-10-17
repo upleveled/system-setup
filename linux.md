@@ -4,7 +4,7 @@
    <img src="linux-1-open-terminal.png"><br>
 2. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
    sudo apt-get update
    sudo apt-get install -y git nodejs
    sudo npm install --global yarn

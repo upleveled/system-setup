@@ -24,7 +24,7 @@
    <img src="./macos-4.1-homebrew-next-steps.png"><br><br>
 6. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install git node@16 yarn flyctl
+   brew install git node yarn flyctl
    ```
    This uses Homebrew to install Git, Node.js, Yarn and `flyctl`.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
