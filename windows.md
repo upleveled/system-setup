@@ -1,10 +1,10 @@
 Before starting the setup, check two things:
 
-#### Windows 10+
+### Windows 10+
 
 Make sure that you're running Windows 10+ - earlier versions such as Windows 7 or 8.1 are not supported
 
-#### Spaces in Windows User Name
+### Spaces in Windows User Name
 
 Open the Start menu and type "cmd" and click on "Command Prompt". When PowerShell starts, type in `echo %USERPROFILE%`. It should display something like `C:\Users\Karl` (without any spaces).
 
