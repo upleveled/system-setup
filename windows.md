@@ -1,4 +1,4 @@
-Before starting the setup, check two things:
+Before starting the setup, check that your operating system and account is compatible:
 
 ### Windows 10+
 
@@ -18,7 +18,7 @@ Make sure to use an account without spaces in the user name for the course.
 
 ---
 
-With those two things out of the way, you're ready to start the system setup:
+With those compatibility things out of the way, you're ready to start the system setup:
 
 1. Open the Start menu, type "Windows Update" and click on the result named Windows Update. Make sure that you have all of the latest updates.
 2. Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
