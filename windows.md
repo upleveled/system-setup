@@ -10,7 +10,7 @@ If you see spaces in the path (eg. `C:\Users\Karl Horky`) then you should create
 
 - Start menu -> Settings -> Accounts -> Family & other users -> Add other user -> Add account
 - Enter a name **without spaces** in the user name (the box beneath the question "Who's going to use this PC?")
-- Once you create the new account, log in to the and try the command above again
+- Once you create the new account, log in to the new account and try the command above again
 
 Make sure to use an account without spaces in the user name for the course.
 
