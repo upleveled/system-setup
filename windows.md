@@ -1,8 +1,8 @@
 Before starting the setup, check that your operating system and account is compatible:
 
-### Windows 10+
+### Minimum OS Version: Windows 10
 
-Make sure that you're running Windows 10+ - earlier versions such as Windows 7 or 8.1 are not supported
+Make sure that you're running Windows 10 or later - earlier versions such as Windows 7 or 8.1 are not supported
 
 ### Spaces in Windows User Name
 
