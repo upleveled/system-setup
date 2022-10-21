@@ -1,4 +1,10 @@
-Before you start, please make sure that you're running Windows 10 or Windows 11. Windows 7 is not supported, since it is no longer supported by Microsoft as of early 2020.
+Before you start, check two things:
+
+A) Make sure that you're running Windows 10+ - earlier versions such as Windows 7 or 8.1 are not supported
+
+B) Open the Start menu and type "cmd" and click on "Command Prompt". When PowerShell starts, type in `echo %USERPROFILE%`. It should display something like `C:\Users\Karl` (without any spaces). If the path is shown with spaces (eg. `C:\Users\Karl Horky`) then you should create a new Windows account (Start menu -> Settings -> Accounts -> Family & other users -> Add other user -> Add account). Make sure that you enter a name without spaces in the user name (the box beneath the question "Who's going to use this PC?"). Once you create the new account, log in to the and try the command above again. Use only this new account for the course.
+
+With those two things out of the way, you're ready to start the system setup:
 
 1. Open the Start menu, type "Windows Update" and click on the result named Windows Update. Make sure that you have all of the latest updates.
 2. Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
