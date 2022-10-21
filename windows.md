@@ -1,8 +1,20 @@
-Before you start, check two things:
+Before starting the setup, check two things:
 
-A) Make sure that you're running Windows 10+ - earlier versions such as Windows 7 or 8.1 are not supported
+**Windows 10+:** Make sure that you're running Windows 10+ - earlier versions such as Windows 7 or 8.1 are not supported
 
-B) Open the Start menu and type "cmd" and click on "Command Prompt". When PowerShell starts, type in `echo %USERPROFILE%`. It should display something like `C:\Users\Karl` (without any spaces). If the path is shown with spaces (eg. `C:\Users\Karl Horky`) then you should create a new Windows account (Start menu -> Settings -> Accounts -> Family & other users -> Add other user -> Add account). Make sure that you enter a name without spaces in the user name (the box beneath the question "Who's going to use this PC?"). Once you create the new account, log in to the and try the command above again. Use only this new account for the course.
+**Spaces in Windows User Name:**
+
+Open the Start menu and type "cmd" and click on "Command Prompt". When PowerShell starts, type in `echo %USERPROFILE%`. It should display something like `C:\Users\Karl` (without any spaces).
+
+If you see spaces in the path (eg. `C:\Users\Karl Horky`) then you should create a new Windows account:
+
+- Start menu -> Settings -> Accounts -> Family & other users -> Add other user -> Add account
+- Enter a name **without spaces** in the user name (the box beneath the question "Who's going to use this PC?")
+- Once you create the new account, log in to the and try the command above again
+
+Make sure to use an account without spaces in the user name for the course.
+
+---
 
 With those two things out of the way, you're ready to start the system setup:
 
