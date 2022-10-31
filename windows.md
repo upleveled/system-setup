@@ -179,7 +179,7 @@ With those compatibility things out of the way, you're ready to start the system
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    choco install postgresql14 --params '/Password:postgres'
+    choco install postgresql15 --params '/Password:postgres'
     ```
 
     This will install PostgreSQL and create a default user of `postgres` and a password of `postgres`. Remember this password and use it any time it asks from now on.
@@ -189,8 +189,8 @@ With those compatibility things out of the way, you're ready to start the system
     Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
     ```bash
-    echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/14/bin\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PGDATA=\"/c/Program Files/PostgreSQL/14/data\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/15/bin\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PGDATA=\"/c/Program Files/PostgreSQL/15/data\"" >> "$USERPROFILE/.bash_profile"
     source "$USERPROFILE/.bash_profile"
     ```
 
@@ -206,11 +206,11 @@ With those compatibility things out of the way, you're ready to start the system
     cat "$USERPROFILE/.bash_profile"
     ```
 
-    It should print out something that looks like the following (although the `14` number may be different for you):
+    It should print out something that looks like the following (although the `15` number may be different for you):
 
     ```bash
-    export PATH=$PATH:"/c/Program Files/PostgreSQL/14/bin"
-    export PGDATA="/c/Program Files/PostgreSQL/14/data"
+    export PATH=$PATH:"/c/Program Files/PostgreSQL/15/bin"
+    export PGDATA="/c/Program Files/PostgreSQL/15/data"
     ```
 
     -->
