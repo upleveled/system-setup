@@ -22,9 +22,10 @@
    <img src="./macos-4-installation-successful.png"><br><br>
    Read the messages underneath the "Installation successful!" message and look for a heading that says "Next steps". If there is a bullet point with the text "Add Homebrew to your PATH...", then there are be some additional commands that you need to copy and run (copy each line, paste it in the terminal and hit return):<br><br>
    <img src="./macos-4.1-homebrew-next-steps.png"><br><br>
-6. Copy the following text, paste it in the terminal and hit return.<br><br>
+6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    brew install git node@18 yarn flyctl
+   brew link --overwrite node@18
    ```
    This uses Homebrew to install Git, Node.js, Yarn and `flyctl`.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
