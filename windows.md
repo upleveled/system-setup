@@ -36,7 +36,7 @@ With those compatibility things out of the way, you're ready to start the system
 5. Close PowerShell and open it again as administrator (like in step 2)<br><br>
 6. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
-   choco install git nodejs yarn vscode hyper postman flyctl -y
+   choco install git nodejs-lts yarn vscode hyper postman flyctl -y
    ```
    This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper, Postman and `flyctl`.<br><br>
    <!--
