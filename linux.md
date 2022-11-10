@@ -6,10 +6,10 @@
    ```bash
    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
    sudo apt-get update
-   sudo apt-get install -y git nodejs
+   sudo apt-get install -y git nodejs python3
    sudo npm install --global yarn
    ```
-   This uses apt to install Git and Node.js and npm to install Yarn.<br><br>
+   This uses apt to install Git, Node.js and Python and uses npm to install Yarn.<br><br>
 3. For the version matching your version of Ubuntu, copy each line in the following text, paste it in the terminal and hit return.<br>
 
    **Ubuntu 18.04 (Bionic)**<br><br>
