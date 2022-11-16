@@ -145,7 +145,7 @@
 14. <a name="postgresql"></a>We will now install PostgreSQL. Copy the following text, paste it in the terminal and hit return.
 
     ```bash
-    brew install postgresql
+    brew install postgresql@15
     ```
 
     This uses Homebrew to install PostgreSQL and create just a single user with your username and all role permissions. There will be no `postgres` user set up.<br><br>
