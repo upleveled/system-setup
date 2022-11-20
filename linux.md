@@ -166,6 +166,13 @@
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
     "eslint.runtime": "node",
+    "stylelint.validate": [
+      "css",
+      "less",
+      "postcss",
+      "javascript",
+      "typescriptreact"
+    ],
     ```
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>

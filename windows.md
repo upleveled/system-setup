@@ -158,6 +158,13 @@ With those compatibility things out of the way, you're ready to start the system
     "prettier.trailingComma": "all",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "eslint.runtime": "node",
+    "stylelint.validate": [
+      "css",
+      "less",
+      "postcss",
+      "javascript",
+      "typescriptreact"
+    ],
     ```
 
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
