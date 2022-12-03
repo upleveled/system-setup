@@ -458,7 +458,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
-22. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Karl (if you haven't already).
+22. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
 23. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
@@ -506,8 +506,8 @@ With those compatibility things out of the way, you're ready to start the system
 27. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
-29. <a name="specs"></a>Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Karl. Under "Windows specifications", click the Copy button and paste this to Karl.
+28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Kimberley](https://upleveled.slack.com/team/U02NSD2E3P1). Also send your Google Account email address to Kimberley (if you haven't already).
+29. <a name="specs"></a>Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Kimberley. Under "Windows specifications", click the Copy button and paste this to Kimberley.
 30. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
