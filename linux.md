@@ -46,7 +46,7 @@
 4. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install code --classic
-   sudo snap install flyctl --edge
+   sudo snap install flyctl --edge --devmode
    ```
    This uses Snap to install VS Code and `flyctl`.<br><br>
 5. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
