@@ -149,10 +149,11 @@
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
-14. <a name="postgresql"></a>We will now install PostgreSQL. Copy the following text, paste it in the terminal and hit return.
+14. <a name="postgresql"></a>We will now install PostgreSQL. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
     brew install postgresql@15
+    brew link postgresql@15
     ```
 
     This uses Homebrew to install PostgreSQL and create just a single user with your username and all role permissions. There will be no `postgres` user set up.<br><br>
