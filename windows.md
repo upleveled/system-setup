@@ -161,6 +161,7 @@ With those compatibility things out of the way, you're ready to start the system
     "stylelint.validate": [
       "css",
       "less",
+      "scss",
       "postcss",
       "javascript",
       "typescriptreact"

@@ -169,6 +169,7 @@
     "stylelint.validate": [
       "css",
       "less",
+      "scss",
       "postcss",
       "javascript",
       "typescriptreact"
