@@ -53,6 +53,7 @@
 
    ```bash
    code --install-extension Cardinal90.multi-cursor-case-preserve
+   code --install-extension clinyong.vscode-css-modules
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension dozerg.tsimportsorter
    code --install-extension esbenp.prettier-vscode
@@ -64,6 +65,7 @@
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
    code --install-extension mattpocock.ts-error-translator
+   code --install-extension viijay-kr.react-ts-css
    code --install-extension wix.glean
    ```
 
