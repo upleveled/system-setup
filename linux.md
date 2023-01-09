@@ -423,7 +423,7 @@
 23. Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
-    git config --global credential.credentialStore gpg
+    git config --global credential.credentialStore cache
     ```
 
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
