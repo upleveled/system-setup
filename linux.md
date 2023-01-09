@@ -395,39 +395,49 @@
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
+
     ```bash
     git config --global user.name "Mona Lisa Octocat"
     ```
+
     You can test whether the name was set correctly with the next command (if it worked, it will print the name on the next line):<br><br>
+
     ```bash
     git config --global user.name
     ```
+
     <br>For running the next command, **add your email in quotes**:<br><br>
+
     ```bash
     git config --global user.email "monalisaoctocat@example.com"
     ```
+
     You can test whether the email was set correctly with with the next command (if it worked, it will print the email on the next line):<br><br>
+
     ```bash
     git config --global user.email
     ```
+
     This prepares `git` so that your work is attributed correctly to you.<br><br>
 
-<!-- 22. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```bash
-    git config --global credential.helper cache
-    ```
-    This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br> -->
-
 23. Copy the following text, paste it in the terminal and hit return.<br><br>
+
+    ```bash
+    git config --global credential.credentialStore gpg
+    ```
+
+    This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
+
+24. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
-24. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+25. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-25. Open Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Kimberley](https://upleveled.slack.com/team/U02NSD2E3P1). Also send your Google Account email address to Kimberley (if you haven't already).
-26. <a name="specs"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
+26. Open Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Kimberley](https://upleveled.slack.com/team/U02NSD2E3P1). Also send your Google Account email address to Kimberley (if you haven't already).
+27. <a name="specs"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     lshw -short
     ```
@@ -442,7 +452,7 @@
     cat /proc/version
     ```
     This will show you details about your Linux distribution. Copy the text on the lines after the command and send it to Kimberley in Slack.
-27. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+28. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
