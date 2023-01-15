@@ -67,7 +67,6 @@ With those compatibility things out of the way, you're ready to start the system
    code --install-extension dozerg.tsimportsorter
    code --install-extension esbenp.prettier-vscode
    code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
-   code --install-extension iceworks-team.iceworks-style-helper
    code --install-extension kumar-harsh.graphql-for-vscode
    code --install-extension meganrogge.template-string-converter
    code --install-extension styled-components.vscode-styled-components
