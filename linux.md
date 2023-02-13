@@ -10,34 +10,10 @@
    sudo npm install --global yarn
    ```
    This uses apt to install Git, Node.js and Python and uses npm to install Yarn.<br><br>
-3. For the version matching your version of Ubuntu, copy each line in the following text, paste it in the terminal and hit return.<br>
-
-   **Ubuntu 18.04 (Bionic)**<br><br>
+3. Copy each line in the following text, paste it in the terminal and hit return.<br>
 
    ```bash
-   curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-   sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
-   sudo apt-get update
-   sudo apt-get install gcmcore
-   git-credential-manager-core configure
-   ```
-
-   **Ubuntu 21.04 (Hirsute)**<br><br>
-
-   ```bash
-   curl -sSL https://packages.microsoft.com/config/ubuntu/21.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list
-   curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-   sudo apt-get update
-   sudo apt-get install gcmcore
-   git-credential-manager-core configure
-   ```
-
-   **Other Ubuntu/Debian versions**
-
-   Download [the latest `.deb` package](https://github.com/microsoft/Git-Credential-Manager-Core/releases/latest) (the one called something like `gcmcore-linux_amd64.x.x.xxx.xxxxx.deb`) and then run the following commands:
-
-   ```bash
-   sudo dpkg -i <path-to-package>
+   curl -L https://aka.ms/gcm/linux-install-source.sh | sh
    git-credential-manager-core configure
    ```
 
