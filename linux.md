@@ -440,3 +440,8 @@
    ```bash
    code --install-extension streetsidesoftware.code-spell-checker
    ```
+2. If you need to record video of your screen with sound (with export to mp4 and gif), you may want to try out Kooha:
+
+   ```bash
+   flatpak install flathub io.github.seadve.Kooha
+   ```

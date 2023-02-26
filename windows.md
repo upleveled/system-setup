@@ -521,7 +521,7 @@ With those compatibility things out of the way, you're ready to start the system
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. If you need to record your screen to a gif, you may want to try out Screen to Gif:
+2. If you need to record video of your screen (with export to mp4 and gif), you may want to try out Screen to Gif:
 
    ```bash
    choco install screentogif
