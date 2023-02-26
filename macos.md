@@ -443,7 +443,13 @@
    brew install --cask flameshot
    ```
 
-3. If you need to record video of your screen with sound (with export to mp4 and gif), you may want to try out Kap:
+3. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/):
+
+   ```bash
+   brew install --cask loom
+   ```
+
+   An alternative without the limitations of Loom is Kap:
 
    ```bash
    brew install --cask kap
