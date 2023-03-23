@@ -322,7 +322,7 @@ With those compatibility things out of the way, you're ready to start the system
     **Option B - Windows 10/11 Home:**
 
     1. **Windows 10 only:** Click on the start menu, type in "winver" to the search and verify you have at least Windows 10 version 1903. If your number is lower than 1903, run Windows Update.<br><br>
-       <img src="windows-5-winver.jpg"><br><br>
+       <img src="windows-6-winver.jpg"><br><br>
     2. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
     3. Copy the following text and paste it into Hyper. Hit enter.
 
@@ -343,6 +343,32 @@ With those compatibility things out of the way, you're ready to start the system
 
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
+
+    If running `docker run hello-world` command results in [an `Unable to write to the database` error](https://github.com/docker/for-win/issues/74#issuecomment-247665026) like the one below, it may mean that virtualization is not enabled on your machine.
+
+    ```bash
+    Unable to write to the database. Exit code: 1
+      at Docker.Backend.Database.WriteKeys(ICollection\'1 keyValues) at Docker.Backend.Database.ModifyDatabase(ICollection`1 keyValuesToWrite, ICollection`1 keysToRemove)
+      at Docker.Backend.Database.Write(Settings settings)
+      at Docker.Backend.ContainerEngine.Linux.DoStart(Settings settings)
+      at Docker.Backend.ContainerEngine.Linux.Start(Settings settings)
+      at Docker.Core.Pipe.NamedPipeServer.<>c**DisplayClass8_0.<Register>b**0(Object[] parameters)
+      at Docker.Core.Pipe.NamedPipeServer.RunAction(String action, Object[] parameters)
+    ```
+
+    Check if virtualization is enabled on your machine on the **Performance** tab of the Task Manager (open the Task Manager with <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>Escape</kbd>):<br><br>
+
+    <img src="windows-7-virtualisation-enabled.png"><br><br>
+
+    Only if virtualization is not enabled, **Enable VT-x or SVM in your UEFI or BIOS**
+
+    1. Reboot your computer
+    2. Right when the computer is coming up from the black screen, press <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, or <kbd>F4</kbd>. Each computer manufacturer uses a different key but it may show a brief message at boot telling you which one to press. If you miss it the first time, reboot and try again. It helps to tap the key about twice a second when the computer is coming up. If you are not able to enter the BIOS via this method, consult your computer’s manual.
+    3. In the BIOS settings, find the configuration items related to the CPU. These can be in under the headings Processor, Chipset, or Northbridge.
+    4. Enable virtualization; the setting may be called VT-x, AMD-V, SVM, or Vanderpool. Enable Intel VT-d or AMD IOMMU if the options are available.
+    5. Save your changes and reboot.
+
+    If you are unable to find the Virtualization settings in your BIOS [make sure that your laptop does support it](https://archive.ph/aZ5Ng).
 
 19. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
