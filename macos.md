@@ -24,11 +24,17 @@
    <img src="./macos-4.1-homebrew-next-steps.png"><br><br>
 6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install flyctl git node@18 python yarn
+   brew install flyctl git node@18 python
    brew link --overwrite node@18
    ```
-   This uses Homebrew to install `flyctl`, Git, Node.js, Python and Yarn.<br><br>
+   This uses Homebrew to install `flyctl`, Git, Node.js and Python.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+   ```bash
+   corepack enable
+   corepack prepare pnpm@latest --activate
+   ```
+   This uses Corepack to install `pnpm`.<br><br>
+8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    brew tap microsoft/git
    brew install --cask visual-studio-code postman git-credential-manager-core
@@ -42,7 +48,7 @@
    ```bash
    brew install --cask slack
    ```
-8. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+9. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
    code --install-extension Cardinal90.multi-cursor-case-preserve
@@ -63,31 +69,31 @@
 
    This installs some VS Code extensions we will need.<br><br>
 
-9. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
-   If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text, paste it in the terminal and hit return.<br><br>
-   ```bash
-   brew install --cask google-chrome
-   ```
-   This uses Homebrew to install Chrome.<br><br>
-10. Install the following Chrome Extensions:
+10. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
+    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text, paste it in the terminal and hit return.<br><br>
+    ```bash
+    brew install --cask google-chrome
+    ```
+    This uses Homebrew to install Chrome.<br><br>
+11. Install the following Chrome Extensions:
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en))
-11. Copy the following text, paste it in the terminal and hit return.<br><br>
+12. Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
-    yarn create react-app --help
+    pnpm create react-app --help
     ```
 
     This step will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
     <img src="./general-cra-installed.png"><br><br>
 
-12. Copy the following text, paste it in the terminal and hit return.<br><br>
+13. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
-    yarn global add @upleveled/preflight
+    pnpm global add @upleveled/preflight
     ```
     This will prepare a program that we will use in the course.<br><br>
-13. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
+14. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>cmd</kbd>-<kbd>shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -152,7 +158,7 @@
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
-14. <a name="postgresql"></a>We will now install PostgreSQL. Copy each line in the following text, paste it in the terminal and hit return.
+15. <a name="postgresql"></a>We will now install PostgreSQL. Copy each line in the following text, paste it in the terminal and hit return.
 
     ```bash
     brew install postgresql@15
@@ -245,7 +251,7 @@
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-15. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
+16. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
 
     ```bash
     brew install --cask docker
@@ -255,7 +261,7 @@
     This uses Homebrew Cask to install Docker for Mac and starts it for the first time to set it up. Wait for a message at the top of the window to indicate that everything is finished being set up:<br><br>
     <img src="./macos-6-docker.png"><br><br>
 
-16. Test if Docker is installed by running the following command on the command line:
+17. Test if Docker is installed by running the following command on the command line:
 
     ```bash
     docker run hello-world
@@ -264,7 +270,7 @@
     It should print out a welcome message like this:<br><br>
     <img src="macos-6-docker-hello-world.png"><br><br>
 
-17. <a name="expo-react-native"></a>We will now install Expo CLI for React Native.
+18. <a name="expo-react-native"></a>We will now install Expo CLI for React Native.
 
     Copy the following text, paste it in the terminal and hit return.
 
@@ -280,7 +286,7 @@
 
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-18. Next we will set up some dependencies for Expo and React Native.
+19. Next we will set up some dependencies for Expo and React Native.
 
     Copy each line in the following text, paste it in the terminal and hit return.
 
@@ -352,15 +358,15 @@
 
     <img src="./general-android-studio-adb.png"><br><br>
 
-19. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
+20. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
 
     ```bash
     cd ~
     mkdir -p projects
     cd projects
-    yarn create expo-app expo-test --template blank
+    pnpm create expo-app expo-test --template blank
     cd expo-test
-    yarn start --android
+    pnpm start --android
     ```
 
     This will create a new Expo demo app and start it.
@@ -383,14 +389,14 @@
 
     Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
-20. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
-21. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+21. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
+22. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-22. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+23. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
