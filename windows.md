@@ -55,7 +55,7 @@ With those compatibility things out of the way, you're ready to start the system
    corepack enable
    corepack prepare pnpm@latest --activate
    ```
-   This installs the `pnpm` package manager, which we will use to install some Node.js packages.<br><br>
+   This uses Corepack to install `pnpm`.<br><br>
 8. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash

@@ -11,11 +11,11 @@
    This uses apt to install Git, Node.js and Python.<br><br>
 3. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
     ```bash
-    sudo corepack enable
-    sudo corepack prepare pnpm@latest --activate
+    corepack enable
+    corepack prepare pnpm@latest --activate
     ```
 
-    This installs the `pnpm` package manager, which we will use to install some Node.js packages.<br><br>
+    This uses Corepack to install `pnpm`.<br><br>
 4. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    curl -L https://aka.ms/gcm/linux-install-source.sh | sh

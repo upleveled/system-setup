@@ -27,13 +27,13 @@
    brew install flyctl git node@18 python
    brew link --overwrite node@18
    ```
-   This uses Homebrew to install `flyctl`, Git, Node.js, Python.<br><br>
+   This uses Homebrew to install `flyctl`, Git, Node.js and Python.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install corepack
+   corepack enable
    corepack prepare pnpm@latest --activate
    ```
-   This uses Homebrew to install `corepack`, and uses Corepack to install `pnpm`.<br><br>
+   This uses Corepack to install `pnpm`.<br><br>
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    brew tap microsoft/git
