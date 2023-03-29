@@ -97,7 +97,7 @@
 
 14. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
-    sudo pnpm global add @upleveled/preflight
+    sudo pnpm add --global @upleveled/preflight
     ```
     This will prepare a program that we will use in the course.<br><br>
 15. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
