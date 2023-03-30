@@ -438,7 +438,7 @@ With those compatibility things out of the way, you're ready to start the system
 
 22. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
 
-      <!-- TODO: Remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
+      <!-- TODO: Check if we can remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
 
     ```bash
     cd ~
