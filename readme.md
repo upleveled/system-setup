@@ -6,7 +6,7 @@
 - [VS Code Settings](./windows.md#user-content-vs-code-settings)
 - [PostgreSQL](./windows.md#user-content-postgresql)
 - [Docker](./windows.md#user-content-docker)
-- [Expo + React Native](https://www.github.com/upleveled/system-setup/blob/main/windows.md#user-content-expo-react-native)
+- <a href="./windows.md#user-content-expo-react-native">Expo + React Native</a>
 - [System Specifications](./windows.md#user-content-specs)
 
 ## [macOS](./macos.md)
