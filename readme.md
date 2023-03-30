@@ -6,7 +6,7 @@
 - [VS Code Settings](./windows.md#user-content-vs-code-settings)
 - [PostgreSQL](./windows.md#user-content-postgresql)
 - [Docker](./windows.md#user-content-docker)
-- <a href="./windows.md#user-content-expo-react-native" target="_blank">Expo + React Native</a>
+- [Expo + React Native](./windows.md#minimum-os-version-windows-10)
 - [System Specifications](./windows.md#user-content-specs)
 
 ## [macOS](./macos.md)
