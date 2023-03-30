@@ -340,12 +340,16 @@
 
 21. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
 
+    <!-- TODO: Check if we can remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
+
     ```bash
     cd ~
     mkdir -p projects
     cd projects
     pnpm create expo-app expo-test --template blank
     cd expo-test
+    echo 'node-linker=hoisted' > ./.npmrc
+    pnpm install --force
     pnpm start --android
     ```
 
