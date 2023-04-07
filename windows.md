@@ -103,8 +103,8 @@ With those compatibility things out of the way, you're ready to start the system
     pnpm create react-app --help
     ```
 
-    This will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
-    <img src="./general-cra-installed.png"><br><br>
+    This will prepare a program that we will use in the course. This will take a while and then respond with a message with some usage instructions, similar to this:<br><br>
+    <img src="./general-cra-installed.avif"><br><br>
 
 14. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
     ```bash

@@ -85,8 +85,8 @@
     pnpm create react-app --help
     ```
 
-    This step will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
-    <img src="./general-cra-installed.png"><br><br>
+    This step will prepare a program that we will use in the course. This will take a while and then respond with a message with some usage instructions, similar to this:<br><br>
+    <img src="./general-cra-installed.avif"><br><br>
 
 13. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
