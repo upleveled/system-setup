@@ -108,7 +108,7 @@ With those compatibility things out of the way, you're ready to start the system
 
 14. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
     ```bash
-    pnpm global add @upleveled/preflight
+    pnpm add --global @upleveled/preflight
     ```
     This will prepare a program that we will use in the course.<br><br>
 15. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
