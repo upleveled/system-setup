@@ -51,6 +51,7 @@
 9. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
+   code --install-extension bradlc.vscode-tailwindcss
    code --install-extension Cardinal90.multi-cursor-case-preserve
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension dozerg.tsimportsorter
