@@ -62,6 +62,7 @@
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
    code --install-extension mattpocock.ts-error-translator
+   code --install-extension unional.vscode-sort-package-json
    code --install-extension viijay-kr.react-ts-css
    code --install-extension vunguyentuan.vscode-css-variables
    code --install-extension wix.glean
@@ -105,7 +106,12 @@
     ```json5
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
+    "files.autoSave": "onFocusChange",
     "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": [
+      // Sort package.json keys with https://marketplace.visualstudio.com/items?itemName=unional.vscode-sort-package-json
+      "source.sortPackageJson"
+    ],
     "tsImportSorter.configuration.groupRules": ["^node:", {}, "^[.]"],
     "tsImportSorter.configuration.keepUnused": [".*"],
     "tsImportSorter.configuration.emptyLinesBetweenGroups": 0,
@@ -132,7 +138,6 @@
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "files.autoSave": "onFocusChange",
     "explorer.openEditors.visible": 0,
     "editor.tabSize": 2,
     "files.insertFinalNewline": true,
