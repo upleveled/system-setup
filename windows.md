@@ -102,7 +102,7 @@ With those compatibility things out of the way, you're ready to start the system
 13. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
 
     ```bash
-    pnpm create react-app --help
+    pnpm create @upleveled/react-app --help
     ```
 
     This will prepare a program that we will use in the course. This will take a while and then respond with a message with some usage instructions, similar to this:<br><br>
