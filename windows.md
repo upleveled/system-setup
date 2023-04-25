@@ -193,7 +193,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\bin\\bash.exe',`
     2. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
-    3. Save the file and close and restart Hyper.
+    3. Save the file and close and restart Hyper
     4. To test that the Hyper setup was successful, open Visual Studio Code
     5. Open a new terminal by clicking on `Terminal` in the top menu and selecting `New Terminal`
      - If your terminal looks similar, then the setup was successful
