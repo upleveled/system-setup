@@ -194,12 +194,21 @@ With those compatibility things out of the way, you're ready to start the system
     1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\bin\\bash.exe',`
     2. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
     3. Save the file and close and restart Hyper
-    4. To test that the Hyper setup was successful, open Visual Studio Code
-    5. Open a new terminal by clicking on `Terminal` in the top menu and selecting `New Terminal`
-     - If your terminal looks similar, then the setup was successful
-    <img src="./windows-16-vscode-hyper.jpg"><br><br>
-     - If your terminal looks similar, then the setup was not successful and you have to go back to step 1 and double-check that the changes were made correctly
-    <img src="./windows-16-vscode-ps.jpg"><br><br>
+
+    To test that the Hyper setup was successful, you can copy and paste the following command into Hyper and hit return:
+    
+    ```bash
+    echo $SHELL; echo $TERM
+    ```
+
+    You should see the following output:
+   
+    ```bash
+    C:\Program Files\Git\bin\bash.exe
+    cygwin
+    ```
+    
+    If you see this output, then the Hyper setup was successful. If the output is different, then you need to go back to step 1 and double-check your changes
 
 17. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
