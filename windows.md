@@ -186,6 +186,22 @@ With those compatibility things out of the way, you're ready to start the system
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
 
+    To verify that the setup for Git Bash was successful, we will open a new terminal window in VS Code:
+    1. Click on `Terminal` in the top menu and select `New Terminal`
+    2. Copy and paste the following command into the terminal and hit return:
+      
+       ```bash
+       echo "VS Code config: $SHELL $TERM"
+       ```
+     
+       This should display:
+     
+       ```bash
+       VS Code config: /bin/bash mingw32
+       ```
+
+       If you see this output, then the Visual Studio Code setup was successful. If the output is different, then you need to go back to step 15 and double-check your changes.
+
 16. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
     <img src="./windows-3-hyper-preferences.png"><br><br>
@@ -193,28 +209,20 @@ With those compatibility things out of the way, you're ready to start the system
 
     1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\bin\\bash.exe',`
     2. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
-    3. Save the file and close and restart Hyper.
+    3. Save the file and close and restart Hyper
     4. To verify that the setup was successful, you can copy and paste the following command into Hyper and hit return:
     
         ```bash
-        echo $SHELL; echo $TERM
+        echo "Hyper config: $SHELL $TERM"
         ```
 
         This should display:
    
         ```bash
-        C:\Program Files\Git\bin\bash.exe
-        cygwin
+        Hyper config: C:\Program Files\Git\bin\bash.exe cygwin
         ```
     
         If you see this output, then the Hyper setup was successful. If the output is different, then you need to go back to step 16 and double-check your changes.
-
-    6. To verify that the setup was successful for Visual Studio Code, open Visual Studio Code.
-    7. Click on `Terminal` in the top menu and select `New Terminal`.
-        - If your terminal window looks similar to the screenshot below, then the setup was successful.
-    <img src="./windows-16-vscode-hyper.jpg"><br><br>
-        - If your terminal looks similar to the screenshot below, then the setup was not successful and you have to go back to step 16 and double-check that the changes were made correctly.
-    <img src="./windows-16-vscode-ps.jpg"><br><br>
 
 17. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
