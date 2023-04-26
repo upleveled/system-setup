@@ -191,7 +191,7 @@ With those compatibility things out of the way, you're ready to start the system
     2. Copy and paste the following command into the terminal and hit return:
       
        ```bash
-       echo "[VS Code config] Shell: $SHELL | Terminal: $TERM"
+       echo "[VS Code config]\nShell: $SHELL\nTerminal: $TERM"
        ```
      
        This should display:
