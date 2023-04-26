@@ -161,9 +161,11 @@
       "typescriptreact"
     ],
     ```
+    After you have pasted the settings, save the file with `File` -> `Save` in the top menu.<br><br>
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
+    If you made any further changes to the file, save the file again with `File` -> `Save` in the top menu.<br><br>
 15. <a name="postgresql"></a>We will now install PostgreSQL. Copy each line in the following text, paste it in the terminal and hit return.
 
     ```bash
