@@ -221,7 +221,9 @@ With those compatibility things out of the way, you're ready to start the system
         This should display:
    
         ```bash
-        [Hyper config] Shell: C:\Program Files\Git\bin\bash.exe | Terminal: cygwin
+        [Hyper config]
+        Shell: C:\Program Files\Git\bin\bash.exe
+        Terminal: cygwin
         ```
     
         If you see this output, then the Hyper setup was successful. If the output is different, then you need to go back to step 16 and double-check your changes.
