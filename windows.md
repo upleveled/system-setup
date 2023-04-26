@@ -215,7 +215,7 @@ With those compatibility things out of the way, you're ready to start the system
     4. To verify that the setup was successful, copy and paste the following command into Hyper and hit return:
     
         ```bash
-        echo "[Hyper config] Shell: $SHELL | Terminal: $TERM"
+        echo -e "[Hyper config]\nShell: $SHELL\nTerminal: $TERM"
         ```
 
         This should display:
