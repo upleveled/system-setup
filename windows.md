@@ -197,7 +197,9 @@ With those compatibility things out of the way, you're ready to start the system
        This should display:
      
        ```bash
-       [VS Code config] Shell: /usr/bin/bash | Terminal: xterm-256color
+       [VS Code config]
+       Shell: /usr/bin/bash
+       Terminal: xterm-256color
        ```
 
        If you see this output, then the Visual Studio Code setup was successful. If the output is different, then you need to go back to step 15 and double-check your changes.
