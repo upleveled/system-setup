@@ -210,7 +210,7 @@ With those compatibility things out of the way, you're ready to start the system
     1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\bin\\bash.exe',`
     2. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
     3. Save the file and close and restart Hyper
-    4. To verify that the setup was successful, you can copy and paste the following command into Hyper and hit return:
+    4. To verify that the setup was successful, copy and paste the following command into Hyper and hit return:
     
         ```bash
         echo "[Hyper config] Shell: $SHELL | Terminal: $TERM"
