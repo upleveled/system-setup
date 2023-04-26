@@ -191,13 +191,13 @@ With those compatibility things out of the way, you're ready to start the system
     2. Copy and paste the following command into the terminal and hit return:
       
        ```bash
-       echo "VS Code config: $SHELL $TERM"
+       echo "[VS Code config] Shell: $SHELL | Terminal: $TERM"
        ```
      
        This should display:
      
        ```bash
-       VS Code config: /bin/bash mingw32
+       [VS Code config] Shell: /usr/bin/bash | Terminal: xterm-256color
        ```
 
        If you see this output, then the Visual Studio Code setup was successful. If the output is different, then you need to go back to step 15 and double-check your changes.
@@ -213,13 +213,13 @@ With those compatibility things out of the way, you're ready to start the system
     4. To verify that the setup was successful, you can copy and paste the following command into Hyper and hit return:
     
         ```bash
-        echo "Hyper config: $SHELL $TERM"
+        echo "[Hyper config] Shell: $SHELL | Terminal: $TERM"
         ```
 
         This should display:
    
         ```bash
-        Hyper config: C:\Program Files\Git\bin\bash.exe cygwin
+        [Hyper config] Shell: C:\Program Files\Git\bin\bash.exe | Terminal: cygwin
         ```
     
         If you see this output, then the Hyper setup was successful. If the output is different, then you need to go back to step 16 and double-check your changes.
