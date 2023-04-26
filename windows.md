@@ -205,7 +205,7 @@ With those compatibility things out of the way, you're ready to start the system
       Terminal: xterm-256color
     ```
 
-    Check line 2 and 3 of output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
+    Check line 2 and 3 of the output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
 
 17. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
@@ -231,7 +231,7 @@ With those compatibility things out of the way, you're ready to start the system
       Terminal: cygwin
     ```
 
-    Check line 2 and 3 of output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
+    Check line 2 and 3 of the output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
 
 19. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
