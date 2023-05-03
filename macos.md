@@ -374,7 +374,7 @@
     cd ~
     mkdir -p projects
     cd projects
-    pnpm create expo-app expo-test --template blank
+    pnpm create expo expo-test --template blank
     cd expo-test
     echo 'node-linker=hoisted' > ./.npmrc
     pnpm install --force
