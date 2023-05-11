@@ -172,14 +172,6 @@ With those compatibility things out of the way, you're ready to start the system
     "prettier.trailingComma": "all",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "eslint.runtime": "node",
-    "stylelint.validate": [
-      "css",
-      "less",
-      "scss",
-      "postcss",
-      "javascript",
-      "typescriptreact"
-    ],
     ```
 
     After you have pasted the settings, save the file with `File` -> `Save` in the top menu.<br><br>

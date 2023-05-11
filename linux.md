@@ -162,14 +162,6 @@
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
     "eslint.runtime": "node",
-    "stylelint.validate": [
-      "css",
-      "less",
-      "scss",
-      "postcss",
-      "javascript",
-      "typescriptreact"
-    ],
     ```
     After you have pasted the settings, save the file with `File` -> `Save` in the top menu.<br><br>
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
