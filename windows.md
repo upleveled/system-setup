@@ -126,6 +126,7 @@ With those compatibility things out of the way, you're ready to start the system
     ```json5
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
+    "editor.linkedEditing": true,
     "files.autoSave": "onFocusChange",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": [
