@@ -8,7 +8,7 @@
    sudo apt-get update
    sudo apt-get install -y git nodejs python3 build-essential
    ```
-   This uses apt to install Git, Node.js, Python and Build Essential.<br><br>
+   This uses apt to install Git, Node.js, Python and the `build-essential` build tools.<br><br>
 3. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
