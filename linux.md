@@ -6,9 +6,9 @@
    ```bash
    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
    sudo apt-get update
-   sudo apt-get install -y git nodejs python3
+   sudo apt-get install -y git nodejs python3 build-essential
    ```
-   This uses apt to install Git, Node.js and Python.<br><br>
+   This uses apt to install Git, Node.js, Python and Build Essential.<br><br>
 3. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
