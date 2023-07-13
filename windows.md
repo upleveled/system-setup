@@ -1,12 +1,12 @@
-Before starting the setup, check that your operating system, RAM and account is compatible:
+Before starting the setup, check that your hardware, operating system and account is compatible:
+
+### Minimum RAM: 8GB
+
+Make sure that your machine has at least 8GB RAM
 
 ### Minimum OS Version: Windows 10
 
 Make sure that you're running Windows 10 or later - earlier versions such as Windows 7 or 8.1 are not supported
-
-### Minimum RAM: 8GB
-
-Make sure that your machine has at least 8GB RAM installed
 
 ### Spaces in Windows User Name
 
