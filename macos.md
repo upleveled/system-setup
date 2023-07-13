@@ -1,3 +1,15 @@
+Before starting the setup, check that your hardware and operating system is compatible:
+
+### Minimum RAM: 8GB
+
+Make sure that your machine has at least 8GB RAM
+
+### Minimum OS Version: 2nd-newest macOS version
+
+Make sure that you're running the 2nd-newest macOS version or the newest version - earlier versions are not supported
+
+---
+
 1. Click on the magnifying glass at the very top right of your screen to open the Spotlight search, enter "terminal.app" and hit return:<br><br>
    <img src="./macos-1-start-terminal.png">
    <br>This will launch the macOS terminal.<br><br>
