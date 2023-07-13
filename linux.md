@@ -1,3 +1,11 @@
+Before starting the setup, check that your hardware is compatible:
+
+### Minimum RAM: 8GB
+
+Make sure that your machine has at least 8GB RAM installed
+
+---
+
 # System Setup for Linux (Ubuntu & Debian)
 
 1. Click on the Ubuntu icon in the top left to open the Dash, type in "Terminal" and click on the matching application.<br><br>
