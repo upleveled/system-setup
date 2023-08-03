@@ -101,6 +101,7 @@ With those compatibility things out of the way, you're ready to start the system
 11. Install the following Chrome Extensions:
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+    - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
 12. Close PowerShell and open it again as administrator (like in step 2)<br><br>
 13. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
