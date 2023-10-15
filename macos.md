@@ -183,7 +183,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
     ```bash
     [[ -d /opt/homebrew/var/postgresql@15 ]] && PGDATA_TMP=/opt/homebrew/var/postgresql@15 || PGDATA_TMP=/usr/local/var/postgresql@15
-    echo "\nexport PGDATA=$PGDATA_TMP" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
+    echo "\nexport PGDATA=$PGDATA_TMP\nexport LC_ALL=en_US.UTF-8" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     ```
 
