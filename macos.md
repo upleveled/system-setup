@@ -165,6 +165,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
     "eslint.runtime": "node",
+    "eslint.experimental.useFlatConfig": true,
     ```
     After you have pasted the settings, save the file with `File` -> `Save` in the top menu.<br><br>
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
