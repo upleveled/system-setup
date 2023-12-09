@@ -132,6 +132,18 @@ With those compatibility things out of the way, you're ready to start the system
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "editor.linkedEditing": true,
+    "editor.tabSize": 2,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.closeEmptyGroups": false,
+    "workbench.tree.enableStickyScroll": true,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
     "files.autoSave": "onFocusChange",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": [
@@ -164,19 +176,8 @@ With those compatibility things out of the way, you're ready to start the system
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "explorer.openEditors.visible": 0,
-    "editor.tabSize": 2,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "[markdown]": {
-      "files.trimTrailingWhitespace": false
-    },
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.editor.closeEmptyGroups": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
     "eslint.runtime": "node",
     "eslint.experimental.useFlatConfig": true,
     ```

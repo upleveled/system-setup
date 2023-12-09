@@ -120,6 +120,17 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "editor.linkedEditing": true,
+    "editor.tabSize": 2,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.closeEmptyGroups": false,
+    "workbench.tree.enableStickyScroll": true,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
     "files.autoSave": "onFocusChange",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": [
@@ -152,16 +163,6 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "explorer.openEditors.visible": 0,
-    "editor.tabSize": 2,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "[markdown]": {
-      "files.trimTrailingWhitespace": false
-    },
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.editor.closeEmptyGroups": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
     "eslint.runtime": "node",
