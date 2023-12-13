@@ -190,7 +190,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
     sudo apt update
-    sudo apt install postgresql-15
+    sudo apt install postgresql-16
     ```
 
     This will install PostgreSQL and create a default user of `postgres` with no password (only authorized users can use this user).<br><br>
