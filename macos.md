@@ -36,10 +36,10 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    <img src="./macos-4.1-homebrew-next-steps.png"><br><br>
 6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install flyctl git node@20 python
+   brew install flyctl git less node@20 python
    brew link --overwrite node@20
    ```
-   This uses Homebrew to install `flyctl`, Git, Node.js and Python.<br><br>
+   This uses Homebrew to install `flyctl`, Git, Less, Node.js and Python.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    corepack enable
@@ -185,7 +185,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
     ```bash
     [[ -d /opt/homebrew/var/postgresql@16 ]] && PGDATA_TMP=/opt/homebrew/var/postgresql@16 || PGDATA_TMP=/usr/local/var/postgresql@16
-    echo "\nexport PGDATA=$PGDATA_TMP\nexport LC_ALL=en_US.UTF-8" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
+    echo "\nexport PGDATA=$PGDATA_TMP\nexport LC_ALL=en_US.UTF-8\nexport PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     ```
 

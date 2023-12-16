@@ -191,6 +191,8 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
     sudo apt update
     sudo apt install postgresql-16
+    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
+    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
     ```
 
     This will install PostgreSQL and create a default user of `postgres` with no password (only authorized users can use this user).<br><br>
