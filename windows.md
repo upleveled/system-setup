@@ -329,7 +329,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     <img src="./macos-5.3-psql.png"><br><br>
 
-    Finally, let's delete the table again to clean up. Run this query:
+    Finally, let's delete the table again to clean up. Exit the table view by typing <kbd>q</kbd> on your keyboard and then run this query:
 
     ```sql
     DROP TABLE users;
