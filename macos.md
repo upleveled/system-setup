@@ -517,6 +517,7 @@ Most software upgrades can be performed with `brew upgrade <package name>`, but 
 1. Node.js with pnpm
    ```bash
    brew upgrade node@20
+   brew link --overwrite node@20
    corepack disable
    corepack enable
    corepack prepare pnpm@latest --activate
