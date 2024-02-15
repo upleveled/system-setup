@@ -509,3 +509,15 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    ```bash
    brew install --cask numi
    ```
+
+## Software Upgrades
+
+Most software upgrades can be performed with `brew upgrade <package name>`, but some software upgrades require additional steps:
+
+1. Node.js with pnpm
+   ```bash
+   brew upgrade node@20
+   corepack disable
+   corepack enable
+   corepack prepare pnpm@latest --activate
+   ```

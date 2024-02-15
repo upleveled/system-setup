@@ -612,3 +612,15 @@ With those compatibility things out of the way, you're ready to start the system
    ```bash
    choco install powertoys
    ```
+
+## Software Upgrades
+
+Most software upgrades can be performed with `choco upgrade <package name>`, but some software upgrades require additional steps:
+
+1. Node.js with pnpm
+   ```bash
+   choco upgrade nodejs-lts
+   corepack disable
+   corepack enable
+   corepack prepare pnpm@latest --activate
+   ```
