@@ -176,6 +176,7 @@ With those compatibility things out of the way, you're ready to start the system
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "prettier.documentSelectors": ["**/*.sql"],
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
     "eslint.runtime": "node",

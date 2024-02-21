@@ -174,6 +174,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "prettier.documentSelectors": ["**/*.sql"],
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
     "eslint.runtime": "node",
