@@ -163,9 +163,13 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "prettier.documentSelectors": ["**/*.sql"],
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
+    "prettier.documentSelectors": [
+      // Enable prettier-vscode to format *.sql files (eg. with prettier-plugin.sql)
+      // https://github.com/prettier/prettier-vscode/issues/3248#issuecomment-1956209714
+      "**/*.sql"
+      ],
     "eslint.runtime": "node",
     "eslint.experimental.useFlatConfig": true,
     ```
