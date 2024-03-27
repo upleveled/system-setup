@@ -63,8 +63,7 @@ With those compatibility things out of the way, you're ready to start the system
 8. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash
-   choco install python visualstudio2017-workload-vctools -y
-   npm config set msvs_version 2017
+   choco install python visualstudio2022-workload-vctools -y
    ```
 
    This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install some Windows build tools to help with installing some Node.js native modules.
