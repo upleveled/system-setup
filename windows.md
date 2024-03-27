@@ -231,7 +231,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     ```bash
     Hyper Config:
-      Shell: C:\Program Files\Git\bin\bash.exe
+      Shell: /usr/bin/bash
       Terminal: cygwin
     ```
 
