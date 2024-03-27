@@ -74,10 +74,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
 8. If you don't have Zoom yet, install it: with each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```bash
-   cd /tmp
-   wget https://zoom.us/client/latest/zoom_amd64.deb
-   sudo dpkg --install zoom_amd64.deb
-   cd -
+   sudo snap install zoom-client
    ```
    This installs Zoom.<br><br>
 9. If you don't have Slack yet, install it: copy the following text, paste it in the terminal and hit return.<br><br>
