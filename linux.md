@@ -476,16 +476,17 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 2. If you need to record video of your screen with sound (with export to mp4 and gif), try out Kooha:
 
    ```bash
+   sudo apt install -y flatpak
    flatpak install flathub io.github.seadve.Kooha
    ```
 
 ## Software Upgrades
 
-Many software upgrades can be performed with `sudo snap refresh <package name>` or `sudo apt --only-upgrade install <package name>`, but some software upgrades require additional steps:
+Many software upgrades can be performed with `sudo snap refresh <package name>` or `sudo apt install <package name>`, but some software upgrades require additional steps:
 
 1. Node.js with pnpm
    ```bash
-   sudo apt --only-upgrade install nodejs
+   sudo apt install nodejs
    corepack disable
    corepack enable
    corepack prepare pnpm@latest --activate
