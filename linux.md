@@ -16,10 +16,10 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    <img src="linux-1-open-terminal.png"><br>
 2. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   sudo apt-get install -y curl
+   sudo apt install -y curl
    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-   sudo apt-get update
-   sudo apt-get install -y build-essential git nodejs python3
+   sudo apt update
+   sudo apt install -y build-essential git nodejs python3
    ```
    This uses apt to install curl, the `build-essential` build tools, Git, Node.js and Python.<br><br>
 3. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
@@ -481,11 +481,11 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
 ## Software Upgrades
 
-Many software upgrades can be performed with `sudo snap refresh <package name>` or `sudo apt-get --only-upgrade install <package name>`, but some software upgrades require additional steps:
+Many software upgrades can be performed with `sudo snap refresh <package name>` or `sudo apt --only-upgrade install <package name>`, but some software upgrades require additional steps:
 
 1. Node.js with pnpm
    ```bash
-   sudo apt-get --only-upgrade install nodejs
+   sudo apt --only-upgrade install nodejs
    corepack disable
    corepack enable
    corepack prepare pnpm@latest --activate
