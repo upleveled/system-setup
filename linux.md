@@ -487,7 +487,7 @@ Many software upgrades can be performed with `sudo snap refresh <package name>` 
 1. Node.js with pnpm
    ```bash
    sudo apt update
-   sudo apt install nodejs
+   sudo apt install -y nodejs
    corepack disable
    corepack enable
    corepack prepare pnpm@latest --activate
