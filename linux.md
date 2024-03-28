@@ -482,7 +482,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
 ## Software Upgrades
 
-Many software upgrades can be performed with `sudo snap refresh <package name>` or `sudo apt install <package name>`, but some software upgrades require additional steps:
+Many software upgrades can be performed with `sudo snap refresh <package name>` or `sudo apt-get --only-upgrade install <package name>`, but some software upgrades require additional steps:
 
 1. Node.js with pnpm
    ```bash
