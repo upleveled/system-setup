@@ -1,3 +1,15 @@
+Before starting the setup, check that your hardware and operating system is compatible:
+
+### Minimum RAM: 8GB
+
+Make sure that your machine has at least 8GB RAM
+
+### Minimum OS Version: 2nd-newest macOS version
+
+Make sure that you're running the 2nd-newest macOS version or the newest version - earlier versions are not supported
+
+---
+
 1. Click on the magnifying glass at the very top right of your screen to open the Spotlight search, enter "terminal.app" and hit return:<br><br>
    <img src="./macos-1-start-terminal.png">
    <br>This will launch the macOS terminal.<br><br>
@@ -22,17 +34,23 @@
    <img src="./macos-4-installation-successful.png"><br><br>
    Read the messages underneath the "Installation successful!" message and look for a heading that says "Next steps". If there is a bullet point with the text "Add Homebrew to your PATH...", then there are be some additional commands that you need to copy and run (copy each line, paste it in the terminal and hit return):<br><br>
    <img src="./macos-4.1-homebrew-next-steps.png"><br><br>
-6. Copy the following text, paste it in the terminal and hit return.<br><br>
+6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install git node@16 yarn
+   brew install flyctl git less node@20 python
+   brew link --overwrite node@20
    ```
-   This uses Homebrew to install Git, Node.js and Yarn.<br><br>
+   This uses Homebrew to install `flyctl`, Git, Less, Node.js and Python.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew tap microsoft/git
-   brew install --cask visual-studio-code postman git-credential-manager-core
+   corepack enable
+   corepack prepare pnpm@latest --activate
    ```
-   This uses Homebrew Cask to install Visual Studio Code, Postman and Git Credential Manager Core.<br><br>
+   This uses Corepack to install `pnpm`.<br><br>
+8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+   ```bash
+   brew install --cask visual-studio-code httpie git-credential-manager
+   ```
+   This uses Homebrew Cask to install Visual Studio Code, HTTPie and Git Credential Manager.<br><br>
    If you don't have Zoom installed yet, run this to install it:<br>
    ```bash
    brew install --cask zoom
@@ -41,50 +59,56 @@
    ```bash
    brew install --cask slack
    ```
-8. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+9. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
+   code --install-extension bradlc.vscode-tailwindcss
    code --install-extension Cardinal90.multi-cursor-case-preserve
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension dozerg.tsimportsorter
    code --install-extension esbenp.prettier-vscode
-   code --install-extension frigus02.vscode-sql-tagged-template-literals
-   code --install-extension styled-components.vscode-styled-components
+   code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
    code --install-extension kumar-harsh.graphql-for-vscode
    code --install-extension meganrogge.template-string-converter
+   code --install-extension styled-components.vscode-styled-components
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
+   code --install-extension mattpocock.ts-error-translator
+   code --install-extension unional.vscode-sort-package-json
+   code --install-extension viijay-kr.react-ts-css
+   code --install-extension vunguyentuan.vscode-css-variables
    code --install-extension wix.glean
    ```
 
    This installs some VS Code extensions we will need.<br><br>
 
-9. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
-   If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text, paste it in the terminal and hit return.<br><br>
-   ```bash
-   brew install --cask google-chrome
-   ```
-   This uses Homebrew to install Chrome.<br><br>
-10. Install the following Chrome Extensions:
+10. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
+    If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text, paste it in the terminal and hit return.<br><br>
+    ```bash
+    brew install --cask google-chrome
+    ```
+    This uses Homebrew to install Chrome.<br><br>
+11. Install the following Chrome Extensions:
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+    - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en))
-11. Copy the following text, paste it in the terminal and hit return.<br><br>
+12. Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
-    yarn create react-app --help
+    pnpm create @upleveled/react-app --help
     ```
 
-    This step will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
-    <img src="./general-cra-installed.png"><br><br>
+    This step will prepare a program that we will use in the course. This will take a while and then respond with a message with some usage instructions, similar to this:<br><br>
+    <img src="./general-cra-installed.avif"><br><br>
 
-12. Copy the following text, paste it in the terminal and hit return.<br><br>
+13. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
-    yarn global add @upleveled/preflight
+    pnpm add --global @upleveled/preflight
     ```
     This will prepare a program that we will use in the course.<br><br>
-13. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
-    Open VS Code and then press the keys <kbd>cmd</kbd>-<kbd>shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
+14. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
+    Open VS Code and then press the keys <kbd>cmd</kbd>-<kbd>shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
     First of all, identify whether your settings file is empty or not. This is what an empty file looks like:<br><br>
@@ -95,7 +119,24 @@
     ```json5
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
+    "editor.linkedEditing": true,
+    "editor.tabSize": 2,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.closeEmptyGroups": false,
+    "workbench.tree.enableStickyScroll": true,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
+    "files.autoSave": "onFocusChange",
     "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": [
+      // Sort package.json keys with https://marketplace.visualstudio.com/items?itemName=unional.vscode-sort-package-json
+      "source.sortPackageJson"
+    ],
     "tsImportSorter.configuration.groupRules": ["^node:", {}, "^[.]"],
     "tsImportSorter.configuration.keepUnused": [".*"],
     "tsImportSorter.configuration.emptyLinesBetweenGroups": 0,
@@ -122,35 +163,34 @@
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "files.autoSave": "onFocusChange",
-    "explorer.openEditors.visible": 0,
-    "editor.tabSize": 2,
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
-    "[markdown]": {
-      "files.trimTrailingWhitespace": false
-    },
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.editor.closeEmptyGroups": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
+    "prettier.documentSelectors": [
+      // Enable prettier-vscode to format *.sql files (eg. with prettier-plugin.sql)
+      // https://github.com/prettier/prettier-vscode/issues/3248#issuecomment-1956209714
+      "**/*.sql"
+    ],
     "eslint.runtime": "node",
+    "eslint.experimental.useFlatConfig": true,
     ```
+    After you have pasted the settings, save the file with `File` -> `Save` in the top menu.<br><br>
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
-14. <a name="postgresql"></a>We will now install PostgreSQL. Copy the following text, paste it in the terminal and hit return.
+    If you made any further changes to the file, save the file again with `File` -> `Save` in the top menu.<br><br>
+15. <a name="postgresql"></a>We will now install PostgreSQL. Copy each line in the following text, paste it in the terminal and hit return.
 
     ```bash
-    brew install postgresql
+    brew install postgresql@16
+    brew link postgresql@16
     ```
 
     This uses Homebrew to install PostgreSQL and create just a single user with your username and all role permissions. There will be no `postgres` user set up.<br><br>
     Now let's set an environment variable to tell PostgreSQL where to put the data:
 
     ```bash
-    [[ -d /opt/homebrew/var/postgres ]] && PGDATA_TMP=/opt/homebrew/var/postgres || PGDATA_TMP=/usr/local/var/postgres
-    echo "export PGDATA=$PGDATA_TMP" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
+    [[ -d /opt/homebrew/var/postgresql@16 ]] && PGDATA_TMP=/opt/homebrew/var/postgresql@16 || PGDATA_TMP=/usr/local/var/postgresql@16
+    echo "\nexport PGDATA=$PGDATA_TMP\nexport LC_ALL=en_US.UTF-8\nexport PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     ```
 
@@ -231,7 +271,7 @@
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-15. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
+16. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
 
     ```bash
     brew install --cask docker
@@ -241,7 +281,7 @@
     This uses Homebrew Cask to install Docker for Mac and starts it for the first time to set it up. Wait for a message at the top of the window to indicate that everything is finished being set up:<br><br>
     <img src="./macos-6-docker.png"><br><br>
 
-16. Test if Docker is installed by running the following command on the command line:
+17. Test if Docker is installed by running the following command on the command line:
 
     ```bash
     docker run hello-world
@@ -250,7 +290,7 @@
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-17. <a name="expo-react-native"></a>We will now install Expo CLI for React Native.
+18. <a name="expo-react-native"></a>We will now install Expo CLI for React Native.
 
     Copy the following text, paste it in the terminal and hit return.
 
@@ -258,9 +298,15 @@
     npm install -g expo-cli
     ```
 
+    You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>
+
+    <img src="./general-expo-init.png"><br><br>
+
+    Lastly, we'll install Expo on your phone, so that you can also test on a real device.
+
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-18. Next we will set up some dependencies for Expo and React Native.
+19. Next we will set up some dependencies for Expo and React Native.
 
     Copy each line in the following text, paste it in the terminal and hit return.
 
@@ -274,7 +320,7 @@
 
     This will install Android Studio, for creating and running Android virtual devices in an emulator.
 
-    Open Android Studio using Start Menu, Spotlight, or Dash.
+    Open Android Studio using the Spotlight or locating it in Applications.
 
     If it asks to import Android Studio Settings, choose **Do not import settings**.
 
@@ -332,18 +378,26 @@
 
     <img src="./general-android-studio-adb.png"><br><br>
 
-19. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
+20. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
+
+    <!-- TODO: Check if we can remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
 
     ```bash
     cd ~
     mkdir -p projects
     cd projects
-    expo init expo-test --template blank
+    pnpm create expo@latest expo-test --template blank
     cd expo-test
-    yarn start --android
+    echo 'node-linker=hoisted' > ./.npmrc
+    pnpm install --force
+    pnpm start --android
     ```
 
-    This will create a new Expo demo app and start it. The first thing that you will see is the installation of Expo Go on the virtual device:<br><br>
+    This will create a new Expo demo app and start it.
+
+    If this step doesn't work, it's possible that you may not have the emulator running - check the last part of the previous step to see how to launch the emulator.
+
+    The first thing that you will see is the installation of Expo Go on the virtual device:<br><br>
 
     <img src="./general-expo-start-expo-go-install.png"><br><br>
 
@@ -359,14 +413,14 @@
 
     Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
-20. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Karl (if you haven't already).
-21. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+21. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
+22. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-22. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+23. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -401,8 +455,8 @@
 24. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-25. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
-26. <a name="specs"></a>Click on the apple icon in the menu bar at the top left of your screen and select "About This Mac". Select "System Report...". Copy the "Hardware Overview" information in the right panel and send to Karl. Select "Software" in the left panel, copy the "System Software Overview" information and send to Karl.
+25. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](https://upleveled.slack.com/team/U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
+26. <a name="specs"></a>Click on the apple icon in the menu bar at the top left of your screen and select "About This Mac". Select "System Report...". Copy the "Hardware Overview" information in the right panel and send to Lukas. Select "Software" in the left panel, copy the "System Software Overview" information and send to Lukas.
 27. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
@@ -419,7 +473,13 @@
    brew install --cask flameshot
    ```
 
-3. If you need to record video of your screen with sound (with export to mp4 and gif), you may want to try out Kap:
+3. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/):
+
+   ```bash
+   brew install --cask loom
+   ```
+
+   An alternative without the limitations of Loom is Kap:
 
    ```bash
    brew install --cask kap
@@ -453,4 +513,17 @@
 
    ```bash
    brew install --cask numi
+   ```
+
+## Software Upgrades
+
+Most software upgrades can be performed with `brew upgrade <package name>`, but some software upgrades require additional steps:
+
+1. Node.js with pnpm
+   ```bash
+   brew upgrade node@20
+   brew link --overwrite node@20
+   corepack disable
+   corepack enable
+   corepack prepare pnpm@latest --activate
    ```
