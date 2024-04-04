@@ -1,4 +1,28 @@
-Before you start, please make sure that you're running Windows 10 or Windows 11. Windows 7 is not supported, since it is no longer supported by Microsoft as of early 2020.
+Before starting the setup, check that your hardware, operating system and account is compatible:
+
+### Minimum RAM: 8GB
+
+Make sure that your machine has at least 8GB RAM
+
+### Minimum OS Version: Windows 10
+
+Make sure that you're running Windows 10 or later - earlier versions such as Windows 7 or 8.1 are not supported
+
+### Spaces in Windows User Name
+
+Open the Start menu and type "cmd" and click on "Command Prompt". When PowerShell starts, type in `echo %USERPROFILE%`. It should display something like `C:\Users\Karl` (without any spaces).
+
+If you see spaces in the path (eg. `C:\Users\Karl Horky`) then you should create a new Windows account:
+
+- Start menu -> Settings -> Accounts -> Family & other users -> Add other user -> Add account
+- Enter a name **without spaces** in the user name (the box beneath the question "Who's going to use this PC?")
+- Once you create the new account, log in to the new account and try the command above again
+
+Make sure to use an account without spaces in the user name for the course.
+
+---
+
+With those compatibility things out of the way, you're ready to start the system setup:
 
 1. Open the Start menu, type "Windows Update" and click on the result named Windows Update. Make sure that you have all of the latest updates.
 2. Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
@@ -16,9 +40,9 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 5. Close PowerShell and open it again as administrator (like in step 2)<br><br>
 6. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
-   choco install git nodejs-lts yarn vscode hyper postman -y
+   choco install git nodejs-lts vscode hyper httpie flyctl -y
    ```
-   This uses Chocolatey to install Git, Node.js, Yarn, Visual Studio Code, Hyper and Postman.<br><br>
+   This uses Chocolatey to install Git, Node.js, Visual Studio Code, Hyper, HTTPie and `flyctl`.<br><br>
    <!--
       **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs -y --version 13.6.0`<br><br>
    -->
@@ -30,60 +54,71 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
    ```bash
    choco install slack -y
    ```
-7. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
+7. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+   ```bash
+   corepack enable
+   corepack prepare pnpm@latest --activate
+   ```
+   This uses Corepack to install `pnpm`.<br><br>
+8. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash
-   choco install python visualstudio2017-workload-vctools -y
-   npm config set msvs_version 2017
+   choco install python visualstudio2022-workload-vctools -y
    ```
 
-   This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install some Windows build tools to help with installing some Node.js native modules.
+   This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install Python and Visual Studio build tools, which are required for installing Node.js native modules.
 
-8. <a name="vs-code-extensions"></a> Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
+9. <a name="vs-code-extensions"></a> Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
    ```bash
+   code --install-extension bradlc.vscode-tailwindcss
    code --install-extension Cardinal90.multi-cursor-case-preserve
    code --install-extension dbaeumer.vscode-eslint
    code --install-extension dozerg.tsimportsorter
    code --install-extension esbenp.prettier-vscode
-   code --install-extension frigus02.vscode-sql-tagged-template-literals
-   code --install-extension styled-components.vscode-styled-components
+   code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
    code --install-extension kumar-harsh.graphql-for-vscode
    code --install-extension meganrogge.template-string-converter
+   code --install-extension styled-components.vscode-styled-components
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
+   code --install-extension mattpocock.ts-error-translator
+   code --install-extension unional.vscode-sort-package-json
+   code --install-extension viijay-kr.react-ts-css
+   code --install-extension vunguyentuan.vscode-css-variables
    code --install-extension wix.glean
    ```
 
    This installs some VS Code extensions we will need.<br><br>
 
-9. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
-   If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
-   ```bash
-   choco install googlechrome -y
-   ```
-   This uses Chocolatey to install Chrome.<br><br>
-10. Install the following Chrome Extensions:
+10. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
+    If you don't have Chrome installed yet, you can install it with Chocolatey. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+    ```bash
+    choco install googlechrome -y
+    ```
+    This uses Chocolatey to install Chrome.<br><br>
+11. Install the following Chrome Extensions:
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
+    - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
-11. Close PowerShell and open it again as administrator (like in step 2)<br><br>
-12. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
+12. Close PowerShell and open it again as administrator (like in step 2)<br><br>
+13. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
 
     ```bash
-    yarn create react-app --help
+    pnpm create @upleveled/react-app --help
     ```
 
-    This will prepare a program that we will use in the course. This will take a while and then respond with a message that some modules have been installed, similar to this:<br><br>
-    <img src="./general-cra-installed.png"><br><br>
+    This will prepare a program that we will use in the course. This will take a while and then respond with a message with some usage instructions, similar to this:<br><br>
+    <img src="./general-cra-installed.avif"><br><br>
 
-13. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
+14. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
     ```bash
-    yarn global add @upleveled/preflight
+    pnpm add --global @upleveled/preflight
     ```
     This will prepare a program that we will use in the course.<br><br>
-14. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
-    Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open Settings (JSON)`:<br><br>
+15. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
+    Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
     First of all, identify whether your settings file is empty or not. This is what an empty file looks like:<br><br>
@@ -95,7 +130,25 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     ```json5
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
+    "editor.linkedEditing": true,
+    "editor.tabSize": 2,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.closeEmptyGroups": false,
+    "workbench.tree.enableStickyScroll": true,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
+    "files.autoSave": "onFocusChange",
     "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": [
+      // Sort package.json keys with https://marketplace.visualstudio.com/items?itemName=unional.vscode-sort-package-json
+      "source.sortPackageJson"
+    ],
     "tsImportSorter.configuration.groupRules": ["^node:", {}, "^[.]"],
     "tsImportSorter.configuration.keepUnused": [".*"],
     "tsImportSorter.configuration.emptyLinesBetweenGroups": 0,
@@ -122,27 +175,43 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "files.autoSave": "onFocusChange",
-    "explorer.openEditors.visible": 0,
-    "editor.tabSize": 2,
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
-    "[markdown]": {
-      "files.trimTrailingWhitespace": false
-    },
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.editor.closeEmptyGroups": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "prettier.documentSelectors": [
+      // Enable prettier-vscode to format *.sql files (eg. with prettier-plugin.sql)
+      // https://github.com/prettier/prettier-vscode/issues/3248#issuecomment-1956209714
+      "**/*.sql"
+    ],
     "eslint.runtime": "node",
+    "eslint.experimental.useFlatConfig": true,
     ```
 
+    After you have pasted the settings, save the file with `File` -> `Save` in the top menu.<br><br>
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
+    If you made any further changes to the file, save the file again with `File` -> `Save` in the top menu.<br><br>
 
-15. Now we will configure Hyper.<br><br>
+16. To verify that the VS Code configuration was successful, select `Terminal` -> `New Terminal` in the top menu:<br><br>
+    <img src="./general-vscode-terminal-new-terminal.avif"><br><br>
+
+    Once the terminal appears, copy the following text, paste it into the terminal and hit return:
+
+    ```bash
+    echo -e "VS Code Config:\n  Shell: $SHELL\n  Terminal: $TERM"
+    ```
+
+    This should display the following output on Windows:
+
+    ```bash
+    VS Code Config:
+      Shell: /usr/bin/bash
+      Terminal: xterm-256color
+    ```
+
+    Check line 2 and 3 of the output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
+
+17. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
     <img src="./windows-3-hyper-preferences.png"><br><br>
     In this file, we will do three things:
@@ -152,12 +221,28 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     Then save the file and close and restart Hyper.
 
-16. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+18. To verify that the Hyper configuration was successful, copy the following text, paste it into Hyper and hit return:
+
+    ```bash
+    echo -e "Hyper Config:\n  Shell: $SHELL\n  Terminal: $TERM"
+    ```
+
+    This should display the following output:
+
+    ```bash
+    Hyper Config:
+      Shell: /usr/bin/bash
+      Terminal: cygwin
+    ```
+
+    Check line 2 and 3 of the output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
+
+19. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    choco install postgresql14 --params '/Password:postgres'
+    choco install postgresql16 --params '/Password:postgres'
     ```
 
     This will install PostgreSQL and create a default user of `postgres` and a password of `postgres`. Remember this password and use it any time it asks from now on.
@@ -167,8 +252,9 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
     ```bash
-    echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/14/bin\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PGDATA=\"/c/Program Files/PostgreSQL/14/data\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> "$USERPROFILE/.bash_profile"
     source "$USERPROFILE/.bash_profile"
     ```
 
@@ -184,11 +270,11 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     cat "$USERPROFILE/.bash_profile"
     ```
 
-    It should print out something that looks like the following (although the `14` number may be different for you):
+    It should print out something that looks like the following (although the `16` number may be different for you):
 
     ```bash
-    export PATH=$PATH:"/c/Program Files/PostgreSQL/14/bin"
-    export PGDATA="/c/Program Files/PostgreSQL/14/data"
+    export PATH=$PATH:"/c/Program Files/PostgreSQL/16/bin"
+    export PGDATA="/c/Program Files/PostgreSQL/16/data"
     ```
 
     -->
@@ -247,7 +333,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     <img src="./macos-5.3-psql.png"><br><br>
 
-    Finally, let's delete the table again to clean up. Run this query:
+    Finally, let's delete the table again to clean up. Exit the table view by typing <kbd>q</kbd> on your keyboard and then run this query:
 
     ```sql
     DROP TABLE users;
@@ -271,7 +357,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-17. <a name="docker"></a>We will now install Docker.
+20. <a name="docker"></a>We will now install Docker.
 
     **Option A - Windows 10/11 Pro:**
 
@@ -303,7 +389,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
     5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
 
-18. Test if Docker is installed by running the following command on the command line:
+21. Test if Docker is installed by running the following command on the command line:
 
     ```bash
     docker run hello-world
@@ -338,7 +424,7 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     If you are unable to find the Virtualization settings in your BIOS [make sure that your laptop does support it](https://archive.ph/aZ5Ng).
 
-19. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+22. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -346,14 +432,22 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
     npm install -g expo-cli
     ```
 
+    You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>
+
+    <img src="./general-expo-init.png"><br><br>
+
+    Lastly, we'll install Expo on your phone, so that you can also test on a real device.
+
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-20. Next we will set up some dependencies for Expo and React Native.
+23. Next we will set up some dependencies for Expo and React Native.
 
-    Copy the following text, paste it in Hyper and hit return.
+    Copy each line in the following text, paste it in Hyper and hit return.
 
     ```bash
     choco install androidstudio
+    echo "export PATH=$HOME/AppData/Local/Android/Sdk/platform-tools:\$PATH" >> ~/.bash_profile
+    source ~/.bash_profile
     ```
 
     This will install Android Studio, for creating and running Android virtual devices in an emulator.
@@ -406,10 +500,6 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     If a message pops up in the virtual device that the "System UI isn't responding" at any point during these steps, you can click on "Wait".
 
-    <!--
-
-    FIXME: Check whether this is needed / working on Windows - multiple students reported that they received "command not found" errors with this
-
     Before running the first Expo app, test that the Android Studio `adb` (Android Debug Bridge) program has been set up properly, by running the following in a new Hyper command line (open a new tab):
 
     ```bash
@@ -420,20 +510,26 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     <img src="./general-android-studio-adb.png"><br><br>
 
-    -->
+24. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
 
-21. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
+    <!-- TODO: Check if we can remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
 
     ```bash
     cd ~
     mkdir -p projects
     cd projects
-    expo init expo-test --template blank
+    pnpm create expo@latest expo-test --template blank
     cd expo-test
-    yarn start --android
+    echo 'node-linker=hoisted' > ./.npmrc
+    pnpm install --force
+    pnpm start --android
     ```
 
-    This will create a new Expo demo app and start it. The first thing that you will see is the installation of Expo Go on the virtual device:<br><br>
+    This will create a new Expo demo app and start it.
+
+    If this step doesn't work, it's possible that you may not have the emulator running - check the last part of the previous step to see how to launch the emulator.
+
+    The first thing that you will see is the installation of Expo Go on the virtual device:<br><br>
 
     <img src="./general-expo-start-expo-go-install.png"><br><br>
 
@@ -449,14 +545,14 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
     Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
-22. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Send the email address associated with this account to Karl (if you haven't already).
-23. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+25. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
+26. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-24. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+27. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -497,8 +593,8 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 27. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to Karl.
-29. <a name="specs"></a>Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Karl. Under "Windows specifications", click the Copy button and paste this to Karl.
+28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](https://upleveled.slack.com/team/U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
+29. <a name="specs"></a>Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Lukas. Under "Windows specifications", click the Copy button and paste this to Lukas.
 30. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
@@ -509,7 +605,9 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. If you need to record your screen to a gif, you may want to try out Screen to Gif:
+2. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
+
+   An alternative without the limitations of Loom is Screen to Gif (however, it does not record audio):
 
    ```bash
    choco install screentogif
@@ -537,4 +635,22 @@ Before you start, please make sure that you're running Windows 10 or Windows 11.
 
    ```bash
    choco install windirstat
+   ```
+
+7. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
+
+   ```bash
+   choco install powertoys
+   ```
+
+## Software Upgrades
+
+Most software upgrades can be performed with `choco upgrade <package name>`, but some software upgrades require additional steps:
+
+1. Node.js with pnpm
+   ```bash
+   choco upgrade nodejs-lts
+   corepack disable
+   corepack enable
+   corepack prepare pnpm@latest --activate
    ```
