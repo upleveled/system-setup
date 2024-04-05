@@ -30,7 +30,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    sudo pnpm setup
    ```
 
-   This uses Corepack to install `pnpm`, and `pnpm` configures its global bin directory.<br><br>
+   This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
 
 4. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
