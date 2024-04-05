@@ -396,7 +396,7 @@ With those compatibility things out of the way, you're ready to start the system
     ```
 
     It should print out a welcome message like this:<br><br>
-    <img src="macos-6-docker-hello-world.png"><br><br>
+    <img src="macos-7-docker-hello-world.png"><br><br>
 
     If running `docker run hello-world` command results in [an `Unable to write to the database` error](https://github.com/docker/for-win/issues/74#issuecomment-247665026) like the one below, it may mean that virtualization is not enabled on your machine.
 
