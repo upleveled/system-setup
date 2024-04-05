@@ -398,17 +398,6 @@ With those compatibility things out of the way, you're ready to start the system
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-    If running `docker run hello-world` command results in [an `Unable to write to the database` error](https://github.com/docker/for-win/issues/74#issuecomment-247665026) like the one below, it may mean that virtualization is not enabled on your machine.
-
-    ```bash
-    Unable to write to the database. Exit code: 1
-      at Docker.Backend.Database.WriteKeys(ICollection\'1 keyValues) at Docker.Backend.Database.ModifyDatabase(ICollection`1 keyValuesToWrite, ICollection`1 keysToRemove)
-      at Docker.Backend.Database.Write(Settings settings)
-      at Docker.Backend.ContainerEngine.Linux.DoStart(Settings settings)
-      at Docker.Backend.ContainerEngine.Linux.Start(Settings settings)
-      at Docker.Core.Pipe.NamedPipeServer.<>c**DisplayClass8_0.<Register>b**0(Object[] parameters)
-      at Docker.Core.Pipe.NamedPipeServer.RunAction(String action, Object[] parameters)
-    ```
 
     Check if virtualization is enabled on your machine on the **Performance** tab of the Task Manager (open the Task Manager with <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>Escape</kbd>):<br><br>
 
