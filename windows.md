@@ -416,7 +416,7 @@ With those compatibility things out of the way, you're ready to start the system
     5. Enable virtualization by setting `Disabled` to `Enabled` on the Virtualization option. The Virtualization option can be called: `Virtualization Technology`, `SVM Mode`, `AMD SVM`, `Intel VTX`, `Intel VT-d` or `AMD IOMMU` depending on your computer manufacturer.
     6. Find option that says `Save Changes and Exit` or anything that signifies that the changes you made will be saved and press `Enter` or the key next to that option. Your computer will restart
 
-    If you are unable to find the virtualization settings in your BIOS [make sure that your laptop does support it](https://archive.ph/aZ5Ng).
+    If you are unable to find the virtualization settings in your BIOS [make sure that your computer does support it](https://archive.ph/aZ5Ng).
 
     After enabling virtualization and you still see the error, you may need to enable Hyper-V. To do this, open PowerShell as an administrator and run the following command:
 
