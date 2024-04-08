@@ -398,18 +398,23 @@ With those compatibility things out of the way, you're ready to start the system
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
+    if opening Docker Desktop shows a message that says `Docker Desktop - Windows HyperVisor is not Present`, you may need to enable virtualization on your machine.
 
-    Check if virtualization is enabled on your machine on the **Performance** tab of the Task Manager (open the Task Manager with <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>Escape</kbd>):<br><br>
+    The error might look like this:<br><br>
+    <img src="docker-desktop-opening-error.avif"><br><br>
+
+    First check if virtualization is enabled on your computer on the **Performance** tab of the Task Manager (open the Task Manager with <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>Escape</kbd>):<br><br>
 
     <img src="windows-7-virtualisation-enabled.png"><br><br>
 
-    Only if virtualization is not enabled, **Enable VT-x or SVM in your UEFI or BIOS**
+    Continue with the steps below only if virtualization is not enabled: **Enable virtualization in your BIOS or UEFI**
 
-    1. Reboot your computer
-    2. Right when the computer is coming up from the black screen, press <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, or <kbd>F4</kbd>. Each computer manufacturer uses a different key but it may show a brief message at boot telling you which one to press. If you miss it the first time, reboot and try again. It helps to tap the key about twice a second when the computer is coming up. If you are not able to enter the BIOS via this method, consult your computer’s manual.
-    3. In the BIOS settings, find the configuration items related to the CPU. These can be in under the headings Processor, Chipset, or Northbridge.
-    4. Enable virtualization; the setting may be called VT-x, AMD-V, SVM, or Vanderpool. Enable Intel VT-d or AMD IOMMU if the options are available.
-    5. Save your changes and reboot.
+    1. Restart your computer
+    2. Right when the computer is starting up (Still on the black screen), press repeatedly any of these keys: <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F4</kbd>, <kbd>F10</kbd>, or <kbd>F12</kbd>. Each computer manufacturer uses a different key but it may show a brief message at boot time telling you which one to press. If you miss it the first time, restart and try again. If you are not able to enter the BIOS via this method, check this [BIOS key lists](https://www.disk-image.com/faq-bootmenu.htm) for different computers or consult your computer’s manual.
+    3. Press the key next to any option that says `BIOS Setup` or has `Bios`,  `UEFI` in it to open BIOS Setup Utility
+    4. Find the virtualization option in the BIOS Setup Utility. This can be under the `Configuration`, `Advanaced` or `Security` tab, you can only navigate with the `Down`, `Up`, `Left`, or `Right` keys in this mode.
+    5. Enable virtualization by setting `Disabled` to `Enabled` on the Virtualization option. The Virtualization option can be called: `Virtualization Technology`, `SVM Mode`, `AMD SVM`, `Intel VTX`, `Intel VT-d` or `AMD IOMMU` depending on your computer manufacturer.
+    6. Find option that says `Save Changes and Exit` or anything that signifies that the changes you made will be saved and press `Enter` or the key next to that option. Your computer will restart
 
     If you are unable to find the Virtualization settings in your BIOS [make sure that your laptop does support it](https://archive.ph/aZ5Ng).
 
