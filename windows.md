@@ -411,8 +411,8 @@ With those compatibility things out of the way, you're ready to start the system
 
     1. Restart your computer
     2. Right when the computer is starting up (Still on the black screen), press repeatedly any of these keys: <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F4</kbd>, <kbd>F10</kbd>, or <kbd>F12</kbd>. Each computer manufacturer uses a different key but it may show a brief message at boot time telling you which one to press. If you miss it the first time, restart and try again. If you are not able to enter the BIOS via this method, check this [BIOS key lists](https://www.disk-image.com/faq-bootmenu.htm) for different computers or consult your computer’s manual.
-    3. Press the key next to any option that says `BIOS Setup` or has `Bios`,  `UEFI` in it to open BIOS Setup Utility
-    4. Find the virtualization option in the BIOS Setup Utility. This can be under the `Configuration`, `Advanaced` or `Security` tab, you can only navigate with the `Down`, `Up`, `Left`, or `Right` keys in this mode.
+    3. Press the key next to any option that says `BIOS Setup` or has `Bios`, `UEFI` in it to open BIOS Setup Utility
+    4. Find the virtualization option in the BIOS Setup Utility. This can be under the `Configuration`, `Advanced` or `Security` tab, you can only navigate with the `Down`, `Up`, `Left`, or `Right` keys in this mode.
     5. Enable virtualization by setting `Disabled` to `Enabled` on the Virtualization option. The Virtualization option can be called: `Virtualization Technology`, `SVM Mode`, `AMD SVM`, `Intel VTX`, `Intel VT-d` or `AMD IOMMU` depending on your computer manufacturer.
     6. Find option that says `Save Changes and Exit` or anything that signifies that the changes you made will be saved and press `Enter` or the key next to that option. Your computer will restart
 
