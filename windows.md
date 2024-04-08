@@ -418,6 +418,14 @@ With those compatibility things out of the way, you're ready to start the system
 
     If you are unable to find the Virtualization settings in your BIOS [make sure that your laptop does support it](https://archive.ph/aZ5Ng).
 
+    After enabling virtualization and you still see the error, you may need to enable Hyper-V. To do this, open PowerShell as an administrator and run the following command:
+
+    ```bash
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+    ```
+
+    After running this command, restart your computer and try running Docker Desktop again.
+
 22. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
