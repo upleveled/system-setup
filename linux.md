@@ -27,7 +27,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
-   sudo pnpm setup
+   pnpm setup
    ```
 
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
