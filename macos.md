@@ -44,8 +44,9 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
+   pnpm setup
    ```
-   This uses Corepack to install `pnpm`.<br><br>
+   This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    brew install --cask visual-studio-code httpie git-credential-manager
