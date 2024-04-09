@@ -399,7 +399,7 @@ With those compatibility things out of the way, you're ready to start the system
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-    if opening Docker Desktop or running the command above shows a message that says `Docker Desktop - Windows HyperVisor is not Present`, you may need to enable virtualization on your machine.
+    If opening Docker Desktop or running the command above shows a message that says `Docker Desktop - Windows HyperVisor is not Present`, you may need to enable virtualization on your machine.
 
     The error might look like this:<br><br>
     <img src="docker-desktop-opening-error.avif"><br><br>
