@@ -404,9 +404,17 @@ With those compatibility things out of the way, you're ready to start the system
     The error might look like this:<br><br>
     <img src="docker-desktop-opening-error.avif"><br><br>
 
-    First check if virtualization is enabled on your computer on the **Performance** tab of the Task Manager (open the Task Manager with <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>Escape</kbd>):<br><br>
+    First check if virtualization is enabled on your computer: To do this, open PowerShell as an administrator and run the following command:
+    ```bash
+    systeminfo | findstr /C:"Hyper-V" /C:"Virtualization"
+    ```
 
-    <img src="windows-7-virtualisation-enabled.avif"><br><br>
+    This should display the output below: Note the `Virtualization Enabled In Firmware: No`, this shows that virtualization is not enabled on your computer
+
+    ```bash
+    Hyper-V Requirements: VM Monitor Mode Extensions: Yes
+                          Virtualization Enabled In Firmware: No
+    ```
 
     Continue with the steps below if virtualization is not enabled, Enable virtualization in your BIOS or UEFI:
 
@@ -418,19 +426,6 @@ With those compatibility things out of the way, you're ready to start the system
     6. Find option that says `Save Changes and Exit` or anything that signifies that the changes you made will be saved and press `Enter` or the key next to that option. Your computer will restart
 
     If you are unable to find the virtualization settings in your BIOS, ensure that your computer supports virtualization. To do this, open PowerShell as an administrator and run the following command:
-
-    ```bash
-    systeminfo | findstr /C:"Hyper-V" /C:"Virtualization"
-    ```
-
-    This should display the following output or similar output that indicates that virtualization is supported:
-
-    ```bash
-    Hyper-V Requirements: VM Monitor Mode Extensions: Yes
-                          Virtualization Enabled In Firmware: No
-    ```
-
-    or
 
     ```bash
     Get-ComputerInfo -Property 'HyperV*'
@@ -446,7 +441,7 @@ With those compatibility things out of the way, you're ready to start the system
     HyperVRequirementVMMonitorModeExtensions          : True
     ```
 
-    If your output looks similar to the ones above, find out the virtualization option for your specific computer and repeat the steps above to enable it on your computer
+    If your output looks similar to the one above, find out the virtualization option for your specific computer and repeat the steps above to enable it on your computer
 
     After enabling virtualization and you still see the error, you may need to enable Hyper-V. To do this, open PowerShell as an administrator and run the following command:
 
