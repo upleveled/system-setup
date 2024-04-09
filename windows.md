@@ -410,8 +410,8 @@ With those compatibility things out of the way, you're ready to start the system
 
     Continue with the steps below if virtualization is not enabled, Enable virtualization in your BIOS or UEFI:
 
-    1. Press and hold the power button for 5 seconds until your computer completely powers off.
-    2. Power on your omputer, right when the computer is starting up (Still on the black screen), press repeatedly any of these keys: <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F4</kbd>, <kbd>F10</kbd>, or <kbd>F12</kbd>. Each computer manufacturer uses a different key but it may show a brief message at boot time telling you which one to press. If you miss it the first time, restart and try again. If you are not able to enter the BIOS via this method, check this [BIOS key lists](https://www.disk-image.com/faq-bootmenu.htm) for different computers or consult your computers manual
+    1. Restart your computer if it is already started or start it, if not
+    2. Right when the computer is starting up (Still on the black screen befor the computer brand logo blashes), press repeatedly any of these keys: <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F4</kbd>, <kbd>F10</kbd>, or <kbd>F12</kbd>. Each computer manufacturer uses a different key but it may show a brief message at boot time telling you which one to press. If you miss it the first time, restart and try again. If you are not able to enter the BIOS via this method, check this [BIOS key lists](https://www.disk-image.com/faq-bootmenu.htm) for different computers or consult your computers manual
     3. Press the key next to any option that says `BIOS Setup` or has `Bios`, `UEFI` in it to open BIOS Setup Utility
     4. Find the virtualization option in the BIOS Setup Utility. This can be under the `Configuration`, `Advanced` or `Security` tab, you can only navigate with the `Down`, `Up`, `Left`, or `Right` keys in this mode
     5. Enable virtualization by setting `Disabled` to `Enabled` on the Virtualization option. The Virtualization option can be called: `Virtualization Technology`, `SVM(Secure Virtual Machine) Mode`, `AMD-V(AMD Virtualization)`, `AMD SVM`, `Intel VTX(Intel Virtualization Technology)`, `Intel VT-d(Virtualization for Direct-IO)` or `AMD IOMMU(Input/Output Memory Management Unit)` depending on your computer manufacturer
@@ -426,7 +426,8 @@ With those compatibility things out of the way, you're ready to start the system
     This should display the following output or similar output that indicates that virtualization is supported:
 
     ```bash
-    Hyper-V Requirements: A hypervisor has been detected. Features required for Hyper-V will not be displayed
+    Hyper-V Requirements: VM Monitor Mode Extensions: Yes
+                          Virtualization Enabled In Firmware: No
     ```
 
     OR
@@ -438,8 +439,14 @@ With those compatibility things out of the way, you're ready to start the system
     This should display the following output or similar output that indicates that virtualization is supported:
 
     ```bash
-    HyperVisorPresent: True
+    HyperVisorPresent: False
+    HyperVRequirementDataExecutionPreventionAvailable : True
+    HyperVRequirementSecondLevelAddressTranslation    : True
+    HyperVRequirementVirtualizationFirmwareEnabled    : False
+    HyperVRequirementVMMonitorModeExtensions          : True
     ```
+
+    If your output looks similar to the ones above, find out the virtualization option for your specific computer and repeat the steps above to enable it on your computer
 
     After enabling virtualization and you still see the error, you may need to enable Hyper-V. To do this, open PowerShell as an administrator and run the following command:
 
