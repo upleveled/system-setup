@@ -430,7 +430,7 @@ With those compatibility things out of the way, you're ready to start the system
                           Virtualization Enabled In Firmware: No
     ```
 
-    OR
+    or
 
     ```bash
     Get-ComputerInfo -Property 'HyperV*'
