@@ -399,58 +399,6 @@ With those compatibility things out of the way, you're ready to start the system
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-    If opening Docker Desktop or running the command above shows a message that says `Docker Desktop - Windows HyperVisor is not present`, you may need to enable virtualization on your machine.
-
-    The error might look like this:<br><br>
-    <img src="docker-desktop-opening-error.avif"><br><br>
-
-    First check if virtualization is enabled on your computer: To do this, open PowerShell as an administrator and run the following command:
-    ```bash
-    systeminfo | findstr /C:"Hyper-V" /C:"Virtualization"
-    ```
-
-    This should display the output below: Note the `Virtualization Enabled In Firmware: No`, this shows that virtualization is not enabled on your computer
-
-    ```bash
-    Hyper-V Requirements: VM Monitor Mode Extensions: Yes
-                          Virtualization Enabled In Firmware: No
-    ```
-
-    Continue with the steps below if virtualization is not enabled, Enable virtualization in your BIOS or UEFI:
-
-    1. Start your computer if it is off, or restart it if it has already started
-    2. Right when the computer is starting up (still on the black screen before the computer brand logo flashes), press repeatedly any of these keys: <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F4</kbd>, <kbd>F10</kbd>, or <kbd>F12</kbd>. Each computer manufacturer uses a different key but it may show a brief message at boot time telling you which one to press. If you miss it the first time, restart and try again. If you are not able to enter the BIOS via this method, check this [BIOS key lists](https://www.disk-image.com/faq-bootmenu.htm) for different computers or consult your computers manual
-    3. If you are not already in the `BIOS Setup Utility` interface, you will need to press the key next to any option that says `BIOS Setup` or has `Bios`, `UEFI` in it to open BIOS Setup Utility
-    4. Find the virtualization option in the BIOS Setup Utility. This can be under the `Configuration`, `Advanced` or `Security` tab, you will likely navigate with the `Down`, `Up`, `Left`, or `Right` arrow keys in this mode if the mouse doesn't work
-    5. Enable virtualization by setting `Disabled` to `Enabled` on the Virtualization option. The Virtualization option can be called: `Virtualization Technology`, `SVM(Secure Virtual Machine) Mode`, `AMD-V(AMD Virtualization)`, `AMD SVM`, `Intel VTX(Intel Virtualization Technology)`, `Intel VT-d(Virtualization for Direct-IO)` or `AMD IOMMU(Input/Output Memory Management Unit)` depending on your computer manufacturer
-    6. Find option that says `Save Changes and Exit` or anything that signifies that the changes you made will be saved and press `Enter` or the key next to that option. Your computer will restart
-
-    If you are unable to find the virtualization settings in your BIOS, ensure that your computer supports virtualization. To do this, open PowerShell as an administrator and run the following command:
-
-    ```bash
-    Get-ComputerInfo -Property 'HyperV*'
-    ```
-
-    This should display the following output or similar output that indicates that virtualization is supported:
-
-    ```bash
-    HyperVisorPresent: False
-    HyperVRequirementDataExecutionPreventionAvailable : True
-    HyperVRequirementSecondLevelAddressTranslation    : True
-    HyperVRequirementVirtualizationFirmwareEnabled    : False
-    HyperVRequirementVMMonitorModeExtensions          : True
-    ```
-
-    If your output looks similar to the one above, find out the virtualization option for your specific computer and repeat the steps above to enable it on your computer
-
-    After enabling virtualization and you still see an error, you may need to enable Hyper-V. To do this, open PowerShell as an administrator and run the following command:
-
-    ```bash
-    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-    ```
-
-    After running this command, restart your computer and try running Docker Desktop again
-
 22. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
