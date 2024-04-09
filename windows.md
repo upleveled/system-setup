@@ -443,7 +443,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     If your output looks similar to the one above, find out the virtualization option for your specific computer and repeat the steps above to enable it on your computer
 
-    After enabling virtualization and you still see the error, you may need to enable Hyper-V. To do this, open PowerShell as an administrator and run the following command:
+    After enabling virtualization and you still see an error, you may need to enable Hyper-V. To do this, open PowerShell as an administrator and run the following command:
 
     ```bash
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
