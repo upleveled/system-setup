@@ -406,7 +406,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     First check if virtualization is enabled on your computer on the **Performance** tab of the Task Manager (open the Task Manager with <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>Escape</kbd>):<br><br>
 
-    <img src="windows-7-virtualisation-enabled.png"><br><br>
+    <img src="windows-7-virtualisation-enabled.avif"><br><br>
 
     Continue with the steps below if virtualization is not enabled, Enable virtualization in your BIOS or UEFI:
 
