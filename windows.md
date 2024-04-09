@@ -397,7 +397,7 @@ With those compatibility things out of the way, you're ready to start the system
     ```
 
     It should print out a welcome message like this:<br><br>
-    <img src="macos-6-docker-hello-world.png"><br><br>
+    <img src="macos-7-docker-hello-world.png"><br><br>
 
 22. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
