@@ -406,7 +406,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     First check if virtualization is enabled on your computer: To do this, open PowerShell as an administrator and run the following command:
     ```bash
-    systeminfo | findstr /C:"Hyper-V" /C:"Virtualization"
+    systeminfo | findstr "Hyper-V Virtualization"
     ```
 
     This should display the output below: Note the `Virtualization Enabled In Firmware: No`, this shows that virtualization is not enabled on your computer
