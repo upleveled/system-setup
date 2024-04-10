@@ -400,7 +400,7 @@ With those compatibility things out of the way, you're ready to start the system
     Check if your computer supports virtualization. Run this command:
 
     ```bash
-    Get-ComputerInfo -Property 'HyperV*'
+    Get-ComputerInfo -Property HyperV*
     ```
 
     This should display the following output:
