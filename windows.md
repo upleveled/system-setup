@@ -390,16 +390,7 @@ With those compatibility things out of the way, you're ready to start the system
     4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
     5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
 
-21. Test if Docker is installed by running the following command on the command line:
-
-    ```bash
-    docker run hello-world
-    ```
-
-    It should print out a welcome message like this:<br><br>
-    <img src="macos-7-docker-hello-world.png"><br><br>
-
-    If opening Docker Desktop or running the command above shows a message that says `Docker Desktop - Windows HyperVisor is not present`, you may need to enable virtualization on your machine.
+    If opening Docker Desktop from **Option A or B** shows an error, you may need to enable virtualization on your machine
 
     The error might look like this:<br><br>
     <img src="docker-desktop-opening-error.avif"><br><br>
@@ -442,6 +433,15 @@ With those compatibility things out of the way, you're ready to start the system
     4. Find the virtualization option in the BIOS Setup Utility. This can be under the `Configuration`, `Advanced` or `Security` tab, you will likely navigate with the `Down`, `Up`, `Left`, or `Right` arrow keys in this mode if the mouse doesn't work
     5. Enable virtualization by setting `Disabled` to `Enabled` on the Virtualization option. The Virtualization option can be called: `Virtualization Technology`, `SVM(Secure Virtual Machine) Mode`, `AMD-V(AMD Virtualization)`, `AMD SVM`, `Intel VTX(Intel Virtualization Technology)`, `Intel VT-d(Virtualization for Direct-IO)` or `AMD IOMMU(Input/Output Memory Management Unit)` depending on your computer manufacturer
     6. Find option that says `Save Changes and Exit` or anything that signifies that the changes you made will be saved and press `Enter` or the key next to that option. Your computer will restart
+
+21. Test if Docker is installed by running the following command on the command line:
+
+    ```bash
+    docker run hello-world
+    ```
+
+    It should print out a welcome message like this:<br><br>
+    <img src="macos-7-docker-hello-world.png"><br><br>
 
 22. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
