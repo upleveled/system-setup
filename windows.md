@@ -404,7 +404,25 @@ With those compatibility things out of the way, you're ready to start the system
     The error might look like this:<br><br>
     <img src="docker-desktop-opening-error.avif"><br><br>
 
-    First check if virtualization is enabled on your computer: To do this, open PowerShell as an administrator and run the following command:
+    Close PowerShell and open it again as administrator (like in step 2)
+
+    Check if your computer supports virtualization. Run this command:
+
+    ```bash
+    Get-ComputerInfo -Property 'HyperV*'
+    ```
+
+    This should display the following output:
+
+    ```bash
+    HyperVisorPresent: False
+    HyperVRequirementDataExecutionPreventionAvailable : True
+    HyperVRequirementSecondLevelAddressTranslation    : True
+    HyperVRequirementVirtualizationFirmwareEnabled    : False
+    HyperVRequirementVMMonitorModeExtensions          : True
+    ```
+
+    Check if virtualization is enabled. Run this command:
 
     ```bash
     systeminfo | findstr Virtualization
@@ -424,24 +442,6 @@ With those compatibility things out of the way, you're ready to start the system
     4. Find the virtualization option in the BIOS Setup Utility. This can be under the `Configuration`, `Advanced` or `Security` tab, you will likely navigate with the `Down`, `Up`, `Left`, or `Right` arrow keys in this mode if the mouse doesn't work
     5. Enable virtualization by setting `Disabled` to `Enabled` on the Virtualization option. The Virtualization option can be called: `Virtualization Technology`, `SVM(Secure Virtual Machine) Mode`, `AMD-V(AMD Virtualization)`, `AMD SVM`, `Intel VTX(Intel Virtualization Technology)`, `Intel VT-d(Virtualization for Direct-IO)` or `AMD IOMMU(Input/Output Memory Management Unit)` depending on your computer manufacturer
     6. Find option that says `Save Changes and Exit` or anything that signifies that the changes you made will be saved and press `Enter` or the key next to that option. Your computer will restart
-
-    If you are unable to find the virtualization settings in your BIOS, ensure that your computer supports virtualization. To do this, open PowerShell as an administrator and run the following command:
-
-    ```bash
-    Get-ComputerInfo -Property 'HyperV*'
-    ```
-
-    This should display the following output or similar output that indicates that virtualization is supported:
-
-    ```bash
-    HyperVisorPresent: False
-    HyperVRequirementDataExecutionPreventionAvailable : True
-    HyperVRequirementSecondLevelAddressTranslation    : True
-    HyperVRequirementVirtualizationFirmwareEnabled    : False
-    HyperVRequirementVMMonitorModeExtensions          : True
-    ```
-
-    If your output looks similar to the one above, find out the virtualization option for your specific computer and repeat the steps above to enable it on your computer
 
 22. <a name="expo-react-native"></a>We will now install Expo CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
