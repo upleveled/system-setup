@@ -377,7 +377,7 @@ With those compatibility things out of the way, you're ready to start the system
     **Option B - Windows 10/11 Home:**
 
     1. **Windows 10 only:** Click on the start menu, type in "winver" to the search and verify you have at least Windows 10 version 1903. If your number is lower than 1903, run Windows Update.<br><br>
-       <img src="windows-5-winver.jpg"><br><br>
+       <img src="windows-6-winver.jpg"><br><br>
     2. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
     3. Copy the following text and paste it into Hyper. Hit enter.
 
