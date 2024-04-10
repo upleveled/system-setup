@@ -405,15 +405,15 @@ With those compatibility things out of the way, you're ready to start the system
     <img src="docker-desktop-opening-error.avif"><br><br>
 
     First check if virtualization is enabled on your computer: To do this, open PowerShell as an administrator and run the following command:
+    
     ```bash
-    systeminfo | findstr "Hyper-V Virtualization"
+    systeminfo | findstr Virtualization
     ```
 
-    This should display the output below: Note the `Virtualization Enabled In Firmware: No`, this shows that virtualization is not enabled on your computer
+    This should display the following output:
 
     ```bash
-    Hyper-V Requirements: VM Monitor Mode Extensions: Yes
-                          Virtualization Enabled In Firmware: No
+    Virtualization Enabled In Firmware: No
     ```
 
     Continue with the steps below if virtualization is not enabled, Enable virtualization in your BIOS or UEFI:
