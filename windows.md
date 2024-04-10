@@ -427,12 +427,11 @@ With those compatibility things out of the way, you're ready to start the system
 
     Continue with the steps below if virtualization is not enabled to enable virtualization in your BIOS or UEFI:
 
-    1. Start your computer if it is off, or restart it if it has already started
-    2. Right when the computer is starting up (still on the black screen before the computer brand logo flashes), press repeatedly any of these keys: <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F4</kbd>, <kbd>F10</kbd>, or <kbd>F12</kbd>. Each computer manufacturer uses a different key but it may show a brief message at boot time telling you which one to press. If you miss it the first time, restart and try again. If you are not able to enter the BIOS via this method, check this [BIOS key lists](https://www.disk-image.com/faq-bootmenu.htm) for different computers or consult your computers manual
-    3. If you are not already in the `BIOS Setup Utility` interface, you will need to press the key next to any option that says `BIOS Setup` or has `Bios`, `UEFI` in it to open BIOS Setup Utility
-    4. Find the virtualization option in the BIOS Setup Utility. This can be under the `Configuration`, `Advanced` or `Security` tab, you will likely navigate with the `Down`, `Up`, `Left`, or `Right` arrow keys in this mode if the mouse doesn't work
-    5. Enable virtualization by setting `Disabled` to `Enabled` on the Virtualization option. The Virtualization option can be called: `Virtualization Technology`, `SVM(Secure Virtual Machine) Mode`, `AMD-V(AMD Virtualization)`, `AMD SVM`, `Intel VTX(Intel Virtualization Technology)`, `Intel VT-d(Virtualization for Direct-IO)` or `AMD IOMMU(Input/Output Memory Management Unit)` depending on your computer manufacturer
-    6. Find option that says `Save Changes and Exit` or anything that signifies that the changes you made will be saved and press `Enter` or the key next to that option. Your computer will restart
+    1. Restart your computer
+    2. Before the brand logo appears, press the BIOS access key repeatedly. Common options are <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F4</kbd>, <kbd>F10</kbd>, or <kbd>F12</kbd> or as shown on the startup screen or check this [BIOS key lists](https://www.disk-image.com/faq-bootmenu.htm)
+    3. Navigate to the `BIOS/UEFI Setup Utility`
+    4. Find the virtualization option for your computer and enable it
+    5. Save changes and exit the BIOS
 
 21. Test if Docker is installed by running the following command on the command line:
 
