@@ -394,7 +394,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     <img src="windows-7-docker-desktop-error.avif"><br><br>
 
-    If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, continue with the step further below to test Docker):
+    If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, you can skip to the Docker testing step):
 
     Check if your machine supports virtualization by running the following command on PowerShell as an administrator:
 
@@ -414,7 +414,7 @@ With those compatibility things out of the way, you're ready to start the system
     1. Restart your machine
     2. As soon as the monitor turns black during restart, press the BIOS key or UEFI key for your machine repeatedly. If you're not sure what that key is, either try to read the key on the screen quickly as your machine restarts or refer to [hotkey documentation online](https://kb.wisc.edu/helpdesk/page.php?id=58779) (common keys are <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F9</kbd>, <kbd>F10</kbd> or <kbd>F12</kbd>)
     3. Navigate to the `BIOS / UEFI Setup Utility`
-    4. Find the virtualization option for your machine and enable it. If you'r not sure what the option is called, refer to the [virtualization options here](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1) (common names are `Virtualization Technology`, `VT-x`, `VT-d`, `AMD-V`, or `SVM`)
+    4. Find the virtualization option for your machine and enable it. If you're not sure what the option is called, refer to the [virtualization options here](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1) (often in `Advanced` settings, common names are `Virtualization`, `VMX`, `VT-x`, `VT-d`, `AMD-V`, or `SVM`)
     5. Find and select the option to save changes and exit the BIOS / UEFI
     6. Open Docker Desktop again (as instructed in Option A or Option B) to verify that the error has been resolved
 
