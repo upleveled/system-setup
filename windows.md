@@ -390,9 +390,11 @@ With those compatibility things out of the way, you're ready to start the system
     4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
     5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
 
-    If opening Docker Desktop from **Option A or B** shows an error message that says `Docker Desktop - Windows Hypervisor is not present`, this indicates that virtualization needs to be enabled on your machine
+    When opening Docker Desktop during Option A or Option B, an error message `Docker Desktop - Windows Hypervisor is not present` may appear:<br><br>
+    
+    <img src="image here"><br><br>
 
-    Only continue with the rest of these steps if you see the above error message. If you do not see this error message, you can continue with step `21`
+    If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, continue with the step below to test Docker):
 
     Check if your machine supports virtualization by running the following command on powershell as an administrator:
 
