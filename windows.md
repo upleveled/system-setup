@@ -392,9 +392,6 @@ With those compatibility things out of the way, you're ready to start the system
 
     If opening Docker Desktop from **Option A or B** shows an error message that says `Docker Desktop - Windows Hypervisor is not present`, this indicates that virtualization needs to be enabled on your machine
 
-    The error might look like this:<br><br>
-    <img src="docker-desktop-opening-error.avif"><br><br>
-
     Close PowerShell and open it again as administrator (like in step 2)
 
     Check if your computer supports virtualization. Run this command:
