@@ -421,7 +421,7 @@ With those compatibility things out of the way, you're ready to start the system
     3. Navigate to the `BIOS / UEFI Setup Utility`
     4. Find the virtualization option for your machine and enable it. If you'r not sure what the option is called, refer to the [virtualization options here](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1) (common names are `Virtualization Technology`, `VT-x`, `VT-d`, `AMD-V`, or `SVM`)
     5. Find and select the option to save changes and exit the BIOS / UEFI
-    6. Open Docker Desktop again
+    6. Open Docker Desktop again as instructed in **Option A or B**
 
 21. Test if Docker is installed by running the following command on the command line:
 
