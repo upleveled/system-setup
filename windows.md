@@ -394,7 +394,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Only continue with the rest of these steps if you see this error message. If you do not see this error message, you can continue with step `21`
 
-    Check if your computer supports virtualization. Run this command:
+    Check if your machine supports virtualization. Run this command:
 
     ```bash
     Get-ComputerInfo -Property HyperV*
@@ -424,10 +424,10 @@ With those compatibility things out of the way, you're ready to start the system
 
     Continue with the steps below if virtualization is not enabled to enable virtualization in your BIOS/UEFI:
 
-    1. Restart your computer
+    1. Restart your machine
     2. As soon as the monitor turns black during restart, press the BIOS key or UEFI key for your machine repeatedly. If you're not sure what that key is, either try to read the key on the screen quickly as your machine restarts or refer to [hotkey documentation online](https://www.disk-image.com/faq-bootmenu.htm) (common keys are <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F9</kbd>, <kbd>F10</kbd> or <kbd>F12</kbd>)
     3. Navigate to the `BIOS/UEFI Setup Utility`
-    4. Find the virtualization option for your computer and enable it
+    4. Find the virtualization option for your machine and enable it
     5. Find and select the option to save changes and exit the BIOS / UEFI
 
 21. Test if Docker is installed by running the following command on the command line:
