@@ -431,7 +431,7 @@ With those compatibility things out of the way, you're ready to start the system
     2. Before the brand logo appears, press the BIOS/UEFI access key repeatedly. Common options are <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F4</kbd>, <kbd>F10</kbd>, or <kbd>F12</kbd> or as shown on the startup screen or check this [BIOS/UEFI key lists](https://www.disk-image.com/faq-bootmenu.htm)
     3. Navigate to the `BIOS/UEFI Setup Utility`
     4. Find the virtualization option for your computer and enable it
-    5. Save changes and exit the BIOS/UEFI
+    5. Find and select the option to save changes and exit the BIOS / UEFI
 
 21. Test if Docker is installed by running the following command on the command line:
 
