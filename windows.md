@@ -429,6 +429,7 @@ With those compatibility things out of the way, you're ready to start the system
     3. Navigate to the `BIOS/UEFI Setup Utility`
     4. Find the virtualization option for your machine and enable it
     5. Find and select the option to save changes and exit the BIOS / UEFI
+    6. Open Docker Desktop again
 
 21. Test if Docker is installed by running the following command on the command line:
 
