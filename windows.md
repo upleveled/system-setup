@@ -396,7 +396,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, continue with the step further below to test Docker):
 
-    Check if your machine supports virtualization by running the following command on powershell as an administrator:
+    Check if your machine supports virtualization by running the following command on PowerShell as an administrator:
 
     ```bash
     Get-ComputerInfo -Property HyperV*
