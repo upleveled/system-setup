@@ -409,7 +409,7 @@ With those compatibility things out of the way, you're ready to start the system
        HyperVRequirementVirtualizationFirmwareEnabled: False
        ```
 
-    Ensure that your output is the same as above before proceeding with the steps below to enable virtualization
+       Ensure that your output is the same as above before proceeding with the steps below to enable virtualization
 
     2. Restart your machine
     3. As soon as the monitor turns black during restart, press the BIOS key or UEFI key for your machine repeatedly. If you're not sure what that key is, either try to read the key on the screen quickly as your machine restarts or refer to [hotkey documentation online](https://kb.wisc.edu/helpdesk/page.php?id=58779) (common keys are <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F9</kbd>, <kbd>F10</kbd> or <kbd>F12</kbd>)
