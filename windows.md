@@ -398,16 +398,16 @@ With those compatibility things out of the way, you're ready to start the system
 
     1. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.
 
-    ```bash
-    Get-ComputerInfo -Property HyperVRequirementVMMonitorModeExtensions,HyperVRequirementVirtualizationFirmwareEnabled | Format-List
-    ```
+       ```bash
+       Get-ComputerInfo -Property HyperVRequirementVMMonitorModeExtensions,HyperVRequirementVirtualizationFirmwareEnabled | Format-List
+       ```
 
-    This should display the following output:
+       This should display the following output:
 
-    ```bash
-    HyperVRequirementVMMonitorModeExtensions: True
-    HyperVRequirementVirtualizationFirmwareEnabled: False
-    ```
+       ```bash
+       HyperVRequirementVMMonitorModeExtensions: True
+       HyperVRequirementVirtualizationFirmwareEnabled: False
+       ```
 
     Ensure that your output is the same as above before proceeding with the steps below to enable virtualization
 
