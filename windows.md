@@ -390,6 +390,34 @@ With those compatibility things out of the way, you're ready to start the system
     4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
     5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
 
+    When opening Docker Desktop during Option A or Option B, an error message `Docker Desktop - Windows Hypervisor is not present` may appear:<br><br>
+
+    <img src="windows-7-docker-desktop-error.avif"><br><br>
+
+    If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, you can skip to the Docker testing step).
+
+    1. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.
+
+       ```bash
+       Get-ComputerInfo -Property HyperVRequirementVMMonitorModeExtensions,HyperVRequirementVirtualizationFirmwareEnabled | Format-List
+       ```
+
+       This should display the following output:
+
+       ```bash
+       HyperVRequirementVMMonitorModeExtensions: True
+       HyperVRequirementVirtualizationFirmwareEnabled: False
+       ```
+
+       The output indicates that your machine supports virtualization, but it is not enabled. Ensure that your output is the same before proceeding with the steps below to enable virtualization.
+
+    2. Restart your machine
+    3. As soon as the monitor turns black during restart, press the BIOS key or UEFI key for your machine repeatedly. If you're not sure what that key is, either try to read the key on the screen quickly as your machine restarts or refer to BIOS key documentation online eg. [the guide by the University of Wisconson-Madison](https://kb.wisc.edu/helpdesk/page.php?id=58779) (common keys are <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F9</kbd>, <kbd>F10</kbd> or <kbd>F12</kbd>)
+    4. On some machines, you will need to find and select the option to enter the BIOS / UEFI after hitting the hotkey
+    5. Find the virtualization option for your machine and enable it. If you're not sure what the option is called, refer to the [virtualization options here](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1) (often in `Advanced` settings, common names are `Virtualization`, `VMX`, `VT-x`, `VT-d`, `AMD-V`, or `SVM`)
+    6. Find and select the option to save changes and exit the BIOS / UEFI
+    7. Open Docker Desktop again (as instructed in Option A or Option B) to verify that the error has been resolved
+
 21. Test if Docker is installed by running the following command on the command line:
 
     ```bash
