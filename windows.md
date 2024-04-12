@@ -394,7 +394,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     <img src="windows-7-docker-desktop-error.avif"><br><br>
 
-    If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, you can skip to the Docker testing step):
+    If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, you can skip to the Docker testing step).
 
     1. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.
 
