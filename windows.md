@@ -365,11 +365,11 @@ With those compatibility things out of the way, you're ready to start the system
     1. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
     2. Copy the following text and paste it into Hyper. Hit enter.
 
-    ```bash
-    choco install wsl2 -y
-    choco install wsl-ubuntu-2004 -y
-    choco install docker-desktop -y
-    ```
+       ```bash
+       choco install wsl2 -y
+       choco install wsl-ubuntu-2004 -y
+       choco install docker-desktop -y
+       ```
 
     3. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
@@ -381,11 +381,11 @@ With those compatibility things out of the way, you're ready to start the system
     2. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
     3. Copy the following text and paste it into Hyper. Hit enter.
 
-    ```bash
-    choco install wsl2 -y
-    choco install wsl-ubuntu-2004 -y
-    choco install docker-desktop -y
-    ```
+       ```bash
+       choco install wsl2 -y
+       choco install wsl-ubuntu-2004 -y
+       choco install docker-desktop -y
+       ```
 
     4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
     5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
