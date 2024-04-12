@@ -396,7 +396,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, you can skip to the Docker testing step):
 
-    Check if your machine supports virtualization by running the following command on PowerShell as an administrator:
+    1. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.
 
     ```bash
     Get-ComputerInfo -Property HyperVRequirementVMMonitorModeExtensions,HyperVRequirementVirtualizationFirmwareEnabled | Format-List
@@ -411,7 +411,6 @@ With those compatibility things out of the way, you're ready to start the system
 
     Ensure that your output is the same as above before proceeding with the steps below to enable virtualization
 
-    1. Close PowerShell and open it again as administrator (like in step 2)
     2. Restart your machine
     3. As soon as the monitor turns black during restart, press the BIOS key or UEFI key for your machine repeatedly. If you're not sure what that key is, either try to read the key on the screen quickly as your machine restarts or refer to [hotkey documentation online](https://kb.wisc.edu/helpdesk/page.php?id=58779) (common keys are <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F9</kbd>, <kbd>F10</kbd> or <kbd>F12</kbd>)
     4. Optional: you may need to find and select an option to enter the `BIOS / UEFI Setup Utility`
