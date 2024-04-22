@@ -489,7 +489,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Select the Pixel 3a as the hardware device.
 
-    Under the **Recommended** tab (the default tab), locate the system image named **S** (API level 31) and click on the downward arrow icon (download link) next to it. In the window that pops up, accept the license agreement and click **Next**:<br><br>
+    Under the **Recommended** tab (the default tab), locate the system image named **S** (API level 31) and click on the downward arrow icon (download button) next to it. In the window that pops up, accept the license agreement and click **Next**:<br><br>
 
     <img src="./general-android-studio-virtual-device-system-image-download.png"><br><br>
 
