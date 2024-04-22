@@ -489,17 +489,17 @@ With those compatibility things out of the way, you're ready to start the system
 
     Select the Pixel 3a as the hardware device.
 
-    Under the **Recommended** tab (the default tab), locate the system image named **R** (API level 30) and click on the **Download** link next to it. In the window that pops up, accept the license agreement and click **Next**:<br><br>
+    Under the **Recommended** tab (the default tab), locate the system image named **S** (API level 31) and click on the downward arrow icon (download link) next to it. In the window that pops up, accept the license agreement and click **Next**:<br><br>
 
     <img src="./general-android-studio-virtual-device-system-image-download.png"><br><br>
 
     Once the download completes, select the image you just downloaded and click on **Next** through the rest of the steps until the virtual device has been created:<br><br>
 
-    <img src="./general-android-studio-virtual-device-system-image-select.png"><br><br>
+    <img src="./general-android-studio-virtual-device-system-image-select.avif"><br><br>
 
     The device will now show up in the Device Manager. Click on the triangular play button to launch the virtual device in the emulator. An emulator window will appear showing the screen of the virtual device:<br><br>
 
-    <img src="./general-android-studio-virtual-device-launch.png"><br><br>
+    <img src="./general-android-studio-virtual-device-launch.avif"><br><br>
 
     If a message pops up in the virtual device that the "System UI isn't responding" at any point during these steps, you can click on "Wait".
 
