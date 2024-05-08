@@ -447,7 +447,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     git config --global init.defaultBranch main
     git config --global core.editor "vim"
     ```
-    This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming) and will set Vim as your default editor for Git.<br><br>
+    This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming) and set Vim as your default editor for Git.<br><br>
 27. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
