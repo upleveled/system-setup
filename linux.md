@@ -442,11 +442,12 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
 
-26. Copy the following text, paste it in the terminal and hit return.<br><br>
+26. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
+    git config --global core.editor "vim"
     ```
-    This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
+    This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming) and sets Vim as your default editor for Git.<br><br>
 27. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
