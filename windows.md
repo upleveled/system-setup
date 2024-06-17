@@ -608,7 +608,13 @@ With those compatibility things out of the way, you're ready to start the system
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
+2. If you want to easily capture screenshots and draw and write on them, try Flameshot:
+
+   ```bash
+   choco install flameshot
+   ```
+
+3. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
 
    An alternative without the limitations of Loom is Screen to Gif (however, it does not record audio):
 
@@ -616,31 +622,31 @@ With those compatibility things out of the way, you're ready to start the system
    choco install screentogif
    ```
 
-3. If you need a clipboard manager to keep a history of things that you have copied, this is an awesome option:
+4. If you need a clipboard manager to keep a history of things that you have copied, this is an awesome option:
 
    ```bash
    choco install ditto
    ```
 
-4. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
+5. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
 
    ```bash
    choco install responsively
    ```
 
-5. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
+6. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
 
    ```bash
    choco install bfg-repo-cleaner
    ```
 
-6. If you're running out of space on your computer, you can use WinDirStat to analyze your hard drive and show a chart of which items are taking up how much space:
+7. If you're running out of space on your computer, you can use WinDirStat to analyze your hard drive and show a chart of which items are taking up how much space:
 
    ```bash
    choco install windirstat
    ```
 
-7. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
+8. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
 
    ```bash
    choco install powertoys

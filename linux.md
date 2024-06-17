@@ -475,7 +475,14 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    ```bash
    code --install-extension streetsidesoftware.code-spell-checker
    ```
-2. If you need to record video of your screen with sound (with export to mp4 and gif), try out Kooha:
+
+2. If you want to easily capture screenshots and draw and write on them, try Flameshot:
+
+   ```bash
+   sudo snap install flameshot
+   ```
+
+3. If you need to record video of your screen with sound (with export to mp4 and gif), try out Kooha:
 
    ```bash
    sudo apt install -y flatpak
