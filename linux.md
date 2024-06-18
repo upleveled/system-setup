@@ -41,9 +41,12 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
    This installs Git Credential Manager Core.<br><br>
 
-5. Copy the following text, paste it in the terminal and hit return.<br><br>
+5. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    curl -L https://fly.io/install.sh | sh
+   echo "export FLYCTL_INSTALL=\$HOME/.fly" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
+   echo "export PATH=\$FLYCTL_INSTALL/bin:\$PATH" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
+   source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
    ```
    This installs `flyctl`.<br><br>
 6. Copy the following text, paste it in the terminal and hit return.<br><br>
@@ -195,8 +198,8 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
     sudo apt update
     sudo apt install postgresql-16
-    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
-    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
+    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
+    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     ```
 
     This will install PostgreSQL and create a default user of `postgres` with no password (only authorized users can use this user).<br><br>
@@ -299,13 +302,13 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     ```bash
     sudo snap install android-studio --classic
     [ -d "$HOME/Library/Android/sdk" ] && ANDROID_SDK=$HOME/Library/Android/sdk || ANDROID_SDK=$HOME/Android/Sdk
-    echo "export ANDROID_SDK=$ANDROID_SDK" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
-    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
+    echo "export ANDROID_SDK=$ANDROID_SDK" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
+    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     ```
 
     This will install Android Studio, for creating and running Android virtual devices in an emulator.
 
-    Open Android Studio using Dash.
+    Open Android Studio using the Dash.
 
     If it asks to import Android Studio Settings, choose **Do not import settings**.
 
@@ -451,7 +454,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 27. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-28. Open Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](https://upleveled.slack.com/team/U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
+28. Open the Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](https://upleveled.slack.com/team/U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
 29. <a name="specs"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     lshw -short
