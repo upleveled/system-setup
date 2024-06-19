@@ -184,7 +184,7 @@ With those compatibility things out of the way, you're ready to start the system
       "**/*.sql"
     ],
     "eslint.runtime": "node",
-    "eslint.experimental.useFlatConfig": true,
+    "eslint.useFlatConfig": true,
     ```
 
     After you have pasted the settings, save the file with `File` -> `Save` in the top menu.<br><br>
