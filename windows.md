@@ -522,8 +522,6 @@ With those compatibility things out of the way, you're ready to start the system
     cd projects
     pnpm create expo-app@latest --template blank-typescript expo-test
     cd expo-test
-    echo 'node-linker=hoisted' > ./.npmrc
-    pnpm install --force
     pnpm start --android
     ```
 

@@ -375,8 +375,6 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     cd projects
     pnpm create expo-app@latest --template blank-typescript expo-test
     cd expo-test
-    echo 'node-linker=hoisted' > ./.npmrc
-    pnpm install --force
     pnpm start --android
     ```
 
