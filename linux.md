@@ -278,12 +278,12 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-19. <a name="expo-react-native"></a>We will now install Expo CLI for React Native.
+19. <a name="expo-react-native"></a>We will now install Expo CLI and EAS CLI for React Native.
 
     Copy the following text, paste it in the terminal and hit return.
 
     ```bash
-    sudo npm install -g expo-cli
+    sudo pnpm add --global expo-cli eas-cli
     ```
 
     You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>
