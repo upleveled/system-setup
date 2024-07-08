@@ -254,6 +254,7 @@ With those compatibility things out of the way, you're ready to start the system
     ```bash
     echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> "$USERPROFILE/.bash_profile"
     echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> "$USERPROFILE/.bash_profile"
+    echo "export LC_ALL=en_US.UTF-8" >> "$USERPROFILE/.bash_profile"
     echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> "$USERPROFILE/.bash_profile"
     source "$USERPROFILE/.bash_profile"
     ```
