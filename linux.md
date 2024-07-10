@@ -64,6 +64,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    code --install-extension esbenp.prettier-vscode
    code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
    code --install-extension kumar-harsh.graphql-for-vscode
+   code --install-extension mattpocock.ts-error-translator
    code --install-extension meganrogge.template-string-converter
    code --install-extension styled-components.vscode-styled-components
    code --install-extension stylelint.vscode-stylelint
@@ -72,7 +73,6 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    code --install-extension viijay-kr.react-ts-css
    code --install-extension vunguyentuan.vscode-css-variables
    code --install-extension wix.glean
-   code --install-extension yoavbls.pretty-ts-errors
    ```
 
    This installs some VS Code extensions we will need.<br><br>
@@ -184,6 +184,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
       "**/*.sql"
     ],
     "eslint.runtime": "node",
+    "totalTypeScript.hideAllTips": true,
     ```
     After you have pasted the settings, save the file with `File` -> `Save` in the top menu.<br><br>
     If you had any previous settings beforehand, you may notice that some text above will be underlined by a squiggly yellow line. This is a warning because we pasted some duplicate properties from the code above.<br><br>
