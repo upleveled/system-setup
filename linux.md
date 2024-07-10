@@ -68,11 +68,11 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    code --install-extension styled-components.vscode-styled-components
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
-   code --install-extension mattpocock.ts-error-translator
    code --install-extension unional.vscode-sort-package-json
    code --install-extension viijay-kr.react-ts-css
    code --install-extension vunguyentuan.vscode-css-variables
    code --install-extension wix.glean
+   code --install-extension yoavbls.pretty-ts-errors
    ```
 
    This installs some VS Code extensions we will need.<br><br>
