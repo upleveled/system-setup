@@ -279,17 +279,17 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-19. <a name="expo-react-native"></a>We will now install Expo CLI and EAS CLI for React Native.
+19. <a name="expo-react-native"></a>We will now install EAS CLI for React Native.
 
     Copy the following text, paste it in the terminal and hit return.
 
     ```bash
-    sudo pnpm add --global expo-cli eas-cli
+    sudo pnpm add --global eas-cli
     ```
 
     You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>
 
-    <img src="./general-expo-init.png"><br><br>
+    <img src="./general-expo-init.avif"><br><br>
 
     Lastly, we'll install Expo on your phone, so that you can also test on a real device.
 

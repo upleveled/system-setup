@@ -427,17 +427,17 @@ With those compatibility things out of the way, you're ready to start the system
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-22. <a name="expo-react-native"></a>We will now install Expo CLI and EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+22. <a name="expo-react-native"></a>We will now install EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    pnpm add --global expo-cli eas-cli
+    pnpm add --global eas-cli
     ```
 
     You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>
 
-    <img src="./general-expo-init.png"><br><br>
+    <img src="./general-expo-init.avif"><br><br>
 
     Lastly, we'll install Expo on your phone, so that you can also test on a real device.
 
