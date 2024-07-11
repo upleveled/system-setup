@@ -79,11 +79,11 @@ With those compatibility things out of the way, you're ready to start the system
    code --install-extension esbenp.prettier-vscode
    code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
    code --install-extension kumar-harsh.graphql-for-vscode
+   code --install-extension mattpocock.ts-error-translator
    code --install-extension meganrogge.template-string-converter
    code --install-extension styled-components.vscode-styled-components
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
-   code --install-extension mattpocock.ts-error-translator
    code --install-extension unional.vscode-sort-package-json
    code --install-extension viijay-kr.react-ts-css
    code --install-extension vunguyentuan.vscode-css-variables
@@ -184,6 +184,7 @@ With those compatibility things out of the way, you're ready to start the system
       "**/*.sql"
     ],
     "eslint.runtime": "node",
+    "totalTypeScript.hideAllTips": true,
     ```
 
     After you have pasted the settings, save the file with `File` -> `Save` in the top menu.<br><br>
@@ -428,17 +429,17 @@ With those compatibility things out of the way, you're ready to start the system
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-22. <a name="expo-react-native"></a>We will now install Expo CLI and EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+22. <a name="expo-react-native"></a>We will now install EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    pnpm add --global expo-cli eas-cli
+    pnpm add --global eas-cli
     ```
 
     You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>
 
-    <img src="./general-expo-init.png"><br><br>
+    <img src="./general-expo-init.avif"><br><br>
 
     Lastly, we'll install Expo on your phone, so that you can also test on a real device.
 
