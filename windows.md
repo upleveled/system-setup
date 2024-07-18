@@ -31,7 +31,7 @@ With those compatibility things out of the way, you're ready to start the system
    <br>This will run Powershell as an administrator user<br><br>
 3. Copy the following text (be sure you select all of it, it's very long) and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
-   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+   Set-ExecutionPolicy AllSigned -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
    ```
    This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command line.
    <br>
