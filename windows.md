@@ -257,8 +257,9 @@ With those compatibility things out of the way, you're ready to start the system
     echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> "$USERPROFILE/.bash_profile"
     echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> "$USERPROFILE/.bash_profile"
     source "$USERPROFILE/.bash_profile"
-    sed -i "s/^logging_collector = on/logging_collector = off/" "$PGDATA/postgresql.conf"
-    sed -i -E "/^[[:space:]]*lc_messages[[:space:]]*=/ s/^#*.*$/lc_messages = 'en_US.UTF-8'/" "$PGDATA/postgresql.conf"
+    sed -i -e "s/^logging_collector = on/logging_collector = off/" \
+       -e "/^[[:space:]]*lc_messages[[:space:]]*=/ s/^#*.*$/lc_messages = 'en_US.UTF-8'/" \
+       "$PGDATA/postgresql.conf"
     ```
 
     <!--
