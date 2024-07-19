@@ -199,7 +199,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     sudo apt update
     sudo apt install postgresql-16
     echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
-    sed -i -E "/^[[:space:]]*lc_messages[[:space:]]*=/ s/^#*.*$/lc_messages = 'eu_US.UTF-8'/" "$(sudo -u postgres psql --tuples-only --pset format=unaligned --command 'SHOW config_file;')"
+    sed -i "/^[[:space:]]*lc_messages[[:space:]]*=/ s/^#*.*$/lc_messages = 'eu_US.UTF-8'/" "$(sudo -u postgres psql --tuples-only --pset format=unaligned --command 'SHOW config_file;')"
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     ```
 
