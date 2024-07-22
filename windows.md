@@ -256,6 +256,7 @@ With those compatibility things out of the way, you're ready to start the system
     echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> "$USERPROFILE/.bash_profile"
     echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> "$USERPROFILE/.bash_profile"
     echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> "$USERPROFILE/.bash_profile"
+    perl -i -pe "s/^logging_collector = on/logging_collector = off/" "$PGDATA/postgresql.conf"
     source "$USERPROFILE/.bash_profile"
     ```
 
