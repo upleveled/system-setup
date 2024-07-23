@@ -200,7 +200,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     sudo apt install postgresql-16
     echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     PGDATA=$(dirname "$(sudo -u postgres psql --tuples-only --pset format=unaligned --command "SHOW config_file;")")
-    perl -i -pe 's/^[#\s]*lc_messages\s*=.+$/lc_messages = '\''en_US.UTF-8'\''/' "$PGDATA/postgresql.conf"
+    perl -i -pe 's/^[#\s]*(lc_messages|lc_time)\s*=.+$/\1 = '\''en_US.UTF-8'\''/' "$PGDATA/postgresql.conf"
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     ```
 
