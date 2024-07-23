@@ -474,7 +474,6 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 ## Optional Software
 
 1. If you would like to check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
-
    ```bash
    code --install-extension streetsidesoftware.code-spell-checker
    ```
