@@ -200,9 +200,9 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     sudo apt install postgresql-16
     echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     PGDATA=$(dirname "$(sudo -u postgres psql --tuples-only --pset format=unaligned --command "SHOW config_file;")")
+    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     perl -i -pe 's/^[#\s]*(lc_messages|lc_time)\s*=.+$/\1 = '\''en_US.UTF-8'\''/' "$PGDATA/postgresql.conf"
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
-    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     ```
 
     This will install PostgreSQL and create a default user of `postgres` with no password (only authorized users can use this user).<br><br>
