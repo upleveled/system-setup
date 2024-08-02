@@ -59,6 +59,7 @@ With those compatibility things out of the way, you're ready to start the system
    corepack enable
    corepack prepare pnpm@latest --activate
    pnpm setup
+   source "$USERPROFILE/.bash_profile"
    ```
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
 8. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.

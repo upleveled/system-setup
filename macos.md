@@ -45,6 +45,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    corepack enable
    corepack prepare pnpm@latest --activate
    pnpm setup
+   source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
    ```
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
