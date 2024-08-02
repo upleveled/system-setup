@@ -660,5 +660,3 @@ Most software upgrades can be performed with `choco upgrade <package name>`, but
    corepack enable
    corepack prepare pnpm@latest --activate
    ```
-
-# test
