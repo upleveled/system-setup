@@ -290,13 +290,9 @@ With those compatibility things out of the way, you're ready to start the system
     postgres
     ```
 
-    If it worked, it should print out some lines with some messages and end with the rectangular cursor on the left side of the screen:
+    If it worked, it should print out some messages and end with the rectangular cursor on the left side of the screen:
 
-    <img src="./macos-5-postgres.png"><br><br>
-
-    The messages may be different than the messages in the image above, and may not mention that PostgreSQL is ready to accept connections:
-
-    <img src="./windows-5-postgres.jpg"><br><br>
+    <img src="./windows-5-postgres.avif"><br><br>
 
     You will need to run this every time you want to use your database.
 

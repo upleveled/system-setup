@@ -204,7 +204,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     postgres
     ```
 
-    If it worked, it should print out some lines with some messages and end with the rectangular cursor on the left side of the screen:
+    If it worked, it should print out some messages and end with the rectangular cursor on the left side of the screen:
 
     <img src="./macos-5-postgres.png"><br><br>
 
