@@ -33,7 +33,18 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
 
-4. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+4. Copy the following text, paste it in the terminal and hit return.<br><br>
+   ```bash
+   pnpm add --global @upleveled/preflight
+   ```
+   This will prepare a program that we will use in the course. If this step doesn't work, it's possible that you may not finished the `pnpm` installation- check the last part of the previous step to see how to finish the installation.
+ 
+   ```bash
+   ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the global bin directory
+
+   Run "pnpm setup" to create it automatically, or set the global-bin-dir setting, or the PNPM_HOME env variable. The global bin directory should be in the PATH.
+   ```
+5. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
    curl -L https://aka.ms/gcm/linux-install-source.sh | sh
@@ -42,7 +53,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
    This installs Git Credential Manager Core.<br><br>
 
-5. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    curl -L https://fly.io/install.sh | sh
    echo "export FLYCTL_INSTALL=\$HOME/.fly" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
@@ -50,12 +61,12 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
    ```
    This installs `flyctl`.<br><br>
-6. Copy the following text, paste it in the terminal and hit return.<br><br>
+7. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install code --classic
    ```
    This uses Snap to install VS Code.<br><br>
-7. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+8. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
    code --install-extension bradlc.vscode-tailwindcss
@@ -78,22 +89,22 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
    This installs some VS Code extensions we will need.<br><br>
 
-8. If you don't have Zoom yet, install it: with each line below, copy the text, paste it in the terminal and hit return.<br><br>
+9. If you don't have Zoom yet, install it: with each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install zoom-client
    ```
    This installs Zoom.<br><br>
-9. If you don't have Slack yet, install it: copy the following text, paste it in the terminal and hit return.<br><br>
+10. If you don't have Slack yet, install it: copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install slack
    ```
    This uses Snap to install Slack.<br><br>
-10. Copy the following text, paste it in the terminal and hit return.<br><br>
+11. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     sudo snap install httpie
     ```
     This uses Snap to install HTTPie.<br><br>
-11. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
+12. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
     If you don't have Chrome installed yet, you can install it by copying each line below, pasting it in the terminal and hitting return.<br><br>
     ```bash
     cd /tmp
@@ -102,12 +113,12 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     cd -
     ```
     This installs Chrome.<br><br>
-12. Install the following Chrome Extensions:
+13. Install the following Chrome Extensions:
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
-13. Copy the following text, paste it in the terminal and hit return.<br><br>
+14. Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
     pnpm create @upleveled/react-app --help
@@ -116,11 +127,6 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     This will prepare a program that we will use in the course. This will take a while and then respond with a message with some usage instructions, similar to this:<br><br>
     <img src="./general-cra-installed.avif"><br><br>
 
-14. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```bash
-    pnpm add --global @upleveled/preflight
-    ```
-    This will prepare a program that we will use in the course.<br><br>
 15. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
