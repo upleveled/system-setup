@@ -59,7 +59,7 @@ With those compatibility things out of the way, you're ready to start the system
    corepack enable
    corepack prepare pnpm@latest --activate
    pnpm setup
-   source "$USERPROFILE/.bash_profile"
+   source ~/.bash_profile
    ```
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
 8. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
@@ -254,13 +254,13 @@ With those compatibility things out of the way, you're ready to start the system
     Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
     ```bash
-    echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> ~/.bash_profile
+    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> ~/.bash_profile
+    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/.bash_profile
     perl -i -pe 's/^[#\s]*(lc_messages|lc_time)\s*=.+$/\1 = '\''en_US.UTF-8'\''/' "$PGDATA/postgresql.conf"
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
     perl -i -pe "s/^logging_collector = on/logging_collector = off/" "$PGDATA/postgresql.conf"
-    source "$USERPROFILE/.bash_profile"
+    source ~/.bash_profile
     ```
 
     <!--
