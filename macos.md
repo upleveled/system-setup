@@ -193,9 +193,9 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     ```bash
     [[ -d /opt/homebrew/var/postgresql@16 ]] && PGDATA_TMP=/opt/homebrew/var/postgresql@16 || PGDATA_TMP=/usr/local/var/postgresql@16
     echo "\nexport PGDATA=$PGDATA_TMP\nexport PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
+    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     perl -i -pe 's/^[#\s]*(lc_messages|lc_time)\s*=.+$/\1 = '\''en_US.UTF-8'\''/' "$PGDATA/postgresql.conf"
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
-    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     ```
 
     We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
