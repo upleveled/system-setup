@@ -37,13 +37,14 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    ```bash
    pnpm add --global @upleveled/preflight
    ```
-   This will prepare a program that we will use in the course. If this step doesn't work, it's possible that you may not finished the `pnpm` installation- check the last part of the previous step to see how to finish the installation.
- 
+   This will prepare a program that we will use in the course. If you encounter the following error: 
    ```bash
    ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the global bin directory
 
    Run "pnpm setup" to create it automatically, or set the global-bin-dir setting, or the PNPM_HOME env variable. The global bin directory should be in the PATH.
    ```
+   This indicates that the `pnpm` installation was incomplete- check the last part of the previous step to see how to finish the installation.<br><br>
+   
 5. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
