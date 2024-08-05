@@ -62,19 +62,19 @@ With those compatibility things out of the way, you're ready to start the system
    source ~/.bash_profile
    ```
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
-8. Copy the following text, paste it in the terminal and hit return.<br><br>
+8. Copy the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
    ```bash
    pnpm add --global @upleveled/preflight
    ```
 
-   This will prepare a program that we will use in the course. If this step doesn't work, it's possible that you may not finished the `pnpm` installation- check the last part of the previous step to see how to finish the installation.
-
+   This will prepare a program that we will use in the course. If you encounter the following error: 
    ```bash
    ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the global bin directory
 
    Run "pnpm setup" to create it automatically, or set the global-bin-dir setting, or the PNPM_HOME env variable. The global bin directory should be in the PATH.
    ```
+   This indicates that the `pnpm` installation was incomplete- check the last part of the previous step to see how to finish the installation.<br><br>
 
 9. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
