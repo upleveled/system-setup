@@ -44,7 +44,6 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    Run "pnpm setup" to create it automatically, or set the global-bin-dir setting, or the PNPM_HOME env variable. The global bin directory should be in the PATH.
    ```
    This indicates that the `pnpm` installation was incomplete- check the last part of the previous step to see how to finish the installation.<br><br>
-   
 5. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
@@ -119,15 +118,6 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
-14. Copy the following text, paste it in the terminal and hit return.<br><br>
-
-    ```bash
-    pnpm create @upleveled/react-app --help
-    ```
-
-    This will prepare a program that we will use in the course. This will take a while and then respond with a message with some usage instructions, similar to this:<br><br>
-    <img src="./general-cra-installed.avif"><br><br>
-
 15. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
