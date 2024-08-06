@@ -54,15 +54,14 @@ With those compatibility things out of the way, you're ready to start the system
    ```bash
    choco install slack -y
    ```
-7. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+7. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
    pnpm setup
-   source ~/.bash_profile
    ```
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
-8. Copy the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
+8. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
 
    ```bash
    pnpm add --global @upleveled/preflight
@@ -76,7 +75,7 @@ With those compatibility things out of the way, you're ready to start the system
    ```
    This indicates that the `pnpm` installation was incomplete- check the last part of the previous step to see how to finish the installation.<br><br>
 
-9. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
+9. Copy the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash
    choco install python visualstudio2022-workload-vctools -y
