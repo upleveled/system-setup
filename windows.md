@@ -255,7 +255,7 @@ With those compatibility things out of the way, you're ready to start the system
     ```bash
     echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> "$USERPROFILE/.bash_profile"
     echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> "$USERPROFILE/.bash_profile"
+    echo -e "export PSQL_PAGER=\"less --chop-long-lines --header 1\"\nexport LANG=en_US.UTF-8" >> "$USERPROFILE/.bash_profile"
     source "$USERPROFILE/.bash_profile"
     perl -i -pe 's/^[#\s]*(lc_messages|lc_time)\s*=.+$/\1 = '\''en_US.UTF-8'\''/' "$PGDATA/postgresql.conf"
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
