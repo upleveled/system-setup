@@ -54,14 +54,28 @@ With those compatibility things out of the way, you're ready to start the system
    ```bash
    choco install slack -y
    ```
-7. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+7. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
    pnpm setup
    ```
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
-8. Close PowerShell and open it again as administrator (like in step 2). Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
+8. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+
+   ```bash
+   pnpm add --global @upleveled/preflight
+   ```
+
+   This will prepare a program that we will use in the course. If you encounter the following error: 
+   ```bash
+   ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the global bin directory
+
+   Run "pnpm setup" to create it automatically, or set the global-bin-dir setting, or the PNPM_HOME env variable. The global bin directory should be in the PATH.
+   ```
+   This indicates that the `pnpm` installation was incomplete- check the last part of the previous step to see how to finish the installation.<br><br>
+
+9. Copy the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash
    choco install python visualstudio2022-workload-vctools -y
@@ -69,7 +83,7 @@ With those compatibility things out of the way, you're ready to start the system
 
    This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install Python and Visual Studio build tools, which are required for installing Node.js native modules.
 
-9. <a name="vs-code-extensions"></a> Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
+10. <a name="vs-code-extensions"></a> Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
    ```bash
    code --install-extension bradlc.vscode-tailwindcss
@@ -92,33 +106,19 @@ With those compatibility things out of the way, you're ready to start the system
 
    This installs some VS Code extensions we will need.<br><br>
 
-10. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
+11. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
     If you don't have Chrome installed yet, you can install it with Chocolatey. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
     ```bash
     choco install googlechrome -y
     ```
     This uses Chocolatey to install Chrome.<br><br>
-11. Install the following Chrome Extensions:
+12. Install the following Chrome Extensions:
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
-12. Close PowerShell and open it again as administrator (like in step 2)<br><br>
-13. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
-
-    ```bash
-    pnpm create @upleveled/react-app --help
-    ```
-
-    This will prepare a program that we will use in the course. This will take a while and then respond with a message with some usage instructions, similar to this:<br><br>
-    <img src="./general-cra-installed.avif"><br><br>
-
-14. Copy the following text and right-click in the PowerShell window to paste the text. Hit enter.<br><br>
-    ```bash
-    pnpm add --global @upleveled/preflight
-    ```
-    This will prepare a program that we will use in the course.<br><br>
-15. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
+13. Close PowerShell and open it again as administrator (like in step 2)<br><br>
+14. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -193,7 +193,7 @@ With those compatibility things out of the way, you're ready to start the system
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
     If you made any further changes to the file, save the file again with `File` -> `Save` in the top menu.<br><br>
 
-16. To verify that the VS Code configuration was successful, select `Terminal` -> `New Terminal` in the top menu:<br><br>
+15. To verify that the VS Code configuration was successful, select `Terminal` -> `New Terminal` in the top menu:<br><br>
     <img src="./general-vscode-terminal-new-terminal.avif"><br><br>
 
     Once the terminal appears, copy the following text, paste it into the terminal and hit return:
@@ -212,7 +212,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Check line 2 and 3 of the output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
 
-17. Now we will configure Hyper.<br><br>
+16. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
     <img src="./windows-3-hyper-preferences.png"><br><br>
     In this file, we will do three things:
@@ -222,7 +222,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Then save the file and close and restart Hyper.
 
-18. To verify that the Hyper configuration was successful, copy the following text, paste it into Hyper and hit return:
+17. To verify that the Hyper configuration was successful, copy the following text, paste it into Hyper and hit return:
 
     ```bash
     echo -e "Hyper Config:\n  Shell: $SHELL\n  Terminal: $TERM"
@@ -238,7 +238,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Check line 2 and 3 of the output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
 
-19. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+18. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -253,10 +253,10 @@ With those compatibility things out of the way, you're ready to start the system
     Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
     ```bash
-    echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> "$USERPROFILE/.bash_profile"
-    source "$USERPROFILE/.bash_profile"
+    echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> ~/.bash_profile
+    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> ~/.bash_profile
+    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/.bash_profile
+    source ~/.bash_profile
     perl -i -pe 's/^[#\s]*(lc_messages|lc_time)\s*=.+$/\1 = '\''en_US.UTF-8'\''/' "$PGDATA/postgresql.conf"
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
     perl -i -pe "s/^logging_collector = on/logging_collector = off/" "$PGDATA/postgresql.conf"
@@ -271,7 +271,7 @@ With those compatibility things out of the way, you're ready to start the system
     Test whether the previous command worked by running the following command:
 
     ```bash
-    cat "$USERPROFILE/.bash_profile"
+    cat ~/.bash_profile
     ```
 
     It should print out something that looks like the following (although the `16` number may be different for you):
@@ -357,7 +357,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-20. <a name="docker"></a>We will now install Docker.
+19. <a name="docker"></a>We will now install Docker.
 
     **Option A - Windows 10/11 Pro:**
 
@@ -417,7 +417,7 @@ With those compatibility things out of the way, you're ready to start the system
     6. Find and select the option to save changes and exit the BIOS / UEFI
     7. Open Docker Desktop again (as instructed in Option A or Option B) to verify that the error has been resolved
 
-21. Test if Docker is installed by running the following command on the command line:
+20. Test if Docker is installed by running the following command on the command line:
 
     ```bash
     docker run hello-world
@@ -426,7 +426,7 @@ With those compatibility things out of the way, you're ready to start the system
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-22. <a name="expo-react-native"></a>We will now install EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+21. <a name="expo-react-native"></a>We will now install EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -442,7 +442,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-23. Next we will set up some dependencies for Expo and React Native.
+22. Next we will set up some dependencies for Expo and React Native.
 
     Copy each line in the following text, paste it in Hyper and hit return.
 
@@ -512,7 +512,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     <img src="./general-android-studio-adb.png"><br><br>
 
-24. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
+23. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
 
     <!-- TODO: Check if we can remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
 
@@ -545,14 +545,14 @@ With those compatibility things out of the way, you're ready to start the system
 
     Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
-25. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
-26. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+24. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
+25. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-27. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+26. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
