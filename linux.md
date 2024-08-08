@@ -198,7 +198,8 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
     sudo apt update
     sudo apt install postgresql-16
-    echo -e "\nexport PSQL_PAGER=\"less --chop-long-lines --header 1\"\nexport LANG=en_US.UTF-8" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
+    echo -e "\nexport PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
+    echo "export LANG=en_US.UTF-8" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     PGDATA=$(dirname "$(sudo -u postgres psql --tuples-only --pset format=unaligned --command "SHOW config_file;")")
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
