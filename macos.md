@@ -191,7 +191,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
     ```bash
     [[ -d /opt/homebrew/var/postgresql@16 ]] && PGDATA_TMP=/opt/homebrew/var/postgresql@16 || PGDATA_TMP=/usr/local/var/postgresql@16
-    echo "\nexport PGDATA=$PGDATA_TMP\nexport PSQL_PAGER=\"less --chop-long-lines --header 1\"\nexport LANG=en_US.UTF-8" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
+    echo -e "export PGDATA=$PGDATA_TMP\nexport PSQL_PAGER=\"less --chop-long-lines --header 1\"\nexport LANG=en_US.UTF-8" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
     ```
