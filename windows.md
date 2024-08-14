@@ -67,12 +67,14 @@ With those compatibility things out of the way, you're ready to start the system
    pnpm add --global @upleveled/preflight
    ```
 
-   This will prepare a program that we will use in the course. If you encounter the following error: 
+   This will prepare a program that we will use in the course. If you encounter the following error:
+
    ```bash
    ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the global bin directory
 
    Run "pnpm setup" to create it automatically, or set the global-bin-dir setting, or the PNPM_HOME env variable. The global bin directory should be in the PATH.
    ```
+
    This indicates that the `pnpm` installation was incomplete- check the last part of the previous step to see how to finish the installation.<br><br>
 
 9. Copy the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
@@ -85,26 +87,26 @@ With those compatibility things out of the way, you're ready to start the system
 
 10. <a name="vs-code-extensions"></a> Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
-   ```bash
-   code --install-extension bradlc.vscode-tailwindcss
-   code --install-extension Cardinal90.multi-cursor-case-preserve
-   code --install-extension dbaeumer.vscode-eslint
-   code --install-extension dozerg.tsimportsorter
-   code --install-extension esbenp.prettier-vscode
-   code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
-   code --install-extension kumar-harsh.graphql-for-vscode
-   code --install-extension mattpocock.ts-error-translator
-   code --install-extension meganrogge.template-string-converter
-   code --install-extension styled-components.vscode-styled-components
-   code --install-extension stylelint.vscode-stylelint
-   code --install-extension sysoev.vscode-open-in-github
-   code --install-extension unional.vscode-sort-package-json
-   code --install-extension viijay-kr.react-ts-css
-   code --install-extension vunguyentuan.vscode-css-variables
-   code --install-extension wix.glean
-   ```
+```bash
+code --install-extension bradlc.vscode-tailwindcss
+code --install-extension Cardinal90.multi-cursor-case-preserve
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension dozerg.tsimportsorter
+code --install-extension esbenp.prettier-vscode
+code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
+code --install-extension kumar-harsh.graphql-for-vscode
+code --install-extension mattpocock.ts-error-translator
+code --install-extension meganrogge.template-string-converter
+code --install-extension styled-components.vscode-styled-components
+code --install-extension stylelint.vscode-stylelint
+code --install-extension sysoev.vscode-open-in-github
+code --install-extension unional.vscode-sort-package-json
+code --install-extension viijay-kr.react-ts-css
+code --install-extension vunguyentuan.vscode-css-variables
+code --install-extension wix.glean
+```
 
-   This installs some VS Code extensions we will need.<br><br>
+This installs some VS Code extensions we will need.<br><br>
 
 11. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
     If you don't have Chrome installed yet, you can install it with Chocolatey. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
@@ -253,11 +255,11 @@ With those compatibility things out of the way, you're ready to start the system
     Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
     ```bash
-    echo "export PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> ~/.bash_profile
-    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> ~/.bash_profile
-    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/.bash_profile
-    source ~/.bash_profile
-    perl -i -pe 's/^[#\s]*(lc_messages|lc_time)\s*=.+$/\1 = '\''en_US.UTF-8'\''/' "$PGDATA/postgresql.conf"
+    echo -e "\nexport PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> "$USERPROFILE/.bash_profile"
+    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> "$USERPROFILE/.bash_profile"
+    echo "export LANG=en_US.UTF-8" >> "$USERPROFILE/.bash_profile"
+    source "$USERPROFILE/.bash_profile"
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
     perl -i -pe "s/^logging_collector = on/logging_collector = off/" "$PGDATA/postgresql.conf"
     ```
