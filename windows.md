@@ -284,11 +284,11 @@ This installs some VS Code extensions we will need.<br><br>
     Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
     ```bash
-    echo -e "\nexport PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> "$USERPROFILE/.bash_profile"
-    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> "$USERPROFILE/.bash_profile"
-    echo "export LANG=en_US.UTF-8" >> "$USERPROFILE/.bash_profile"
-    source "$USERPROFILE/.bash_profile"
+    echo -e "\nexport PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> ~/.bash_profile
+    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> ~/.bash_profile
+    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/.bash_profile
+    echo "export LANG=en_US.UTF-8" >> ~/.bash_profile
+    source ~/.bash_profile
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
     perl -i -pe "s/^logging_collector = on/logging_collector = off/" "$PGDATA/postgresql.conf"
     ```
