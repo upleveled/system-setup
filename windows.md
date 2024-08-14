@@ -253,9 +253,9 @@ With those compatibility things out of the way, you're ready to start the system
     Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
     ```bash
-    echo -e "\nexport PATH=\$PATH:/c/Program Files/PostgreSQL/16/bin" >> ~/ .bash_profile
-    echo "export PGDATA=/c/Program Files/PostgreSQL/16/data" >> ~/.bash_profile
-    echo "export PSQL_PAGER=less --chop-long-lines --header 1" >> ~/.bash_profile
+    echo -e "\nexport PATH=\$PATH:\"/c/Program Files/PostgreSQL/16/bin\"" >> ~/.bash_profile
+    echo "export PGDATA=\"/c/Program Files/PostgreSQL/16/data\"" >> ~/.bash_profile
+    echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/.bash_profile
     echo "export LANG=en_US.UTF-8" >> ~/.bash_profile
     source ~/.bash_profile
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
@@ -448,7 +448,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     ```bash
     choco install androidstudio
-    echo "export PATH=~/AppData/Local/Android/Sdk/platform-tools:\$PATH" >> ~/.bash_profile
+    echo "export PATH=$HOME/AppData/Local/Android/Sdk/platform-tools:\$PATH" >> ~/.bash_profile
     source ~/.bash_profile
     ```
 
