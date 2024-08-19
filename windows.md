@@ -58,6 +58,7 @@ With those compatibility things out of the way, you're ready to start the system
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
    pnpm setup
    ```
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
