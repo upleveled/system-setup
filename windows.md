@@ -58,6 +58,7 @@ With those compatibility things out of the way, you're ready to start the system
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
    pnpm setup
    ```
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
@@ -241,7 +242,7 @@ This installs some VS Code extensions we will need.<br><br>
       Terminal: xterm-256color
     ```
 
-    Check line 2 and 3 of the output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
+    Check your output carefully - if line 2 (`Shell: ...`) and line 3 (`Terminal: ...`) on your screen aren't exactly the same as the output above, return to the previous step and check if everything was completed fully.
 
 15. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
@@ -267,7 +268,7 @@ This installs some VS Code extensions we will need.<br><br>
       Terminal: cygwin
     ```
 
-    Check line 2 and 3 of the output on your screen carefully against the output above. If your output isn't exactly the same, return to the previous step and re-check if everything was completed fully.
+    Check your output carefully - if line 2 (`Shell: ...`) and line 3 (`Terminal: ...`) on your screen aren't exactly the same as the output above, return to the previous step and check if everything was completed fully.
 
 17. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
