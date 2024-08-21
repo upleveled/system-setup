@@ -303,7 +303,7 @@ This installs some VS Code extensions we will need.<br><br>
     Test whether the previous command worked by running the following command:
 
     ```bash
-    cat ~/.bash_profile
+    cat "$USERPROFILE/.bash_profile"
     ```
 
     It should print out something that looks like the following (although the `16` number may be different for you):
