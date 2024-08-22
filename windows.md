@@ -149,8 +149,7 @@ With those compatibility things out of the way, you're ready to start the system
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
-12. Close PowerShell and open it again as administrator (like in step 2)<br><br>
-13. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
+12. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -225,7 +224,7 @@ With those compatibility things out of the way, you're ready to start the system
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
     If you made any further changes to the file, save the file again with `File` -> `Save` in the top menu.<br><br>
 
-14. To verify that the VS Code configuration was successful, select `Terminal` -> `New Terminal` in the top menu:<br><br>
+13. To verify that the VS Code configuration was successful, select `Terminal` -> `New Terminal` in the top menu:<br><br>
     <img src="./general-vscode-terminal-new-terminal.avif"><br><br>
 
     Once the terminal appears, copy the following text, paste it into the terminal and hit return:
@@ -244,7 +243,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Check your output carefully - if line 2 (`Shell: ...`) and line 3 (`Terminal: ...`) on your screen aren't exactly the same as the output above, return to the previous step and check if everything was completed fully.
 
-15. Now we will configure Hyper.<br><br>
+14. Now we will configure Hyper.<br><br>
     Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
     <img src="./windows-3-hyper-preferences.png"><br><br>
     In this file, we will do three things:
@@ -254,7 +253,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Then save the file and close and restart Hyper.
 
-16. To verify that the Hyper configuration was successful, copy the following text, paste it into Hyper and hit return:
+15. To verify that the Hyper configuration was successful, copy the following text, paste it into Hyper and hit return:
 
     ```bash
     echo -e "Hyper Config:\n  Shell: $SHELL\n  Terminal: $TERM"
@@ -270,7 +269,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Check your output carefully - if line 2 (`Shell: ...`) and line 3 (`Terminal: ...`) on your screen aren't exactly the same as the output above, return to the previous step and check if everything was completed fully.
 
-17. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+16. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -389,7 +388,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-18. <a name="docker"></a>We will now install Docker.
+17. <a name="docker"></a>We will now install Docker.
 
     **Option A - Windows 10/11 Pro:**
 
@@ -449,7 +448,7 @@ With those compatibility things out of the way, you're ready to start the system
     6. Find and select the option to save changes and exit the BIOS / UEFI
     7. Open Docker Desktop again (as instructed in Option A or Option B) to verify that the error has been resolved
 
-19. Test if Docker is installed by running the following command on the command line:
+18. Test if Docker is installed by running the following command on the command line:
 
     ```bash
     docker run hello-world
@@ -458,7 +457,7 @@ With those compatibility things out of the way, you're ready to start the system
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-20. <a name="expo-react-native"></a>We will now install EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+19. <a name="expo-react-native"></a>We will now install EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -474,7 +473,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-21. Next we will set up some dependencies for Expo and React Native.
+20. Next we will set up some dependencies for Expo and React Native.
 
     Copy each line in the following text, paste it in Hyper and hit return.
 
@@ -544,7 +543,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     <img src="./general-android-studio-adb.png"><br><br>
 
-22. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
+21. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
 
     <!-- TODO: Check if we can remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
 
@@ -577,14 +576,14 @@ With those compatibility things out of the way, you're ready to start the system
 
     Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
-23. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
-24. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+22. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
+23. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-25. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+24. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -611,23 +610,23 @@ With those compatibility things out of the way, you're ready to start the system
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br> -->
 
-26. Copy the following text, paste it in Hyper and hit return.<br><br>
+25. Copy the following text, paste it in Hyper and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
-27. Copy and run each of these lines separately in Hyper.<br><br>
+26. Copy and run each of these lines separately in Hyper.<br><br>
     ```bash
     git config --global core.autocrlf false
     git config --global core.eol lf
     ```
     This step will improve line breaks compatibility on Windows.
-28. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+27. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-29. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](https://upleveled.slack.com/team/U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
-30. <a name="specs"></a>Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Lukas. Under "Windows specifications", click the Copy button and paste this to Lukas.
-31. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](https://upleveled.slack.com/team/U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
+29. <a name="specs"></a>Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Lukas. Under "Windows specifications", click the Copy button and paste this to Lukas.
+30. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
