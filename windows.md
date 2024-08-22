@@ -68,7 +68,9 @@ With those compatibility things out of the way, you're ready to start the system
    pnpm add --global @upleveled/preflight
    ```
 
-   Verify that your output looks similar to the "Successful" output below. If it looks very different (for example like the "Failing" output), repeat the pnpm installation commands at the start of this step.
+   Verify that your output looks similar to the "Successful" output below. You can ignore any differences in version numbers and package names - the important part is "Done in ..." on the last line.
+
+   If your output looks very different (either like the "Failing" output below or like some other different output), repeat the pnpm installation commands at the start of this step.
 
    <table>
      <tr>
