@@ -117,26 +117,26 @@ With those compatibility things out of the way, you're ready to start the system
 
 9. <a name="vs-code-extensions"></a> Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
 
-```bash
-code --install-extension bradlc.vscode-tailwindcss
-code --install-extension Cardinal90.multi-cursor-case-preserve
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension dozerg.tsimportsorter
-code --install-extension esbenp.prettier-vscode
-code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
-code --install-extension kumar-harsh.graphql-for-vscode
-code --install-extension mattpocock.ts-error-translator
-code --install-extension meganrogge.template-string-converter
-code --install-extension styled-components.vscode-styled-components
-code --install-extension stylelint.vscode-stylelint
-code --install-extension sysoev.vscode-open-in-github
-code --install-extension unional.vscode-sort-package-json
-code --install-extension viijay-kr.react-ts-css
-code --install-extension vunguyentuan.vscode-css-variables
-code --install-extension wix.glean
-```
+   ```bash
+   code --install-extension bradlc.vscode-tailwindcss
+   code --install-extension Cardinal90.multi-cursor-case-preserve
+   code --install-extension dbaeumer.vscode-eslint
+   code --install-extension dozerg.tsimportsorter
+   code --install-extension esbenp.prettier-vscode
+   code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
+   code --install-extension kumar-harsh.graphql-for-vscode
+   code --install-extension mattpocock.ts-error-translator
+   code --install-extension meganrogge.template-string-converter
+   code --install-extension styled-components.vscode-styled-components
+   code --install-extension stylelint.vscode-stylelint
+   code --install-extension sysoev.vscode-open-in-github
+   code --install-extension unional.vscode-sort-package-json
+   code --install-extension viijay-kr.react-ts-css
+   code --install-extension vunguyentuan.vscode-css-variables
+   code --install-extension wix.glean
+   ```
 
-This installs some VS Code extensions we will need.<br><br>
+   This installs some VS Code extensions we will need.<br><br>
 
 10. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
     If you don't have Chrome installed yet, you can install it with Chocolatey. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
