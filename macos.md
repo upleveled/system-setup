@@ -41,12 +41,63 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    ```
    This uses Homebrew to install `flyctl`, Git, Less, Node.js and Python.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
    pnpm setup
+   source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
    ```
+
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
+   Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
+
+   ```bash
+   pnpm add --global @upleveled/preflight
+   ```
+
+   Verify that your output looks similar to the "Successful" output below. You can ignore any differences in version numbers and package names - the important part is "Done in ..." on the last line.
+
+   If your output looks very different (either like the "Failing" output below or like some other different output), repeat the pnpm installation commands at the start of this step.
+
+   <table>
+     <tr>
+       <th>Successful</th>
+       <th>Failing (ERR_PNPM_NO_GLOBAL_BIN_DIR)</th>
+     </tr>
+     <tr>
+       <td valign="top">
+
+   ```bash
+    WARN  6 deprecated subdependencies found:
+   @oclif/screen@3.0.8, glob@6.0.4, glob@7.1.6,
+   osenv@0.1.5, rimraf@2.4.5, rimraf@3.0.2
+   Packages: +21 -32
+   +++++++++++++++++--------------------------
+   Progress: resolved 773, reused 772,
+   downloaded 1, added 21, done
+
+   /Users/k/Library/pnpm/global/5:
+   + @upleveled/preflight 7.0.8
+
+   Done in 3.3s
+   ```
+
+   </td>
+   <td valign="top">
+
+   ```bash
+   ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the
+   global bin directory
+
+   Run "pnpm setup" to create it automatically,
+   or set the global-bin-dir setting, or the
+   PNPM_HOME env variable. The global bin
+   directory should be in the PATH.
+   ```
+
+   </td></tr></table>
+
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    brew install --cask visual-studio-code httpie git-credential-manager
@@ -94,21 +145,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en))
-12. Copy the following text, paste it in the terminal and hit return.<br><br>
-
-    ```bash
-    pnpm create @upleveled/react-app --help
-    ```
-
-    This step will prepare a program that we will use in the course. This will take a while and then respond with a message with some usage instructions, similar to this:<br><br>
-    <img src="./general-cra-installed.avif"><br><br>
-
-13. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```bash
-    pnpm add --global @upleveled/preflight
-    ```
-    This will prepare a program that we will use in the course.<br><br>
-14. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
+12. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>cmd</kbd>-<kbd>shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -179,7 +216,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
     If you made any further changes to the file, save the file again with `File` -> `Save` in the top menu.<br><br>
-15. <a name="postgresql"></a>We will now install PostgreSQL. Copy each line in the following text, paste it in the terminal and hit return.
+13. <a name="postgresql"></a>We will now install PostgreSQL. Copy each line in the following text, paste it in the terminal and hit return.
 
     ```bash
     brew install postgresql@16
@@ -275,7 +312,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-16. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
+14. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
 
     ```bash
     brew install --cask docker
@@ -285,7 +322,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     This uses Homebrew Cask to install Docker for Mac and starts it for the first time to set it up. Wait for a message at the top of the window to indicate that everything is finished being set up:<br><br>
     <img src="./macos-6-docker.png"><br><br>
 
-17. Test if Docker is installed by running the following command on the command line:
+15. Test if Docker is installed by running the following command on the command line:
 
     ```bash
     docker run hello-world
@@ -294,7 +331,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-18. <a name="expo-react-native"></a>We will now install EAS CLI for React Native.
+16. <a name="expo-react-native"></a>We will now install EAS CLI for React Native.
 
     Copy the following text, paste it in the terminal and hit return.
 
@@ -310,7 +347,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-19. Next we will set up some dependencies for Expo and React Native.
+17. Next we will set up some dependencies for Expo and React Native.
 
     Copy each line in the following text, paste it in the terminal and hit return.
 
@@ -382,7 +419,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
     <img src="./general-android-studio-adb.png"><br><br>
 
-20. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
+18. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
 
     <!-- TODO: Check if we can remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
 
@@ -415,14 +452,14 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
     Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
-21. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
-22. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+19. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
+20. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-23. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+21. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -449,17 +486,17 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     ```
     This step will save your GitHub password so that you don't need to enter it every time.<br><br> -->
 
-23. Copy the following text, paste it in the terminal and hit return.<br><br>
+22. Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
-24. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+23. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-25. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](https://upleveled.slack.com/team/U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
-26. <a name="specs"></a>Click on the apple icon in the menu bar at the top left of your screen and select "About This Mac". Select "System Report...". Copy the "Hardware Overview" information in the right panel and send to Lukas. Select "Software" in the left panel, copy the "System Software Overview" information and send to Lukas.
-27. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+24. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](https://upleveled.slack.com/team/U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
+25. <a name="specs"></a>Click on the apple icon in the menu bar at the top left of your screen and select "About This Mac". Select "System Report...". Copy the "Hardware Overview" information in the right panel and send to Lukas. Select "Software" in the left panel, copy the "System Software Overview" information and send to Lukas.
+26. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
