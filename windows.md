@@ -55,12 +55,14 @@ With those compatibility things out of the way, you're ready to start the system
    choco install slack -y
    ```
 7. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
    pnpm setup
    ```
+
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
    Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
@@ -99,7 +101,8 @@ With those compatibility things out of the way, you're ready to start the system
    <td valign="top">
 
    ```bash
-   ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the global bin directory
+   ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the
+   global bin directory
 
    Run "pnpm setup" to create it automatically,
    or set the global-bin-dir setting, or the

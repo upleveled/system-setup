@@ -41,12 +41,14 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    ```
    This uses Homebrew to install `flyctl`, Git, Less, Node.js and Python.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
    pnpm setup
    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
    ```
+
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
    Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
@@ -54,7 +56,9 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    pnpm add --global @upleveled/preflight
    ```
 
-   Verify that your output looks similar to the "Successful" output below. If it looks very different (for example like the "Failing" output), repeat the pnpm installation commands at the start of this step.
+   Verify that your output looks similar to the "Successful" output below. You can ignore any differences in version numbers and package names - the important part is "Done in ..." on the last line.
+
+   If your output looks very different (either like the "Failing" output below or like some other different output), repeat the pnpm installation commands at the start of this step.
 
    <table>
      <tr>
@@ -83,7 +87,8 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    <td valign="top">
 
    ```bash
-   ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the global bin directory
+   ERR_PNPM_NO_GLOBAL_BIN_DIR  Unable to find the
+   global bin directory
 
    Run "pnpm setup" to create it automatically,
    or set the global-bin-dir setting, or the
@@ -92,7 +97,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    ```
 
    </td></tr></table>
-   
+
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    brew install --cask visual-studio-code httpie git-credential-manager
