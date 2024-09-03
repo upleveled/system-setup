@@ -494,7 +494,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 23. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-24. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](https://upleveled.slack.com/team/U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
+24. Click on Applications in the dock and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](slack://user?team=TFFSPKL92&id=U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
 25. <a name="specs"></a>Click on the apple icon in the menu bar at the top left of your screen and select "About This Mac". Select "System Report...". Copy the "Hardware Overview" information in the right panel and send to Lukas. Select "Software" in the left panel, copy the "System Software Overview" information and send to Lukas.
 26. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
