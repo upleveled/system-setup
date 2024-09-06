@@ -247,7 +247,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
     The messages may be different than the messages in the image above, and may not mention that PostgreSQL is ready to accept connections:
 
-    <img src="./windows-5-postgres.jpg"><br><br>
+    <img src="./windows-5-postgres.avif"><br><br>
 
     You will need to run this every time you want to use your database.<br><br>
     When you want to stop PostgreSQL again, just stop it like any other command line program using the shortcut <kbd>control</kbd>-<kbd>C</kbd>.
