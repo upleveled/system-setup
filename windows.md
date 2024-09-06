@@ -59,7 +59,7 @@ With those compatibility things out of the way, you're ready to start the system
    ```bash
    corepack enable
    corepack prepare pnpm@latest --activate
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    pnpm setup
    ```
 
