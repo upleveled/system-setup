@@ -31,7 +31,7 @@ With those compatibility things out of the way, you're ready to start the system
    <br>This will run Powershell as an administrator user<br><br>
 3. Copy the following text (be sure you select all of it, it's very long) and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
-   Set-ExecutionPolicy AllSigned -f; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+   Set-ExecutionPolicy AllSigned -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
    ```
    This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command line.
    <br>
@@ -40,7 +40,7 @@ With those compatibility things out of the way, you're ready to start the system
 5. Close PowerShell and open it again as administrator (like in step 2)<br><br>
 6. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
    ```bash
-   choco install git nodejs-lts vscode hyper httpie flyctl -y -f
+   choco install git nodejs-lts vscode hyper httpie flyctl --yes --force
    ```
    This uses Chocolatey to install Git, Node.js, Visual Studio Code, Hyper, HTTPie and `flyctl`.<br><br>
    <!--
@@ -48,11 +48,11 @@ With those compatibility things out of the way, you're ready to start the system
    -->
    If you don't have Zoom installed yet, run this to install it:<br>
    ```bash
-   choco install zoom -y -f
+   choco install zoom --yes --force
    ```
    If you don't have Slack installed yet, run this to install it:<br>
    ```bash
-   choco install slack -y -f
+   choco install slack --yes --force
    ```
 7. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
 
@@ -115,7 +115,7 @@ With those compatibility things out of the way, you're ready to start the system
 8. Copy the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
 
    ```bash
-   choco install python visualstudio2022-workload-vctools -y -f
+   choco install python visualstudio2022-workload-vctools --yes --force
    ```
 
    This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install Python and Visual Studio build tools, which are required for installing Node.js native modules.
@@ -146,7 +146,7 @@ With those compatibility things out of the way, you're ready to start the system
 10. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
     If you don't have Chrome installed yet, you can install it with Chocolatey. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
     ```bash
-    choco install googlechrome -y -f
+    choco install googlechrome --yes --force
     ```
     This uses Chocolatey to install Chrome.<br><br>
 11. Install the following Chrome Extensions:
@@ -279,7 +279,7 @@ With those compatibility things out of the way, you're ready to start the system
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    choco install postgresql16 --params '/Password:postgres' -f
+    choco install postgresql16 --params '/Password:postgres' --yes --force
     ```
 
     This will install PostgreSQL and create a default user of `postgres` and a password of `postgres`. Remember this password and use it any time it asks from now on.
@@ -401,9 +401,9 @@ With those compatibility things out of the way, you're ready to start the system
     2. Copy the following text and paste it into Hyper. Hit enter.
 
        ```bash
-       choco install wsl2 -y -f
-       choco install wsl-ubuntu-2004 -y -f
-       choco install docker-desktop -y -f
+       choco install wsl2 --yes --force
+       choco install wsl-ubuntu-2004 --yes --force
+       choco install docker-desktop --yes --force
        ```
 
     3. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
@@ -417,9 +417,9 @@ With those compatibility things out of the way, you're ready to start the system
     3. Copy the following text and paste it into Hyper. Hit enter.
 
        ```bash
-       choco install wsl2 -y -f
-       choco install wsl-ubuntu-2004 -y -f
-       choco install docker-desktop -y -f
+       choco install wsl2 --yes --force
+       choco install wsl-ubuntu-2004 --yes --force
+       choco install docker-desktop --yes --force
        ```
 
     4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
@@ -483,7 +483,7 @@ With those compatibility things out of the way, you're ready to start the system
     Copy each line in the following text, paste it in Hyper and hit return.
 
     ```bash
-    choco install androidstudio -f
+    choco install androidstudio --yes --force
     echo "export PATH=$HOME/AppData/Local/Android/Sdk/platform-tools:\$PATH" >> ~/.bash_profile
     source ~/.bash_profile
     ```
@@ -644,7 +644,7 @@ With those compatibility things out of the way, you're ready to start the system
 2. If you want to easily capture screenshots and draw and write on them, try Flameshot:
 
    ```bash
-   choco install flameshot -f
+   choco install flameshot --yes --force
    ```
 
 3. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
@@ -652,37 +652,37 @@ With those compatibility things out of the way, you're ready to start the system
    An alternative without the limitations of Loom is Screen to Gif (however, it does not record audio):
 
    ```bash
-   choco install screentogif -f
+   choco install screentogif --yes --force
    ```
 
 4. If you need a clipboard manager to keep a history of things that you have copied, this is an awesome option:
 
    ```bash
-   choco install ditto -f
+   choco install ditto --yes --force
    ```
 
 5. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
 
    ```bash
-   choco install responsively -f
+   choco install responsively --yes --force
    ```
 
 6. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
 
    ```bash
-   choco install bfg-repo-cleaner -f
+   choco install bfg-repo-cleaner --yes --force
    ```
 
 7. If you're running out of space on your computer, you can use WinDirStat to analyze your hard drive and show a chart of which items are taking up how much space:
 
    ```bash
-   choco install windirstat -f
+   choco install windirstat --yes --force
    ```
 
 8. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
 
    ```bash
-   choco install powertoys -f
+   choco install powertoys --yes --force
    ```
 
 ## Software Upgrades
