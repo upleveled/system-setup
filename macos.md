@@ -36,7 +36,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    <img src="./macos-4.1-homebrew-next-steps.png"><br><br>
 6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install flyctl git less node@20 python
+   brew install flyctl git less node@20 python -f
    brew link --overwrite node@20
    ```
    This uses Homebrew to install `flyctl`, Git, Less, Node.js and Python.<br><br>
@@ -100,16 +100,16 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install --cask visual-studio-code httpie git-credential-manager
+   brew install --cask visual-studio-code httpie git-credential-manager -f
    ```
    This uses Homebrew Cask to install Visual Studio Code, HTTPie and Git Credential Manager.<br><br>
    If you don't have Zoom installed yet, run this to install it:<br>
    ```bash
-   brew install --cask zoom
+   brew install --cask zoom -f
    ```
    If you don't have Slack installed yet, run this to install it:<br>
    ```bash
-   brew install --cask slack
+   brew install --cask slack -f
    ```
 9. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
@@ -137,7 +137,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 10. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
     If you don't have Chrome installed yet, you can install it with Homebrew. To do this, copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
-    brew install --cask google-chrome
+    brew install --cask google-chrome -f
     ```
     This uses Homebrew to install Chrome.<br><br>
 11. Install the following Chrome Extensions:
@@ -219,7 +219,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 13. <a name="postgresql"></a>We will now install PostgreSQL. Copy each line in the following text, paste it in the terminal and hit return.
 
     ```bash
-    brew install postgresql@16
+    brew install postgresql@16 -f
     brew link postgresql@16
     ```
 
@@ -311,7 +311,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 14. <a name="docker"></a>We will now install Docker. Copy the following text, paste it in the terminal and hit return.
 
     ```bash
-    brew install --cask docker
+    brew install --cask docker -f
     open /Applications/Docker.app
     ```
 
@@ -348,7 +348,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     Copy each line in the following text, paste it in the terminal and hit return.
 
     ```bash
-    brew install --cask android-studio
+    brew install --cask android-studio -f
     [ -d "$HOME/Library/Android/sdk" ] && ANDROID_SDK=$HOME/Library/Android/sdk || ANDROID_SDK=$HOME/Android/Sdk
     echo "export ANDROID_SDK=$ANDROID_SDK" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
     echo "export PATH=$HOME/Library/Android/sdk/platform-tools:\$PATH" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bash_profile'`
@@ -505,49 +505,49 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 2. If you want to easily capture screenshots and draw and write on them, try Flameshot:
 
    ```bash
-   brew install --cask flameshot
+   brew install --cask flameshot -f
    ```
 
 3. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/):
 
    ```bash
-   brew install --cask loom
+   brew install --cask loom -f
    ```
 
    An alternative without the limitations of Loom is Kap:
 
    ```bash
-   brew install --cask kap
+   brew install --cask kap -f
    ```
 
 4. If you would like to keep a history of what you have copied to your clipboard, you can try out Yippy:
 
    ```bash
-   brew install --cask yippy
+   brew install --cask yippy -f
    ```
 
 5. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
 
    ```bash
-   brew install --cask responsively
+   brew install --cask responsively -f
    ```
 
 6. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
 
    ```bash
-   brew install bfg
+   brew install bfg -f
    ```
 
 7. If you're running out of space on your computer, you can use Disk Inventory X to analyze your hard drive and show a chart of which items are taking up how much space:
 
    ```bash
-   brew install --cask disk-inventory-x
+   brew install --cask disk-inventory-x -f
    ```
 
 8. To do natural language calculations and conversions, try [Numi](https://numi.app/):
 
    ```bash
-   brew install --cask numi
+   brew install --cask numi -f
    ```
 
 ## Software Upgrades
