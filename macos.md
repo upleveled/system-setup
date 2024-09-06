@@ -36,7 +36,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    <img src="./macos-4.1-homebrew-next-steps.png"><br><br>
 6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install flyctl git less node@20 python -f
+   brew install flyctl git less node@20 python --yes --force
    brew link --overwrite node@20
    ```
    This uses Homebrew to install `flyctl`, Git, Less, Node.js and Python.<br><br>
