@@ -16,10 +16,10 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    <img src="linux-1-open-terminal.png"><br>
 2. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   sudo apt install -y curl
+   sudo apt install --yes curl
    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
    sudo apt update
-   sudo apt install -y build-essential git nodejs python3
+   sudo apt install --yes build-essential git nodejs python3
    ```
    This uses apt to install curl, the `build-essential` build tools, Git, Node.js and Python.<br><br>
 3. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
@@ -232,7 +232,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
     sudo apt update
-    sudo apt install postgresql-16
+    sudo apt install --yes postgresql-16
     echo -e "\nexport PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     echo "export LANG=en_US.UTF-8" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshenv' || echo '.bashrc'`
     PGDATA=$(dirname "$(sudo -u postgres psql --tuples-only --pset format=unaligned --command "SHOW config_file;")")
@@ -525,7 +525,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 3. If you need to record video of your screen with sound (with export to mp4 and gif), try out Kooha:
 
    ```bash
-   sudo apt install -y flatpak
+   sudo apt install --yes flatpak
    flatpak install flathub io.github.seadve.Kooha
    ```
 
@@ -536,7 +536,7 @@ Many software upgrades can be performed with `sudo snap refresh <package name>` 
 1. Node.js with pnpm
    ```bash
    sudo apt update
-   sudo apt install -y nodejs
+   sudo apt install --yes nodejs
    corepack disable
    corepack enable
    corepack prepare pnpm@latest --activate
