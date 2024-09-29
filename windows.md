@@ -137,6 +137,7 @@ With those compatibility things out of the way, you're ready to start the system
    code --install-extension sysoev.vscode-open-in-github
    code --install-extension unional.vscode-sort-package-json
    code --install-extension viijay-kr.react-ts-css
+   code --install-extension vitaliymaz.vscode-svg-previewer
    code --install-extension vunguyentuan.vscode-css-variables
    code --install-extension wix.glean
    ```
