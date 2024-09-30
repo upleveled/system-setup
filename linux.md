@@ -120,6 +120,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    code --install-extension sysoev.vscode-open-in-github
    code --install-extension unional.vscode-sort-package-json
    code --install-extension viijay-kr.react-ts-css
+   code --install-extension vitaliymaz.vscode-svg-previewer
    code --install-extension vunguyentuan.vscode-css-variables
    code --install-extension wix.glean
    ```
