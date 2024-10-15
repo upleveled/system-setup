@@ -135,6 +135,7 @@ With those compatibility things out of the way, you're ready to start the system
    code --install-extension styled-components.vscode-styled-components
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
+   code --install-extension tamasfe.even-better-toml
    code --install-extension unional.vscode-sort-package-json
    code --install-extension viijay-kr.react-ts-css
    code --install-extension vitaliymaz.vscode-svg-previewer

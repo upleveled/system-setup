@@ -126,6 +126,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    code --install-extension styled-components.vscode-styled-components
    code --install-extension stylelint.vscode-stylelint
    code --install-extension sysoev.vscode-open-in-github
+   code --install-extension tamasfe.even-better-toml
    code --install-extension unional.vscode-sort-package-json
    code --install-extension viijay-kr.react-ts-css
    code --install-extension vitaliymaz.vscode-svg-previewer
