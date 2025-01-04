@@ -221,15 +221,15 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 13. <a name="postgresql"></a>We will now install PostgreSQL. Copy each line in the following text, paste it in the terminal and hit return.
 
     ```bash
-    brew install postgresql@16
-    brew link postgresql@16
+    brew install postgresql@17
+    brew link postgresql@17
     ```
 
     This uses Homebrew to install PostgreSQL and create just a single user with your username and all role permissions. There will be no `postgres` user set up.<br><br>
     Now let's set an environment variable to tell PostgreSQL where to put the data:
 
     ```bash
-    [[ -d /opt/homebrew/var/postgresql@16 ]] && PGDATA_TMP=/opt/homebrew/var/postgresql@16 || PGDATA_TMP=/usr/local/var/postgresql@16
+    [[ -d /opt/homebrew/var/postgresql@17 ]] && PGDATA_TMP=/opt/homebrew/var/postgresql@17 || PGDATA_TMP=/usr/local/var/postgresql@17
     echo -e "\nexport PGDATA=$PGDATA_TMP" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
     echo "export LANG=en_US.UTF-8" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
