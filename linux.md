@@ -492,22 +492,22 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 25. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-26. Open the Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Lukas](slack://user?team=TFFSPKL92&id=U026UPA0TKL). Also send your Google Account email address to Lukas (if you haven't already).
+26. Open the Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Karl](slack://user?team=TFFSPKL92&id=UFG252SH0). Also send your Google Account email address to Karl (if you haven't already).
 27. <a name="specs"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     lshw -short
     ```
-    This will show you a summary of your computer specifications. Copy the text on the lines after the command and send it to Lukas in Slack.<br><br>
+    This will show you a summary of your computer specifications. Copy the text on the lines after the command and send it to Karl in Slack.<br><br>
     Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     cat /etc/os-release
     ```
-    This will show you details about your operating system. Copy the text on the lines after the command and send it to Lukas in Slack.<br><br>
+    This will show you details about your operating system. Copy the text on the lines after the command and send it to Karl in Slack.<br><br>
     Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     cat /proc/version
     ```
-    This will show you details about your Linux distribution. Copy the text on the lines after the command and send it to Lukas in Slack.
+    This will show you details about your Linux distribution. Copy the text on the lines after the command and send it to Karl in Slack.
 28. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
