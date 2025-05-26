@@ -632,7 +632,9 @@ With those compatibility things out of the way, you're ready to start the system
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
 28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Karl](slack://user?team=TFFSPKL92&id=UFG252SH0). Also send your Google Account email address to Karl (if you haven't already).
-29. <a name="specs"></a>Open the start menu, type "Settings" and open the app (or click on the cog on the left). Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Karl. Under "Windows specifications", click the Copy button and paste this to Karl.
+29. <a name="specs"></a>Open the start menu, type "Settings", open the app (or click on the cog on the left) and copy and send two sets of details:
+    - Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Karl
+    - Under "Windows specifications", click the Copy button and paste this to Karl
 30. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
