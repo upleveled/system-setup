@@ -559,8 +559,8 @@ Most software upgrades can be performed with `brew upgrade <package name>`, but 
 1. Node.js with pnpm
    ```bash
    brew upgrade node@22
-   brew link --overwrite node@22
    corepack disable
+   rm /opt/homebrew/bin/{pnpm,pnpx,yarn,yarnpkg}
    corepack enable
    corepack prepare pnpm@latest --activate
    ```
