@@ -65,7 +65,9 @@ With those compatibility things out of the way, you're ready to start the system
 
    This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
    
-   Close PowerShell and open it again as administrator (like in step 2). Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
+   Close PowerShell and open it again as administrator (like in step 2).
+   
+   Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
    pnpm add --global @upleveled/preflight
