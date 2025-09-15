@@ -61,9 +61,10 @@ With those compatibility things out of the way, you're ready to start the system
    corepack prepare pnpm@latest --activate
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    pnpm setup
+   pnpm config set minimumReleaseAge 10080 --global
    ```
 
-   This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
+   This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory, and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
    
    Close PowerShell and open it again as administrator (like in step 2).
    
