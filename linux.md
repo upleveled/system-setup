@@ -29,9 +29,12 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    corepack prepare pnpm@latest --activate
    pnpm setup
    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
+   pnpm config set minimumReleaseAge 10080 --global
+   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=eslint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=eslint-config-upleveled\n" if eof && !$exists' "$HOME/.config/pnpm/rc"
+   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=stylelint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=stylelint-config-upleveled\n" if eof && !$exists' "$HOME/.config/pnpm/rc"
    ```
 
-   This uses Corepack to install `pnpm`, and configures `pnpm`'s global bin directory.<br><br>
+   This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
 
    Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
