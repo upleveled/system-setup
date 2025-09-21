@@ -66,7 +66,7 @@ With those compatibility things out of the way, you're ready to start the system
    perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=stylelint-config-upleveled\r?$/; $_ .= "minimum-release-age-exclude[]=stylelint-config-upleveled\n" if eof && !$exists' "$LOCALAPPDATA/pnpm/config/rc"
    ```
 
-   This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory, and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
+   This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
    
    Close PowerShell and open it again as administrator (like in step 2).
    
