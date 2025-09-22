@@ -476,7 +476,7 @@ With those compatibility things out of the way, you're ready to start the system
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    pnpm add --global eas-cli
+    pnpm add --global eas-cli --allow-build=dtrace-provider
     ```
 
     You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>

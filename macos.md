@@ -339,7 +339,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     Copy the following text, paste it in the terminal and hit return.
 
     ```bash
-    pnpm add --global eas-cli
+    pnpm add --global eas-cli --allow-build=dtrace-provider
     ```
 
     You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>

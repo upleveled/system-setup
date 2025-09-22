@@ -328,7 +328,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     Copy the following text, paste it in the terminal and hit return.
 
     ```bash
-    sudo pnpm add --global eas-cli
+    sudo pnpm add --global eas-cli --allow-build=dtrace-provider
     ```
 
     You can ignore the lines marked `WARN` - these do not indicate problems:<br><br>
