@@ -36,8 +36,8 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    <img src="./macos-4.1-homebrew-next-steps.png"><br><br>
 6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install flyctl git less node@22 python
-   brew link --overwrite node@22
+   brew install flyctl git less node@24 python
+   brew link --overwrite node@24
    ```
    This uses Homebrew to install `flyctl`, Git, Less, Node.js and Python.<br><br>
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
@@ -563,7 +563,7 @@ Most software upgrades can be performed with `brew upgrade <package name>`, but 
 
 1. Node.js with pnpm
    ```bash
-   brew upgrade node@22
+   brew upgrade node@24
    corepack disable
    rm /opt/homebrew/bin/{pnpm,pnpx,yarn,yarnpkg}
    corepack enable
