@@ -183,6 +183,12 @@ With those compatibility things out of the way, you're ready to start the system
     "workbench.tree.enableStickyScroll": true,
     "terminal.integrated.stickyScroll.enabled": true,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.suggest.enabled": true,
+    "terminal.integrated.suggest.quickSuggestions": {
+      "commands": "off",
+      "arguments": "off",
+      "unknown": "off"
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,

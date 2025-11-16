@@ -170,6 +170,12 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     "workbench.editor.closeEmptyGroups": false,
     "workbench.tree.enableStickyScroll": true,
     "terminal.integrated.stickyScroll.enabled": true,
+    "terminal.integrated.suggest.enabled": true,
+    "terminal.integrated.suggest.quickSuggestions": {
+      "commands": "off",
+      "arguments": "off",
+      "unknown": "off"
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
