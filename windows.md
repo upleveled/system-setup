@@ -54,7 +54,33 @@ With those compatibility things out of the way, you're ready to start the system
    ```bash
    choco install slack --yes
    ```
-7. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+7. Now we will configure Hyper.<br><br>
+   Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
+   <img src="./windows-3-hyper-preferences.png"><br><br>
+   In this file, we will do three things:
+
+   1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\bin\\bash.exe',`
+   2. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
+
+   Then save the file and close and restart Hyper.
+
+8. To verify that the Hyper configuration was successful, copy the following text, paste it into Hyper and hit return:
+
+   ```bash
+   echo -e "Hyper Config:\n  Shell: $SHELL\n  Terminal: $TERM"
+   ```
+
+   This should display the following output:
+
+   ```bash
+   Hyper Config:
+     Shell: /usr/bin/bash
+     Terminal: cygwin
+   ```
+
+   Check your output carefully - if line 2 (`Shell: ...`) and line 3 (`Terminal: ...`) on your screen aren't exactly the same as the output above, return to the previous step and check if everything was completed fully.
+
+9. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator". Copy each line of the following text, paste it in Hyper and hit return.<br><br>
 
    ```bash
    corepack enable
@@ -68,9 +94,9 @@ With those compatibility things out of the way, you're ready to start the system
    ```
 
    This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
-   
-   Close PowerShell and open it again as administrator (like in step 2).
-   
+
+   Close Hyper and open it again as administrator (like at the beginning of this step).
+
    Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
@@ -119,51 +145,51 @@ With those compatibility things out of the way, you're ready to start the system
 
    </td></tr></table>
 
-8. Copy the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.
+10. Copy the following text, paste it in Hyper and hit return.
 
-   ```bash
-   choco install python visualstudio2022-workload-vctools --yes
-   ```
+    ```bash
+    choco install python visualstudio2022-workload-vctools --yes
+    ```
 
-   This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install Python and Visual Studio build tools, which are required for installing Node.js native modules.
+    This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install Python and Visual Studio build tools, which are required for installing Node.js native modules.
 
-9. <a name="vs-code-extensions"></a> Copy each line in the following text, right-click in the blue middle part of the PowerShell window to paste the text and hit enter.<br><br>
+11. <a name="vs-code-extensions"></a> Copy each line of the following text, paste it in Hyper and hit return.<br><br>
 
-   ```bash
-   code --install-extension bradlc.vscode-tailwindcss
-   code --install-extension Cardinal90.multi-cursor-case-preserve
-   code --install-extension dbaeumer.vscode-eslint
-   code --install-extension dozerg.tsimportsorter
-   code --install-extension esbenp.prettier-vscode
-   code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
-   code --install-extension kumar-harsh.graphql-for-vscode
-   code --install-extension mattpocock.ts-error-translator
-   code --install-extension meganrogge.template-string-converter
-   code --install-extension styled-components.vscode-styled-components
-   code --install-extension stylelint.vscode-stylelint
-   code --install-extension sysoev.vscode-open-in-github
-   code --install-extension tamasfe.even-better-toml
-   code --install-extension unional.vscode-sort-package-json
-   code --install-extension viijay-kr.react-ts-css
-   code --install-extension vitaliymaz.vscode-svg-previewer
-   code --install-extension vunguyentuan.vscode-css-variables
-   code --install-extension wix.glean
-   ```
+    ```bash
+    code --install-extension bradlc.vscode-tailwindcss
+    code --install-extension Cardinal90.multi-cursor-case-preserve
+    code --install-extension dbaeumer.vscode-eslint
+    code --install-extension dozerg.tsimportsorter
+    code --install-extension esbenp.prettier-vscode
+    code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
+    code --install-extension kumar-harsh.graphql-for-vscode
+    code --install-extension mattpocock.ts-error-translator
+    code --install-extension meganrogge.template-string-converter
+    code --install-extension styled-components.vscode-styled-components
+    code --install-extension stylelint.vscode-stylelint
+    code --install-extension sysoev.vscode-open-in-github
+    code --install-extension tamasfe.even-better-toml
+    code --install-extension unional.vscode-sort-package-json
+    code --install-extension viijay-kr.react-ts-css
+    code --install-extension vitaliymaz.vscode-svg-previewer
+    code --install-extension vunguyentuan.vscode-css-variables
+    code --install-extension wix.glean
+    ```
 
-   This installs some VS Code extensions we will need.<br><br>
+    This installs some VS Code extensions we will need.<br><br>
 
-10. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
-    If you don't have Chrome installed yet, you can install it with Chocolatey. To do this, copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
+12. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
+    If you don't have Chrome installed yet, you can install it with Chocolatey. To do this, copy the following text, paste it in Hyper and hit return.<br><br>
     ```bash
     choco install googlechrome --yes
     ```
     This uses Chocolatey to install Chrome.<br><br>
-11. Install the following Chrome Extensions:
+13. Install the following Chrome Extensions:
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
     - [Web Vitals Chrome Extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma?hl=en)
-12. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
+14. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -244,7 +270,7 @@ With those compatibility things out of the way, you're ready to start the system
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
     If you made any further changes to the file, save the file again with `File` -> `Save` in the top menu.<br><br>
 
-13. To verify that the VS Code configuration was successful, select `Terminal` -> `New Terminal` in the top menu:<br><br>
+15. To verify that the VS Code configuration was successful, select `Terminal` -> `New Terminal` in the top menu:<br><br>
     <img src="./general-vscode-terminal-new-terminal.avif"><br><br>
 
     Once the terminal appears, copy the following text, paste it into the terminal and hit return:
@@ -263,33 +289,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     Check your output carefully - if line 2 (`Shell: ...`) and line 3 (`Terminal: ...`) on your screen aren't exactly the same as the output above, return to the previous step and check if everything was completed fully.
 
-14. Now we will configure Hyper.<br><br>
-    Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
-    <img src="./windows-3-hyper-preferences.png"><br><br>
-    In this file, we will do three things:
-
-    1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\bin\\bash.exe',`
-    2. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
-
-    Then save the file and close and restart Hyper.
-
-15. To verify that the Hyper configuration was successful, copy the following text, paste it into Hyper and hit return:
-
-    ```bash
-    echo -e "Hyper Config:\n  Shell: $SHELL\n  Terminal: $TERM"
-    ```
-
-    This should display the following output:
-
-    ```bash
-    Hyper Config:
-      Shell: /usr/bin/bash
-      Terminal: cygwin
-    ```
-
-    Check your output carefully - if line 2 (`Shell: ...`) and line 3 (`Terminal: ...`) on your screen aren't exactly the same as the output above, return to the previous step and check if everything was completed fully.
-
-16. <a name="postgresql"></a>We will now install PostgreSQL. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+16. <a name="postgresql"></a>We will now install PostgreSQL. Close Hyper and open it again as administrator (like in step 9).
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -446,7 +446,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, you can skip to the Docker testing step).
 
-    1. Close PowerShell and open it again as administrator (like in step 2). Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.
+    1. Close Hyper and open it again as administrator (like in step 9). Copy the following text, paste it in Hyper and hit return.
 
        ```bash
        Get-ComputerInfo -Property HyperVRequirementVMMonitorModeExtensions,HyperVRequirementVirtualizationFirmwareEnabled | Format-List
