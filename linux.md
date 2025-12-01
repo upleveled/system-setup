@@ -147,7 +147,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     ```bash
     sudo snap install httpie
     ```
-    This uses Snap to install HTTPie.<br><br>
+    This uses Snap to install HTTPie Desktop.<br><br>
 11. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
     If you don't have Chrome installed yet, you can install it by copying each line below, pasting it in the terminal and hitting return.<br><br>
     ```bash
