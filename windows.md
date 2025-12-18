@@ -87,6 +87,7 @@ With those compatibility things out of the way, you're ready to start the system
    corepack prepare pnpm@latest --activate
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    pnpm setup
+   pnpm config set blockExoticSubdeps true --global
    pnpm config set minimumReleaseAge 10080 --global
    perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=\@upleveled\/\*$/; $_ .= "minimum-release-age-exclude[]=\@upleveled/*\n" if eof && !$exists' "$LOCALAPPDATA/pnpm/config/rc"
    perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=eslint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=eslint-config-upleveled\n" if eof && !$exists' "$LOCALAPPDATA/pnpm/config/rc"
