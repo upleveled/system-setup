@@ -55,7 +55,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    ```
 
    This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
-   
+
    Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
@@ -106,9 +106,9 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
 8. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
-   brew install --cask visual-studio-code httpie git-credential-manager
+   brew install --cask visual-studio-code httpie-desktop git-credential-manager
    ```
-   This uses Homebrew Cask to install Visual Studio Code, HTTPie and Git Credential Manager.<br><br>
+   This uses Homebrew Cask to install Visual Studio Code, HTTPie Desktop and Git Credential Manager.<br><br>
    If you don't have Zoom installed yet, run this to install it:<br>
    ```bash
    brew install --cask zoom

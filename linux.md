@@ -16,13 +16,19 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    <img src="linux-1-open-terminal.png"><br>
 2. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
+   sudo apt install --yes flatpak
+   flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+   ```
+   This uses apt to install Flatpak.<br><br>
+3. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+   ```bash
    sudo apt install --yes curl
    curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
    sudo apt update
    sudo apt install --yes build-essential git nodejs python3
    ```
    This uses apt to install curl, the `build-essential` build tools, Git, Node.js and Python.<br><br>
-3. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+4. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
    corepack enable
@@ -86,7 +92,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
    </td></tr></table>
 
-4. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+5. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
    curl -L https://aka.ms/gcm/linux-install-source.sh | sh
@@ -95,7 +101,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
    This installs Git Credential Manager Core.<br><br>
 
-5. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+6. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    curl -L https://fly.io/install.sh | sh
    echo "export FLYCTL_INSTALL=\$HOME/.fly" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
@@ -103,12 +109,12 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
    ```
    This installs `flyctl`.<br><br>
-6. Copy the following text, paste it in the terminal and hit return.<br><br>
+7. Copy the following text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install code --classic
    ```
    This uses Snap to install VS Code.<br><br>
-7. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+8. <a name="vs-code-extensions"></a> Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
    code --install-extension bradlc.vscode-tailwindcss
@@ -133,22 +139,22 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
    This installs some VS Code extensions we will need.<br><br>
 
-8. If you don't have Zoom yet, install it: with each line below, copy the text, paste it in the terminal and hit return.<br><br>
+9. If you don't have Zoom yet, install it: with each line below, copy the text, paste it in the terminal and hit return.<br><br>
    ```bash
    sudo snap install zoom-client
    ```
    This installs Zoom.<br><br>
-9. If you don't have Slack yet, install it: copy the following text, paste it in the terminal and hit return.<br><br>
-   ```bash
-   sudo snap install slack
-   ```
-   This uses Snap to install Slack.<br><br>
-10. Copy the following text, paste it in the terminal and hit return.<br><br>
+10. If you don't have Slack yet, install it: copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
-    sudo snap install httpie
+    sudo snap install slack
     ```
-    This uses Snap to install HTTPie.<br><br>
-11. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
+    This uses Snap to install Slack.<br><br>
+11. Copy the following text, paste it in the terminal and hit return.<br><br>
+    ```bash
+    flatpak install --assumeyes flathub io.httpie.Httpie
+    ```
+    This uses Flatpak to install HTTPie Desktop.<br><br>
+12. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
     If you don't have Chrome installed yet, you can install it by copying each line below, pasting it in the terminal and hitting return.<br><br>
     ```bash
     cd /tmp
@@ -157,11 +163,11 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     cd -
     ```
     This installs Chrome.<br><br>
-12. Install the following Chrome Extensions:
+13. Install the following Chrome Extensions:
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
-13. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
+14. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -238,7 +244,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     If you have any of these warnings, we should fix them. For each one of these lines with the warnings on them, delete the full line, including the comma at the end. We usually like to select from the start of the first `"` to just before the next `"` on the next line:<br><br>
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
     If you made any further changes to the file, save the file again with `File` -> `Save` in the top menu.<br><br>
-14. <a name="postgresql"></a>We will now install PostgreSQL. Copy and run each of these lines separately in the terminal:<br>
+15. <a name="postgresql"></a>We will now install PostgreSQL. Copy and run each of these lines separately in the terminal:<br>
 
     ```bash
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -312,7 +318,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
     <img src="./macos-5.5-psql.png"><br><br>
 
-15. <a name="docker"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
+16. <a name="docker"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
     sudo snap install docker
@@ -320,7 +326,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
     This uses Snap to install Docker.<br><br>
 
-16. Test if Docker is installed by running the following command on the command line:
+17. Test if Docker is installed by running the following command on the command line:
 
     ```bash
     docker run hello-world
@@ -329,7 +335,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-17. <a name="expo-react-native"></a>We will now install EAS CLI for React Native.
+18. <a name="expo-react-native"></a>We will now install EAS CLI for React Native.
 
     Copy the following text, paste it in the terminal and hit return.
 
@@ -345,7 +351,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-18. Next we will set up some dependencies for Expo and React Native.
+19. Next we will set up some dependencies for Expo and React Native.
 
     Copy each line in the following text, paste it in the terminal and hit return.
 
@@ -416,7 +422,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
     <img src="./general-android-studio-adb.png"><br><br>
 
-19. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
+20. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in the terminal:
 
     <!-- TODO: Check if we can remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
 
@@ -449,14 +455,14 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
     Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
-20. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
-21. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+21. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
+22. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-22. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+23. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
@@ -485,7 +491,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
     This prepares `git` so that your work is attributed correctly to you.<br><br>
 
-23. Copy the following text, paste it in the terminal and hit return.<br><br>
+24. Copy the following text, paste it in the terminal and hit return.<br><br>
 
     ```bash
     git config --global credential.credentialStore cache
@@ -493,17 +499,17 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
     This step will save your GitHub password for 15 minutes so that you don't need to enter it every time.<br><br>
 
-24. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
+25. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
     git config --global core.editor "vim"
     ```
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming) and set Vim as your default editor for Git.<br><br>
-25. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+26. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-26. Open the Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Karl](slack://user?team=TFFSPKL92&id=UFG252SH0). Also send your Google Account email address to Karl (if you haven't already).
-27. <a name="specs"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
+27. Open the Dash and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Karl](slack://user?team=TFFSPKL92&id=UFG252SH0). Also send your Google Account email address to Karl (if you haven't already).
+28. <a name="specs"></a>Copy the following text, paste it in the terminal and hit return.<br><br>
     ```bash
     lshw -short
     ```
@@ -518,7 +524,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     cat /proc/version
     ```
     This will show you details about your Linux distribution. Copy the text on the lines after the command and send it to Karl in Slack.
-28. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+29. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
@@ -537,8 +543,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 3. If you need to record video of your screen with sound (with export to mp4 and gif), try out Kooha:
 
    ```bash
-   sudo apt install --yes flatpak
-   flatpak install flathub io.github.seadve.Kooha
+   flatpak install --assumeyes flathub io.github.seadve.Kooha
    ```
 
 ## Software Upgrades
