@@ -25,36 +25,55 @@ Make sure to use an account without spaces in the user name for the course.
 With those compatibility things out of the way, you're ready to start the system setup:
 
 1. Open the Start menu, type "Windows Update" and click on the result named Windows Update. Make sure that you have all of the latest updates.
-2. Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
+
+2. Check that WinGet is available:
+
+   - Open the Start menu, type "powershell" and click on "Windows PowerShell"
+   - Run:
+     ```powershell
+     winget --version
+     ```
+     If this prints a version, WinGet is installed and you can continue.
+     If you get an error that `winget` is not recognized, install or update "App Installer" from the Microsoft Store, then try again.
+
+3. Open the Start menu and type "powershell". Right-click on the item "Windows PowerShell" that appears and choose "Run as administrator":<br>
    <br>
    <img src="./windows-1-run-powershell-as-admin.png">
    <br>This will run Powershell as an administrator user<br><br>
-3. Copy the following text (be sure you select all of it, it's very long) and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
-   ```bash
-   Set-ExecutionPolicy AllSigned -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+4. Update WinGet sources (recommended so installs do not fail due to stale metadata):
+
+   ```powershell
+   winget source update
    ```
-   This will install Chocolatey, a package manager which will allow us to install and uninstall programs from the command line.
-   <br>
-4. The installer will take a bit of time and then show a message that "Chocolatey is ready", signaling that it is done:<br><br>
-   <img src="./windows-2-chocolatey-installed.png"><br><br>
-5. Close PowerShell and open it again as administrator (like in step 2)<br><br>
-6. Copy the following text and right-click in the blue middle part of the PowerShell window to paste the text. Hit enter.<br><br>
-   ```bash
-   choco install git nodejs-lts strawberryperl vscode hyper httpie-desktop flyctl --yes
+
+5. Install required software with WinGet (copy each line, paste into the PowerShell admin window, hit enter after each line):
+
+   ```powershell
+   winget install --id Git.Git --exact --source winget --accept-package-agreements --accept-source-agreements
+   winget install --id OpenJS.NodeJS.LTS --exact --source winget --accept-package-agreements --accept-source-agreements
+   winget install --id StrawberryPerl.StrawberryPerl --exact --source winget --accept-package-agreements --accept-source-agreements
+   winget install --id Microsoft.VisualStudioCode --exact --source winget --accept-package-agreements --accept-source-agreements
+   winget install --id Vercel.Hyper --exact --source winget --accept-package-agreements --accept-source-agreements
+   winget install --id HTTPie.HTTPie --exact --source winget --accept-package-agreements --accept-source-agreements
+   winget install --id Fly-io.flyctl --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
-   This uses Chocolatey to install Git, Node.js, Strawberry Perl, Visual Studio Code, Hyper, HTTPie Desktop and `flyctl`.<br><br>
-   <!--
-      **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs --yes --version 13.6.0`<br><br>
-   -->
-   If you don't have Zoom installed yet, run this to install it:<br>
-   ```bash
-   choco install zoom --yes
+
+   This installs Git, Node.js (LTS), Strawberry Perl, Visual Studio Code, Hyper, HTTPie Desktop and `flyctl`.
+
+   If you don't have Zoom installed yet, run this to install it:
+
+   ```powershell
+   winget install --id Zoom.Zoom --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
-   If you don't have Slack installed yet, run this to install it:<br>
-   ```bash
-   choco install slack --yes
+
+   If you don't have Slack installed yet, run this to install it:
+
+   ```powershell
+   winget install --id SlackTechnologies.Slack --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
-7. Now we will configure Hyper.<br><br>
+
+6. Now we will configure Hyper.<br><br>
    Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
    <img src="./windows-3-hyper-preferences.png"><br><br>
    In this file, we will do three things:
@@ -64,7 +83,7 @@ With those compatibility things out of the way, you're ready to start the system
 
    Then save the file and close and restart Hyper.
 
-8. To verify that the Hyper configuration was successful, copy the following text, paste it into Hyper and hit return:
+7. To verify that the Hyper configuration was successful, copy the following text, paste it into Hyper and hit return:
 
    ```bash
    echo -e "Hyper Config:\n  Shell: $SHELL\n  Terminal: $TERM"
@@ -80,7 +99,7 @@ With those compatibility things out of the way, you're ready to start the system
 
    Check your output carefully - if line 2 (`Shell: ...`) and line 3 (`Terminal: ...`) on your screen aren't exactly the same as the output above, return to the previous step and check if everything was completed fully.
 
-9. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator". Copy each line of the following text, paste it in Hyper and hit return.<br><br>
+8. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator". Copy each line of the following text, paste it in Hyper and hit return.<br><br>
 
    ```bash
    corepack enable
@@ -146,15 +165,18 @@ With those compatibility things out of the way, you're ready to start the system
 
    </td></tr></table>
 
-10. Copy the following text, paste it in Hyper and hit return.
+9. Install Python and Visual Studio build tools (required for installing Node.js native modules). These installs are best done from PowerShell as administrator (like step 3).
 
-    ```bash
-    choco install python visualstudio2022-workload-vctools --yes
-    ```
+   Open the Start menu, type "powershell", right-click "Windows PowerShell" and choose "Run as administrator". Then run:
 
-    This may take some time (possibly up to 15-20 minutes). This uses Chocolatey to install Python and Visual Studio build tools, which are required for installing Node.js native modules.
+   ```powershell
+   winget install --id Python.Python.3.12 --exact --source winget --accept-package-agreements --accept-source-agreements
+   winget install --id Microsoft.VisualStudio.2022.BuildTools --exact --source winget --accept-package-agreements --accept-source-agreements --override "--wait --passive --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended"
+   ```
 
-11. <a name="vs-code-extensions"></a> Copy each line of the following text, paste it in Hyper and hit return.<br><br>
+   This may take some time (possibly up to 15-20 minutes), especially the build tools.
+
+10. <a name="vs-code-extensions"></a> Copy each line of the following text, paste it in Hyper (or VS Code terminal) and hit return.<br><br>
 
     ```bash
     code --install-extension bradlc.vscode-tailwindcss
@@ -179,17 +201,22 @@ With those compatibility things out of the way, you're ready to start the system
 
     This installs some VS Code extensions we will need.<br><br>
 
-12. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
-    If you don't have Chrome installed yet, you can install it with Chocolatey. To do this, copy the following text, paste it in Hyper and hit return.<br><br>
-    ```bash
-    choco install googlechrome --yes
+11. We recommend installing and using Chrome so that you have the same DevTools as others.<br><br>
+    If you don't have Chrome installed yet, install it with WinGet. To do this, run in PowerShell:
+
+    ```powershell
+    winget install --id Google.Chrome --exact --source winget --accept-package-agreements --accept-source-agreements
     ```
-    This uses Chocolatey to install Chrome.<br><br>
-13. Install the following Chrome Extensions:
+
+    This installs Chrome.<br><br>
+
+12. Install the following Chrome Extensions:
+
     - [React Developer tools Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
     - [Refined GitHub Chrome Extension](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
     - [Socket Security Chrome Extension](https://chrome.google.com/webstore/detail/socket-security/jbcobpbfgkhmjfpjjepkcocalmpkiaop?hl=en)
-14. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
+
+13. <a name="vs-code-settings"></a> Next we will configure VS Code.<br><br>
     Open VS Code and then press the keys <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>P</kbd>. Type in "Settings" and select the item that says `Preferences: Open User Settings (JSON)`:<br><br>
     <img src="./general-vscode-settings.png"><br><br>
     Once the settings file is open, we will want to add the settings below.<br><br>
@@ -270,7 +297,7 @@ With those compatibility things out of the way, you're ready to start the system
     <img src="./general-vscode-settings-fix-warnings.png"><br><br>
     If you made any further changes to the file, save the file again with `File` -> `Save` in the top menu.<br><br>
 
-15. To verify that the VS Code configuration was successful, select `Terminal` -> `New Terminal` in the top menu:<br><br>
+14. To verify that the VS Code configuration was successful, select `Terminal` -> `New Terminal` in the top menu:<br><br>
     <img src="./general-vscode-terminal-new-terminal.avif"><br><br>
 
     Once the terminal appears, copy the following text, paste it into the terminal and hit return:
@@ -289,15 +316,20 @@ With those compatibility things out of the way, you're ready to start the system
 
     Check your output carefully - if line 2 (`Shell: ...`) and line 3 (`Terminal: ...`) on your screen aren't exactly the same as the output above, return to the previous step and check if everything was completed fully.
 
-16. <a name="postgresql"></a>We will now install PostgreSQL. Close Hyper and open it again as administrator (like in step 9).
+15. <a name="postgresql"></a>We will now install PostgreSQL.
 
-    Copy the following text, paste it in Hyper and hit return.
+    Install PostgreSQL with WinGet (PowerShell as administrator recommended):
 
-    ```bash
-    choco install postgresql17 --yes --params '/Password:postgres'
+    ```powershell
+    winget install --id PostgreSQL.PostgreSQL.17 --exact --source winget --accept-package-agreements --accept-source-agreements
     ```
 
-    This will install PostgreSQL and create a default user of `postgres` and a password of `postgres`. Remember this password and use it any time it asks from now on.
+    During installation, set:
+
+    - Username: `postgres`
+    - Password: `postgres`
+
+    Remember this password and use it any time it asks from now on.
 
     After the installation is complete, close Hyper and reopen it (just as a normal user - not as an administrator).
 
@@ -312,27 +344,6 @@ With those compatibility things out of the way, you're ready to start the system
     perl -i -pe "s/^[#\s]*(timezone|log_timezone)\s*=.+$/\1 = 'UTC'/" "$PGDATA/postgresql.conf"
     perl -i -pe "s/^logging_collector = on/logging_collector = off/" "$PGDATA/postgresql.conf"
     ```
-
-    <!--
-
-    You may encounter some "Permission denied" warnings during some of these steps, which should be no problem:
-
-    <img src="./windows-4-permission-denied.png"><br><br>
-
-    Test whether the previous command worked by running the following command:
-
-    ```bash
-    cat "$USERPROFILE/.bash_profile"
-    ```
-
-    It should print out something that looks like the following (although the `17` number may be different for you):
-
-    ```bash
-    export PATH=$PATH:"/c/Program Files/PostgreSQL/17/bin"
-    export PGDATA="/c/Program Files/PostgreSQL/17/data"
-    ```
-
-    -->
 
     We can now test whether PostgreSQL has been correctly installed by starting the database. To do this, we can run the following command:
 
@@ -408,37 +419,45 @@ With those compatibility things out of the way, you're ready to start the system
 
     <img src="./macos-5.6-psql.png"><br><br>
 
-17. <a name="docker"></a>We will now install Docker.
+16. <a name="docker"></a>We will now install Docker.
 
     **Option A - Windows 10/11 Pro:**
 
-    1. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
-    2. Copy the following text and paste it into Hyper. Hit enter.
+    1. Search for PowerShell in the start menu, right click it and choose "Run as administrator".
+    2. Enable WSL and install Ubuntu 20.04 (this may restart your computer):
 
-       ```bash
-       choco install wsl2 --yes
-       choco install wsl-ubuntu-2004 --yes
-       choco install docker-desktop --yes
+       ```powershell
+       wsl --install --distribution Ubuntu-20.04
        ```
 
-    3. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
+    3. After WSL is installed, install Docker Desktop:
+
+       ```powershell
+       winget install --id Docker.DockerDesktop --exact --source winget --accept-package-agreements --accept-source-agreements
+       ```
+
+    4. Open start menu and search for "Docker Desktop". Run it. This will set up and start Docker.<br><br>
        You will need to run this every time you want to work with Docker after you restart.
 
     **Option B - Windows 10/11 Home:**
 
     1. **Windows 10 only:** Click on the start menu, type in "winver" to the search and verify you have at least Windows 10 version 1903. If your number is lower than 1903, run Windows Update.<br><br>
        <img src="windows-6-winver.jpg"><br><br>
-    2. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
-    3. Copy the following text and paste it into Hyper. Hit enter.
+    2. Search for PowerShell in the start menu, right click it and choose "Run as administrator".
+    3. Enable WSL and install Ubuntu 20.04 (this may restart your computer):
 
-       ```bash
-       choco install wsl2 --yes
-       choco install wsl-ubuntu-2004 --yes
-       choco install docker-desktop --yes
+       ```powershell
+       wsl --install --distribution Ubuntu-20.04
        ```
 
-    4. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
-    5. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
+    4. Install Docker Desktop:
+
+       ```powershell
+       winget install --id Docker.DockerDesktop --exact --source winget --accept-package-agreements --accept-source-agreements
+       ```
+
+    5. Open the start menu and search for "Ubuntu". Start it - it should ask you to create a user with a password. This will be your user to log in to your Ubuntu Linux Subsystem - note down the username and password somewhere secure to make sure you do not forget it.
+    6. Open the start menu and search for "Docker Desktop". Start it and go to the Settings. Under the General tab, you will find an option called "Use WSL 2 based engine". Make sure this is checked.
 
     When opening Docker Desktop during Option A or Option B, an error message `Docker Desktop - Windows Hypervisor is not present` may appear:<br><br>
 
@@ -446,15 +465,15 @@ With those compatibility things out of the way, you're ready to start the system
 
     If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, you can skip to the Docker testing step).
 
-    1. Close Hyper and open it again as administrator (like in step 9). Copy the following text, paste it in Hyper and hit return.
+    1. Open PowerShell as administrator. Copy the following text, paste it and hit return.
 
-       ```bash
+       ```powershell
        Get-ComputerInfo -Property HyperVRequirementVMMonitorModeExtensions,HyperVRequirementVirtualizationFirmwareEnabled | Format-List
        ```
 
        This should display the following output:
 
-       ```bash
+       ```powershell
        HyperVRequirementVMMonitorModeExtensions: True
        HyperVRequirementVirtualizationFirmwareEnabled: False
        ```
@@ -464,11 +483,11 @@ With those compatibility things out of the way, you're ready to start the system
     2. Restart your machine
     3. As soon as the monitor turns black during restart, press the BIOS key or UEFI key for your machine repeatedly. If you're not sure what that key is, either try to read the key on the screen quickly as your machine restarts or refer to BIOS key documentation online eg. [the guide by the University of Wisconson-Madison](https://kb.wisc.edu/helpdesk/page.php?id=58779) (common keys are <kbd>Delete</kbd>, <kbd>Esc</kbd>, <kbd>F1</kbd>, <kbd>F2</kbd>, <kbd>F9</kbd>, <kbd>F10</kbd> or <kbd>F12</kbd>)
     4. On some machines, you will need to find and select the option to enter the BIOS / UEFI after hitting the hotkey
-    5. Find the virtualization option for your machine and enable it. If you're not sure what the option is called, refer to the [virtualization options here](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1) (often in `Advanced` settings, common names are `Virtualization`, `VMX`, `VT-x`, `VT-d`, `AMD-V`, or `SVM`)
+    5. Find the virtualization option for your machine and enable it. If you're not sure what the option is called, refer to the virtualization options in Microsoft documentation (often in `Advanced` settings, common names are `Virtualization`, `VMX`, `VT-x`, `VT-d`, `AMD-V`, or `SVM`)
     6. Find and select the option to save changes and exit the BIOS / UEFI
     7. Open Docker Desktop again (as instructed in Option A or Option B) to verify that the error has been resolved
 
-18. Test if Docker is installed by running the following command on the command line:
+17. Test if Docker is installed by running the following command on the command line:
 
     ```bash
     docker run hello-world
@@ -477,7 +496,7 @@ With those compatibility things out of the way, you're ready to start the system
     It should print out a welcome message like this:<br><br>
     <img src="macos-7-docker-hello-world.png"><br><br>
 
-19. <a name="expo-react-native"></a>We will now install EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
+18. <a name="expo-react-native"></a>We will now install EAS CLI for React Native. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
 
     Copy the following text, paste it in Hyper and hit return.
 
@@ -493,17 +512,22 @@ With those compatibility things out of the way, you're ready to start the system
 
     On your phone, go to the app store and install Expo on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US), [iOS](https://apps.apple.com/us/app/expo-go/id982107779)). Create an account and log in.
 
-20. Next we will set up some dependencies for Expo and React Native.
+19. Next we will set up some dependencies for Expo and React Native.
 
-    Copy each line in the following text, paste it in Hyper and hit return.
+    Install Android Studio with WinGet (PowerShell recommended):
+
+    ```powershell
+    winget install --id Google.AndroidStudio --exact --source winget --accept-package-agreements --accept-source-agreements
+    ```
+
+    Then run in Hyper:
 
     ```bash
-    choco install androidstudio --yes
     echo "export PATH=$HOME/AppData/Local/Android/Sdk/platform-tools:\$PATH" >> ~/.bash_profile
     source ~/.bash_profile
     ```
 
-    This will install Android Studio, for creating and running Android virtual devices in an emulator.
+    This installs Android Studio, for creating and running Android virtual devices in an emulator.
 
     Open Android Studio by finding it using the Start menu.
 
@@ -563,9 +587,7 @@ With those compatibility things out of the way, you're ready to start the system
 
     <img src="./general-android-studio-adb.png"><br><br>
 
-21. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
-
-    <!-- TODO: Check if we can remove the `echo ...` and `pnpm install ...` steps below when Expo supports RN 0.72 with symlinks https://github.com/upleveled/system-setup/issues/28 -->
+20. To verify that Expo is working with the Android Studio virtual device copy and run each of these lines separately in Hyper:
 
     ```bash
     cd ~
@@ -596,59 +618,72 @@ With those compatibility things out of the way, you're ready to start the system
 
     Click on the small `x` at the top right of the virtual device frame to stop the virtual device - this will save a snapshot to make starting the virtual device faster in the future.
 
-22. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
-23. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
+21. If you don't have one yet, create a Google account [here](https://accounts.google.com/signup?hl=en). Make a note of the email address associated with this account for usage in later steps.
+
+22. If you don't have one yet, create a GitHub account [here](https://github.com/join). Make sure to set a name.
 
     If you already have a GitHub account and you haven't set a name on GitHub yet, go to the [GitHub Profile Settings](https://github.com/settings/profile) and add a name:<br><br>
     <img src="./general-github-profile-settings.png"><br><br>
     We will use this name in the next step.<br><br>
 
-24. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
+23. For this step, we'll need to **edit some of the information in the commands** by adding our own information.<br><br>
     First of all, we will set our name, which will be the same name as on our GitHub profile:<br><br>
     <img src="./general-github-name.png"><br><br>
     Copy your name from your profile, **add it in quotes** in the command (replace `Mona Lisa Octocat`) and run the command:<br><br>
+
     ```bash
     git config --global user.name "Mona Lisa Octocat"
     ```
+
     You can test whether the name was set correctly with the next command (if it worked, it will print the name on the next line):<br><br>
+
     ```bash
     git config --global user.name
     ```
+
     <br>For running the next command, **add your email in quotes**:<br><br>
+
     ```bash
     git config --global user.email "monalisaoctocat@example.com"
     ```
+
     You can test whether the email was set correctly with with the next command (if it worked, it will print the email on the next line):<br><br>
+
     ```bash
     git config --global user.email
     ```
+
     This prepares `git` so that your work is attributed correctly to you.<br><br>
 
-<!-- 25. Copy the following text, paste it in the terminal and hit return.<br><br>
-    ```bash
-    git config --global credential.helper wincred
-    ```
-    This step will save your GitHub password so that you don't need to enter it every time.<br><br> -->
+24. Copy the following text, paste it in Hyper and hit return.<br><br>
 
-25. Copy the following text, paste it in Hyper and hit return.<br><br>
     ```bash
     git config --global init.defaultBranch main
     ```
+
     This step will change the default Git branch from `master` to `main` (see https://github.com/github/renaming).<br><br>
-26. Copy and run each of these lines separately in Hyper.<br><br>
+
+25. Copy and run each of these lines separately in Hyper.<br><br>
+
     ```bash
     git config --global core.autocrlf false
     git config --global core.eol lf
     ```
+
     This step will improve line breaks compatibility on Windows.
-27. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
+
+26. Go back to GitHub, and go to your profile page by clicking on your avatar at the top right and selecting **Your profile**<br><br>
     <img src="./general-github-your-profile.png"><br><br>
     Copy the `github.com/...` URL in the address bar of your browser, for use in the next step.
-28. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Karl](slack://user?team=TFFSPKL92&id=UFG252SH0). Also send your Google Account email address to Karl (if you haven't already).
-29. <a name="specs"></a>Open the start menu, type "Settings", open the app (or click on the cog on the left) and copy and send two sets of details:
+
+27. Open the Start menu and start Slack. Log in to the UpLeveled Slack. Send your GitHub profile URL to [Karl](slack://user?team=TFFSPKL92&id=UFG252SH0). Also send your Google Account email address to Karl (if you haven't already).
+
+28. <a name="specs"></a>Open the start menu, type "Settings", open the app (or click on the cog on the left) and copy and send two sets of details:
+
     - Select "System" and "About". Under "Device specifications", click the Copy button and paste this to Karl
     - Under "Windows specifications", click the Copy button and paste this to Karl
-30. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
+
+29. On your phone, go to the app store and install Slack on your phone. Log in to the UpLeveled Slack.
 
 ## Optional Software
 
@@ -658,57 +693,64 @@ With those compatibility things out of the way, you're ready to start the system
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. If you want to easily capture screenshots and draw and write on them, try Flameshot:
+2. If you want to easily capture screenshots and draw and write on them, try Flameshot (PowerShell recommended):
 
-   ```bash
-   choco install flameshot --yes
+   ```powershell
+   winget install --id Flameshot.Flameshot --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
 
 3. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
 
-   An alternative without the limitations of Loom is Screen to Gif (however, it does not record audio):
+   An alternative without the limitations of Loom is ScreenToGif (however, it does not record audio) (PowerShell recommended):
 
-   ```bash
-   choco install screentogif --yes
+   ```powershell
+   winget install --id NickeManarin.ScreenToGif --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
 
-4. If you need a clipboard manager to keep a history of things that you have copied, this is an awesome option:
+4. If you need a clipboard manager to keep a history of things that you have copied, Ditto is a great option (PowerShell recommended):
 
-   ```bash
-   choco install ditto --yes
+   ```powershell
+   winget install --id Ditto.Ditto --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
 
-5. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
+5. To simultaneously test your web design in multiple mobile viewports, try Responsively App (PowerShell recommended):
 
-   ```bash
-   choco install responsively --yes
+   ```powershell
+   winget install --id ResponsivelyApp.ResponsivelyApp --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
 
-6. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
+6. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner (manual download from releases, requires Java).
 
-   ```bash
-   choco install bfg-repo-cleaner --yes
+7. If you're running out of space on your computer, you can use WinDirStat to analyze your hard drive and show a chart of which items are taking up how much space (PowerShell recommended):
+
+   ```powershell
+   winget install --id WinDirStat.WinDirStat --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
 
-7. If you're running out of space on your computer, you can use WinDirStat to analyze your hard drive and show a chart of which items are taking up how much space:
+8. To add an assortment of new features to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys (PowerShell recommended):
 
-   ```bash
-   choco install windirstat --yes
-   ```
-
-8. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
-
-   ```bash
-   choco install powertoys --yes
+   ```powershell
+   winget install --id Microsoft.PowerToys --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
 
 ## Software Upgrades
 
-Most software upgrades can be performed with `choco upgrade <package name>`, but some software upgrades require additional steps:
+Most software upgrades can be performed with WinGet:
 
-1. Node.js with pnpm
+1. Upgrade everything:
+
+   ```powershell
+   winget upgrade --all --source winget --accept-package-agreements --accept-source-agreements
+   ```
+
+2. Upgrade a specific package (example: Node.js LTS):
+
+   ```powershell
+   winget upgrade --id OpenJS.NodeJS.LTS --exact --source winget --accept-package-agreements --accept-source-agreements
+   ```
+
+3. Node.js with pnpm (after upgrading Node.js):
    ```bash
-   choco upgrade nodejs-lts --yes
    corepack disable
    corepack enable
    corepack prepare pnpm@latest --activate
