@@ -325,11 +325,11 @@ With those compatibility things out of the way, you're ready to start the system
     cat "$USERPROFILE/.bash_profile"
     ```
 
-    It should print out something that looks like the following (although the `17` number may be different for you):
+    It should print out something that looks like the following (although the `18` number may be different for you):
 
     ```bash
-    export PATH=$PATH:"/c/Program Files/PostgreSQL/17/bin"
-    export PGDATA="/c/Program Files/PostgreSQL/17/data"
+    export PATH=$PATH:"/c/Program Files/PostgreSQL/18/bin"
+    export PGDATA="/c/Program Files/PostgreSQL/18/data"
     ```
 
     -->
