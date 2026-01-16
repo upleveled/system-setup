@@ -294,7 +294,7 @@ With those compatibility things out of the way, you're ready to start the system
     Copy the following text, paste it in Hyper and hit return.
 
     ```bash
-    choco install postgresql17 --yes --params '/Password:postgres'
+    choco install postgresql18 --yes --params '/Password:postgres'
     ```
 
     This will install PostgreSQL and create a default user of `postgres` and a password of `postgres`. Remember this password and use it any time it asks from now on.
@@ -304,8 +304,8 @@ With those compatibility things out of the way, you're ready to start the system
     Now let's set an environment variable to tell PostgreSQL where to find the programs and where to put the data. Copy and run each of these lines separately in Hyper:
 
     ```bash
-    echo -e "\nexport PATH=\$PATH:\"/c/Program Files/PostgreSQL/17/bin\"" >> ~/.bash_profile
-    echo "export PGDATA=\"/c/Program Files/PostgreSQL/17/data\"" >> ~/.bash_profile
+    echo -e "\nexport PATH=\$PATH:\"/c/Program Files/PostgreSQL/18/bin\"" >> ~/.bash_profile
+    echo "export PGDATA=\"/c/Program Files/PostgreSQL/18/data\"" >> ~/.bash_profile
     echo "export PSQL_PAGER=\"less --chop-long-lines --header 1\"" >> ~/.bash_profile
     echo "export LANG=en_US.UTF-8" >> ~/.bash_profile
     source ~/.bash_profile
