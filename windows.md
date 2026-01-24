@@ -58,7 +58,6 @@ With those compatibility things out of the way, you're ready to start the system
    Open Hyper and then select Edit -> Preferences, which will open a text file in an editor:<br><br>
    <img src="./windows-3-hyper-preferences.png"><br><br>
    In this file, we will do three things:
-
    1. Find `shell: '',` and replace it with `shell: 'C:\\Program Files\\Git\\bin\\bash.exe',`
    2. Find `env: {},` and replace it with `env: { TERM: 'cygwin' },`
 
@@ -206,6 +205,10 @@ With those compatibility things out of the way, you're ready to start the system
     "editor.tabSize": 2,
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.closeEmptyGroups": false,
+    // Disable bad default of maximizing editor groups (panes) on
+    // double-click
+    // - https://code.visualstudio.com/updates/v1_80#_disable-maximizing-editor-groups-on-tab-double-click
+    "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "off",
     "workbench.tree.enableStickyScroll": true,
     "terminal.integrated.stickyScroll.enabled": true,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
@@ -257,7 +260,7 @@ With those compatibility things out of the way, you're ready to start the system
     "prettier.trailingComma": "all",
     "prettier.documentSelectors": [
       // Enable prettier-vscode to format *.sql files (eg. with prettier-plugin.sql)
-      // https://github.com/prettier/prettier-vscode/issues/3248#issuecomment-1956209714
+      // - https://github.com/prettier/prettier-vscode/issues/3248#issuecomment-1956209714
       "**/*.sql"
     ],
     "eslint.runtime": "node",
@@ -411,7 +414,6 @@ With those compatibility things out of the way, you're ready to start the system
 17. <a name="docker"></a>We will now install Docker.
 
     **Option A - Windows 10/11 Pro:**
-
     1. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
     2. Copy the following text and paste it into Hyper. Hit enter.
 
@@ -425,7 +427,6 @@ With those compatibility things out of the way, you're ready to start the system
        You will need to run this every time you want to work with Docker after you restart.
 
     **Option B - Windows 10/11 Home:**
-
     1. **Windows 10 only:** Click on the start menu, type in "winver" to the search and verify you have at least Windows 10 version 1903. If your number is lower than 1903, run Windows Update.<br><br>
        <img src="windows-6-winver.jpg"><br><br>
     2. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator".
@@ -445,7 +446,6 @@ With those compatibility things out of the way, you're ready to start the system
     <img src="windows-7-docker-desktop-error.avif"><br><br>
 
     If this appears for you, follow the next steps to enable virtualization on your machine (if you don't receive the error, you can skip to the Docker testing step).
-
     1. Close Hyper and open it again as administrator (like in step 9). Copy the following text, paste it in Hyper and hit return.
 
        ```bash

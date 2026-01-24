@@ -183,6 +183,10 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     "editor.tabSize": 2,
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.closeEmptyGroups": false,
+    // Disable bad default of maximizing editor groups (panes) on
+    // double-click
+    // - https://code.visualstudio.com/updates/v1_80#_disable-maximizing-editor-groups-on-tab-double-click
+    "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "off",
     "workbench.tree.enableStickyScroll": true,
     "terminal.integrated.stickyScroll.enabled": true,
     "terminal.integrated.suggest.enabled": true,
@@ -233,7 +237,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
     "prettier.trailingComma": "all",
     "prettier.documentSelectors": [
       // Enable prettier-vscode to format *.sql files (eg. with prettier-plugin.sql)
-      // https://github.com/prettier/prettier-vscode/issues/3248#issuecomment-1956209714
+      // - https://github.com/prettier/prettier-vscode/issues/3248#issuecomment-1956209714
       "**/*.sql"
     ],
     "eslint.runtime": "node",
