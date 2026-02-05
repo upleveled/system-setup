@@ -652,19 +652,19 @@ With those compatibility things out of the way, you're ready to start the system
 
 ## Optional Software
 
-1. If you would like to check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
+1. To check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
 
    ```bash
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. If you want to easily capture screenshots and draw and write on them, try Flameshot:
+2. To easily capture screenshots and draw and write on them, try Flameshot:
 
    ```bash
    choco install flameshot --yes
    ```
 
-3. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
+3. To record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
 
    An alternative without the limitations of Loom is Screen to Gif (however, it does not record audio):
 
@@ -672,7 +672,7 @@ With those compatibility things out of the way, you're ready to start the system
    choco install screentogif --yes
    ```
 
-4. If you need a clipboard manager to keep a history of things that you have copied, this is an awesome option:
+4. To keep a history of things you have copied, clipboard managers like Ditto are an awesome option:
 
    ```bash
    choco install ditto --yes

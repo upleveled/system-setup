@@ -513,19 +513,19 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
 ## Optional Software
 
-1. If you would like to check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
+1. To check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
 
    ```bash
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. If you want to easily capture screenshots and draw and write on them, try Flameshot:
+2. To easily capture screenshots and draw and write on them, try Flameshot:
 
    ```bash
    brew install --cask flameshot
    ```
 
-3. If you need to record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/):
+3. To record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/):
 
    ```bash
    brew install --cask loom
@@ -537,7 +537,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    brew install --cask kap
    ```
 
-4. If you would like to keep a history of what you have copied to your clipboard, you can try out Yippy:
+4. To keep a history of what you have copied to your clipboard, you can try out Yippy:
 
    ```bash
    brew install --cask yippy
