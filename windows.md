@@ -658,13 +658,25 @@ With those compatibility things out of the way, you're ready to start the system
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. To easily capture screenshots and draw and write on them, try Flameshot:
+2. To sort words and lines in VS Code, try [Smart Sort](https://marketplace.visualstudio.com/items?itemName=sgryjp.vscode-stable-sort). You can install on the command line with this command:
+
+   ```bash
+   code --install-extension sgryjp.vscode-stable-sort
+   ```
+
+3. To increment, decrement and reverse content in multiple cursor selections in VS Code, try [Increment Selection](https://marketplace.visualstudio.com/items?itemName=albymor.increment-selection). You can install on the command line with this command:
+
+   ```bash
+   code --install-extension albymor.increment-selection
+   ```
+
+4. To easily capture screenshots and draw and write on them, try Flameshot:
 
    ```bash
    choco install flameshot --yes
    ```
 
-3. To record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
+5. To record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
 
    An alternative without the limitations of Loom is Screen to Gif (however, it does not record audio):
 
@@ -672,35 +684,35 @@ With those compatibility things out of the way, you're ready to start the system
    choco install screentogif --yes
    ```
 
-4. To keep a history of things you have copied, clipboard managers like Ditto are an awesome option:
+6. To keep a history of things you have copied, clipboard managers like Ditto are an awesome option:
 
    ```bash
    choco install ditto --yes
    ```
 
-5. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
+7. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
 
    ```bash
    choco install responsively --yes
    ```
 
-6. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
+8. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
 
    ```bash
    choco install bfg-repo-cleaner --yes
    ```
 
-7. If you're running out of space on your computer, you can use WinDirStat to analyze your hard drive and show a chart of which items are taking up how much space:
+9. If you're running out of space on your computer, you can use WinDirStat to analyze your hard drive and show a chart of which items are taking up how much space:
 
    ```bash
    choco install windirstat --yes
    ```
 
-8. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
+10. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
 
-   ```bash
-   choco install powertoys --yes
-   ```
+```bash
+choco install powertoys --yes
+```
 
 ## Software Upgrades
 

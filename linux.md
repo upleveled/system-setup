@@ -538,13 +538,25 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. To easily capture screenshots and draw and write on them, try Flameshot:
+2. To sort words and lines in VS Code, try [Smart Sort](https://marketplace.visualstudio.com/items?itemName=sgryjp.vscode-stable-sort). You can install on the command line with this command:
+
+   ```bash
+   code --install-extension sgryjp.vscode-stable-sort
+   ```
+
+3. To increment, decrement and reverse content in multiple cursor selections in VS Code, try [Increment Selection](https://marketplace.visualstudio.com/items?itemName=albymor.increment-selection). You can install on the command line with this command:
+
+   ```bash
+   code --install-extension albymor.increment-selection
+   ```
+
+4. To easily capture screenshots and draw and write on them, try Flameshot:
 
    ```bash
    sudo snap install flameshot
    ```
 
-3. To record video of your screen with sound (with export to mp4 and gif), try out Kooha:
+5. To record video of your screen with sound (with export to mp4 and gif), try out Kooha:
 
    ```bash
    flatpak install --assumeyes flathub io.github.seadve.Kooha

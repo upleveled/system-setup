@@ -519,13 +519,25 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    code --install-extension streetsidesoftware.code-spell-checker
    ```
 
-2. To easily capture screenshots and draw and write on them, try Flameshot:
+2. To sort words and lines in VS Code, try [Smart Sort](https://marketplace.visualstudio.com/items?itemName=sgryjp.vscode-stable-sort). You can install on the command line with this command:
+
+   ```bash
+   code --install-extension sgryjp.vscode-stable-sort
+   ```
+
+3. To increment, decrement and reverse content in multiple cursor selections in VS Code, try [Increment Selection](https://marketplace.visualstudio.com/items?itemName=albymor.increment-selection). You can install on the command line with this command:
+
+   ```bash
+   code --install-extension albymor.increment-selection
+   ```
+
+4. To easily capture screenshots and draw and write on them, try Flameshot:
 
    ```bash
    brew install --cask flameshot
    ```
 
-3. To record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/):
+5. To record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/):
 
    ```bash
    brew install --cask loom
@@ -537,35 +549,35 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    brew install --cask kap
    ```
 
-4. To keep a history of what you have copied to your clipboard, you can try out Yippy:
+6. To keep a history of what you have copied to your clipboard, you can try out Yippy:
 
    ```bash
    brew install --cask yippy
    ```
 
-5. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
+7. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
 
    ```bash
    brew install --cask responsively
    ```
 
-6. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
+8. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
 
    ```bash
    brew install bfg
    ```
 
-7. If you're running out of space on your computer, you can use Disk Inventory X to analyze your hard drive and show a chart of which items are taking up how much space:
+9. If you're running out of space on your computer, you can use Disk Inventory X to analyze your hard drive and show a chart of which items are taking up how much space:
 
    ```bash
    brew install --cask disk-inventory-x
    ```
 
-8. To do natural language calculations and conversions, try [Numi](https://numi.app/):
+10. To do natural language calculations and conversions, try [Numi](https://numi.app/):
 
-   ```bash
-   brew install --cask numi
-   ```
+```bash
+brew install --cask numi
+```
 
 ## Software Upgrades
 
