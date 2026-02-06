@@ -108,7 +108,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    ```bash
    brew install --cask visual-studio-code httpie-desktop git-credential-manager
    ```
-   This uses Homebrew Cask to install Visual Studio Code, HTTPie Desktop and Git Credential Manager.<br><br>
+   This uses Homebrew Cask to install VS Code, HTTPie Desktop and Git Credential Manager.<br><br>
    If you don't have Zoom installed yet, run this to install it:<br>
    ```bash
    brew install --cask zoom

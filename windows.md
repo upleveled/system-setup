@@ -42,7 +42,7 @@ With those compatibility things out of the way, you're ready to start the system
    ```bash
    choco install git nodejs-lts strawberryperl vscode hyper httpie-desktop flyctl --yes
    ```
-   This uses Chocolatey to install Git, Node.js, Strawberry Perl, Visual Studio Code, Hyper, HTTPie Desktop and `flyctl`.<br><br>
+   This uses Chocolatey to install Git, Node.js, Strawberry Perl, VS Code, Hyper, HTTPie Desktop and `flyctl`.<br><br>
    <!--
       **Note:** If you are using Windows 7, you may have encountered a problem with installing Node.js because [the latest versions no longer support Windows 7](https://github.com/nodejs/node/issues/33000). To get around this, run this separately: `choco install nodejs --yes --version 13.6.0`<br><br>
    -->
