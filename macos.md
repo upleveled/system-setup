@@ -126,7 +126,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    code --install-extension dozerg.tsimportsorter
    code --install-extension esbenp.prettier-vscode
    code --install-extension frigus02.vscode-sql-tagged-template-literals-syntax-only
-   code --install-extension kumar-harsh.graphql-for-vscode
+   code --install-extension GraphQL.vscode-graphql-syntax
    code --install-extension mattpocock.ts-error-translator
    code --install-extension meganrogge.template-string-converter
    code --install-extension styled-components.vscode-styled-components
