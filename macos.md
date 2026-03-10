@@ -402,19 +402,11 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
     <img src="./general-android-studio-virtual-device-dropdown.png"><br><br>
 
-    Click on the **Create device** button on the top left of the window:<br><br>
+    Click on the **Create device** button in the middle of the window:<br><br>
 
-    <img src="./general-android-studio-virtual-device-create-device.png"><br><br>
+    <img src="./general-android-studio-virtual-device-create-device.avif"><br><br>
 
-    Select the Pixel 3a as the hardware device.
-
-    Under the **Recommended** tab (the default tab), locate the system image named **S** (API level 31) and click on the downward arrow icon (download button) next to it. In the window that pops up, accept the license agreement and click **Next**:<br><br>
-
-    <img src="./general-android-studio-virtual-device-system-image-download.png"><br><br>
-
-    Once the download completes, select the image you just downloaded and click on **Next** through the rest of the steps until the virtual device has been created:<br><br>
-
-    <img src="./general-android-studio-virtual-device-system-image-select.avif"><br><br>
+    Select the Pixel 8a as the hardware device and click **Next** and **Finish**.<br><br>
 
     The device will now show up in the Device Manager. Click on the triangular play button to launch the virtual device in the emulator. An emulator window will appear showing the screen of the virtual device:<br><br>
 
