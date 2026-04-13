@@ -524,7 +524,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
 ## Optional Software
 
-1. To check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
+1. To check the spelling of all code you write in VS Code, try [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
 
    ```bash
    code --install-extension streetsidesoftware.code-spell-checker
@@ -548,7 +548,13 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    sudo snap install flameshot
    ```
 
-5. To record video of your screen with sound (with export to mp4 and gif), try out Kooha:
+5. To record videos of your screen with sound, try [OBS Studio](https://obsproject.com) (advanced):
+
+   ```bash
+   flatpak install --assumeyes flathub com.obsproject.Studio
+   ```
+
+   A simpler alternative is [Kooha](https://flathub.org/apps/io.github.seadve.Kooha):
 
    ```bash
    flatpak install --assumeyes flathub io.github.seadve.Kooha
