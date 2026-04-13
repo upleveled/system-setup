@@ -644,7 +644,7 @@ With those compatibility things out of the way, you're ready to start the system
 
 ## Optional Software
 
-1. To check the spelling of all code you write in VS Code, try out [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
+1. To check the spelling of all code you write in VS Code, try [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). You can install on the command line with this command:
 
    ```bash
    code --install-extension streetsidesoftware.code-spell-checker
@@ -668,12 +668,16 @@ With those compatibility things out of the way, you're ready to start the system
    choco install flameshot --yes
    ```
 
-5. To record mp4 videos of your screen with sound, try out [Loom](https://www.loom.com/).
-
-   An alternative without the limitations of Loom is Screen to Gif (however, it does not record audio):
+5. To record videos of your screen with sound, try [OBS Studio](https://obsproject.com) (advanced):
 
    ```bash
-   choco install screentogif --yes
+   choco install obs-studio --yes
+   ```
+
+   A simpler alternative is [Cap](https://cap.so):
+
+   ```bash
+   winget install --id CapSoftware.Cap --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
 
 6. To keep a history of things you have copied, clipboard managers like Ditto are an awesome option:
