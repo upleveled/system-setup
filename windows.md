@@ -706,9 +706,9 @@ With those compatibility things out of the way, you're ready to start the system
 
 10. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
 
-   ```bash
-   choco install powertoys --yes
-   ```
+    ```bash
+    choco install powertoys --yes
+    ```
 
 ## Software Upgrades
 
