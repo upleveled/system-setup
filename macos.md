@@ -569,9 +569,9 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
 10. To do natural language calculations and conversions, try [Numi](https://numi.app/):
 
-```bash
-brew install --cask numi
-```
+   ```bash
+   brew install --cask numi
+   ```
 
 ## Software Upgrades
 
