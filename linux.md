@@ -560,6 +560,14 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    flatpak install --assumeyes flathub io.github.seadve.Kooha
    ```
 
+6. To edit videos, try [Shotcut](https://www.shotcut.org/) as an intermediate option that offers traditional timeline editing:
+
+   ```bash
+   flatpak install --assumeyes flathub org.shotcut.Shotcut
+   ```
+
+   [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) is more advanced, but allows for greater control.
+
 ## Software Upgrades
 
 Many software upgrades can be performed with `sudo snap refresh <package name>` or `sudo apt-get --only-upgrade install <package name>`, but some software upgrades require additional steps:

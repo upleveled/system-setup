@@ -543,31 +543,47 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
    Paid macOS alternatives to Cap are [Screen Studio](https://screen.studio) and [ScreenFlow](https://www.telestream.net/screenflow/overview.htm).
 
-6. To keep a history of what you have copied to your clipboard, you can try Yippy:
+6. To edit videos, try [CapCut](https://www.capcut.com/tools/desktop-video-editor) for a simple editor:
+
+   ```bash
+   brew install --cask capcut
+   ```
+
+   [Shotcut](https://www.shotcut.org/) is an intermediate option that offers traditional timeline editing:
+
+   ```bash
+   brew install --cask shotcut
+   ```
+
+   [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) is more advanced, but allows for greater control.
+
+   [iMovie](https://www.apple.com/imovie/) is a simple official Apple option.
+
+7. To keep a history of what you have copied to your clipboard, you can try Yippy:
 
    ```bash
    brew install --cask yippy
    ```
 
-7. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
+8. To simultaneously test your web design in multiple mobile viewports, try Responsively App:
 
    ```bash
    brew install --cask responsively
    ```
 
-8. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
+9. To remove secrets, large files or other undesirable files from your Git repository, try BFG Repo-Cleaner:
 
    ```bash
    brew install bfg
    ```
 
-9. If you're running out of space on your computer, you can use Disk Inventory X to analyze your hard drive and show a chart of which items are taking up how much space:
+10. If you're running out of space on your computer, you can use Disk Inventory X to analyze your hard drive and show a chart of which items are taking up how much space:
 
    ```bash
    brew install --cask disk-inventory-x
    ```
 
-10. To do natural language calculations and conversions, try [Numi](https://numi.app/):
+11. To do natural language calculations and conversions, try [Numi](https://numi.app/):
 
     ```bash
     brew install --cask numi
