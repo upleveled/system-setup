@@ -560,7 +560,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    flatpak install --assumeyes flathub io.github.seadve.Kooha
    ```
 
-6. To edit videos, try [Shotcut](https://www.shotcut.org/) as an intermediate editor:
+6. To edit videos, try [Shotcut](https://www.shotcut.org/) (intermediate):
 
    ```bash
    flatpak install --assumeyes flathub org.shotcut.Shotcut

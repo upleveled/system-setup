@@ -543,7 +543,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
    Paid macOS alternatives to Cap are [Screen Studio](https://screen.studio) and [ScreenFlow](https://www.telestream.net/screenflow/overview.htm).
 
-6. To edit videos, try [CapCut](https://www.capcut.com/tools/desktop-video-editor) for a simple editor:
+6. To edit videos, try [CapCut](https://www.capcut.com/tools/desktop-video-editor) (simple):
 
    ```bash
    brew install --cask capcut

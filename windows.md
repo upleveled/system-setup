@@ -680,7 +680,7 @@ With those compatibility things out of the way, you're ready to start the system
    winget install --id CapSoftware.Cap --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
 
-6. To edit videos, try [CapCut](https://www.capcut.com/tools/desktop-video-editor) for a simple editor:
+6. To edit videos, try [CapCut](https://www.capcut.com/tools/desktop-video-editor) (simple):
 
    ```bash
    winget install --id ByteDance.CapCut --exact --source winget --accept-package-agreements --accept-source-agreements
