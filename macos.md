@@ -557,7 +557,12 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
    [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) is more advanced, but allows for greater control.
 
-   [iMovie](https://www.apple.com/imovie/) is a simple official Apple option.
+   [iMovie](https://www.apple.com/imovie/) is a simple official Apple option (sign in first to the App Store):
+
+   ```bash
+   brew install mas
+   mas install 408981434
+   ```
 
 7. To keep a history of what you have copied to your clipboard, you can try Yippy:
 
@@ -579,9 +584,9 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 
 10. If you're running out of space on your computer, you can use Disk Inventory X to analyze your hard drive and show a chart of which items are taking up how much space:
 
-   ```bash
-   brew install --cask disk-inventory-x
-   ```
+    ```bash
+    brew install --cask disk-inventory-x
+    ```
 
 11. To do natural language calculations and conversions, try [Numi](https://numi.app/):
 
