@@ -549,15 +549,15 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    brew install --cask capcut
    ```
 
-   [Shotcut](https://www.shotcut.org/) is an intermediate option that offers traditional timeline editing:
+   An intermediate alternative is [Shotcut](https://www.shotcut.org/), which offers traditional timeline editing:
 
    ```bash
    brew install --cask shotcut
    ```
 
-   [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) is more advanced, but allows for greater control.
+   An advanced alternative is [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve), which allows for professional video editing.
 
-   [iMovie](https://www.apple.com/imovie/) is a simple official Apple option (sign in first to the App Store):
+   A simple, official Apple alternative is [iMovie](https://www.apple.com/imovie/) (sign in first to the App Store before downloading):
 
    ```bash
    brew install mas

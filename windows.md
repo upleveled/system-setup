@@ -686,15 +686,15 @@ With those compatibility things out of the way, you're ready to start the system
    winget install --id ByteDance.CapCut --exact --source winget --accept-package-agreements --accept-source-agreements
    ```
 
-   [Shotcut](https://www.shotcut.org/) is an intermediate option that offers traditional timeline editing:
+   An intermediate alternative is [Shotcut](https://www.shotcut.org/), which offers traditional timeline editing:
 
    ```bash
    choco install shotcut --yes
    ```
 
-   [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) is more advanced, but allows for greater control.
+   An advanced alternative is [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve), which allows for professional video editing.
 
-   [Microsoft Clipchamp](https://clipchamp.com/) is a simple official Microsoft option:
+   A simple, official Microsoft alternative is [Microsoft Clipchamp](https://clipchamp.com/):
 
    ```bash
    winget install --id 9P1J8S7CCWWT --source msstore --accept-package-agreements --accept-source-agreements
@@ -720,9 +720,9 @@ With those compatibility things out of the way, you're ready to start the system
 
 10. If you're running out of space on your computer, you can use WinDirStat to analyze your hard drive and show a chart of which items are taking up how much space:
 
-   ```bash
-   choco install windirstat --yes
-   ```
+```bash
+choco install windirstat --yes
+```
 
 11. To add [an assortment of new features](https://www.fourth-wall.co.uk/post/powertoys-11-awesome-features-microsoft-won-t-add-to-windows) to Windows such as "pinning" a window to stay on top of all others, quickly renaming or resizing multiple files, splitting your running apps into regions of the screen and more, try Microsoft PowerToys:
 

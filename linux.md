@@ -560,13 +560,13 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    flatpak install --assumeyes flathub io.github.seadve.Kooha
    ```
 
-6. To edit videos, try [Shotcut](https://www.shotcut.org/) as an intermediate option that offers traditional timeline editing:
+6. To edit videos, try [Shotcut](https://www.shotcut.org/) as an intermediate editor:
 
    ```bash
    flatpak install --assumeyes flathub org.shotcut.Shotcut
    ```
 
-   [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) is more advanced, but allows for greater control.
+   An advanced alternative is [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve), which allows for professional video editing.
 
 ## Software Upgrades
 
