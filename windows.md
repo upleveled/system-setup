@@ -729,6 +729,33 @@ choco install windirstat --yes
     choco install powertoys --yes
     ```
 
+12. To use AI agents on the command line, try Codex CLI (requires OpenAI paid account):
+
+    ```bash
+    pnpm add --global @openai/codex
+    codex login
+    codex
+    ```
+
+    As an alternative, try Claude Code (requires Anthropic paid account):
+
+    ```bash
+    pnpm add --global @anthropic-ai/claude-code
+
+    mkdir -p ~/.claude
+
+    cat > ~/.claude/settings.json <<'CLAUDE_CODE_SETTINGS_JSON'
+    {
+      "env": {
+        "DISABLE_UPDATES": "1"
+      }
+    }
+    CLAUDE_CODE_SETTINGS_JSON
+
+    claude auth login
+    claude
+    ```
+
 ## Software Upgrades
 
 Most software upgrades can be performed with `choco upgrade <package name>`, but some software upgrades require additional steps:
