@@ -48,9 +48,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    pnpm setup
    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
    pnpm config set minimumReleaseAge 10080 --global
-   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=\@upleveled\/\*$/; $_ .= "minimum-release-age-exclude[]=\@upleveled/*\n" if eof && !$exists' "$HOME/Library/Preferences/pnpm/rc"
-   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=eslint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=eslint-config-upleveled\n" if eof && !$exists' "$HOME/Library/Preferences/pnpm/rc"
-   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=stylelint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=stylelint-config-upleveled\n" if eof && !$exists' "$HOME/Library/Preferences/pnpm/rc"
+   perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$HOME/Library/Preferences/pnpm/config.yaml"
    ```
 
    This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
