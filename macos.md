@@ -43,9 +43,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
 7. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
-   corepack enable
-   corepack prepare pnpm@latest --activate
-   pnpm setup
+   npx --yes get-pnpm
    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
    pnpm config set minimumReleaseAge 10080 --global
    perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=\@upleveled\/\*$/; $_ .= "minimum-release-age-exclude[]=\@upleveled/*\n" if eof && !$exists' "$HOME/Library/Preferences/pnpm/rc"
@@ -53,7 +51,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=stylelint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=stylelint-config-upleveled\n" if eof && !$exists' "$HOME/Library/Preferences/pnpm/rc"
    ```
 
-   This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
+   This installs `pnpm` as a standalone executable, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
 
    Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
@@ -619,16 +617,3 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
     claude auth login
     claude
     ```
-
-## Software Upgrades
-
-Most software upgrades can be performed with `brew upgrade <package name>`, but some software upgrades require additional steps:
-
-1. Node.js with pnpm
-   ```bash
-   brew upgrade node@24
-   corepack disable
-   rm /opt/homebrew/bin/{pnpm,pnpx,yarn,yarnpkg}
-   corepack enable
-   corepack prepare pnpm@latest --activate
-   ```

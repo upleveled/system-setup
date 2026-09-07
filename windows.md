@@ -82,17 +82,15 @@ With those compatibility things out of the way, you're ready to start the system
 9. Search for Hyper in the start menu, then right click on it and choose "Run as Administrator". Copy each line of the following text, paste it in Hyper and hit return.<br><br>
 
    ```bash
-   corepack enable
-   corepack prepare pnpm@latest --activate
+   npx --yes get-pnpm
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   pnpm setup
    pnpm config set minimumReleaseAge 10080 --global
    perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=\@upleveled\/\*$/; $_ .= "minimum-release-age-exclude[]=\@upleveled/*\n" if eof && !$exists' "$LOCALAPPDATA/pnpm/config/rc"
    perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=eslint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=eslint-config-upleveled\n" if eof && !$exists' "$LOCALAPPDATA/pnpm/config/rc"
    perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=stylelint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=stylelint-config-upleveled\n" if eof && !$exists' "$LOCALAPPDATA/pnpm/config/rc"
    ```
 
-   This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
+   This installs `pnpm` as a standalone executable, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
 
    Close Hyper and open it again as administrator (like at the beginning of this step).
 
@@ -755,15 +753,3 @@ choco install windirstat --yes
     claude auth login
     claude
     ```
-
-## Software Upgrades
-
-Most software upgrades can be performed with `choco upgrade <package name>`, but some software upgrades require additional steps:
-
-1. Node.js with pnpm
-   ```bash
-   choco upgrade nodejs-lts --yes
-   corepack disable
-   corepack enable
-   corepack prepare pnpm@latest --activate
-   ```
