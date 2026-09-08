@@ -49,7 +49,7 @@ Make sure that you're running the 2nd-newest macOS version or the newest version
    perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$HOME/Library/Preferences/pnpm/config.yaml"
    ```
 
-   This uses `get-pnpm` to install `pnpm` as a standalone executable and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
+   This uses `get-pnpm` to install `pnpm` and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
 
    Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
