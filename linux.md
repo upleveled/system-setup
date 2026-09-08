@@ -34,9 +34,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    npx --yes get-pnpm
    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
    pnpm config set minimumReleaseAge 10080 --global
-   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=\@upleveled\/\*$/; $_ .= "minimum-release-age-exclude[]=\@upleveled/*\n" if eof && !$exists' "$HOME/.config/pnpm/rc"
-   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=eslint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=eslint-config-upleveled\n" if eof && !$exists' "$HOME/.config/pnpm/rc"
-   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=stylelint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=stylelint-config-upleveled\n" if eof && !$exists' "$HOME/.config/pnpm/rc"
+   perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$HOME/.config/pnpm/config.yaml"
    ```
 
    This installs `pnpm` as a standalone executable, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>

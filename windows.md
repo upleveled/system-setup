@@ -85,9 +85,7 @@ With those compatibility things out of the way, you're ready to start the system
    npx --yes get-pnpm
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    pnpm config set minimumReleaseAge 10080 --global
-   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=\@upleveled\/\*$/; $_ .= "minimum-release-age-exclude[]=\@upleveled/*\n" if eof && !$exists' "$LOCALAPPDATA/pnpm/config/rc"
-   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=eslint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=eslint-config-upleveled\n" if eof && !$exists' "$LOCALAPPDATA/pnpm/config/rc"
-   perl -i -pe '$exists ||= /^minimum-release-age-exclude\[\]=stylelint-config-upleveled$/; $_ .= "minimum-release-age-exclude[]=stylelint-config-upleveled\n" if eof && !$exists' "$LOCALAPPDATA/pnpm/config/rc"
+   perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$LOCALAPPDATA/pnpm/config/config.yaml"
    ```
 
    This installs `pnpm` as a standalone executable, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
