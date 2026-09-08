@@ -88,7 +88,7 @@ With those compatibility things out of the way, you're ready to start the system
    perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$LOCALAPPDATA/pnpm/config/config.yaml"
    ```
 
-   This installs `pnpm` as a standalone executable, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
+   This uses `get-pnpm` to install `pnpm` as a standalone executable and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
 
    Close Hyper and open it again as administrator (like at the beginning of this step).
 

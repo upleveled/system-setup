@@ -37,7 +37,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$HOME/.config/pnpm/config.yaml"
    ```
 
-   This installs `pnpm` as a standalone executable, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
+   This uses `get-pnpm` to install `pnpm` as a standalone executable and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
 
    Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
