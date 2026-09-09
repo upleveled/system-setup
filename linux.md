@@ -31,15 +31,13 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 4. Copy each line in the following text, paste it in the terminal and hit return.<br><br>
 
    ```bash
-   corepack enable
-   corepack prepare pnpm@latest --activate
-   pnpm setup
+   npx --yes get-pnpm
    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
    pnpm config set minimumReleaseAge 10080 --global
    perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$HOME/.config/pnpm/config.yaml"
    ```
 
-   This uses Corepack to install `pnpm`, configures `pnpm`'s global bin directory and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
+   This uses `get-pnpm` to install `pnpm` and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
 
    Install `@upleveled/preflight`, a program we will use in the course, to verify that the previous commands were successful: copy the following text, paste it in the terminal and hit return.<br><br>
 
@@ -590,17 +588,4 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
 
    claude auth login
    claude
-   ```
-
-## Software Upgrades
-
-Many software upgrades can be performed with `sudo snap refresh <package name>` or `sudo apt-get --only-upgrade install <package name>`, but some software upgrades require additional steps:
-
-1. Node.js with pnpm
-   ```bash
-   sudo apt update
-   sudo apt install --yes nodejs
-   corepack disable
-   corepack enable
-   corepack prepare pnpm@latest --activate
    ```
