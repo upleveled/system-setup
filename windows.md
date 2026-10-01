@@ -84,7 +84,7 @@ With those compatibility things out of the way, you're ready to start the system
    ```bash
    npx --yes get-pnpm
    pnpm config set minimumReleaseAge 10080 --global
-   perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$LOCALAPPDATA/pnpm/config/config.yaml"
+   perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - eslint-plugin-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$LOCALAPPDATA/pnpm/config/config.yaml"
    ```
 
    This uses `get-pnpm` to install `pnpm` and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
