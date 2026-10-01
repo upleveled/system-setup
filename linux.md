@@ -34,7 +34,7 @@ Make sure that you're running the 2nd-newest OS version or the newest version - 
    npx --yes get-pnpm
    source ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bashrc'`
    pnpm config set minimumReleaseAge 10080 --global
-   perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$HOME/.config/pnpm/config.yaml"
+   perl -0777 -i -pe "\$_ .= \"minimumReleaseAgeExclude:\n  - '\@upleveled/*'\n  - eslint-config-upleveled\n  - eslint-plugin-upleveled\n  - stylelint-config-upleveled\n\" unless /^minimumReleaseAgeExclude:/m" "$HOME/.config/pnpm/config.yaml"
    ```
 
    This uses `get-pnpm` to install `pnpm` and prevents installation of packages newer than 7 days to mitigate supply chain security risks.<br><br>
